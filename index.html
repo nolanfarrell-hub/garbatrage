@@ -399,13 +399,13 @@ h3{transition:color .2s ease}
 
     <div class="tickerbox">
       <div class="opinion">Value Is <span>Everywhere.</span></div>
-      <div class="opname">— The Garbatrage Investment Thesis, page 4</div>
+      <div class="opname">— The Garbatrage Investment Thesis, page 4 of 17 (the rest are blank)</div>
 
-      <div class="quote reveal">"The market spends most of its time mispricing the unglamorous asset classes. We think that's where the durable returns sit."
+      <div class="quote reveal">"We shorted gravity in a strong tape and it worked for six years. We're not saying we regret it. We're saying nobody can prove the longs to blame are wrong."
         <div class="who">Elena Marsh · Head of Research</div>
       </div>
 
-      <div class="quote reveal">"We talk a lot about efficiency in this business, and the truth is the best operators are simply disciplined about cost."
+      <div class="quote reveal">"The honest answer to every ask is the same as the honest answer to the market: it will be fine, and we will have been right about it being fine, and we will be unable to tell you why at the exact moment it matters most."
         <div class="who">Dana Whitfield · Portfolio Strategy</div>
       </div>
     </div>
@@ -496,11 +496,11 @@ h3{transition:color .2s ease}
 <script>
 const FH="https://finnhub.io/api/v1/quote?token=dbhbco1r01qjpoc6egh0dbhbco1r01qjpoc6eghg&symbol=";
 const EQUITIES=[
- ["AAPL","Apple"],["MSFT","Microsoft"],["NVDA","Nvidia"],["GOOGL","Alphabet"],
- ["AMZN","Amazon"],["META","Meta"],["TSLA","Tesla"],["JPM","JPMorgan"],
+ ["MSFT","Microsoft"],["NVDA","Nvidia"],["GOOGL","Alphabet"],["JPM","JPMorgan"],
  ["V","Visa"],["XOM","ExxonMobil"],["KO","Coca-Cola"],["WMT","Walmart"],
  ["NFLX","Netflix"],["DIS","Disney"],["GS","Goldman Sachs"],["MA","Mastercard"],
- ["MCD","McDonald's"],["PEP","PepsiCo"],["BA","Boeing"],["CAT","Caterpillar"],
+ ["UNH","UnitedHealth"],["HD","Home Depot"],["JNJ","Johnson & Johnson"],["CRM","Salesforce"],
+ ["ORCL","Oracle"],["PEP","PepsiCo"],["BA","Boeing"],["CAT","Caterpillar"],
  ["NUE","Nucor"],["STLD","Steel Dynamics"],["RSG","Republic Services"],["WM","Waste Management"],["DP","Dominion"],["X","U.S. Steel"],
 ];
 const tickEl=document.getElementById('tt1');
@@ -508,7 +508,7 @@ const giaVal=document.querySelector('.mkt-head .val');
 const giaChg=document.querySelector('.mkt-head .chg');
 const giaNote=document.querySelector('.mkt-head .ttl + * + *');
 const stockRows=document.querySelectorAll('.stock-row');
-const baskets={TOP:["AAPL","MSFT","NVDA","GOOGL","AMZN"],MOVERS:["TSLA","NVDA","META","BA","XOM"],FLOP:["KO","PEP","DIS","CAT","WMT"],RECYCLE:["NUE","STLD","RSG","WM","X"]};
+const baskets={TOP:["MSFT","NVDA","GOOGL","JPM","V"],MOVERS:["NVDA","GOOGL","XOM","NFLX","GS"],FLOP:["KO","PEP","DIS","CAT","WMT"],RECYCLE:["NUE","STLD","RSG","WM","X"]};
 function fmt(n){n=parseFloat(n);return n>=1000?n.toLocaleString('en-US',{maximumFractionDigits:0}):n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
 function buildTicker(data){
   const items=EQUITIES.filter(e=>data[e[0]]).map(e=>{const q=data[e[0]];const up=q.dp>=0;return `<span class="tick"><span class="sym">${e[0]}</span> &nbsp;$${fmt(q.c)} <span class="${up?'up':'down'}">${up?'+':''}${q.dp.toFixed(1)}%</span></span>`;});
@@ -523,7 +523,7 @@ function buildPanel(data){
   giaVal.textContent='$'+basketVal(data,bkeys).toLocaleString('en-US',{maximumFractionDigits:1});
   giaChg.textContent=(run>=0?'+':'')+run.toFixed(2)+'%';
   giaChg.style.color=run>=0?'var(--up)':'var(--down)';
-  giaNote.textContent='Top 5 megacap basket · updated live';
+  giaNote.textContent='Five wide-moat names, updated live · pray they match';
   const keys=baskets[cTab];
   stockRows.forEach((row,i)=>{
     const k=keys[i]; const q=k&&data[k]; if(!q) return;
