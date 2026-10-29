@@ -190,6 +190,22 @@ h3{transition:color .2s ease}
 .gauge>div{width:0!important;transition:width 1.2s cubic-bezier(.2,.7,.3,1)}
 .gauge.fill>div{width:var(--w)!important}
 .num{transition:transform .15s ease}
+/* ================= WATCH ================= */
+.watch{padding:40px 26px;border-top:1px solid var(--line);background:var(--panel)}
+.watch .inner{max-width:1200px;margin:0 auto}
+.watch .desk-h{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.watch .desk-h .t{font-family:'Archivo Black',sans-serif;font-size:22px;color:var(--white);text-transform:uppercase}
+.watch .desk-h .l{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--brand);text-transform:uppercase;letter-spacing:2px}
+.watch-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.watch-frame{background:var(--bg);border:1px solid var(--line);border-radius:8px;overflow:hidden;position:relative}
+.watch-frame video{width:100%;display:block;background:#000}
+.watch-frame .rec{position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:8px;background:rgba(4,10,18,.7);padding:6px 12px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#ff5b4d;letter-spacing:1px;z-index:2}
+.watch-frame .rec .d{width:9px;height:9px;border-radius:50%;background:#c83e3e;animation:blink 1s infinite}
+.watch-info h3{font-family:'Archivo Black',sans-serif;font-size:24px;line-height:1.15;color:var(--white);margin-bottom:12px;text-transform:uppercase}
+.watch-info p{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:18px}
+.watch-info .wh{display:flex;align-items:center;gap:10px}
+.watch-info .wh .av{width:34px;height:34px;border-radius:50%;background:#123053;border:1px solid #2e4d73;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--brand);font-size:12px}
+@media(max-width:900px){.watch-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -411,6 +427,24 @@ h3{transition:color .2s ease}
     <div class="a-tags" id="aTags"></div>
   </article>
 </div>
+
+<!-- WATCH -->
+<section class="watch" id="watch">
+  <div class="inner">
+    <div class="desk-h"><div class="t">Watch</div><div class="l">Garbatrage Now · today's open</div></div>
+    <div class="watch-grid">
+      <div class="watch-frame">
+        <div class="rec"><div class="d"></div>LIVE</div>
+        <video controls preload="metadata" poster="" src="media/watch.mp4"></video>
+      </div>
+      <div class="watch-info">
+        <h3>Today's Market Open</h3>
+        <p>The morning broadcast, fresh every day before the open. Headlines, the data, and one quietly mispriced value — deadpan, on time, and entirely fictional.</p>
+        <div class="wh"><div class="av">MR</div><span style="color:var(--muted);font-size:13px">Marcus Reid &middot; Markets Anchor</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- THE DESK -->
 <section class="desk" id="desk">
