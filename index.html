@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Garbatrage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1e33; --panel:#0e2540; --panel2:#123053; --line:#1e3a5c;
+  --brand:#c83e3e; --brand-dim:#a02f2f; --up:#2ea84f; --down:#c83e3e;
+  --text:#e9eef3; --muted:#93a6bb; --white:#ffffff; --faint:#6e8094;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ================= TICKER ================= */
+.ticker{background:#0b1e33;border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;position:relative}
+.ticker-track{display:inline-block;padding:8px 0;white-space:nowrap;animation:tick 42s linear infinite}
+.ticker-track2{display:inline-block;padding:8px 0;white-space:nowrap;animation:tick2 42s linear infinite}
+.tick{display:inline-block;padding:0 22px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:.5px}
+.tick .sym{color:var(--muted)}
+.tick .up{color:var(--up)} .tick .down{color:var(--down)}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+@keyframes tick2{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+
+/* ================= HEADER ================= */
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 26px;border-bottom:1px solid var(--line);background:var(--bg)}
+.logo{display:flex;align-items:center;gap:14px}
+.logo .mark{flex-shrink:0}
+.logo .word{font-family:'Archivo Black',sans-serif;font-size:30px;letter-spacing:1px;color:var(--white)}
+.logo .word span{color:var(--brand)}
+.logo .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-left:4px}
+.nav{display:flex;gap:26px}
+.nav a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px}
+.nav a:hover{color:var(--brand)}
+.utc{display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 10px var(--brand);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+
+/* ================= TRADINGVIEW STRIP ================= */
+.tv-wrap{border-bottom:1px solid var(--line);background:#0b1e33}
+.tv-wrap .tradingview-widget-container{max-width:none;background:transparent}
+.tv-wrap .tradingview-widget-container iframe{display:block;background:#0b1e33}
+
+/* ================= BREAKING ================= */
+.breaking{display:flex;align-items:center;gap:14px;background:#0b1e33;color:#ffffff;padding:10px 26px;border-bottom:1px solid #2e4d73}
+.breaking .label{font-family:'Archivo Black',sans-serif;font-size:13px;letter-spacing:2px;background:#c83e3e;color:#ffffff;padding:4px 12px}
+.breaking .msg{font-weight:900;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+
+/* ================= HERO / LIVE ================= */
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+.segment{padding:26px;position:relative;background:radial-gradient(ellipse at 20% 0%,#123053 0%,#0b1e33 60%)}
+.seg-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.live-tag{display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--red)}
+.live-tag .rec{width:10px;height:10px;border-radius:50%;background:var(--red);animation:blink 1.2s infinite}
+.stamp{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:2px}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+h1.headline{font-family:'Archivo Black',sans-serif;font-size:clamp(30px,4.5vw,56px);line-height:1.02;letter-spacing:-1px;color:var(--white);text-transform:uppercase}
+h1.headline em{font-style:normal;color:var(--brand)}
+.dek{margin-top:18px;font-size:17px;line-height:1.5;color:var(--text);max-width:600px;font-weight:500}
+.reporter{margin-top:22px;display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--line)}
+.reporter .avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#123053;border:1px solid #2e4d73;font-weight:900;color:var(--brand)}
+.reporter .by{font-size:12px;color:var(--muted)}.reporter .nm{font-size:14px;font-weight:700;color:var(--white)}
+
+/* ================= INDEX PANEL ================= */
+.sidebar{border-left:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column}
+.mkt-head{padding:20px 22px;border-bottom:1px solid var(--line)}
+.mkt-head .ttl{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px}
+.mkt-line{display:flex;align-items:baseline;gap:12px}
+.mkt-line .val{font-family:'Archivo Black',sans-serif;font-size:34px;color:var(--white)}
+.mkt-line .chg{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;color:var(--up)}
+.sub-tabs{display:flex;gap:2px;padding:10px 0;border-bottom:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:11px}
+.sub-tabs>div{flex:1;text-align:center;padding:8px 0;color:var(--muted);letter-spacing:1px}
+.sub-tabs>div.on{color:var(--brand);background:var(--panel2);border-bottom:2px solid var(--brand)}
+.stock-row{display:flex;justify-content:space-between;align-items:center;padding:13px 22px;border-bottom:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:13px}
+.stock-row .name{font-weight:700;color:var(--white)}.stock-row .tick{color:var(--muted);padding:0}
+.stock-row .val{color:var(--muted)}
+.stock-row .chg.up{color:var(--up)}.stock-row .chg.down{color:var(--down)}
+.note{padding:16px 22px;font-size:10px;line-height:1.6;color:var(--faint);font-family:'JetBrains Mono',monospace}
+
+/* ================= TICKER2 BAR ================= */
+.scroller{display:flex;align-items:center;gap:26px;padding:13px 26px;border-bottom:1px solid var(--line);background:var(--panel)}
+.scroller .label{font-family:'Archivo Black',sans-serif;font-size:11px;letter-spacing:2px;color:var(--brand);white-space:nowrap}
+.marquee{overflow:hidden;white-space:nowrap;flex:1;position:relative}
+.mq{display:inline-block;animation:mq 34s linear infinite}
+.mq span{display:inline-block;padding:0 30px;font-size:13px;color:var(--muted)}
+
+/* ================= CONTENT GRID ================= */
+.content{display:grid;grid-template-columns:2fr 1fr;gap:0}
+.stories{padding:30px 26px;border-right:1px solid var(--line)}
+.section-h{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.section-h::after{content:'';flex:1;height:1px;background:var(--line)}
+.feat{margin-bottom:34px}
+.feat .tag-row{display:flex;gap:8px;margin-bottom:12px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border:1px solid var(--line);color:var(--brand-dim)}
+h2.top{margin-bottom:22px;font-size:22px;line-height:1.2}
+.story{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.story .imgbox{width:150px;height:100px;flex-shrink:0;background:linear-gradient(135deg,#123053,#0b1e33);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Archivo Black',sans-serif;font-size:44px}
+.story .imgbox.g{color:var(--brand)}.story .imgbox.r{color:var(--red)}
+.story .body h3{font-size:18px;line-height:1.25;margin-bottom:8px;color:var(--white)}
+.story .body h3:hover{color:var(--brand)}
+.story .body p{font-size:14px;color:var(--muted);line-height:1.5;margin-bottom:10px}
+.story .meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:1px}
+
+/* ================= RIGHT COL ================= */
+.right{padding:30px 26px}
+.watch-card{border:1px solid var(--line);background:var(--panel);margin-bottom:26px;overflow:hidden}
+.watch-card .wc-head{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:var(--panel2);border-bottom:1px solid var(--line)}
+.watch-card .wc-head .t{font-family:'Archivo Black',sans-serif;font-size:14px;color:var(--white);letter-spacing:1px}
+.watch-card .wc-head .l{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--brand);text-transform:uppercase}
+.wc-body{padding:20px 18px;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:2}
+.wc-body .row{display:flex;justify-content:space-between;color:var(--muted)}
+.wc-body .row b{color:var(--white)}
+.gauge{height:6px;background:#1e3a5c;border-radius:3px;margin:4px 0 2px}
+.gauge>div{height:100%;background:var(--brand);border-radius:3px}
+.tickerbox{}
+.opinion{font-size:32px;line-height:1.1;font-family:'Archivo Black',sans-serif;color:var(--white);text-transform:uppercase;margin-bottom:14px}
+.opinion span{color:var(--brand)}
+.opname{font-size:13px;color:var(--muted);margin-bottom:26px}
+.quote{border-left:2px solid var(--brand);padding-left:16px;margin:24px 0;font-size:15px;line-height:1.6;color:var(--text)}
+.quote .who{font-size:12px;color:var(--muted);margin-top:8px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:1px}
+
+/* ================= FOOTER ================= */
+footer{border-top:2px solid var(--brand);padding:40px 26px;background:var(--panel)}
+.foot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:1200px;margin:0 auto}
+.foot-col h4{font-size:12px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;font-family:'JetBrains Mono',monospace}
+.foot-col a,.foot-col p{display:block;color:var(--muted);text-decoration:none;font-size:13px;line-height:1.9}
+.foot-col a:hover{color:var(--white)}
+.foot-dis{max-width:1200px;margin:26px auto 0;font-size:11px;color:var(--faint);line-height:1.7;border-top:1px solid var(--line);padding-top:20px;font-family:'JetBrains Mono',monospace}
+.copyright{text-align:center;color:var(--faint);font-size:11px;margin-top:22px;font-family:'JetBrains Mono',monospace}
+
+@media(max-width:900px){
+ .hero,.content{grid-template-columns:1fr}
+ .sidebar{border-left:0;border-top:1px solid var(--line)}
+ .stories{border-right:0}
+ .nav{display:none}
+ .foot-grid{grid-template-columns:1fr 1fr}
+}
+
+/* ================= ARTICLE MODAL ================= */
+.story{position:relative}
+.story .body h3{cursor:pointer}
+.story .body h3:hover{color:var(--brand)}
+.story .open-arrow{display:none}
+.overlay{position:fixed;inset:0;background:rgba(4,10,18,.86);z-index:200;opacity:0;pointer-events:none;transition:opacity .25s ease;display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:36px 20px}
+.overlay.show{opacity:1;pointer-events:auto}
+.article{background:var(--panel);border:1px solid var(--line);max-width:760px;width:100%;padding:40px 44px;position:relative;border-radius:6px}
+.article .a-close{position:absolute;top:18px;right:22px;background:none;border:1px solid var(--line);color:var(--muted);font-family:'JetBrains Mono',monospace;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:15px;transition:all .2s}
+.article .a-close:hover{border-color:var(--brand);color:var(--brand)}
+.article .a-cat{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
+.article h2{font-family:'Archivo Black',sans-serif;font-size:clamp(24px,3.2vw,34px);line-height:1.1;color:var(--white);margin-bottom:16px}
+.article .a-dek{font-size:17px;line-height:1.6;color:var(--text);margin-bottom:22px}
+.article .a-byline{display:flex;align-items:center;gap:12px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.article .a-av{width:38px;height:38px;border-radius:50%;background:#123053;border:1px solid #2e4d73;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--brand);font-size:13px}
+.article .a-name{font-size:14px;font-weight:700;color:var(--white)}
+.article .a-role{font-size:12px;color:var(--muted)}
+.article p{font-size:15px;line-height:1.75;color:var(--text);margin-bottom:18px}
+.article p.lead{font-size:16px;color:var(--white)}
+.article blockquote{border-left:2px solid var(--brand);padding:4px 0 4px 18px;margin:22px 0;font-size:16px;line-height:1.6;font-style:italic;color:var(--text)}
+.article .a-tags{display:flex;gap:8px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.article .a-tags .chip{color:var(--muted)}
+
+/* ================= THE DESK ================= */
+.desk{padding:40px 26px;border-top:1px solid var(--line);background:var(--panel) 0 0/cover}
+.desk .inner{max-width:1200px;margin:0 auto}
+.desk .desk-h{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.desk .desk-h .t{font-family:'Archivo Black',sans-serif;font-size:22px;color:var(--white);text-transform:uppercase}
+.desk .desk-h .l{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--brand);text-transform:uppercase;letter-spacing:2px}
+.desk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.anchor{background:var(--panel2);border:1px solid var(--line);padding:20px 18px;cursor:pointer;transition:border-color .2s ease,transform .2s ease;position:relative}
+.anchor:hover{border-color:var(--brand);transform:translateY(-2px)}
+.anchor .an-av{width:48px;height:48px;border-radius:50%;background:#123053;border:1px solid #2e4d73;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--brand);font-size:16px;margin-bottom:14px}
+.anchor .an-name{font-size:16px;font-weight:700;color:var(--white);margin-bottom:2px}
+.anchor .an-role{font-size:12px;color:var(--muted);line-height:1.4;margin-bottom:10px}
+.anchor .an-bio{font-size:12px;color:var(--faint);line-height:1.55}
+.anchor .an-read{position:absolute;right:16px;bottom:14px;color:var(--brand);font-family:'JetBrains Mono',monospace;font-size:11px}
+@media(max-width:560px){.desk-grid{grid-template-columns:1fr 1fr}}
+
+/* ================= MOTION ================= */
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.reveal{opacity:0}
+.reveal.show{animation:rise .6s cubic-bezier(.2,.65,.3,1) forwards}
+.stock-row{transition:background .2s ease}
+.stock-row:hover{background:var(--panel2)}
+h3{transition:color .2s ease}
+.gauge>div{width:0!important;transition:width 1.2s cubic-bezier(.2,.7,.3,1)}
+.gauge.fill>div{width:var(--w)!important}
+.num{transition:transform .15s ease}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+ <div class="ticker-track" id="tt1"></div>
+</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="logo">
+    <svg class="mark" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Garbatrage mark">
+      <rect x="1" y="1" width="38" height="38" rx="7" fill="#c83e3e"/>
+      <text x="20" y="28.5" text-anchor="middle" font-family="Archivo Black, Arial Black, sans-serif" font-size="26" font-weight="900" fill="#ffffff">G</text>
+    </svg>
+    <div class="word">GARBATRAGE</div>
+    <div class="tag">Markets. Money. Mischief.</div>
+  </div>
+  <div class="nav">
+    <a href="#markets">Markets</a><a href="#investing">Investing</a><a href="#stories">Stories</a><a href="#midvalue">Mid-Value</a><a href="#desk">The Desk</a><a href="#community">Community</a>
+  </div>
+  <div class="utc"><div class="dot"></div><span id="clock">--:--:-- ET</span></div>
+</div>
+
+<!-- TRADINGVIEW INDEX STRIP -->
+<div class="tv-wrap">
+  <!-- TradingView Widget BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+      {"proName": "SPX500", "title": "S&P 500"},
+      {"proName": "NSXUSD", "title": "US 100"},
+      {"proName": "DJI", "title": "Dow 30"},
+      {"proName": "FOREXCOM:EURUSD", "title": "EUR/USD"},
+      {"proName": "FRED:GOLDPMGBD228NLBM", "title": "Gold"},
+      {"proName": "BITSTAMP:BTCUSD", "title": "Bitcoin"},
+      {"proName": "BINANCE:ETHUSDT", "title": "Ethereum"}
+    ],
+    "showSymbolLogo": true,
+    "colorTheme": "dark",
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "locale": "en"
+    }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+</div>
+
+<!-- BREAKING -->
+<div class="breaking">
+  <div class="label">BREAKING</div>
+  <div class="msg" id="breakingMsg">Waste sector advances as second-quarter volumes exceed expectations.</div>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="markets">
+  <div class="segment">
+    <div class="seg-top">
+      <div class="live-tag"><div class="rec"></div>LIVE &nbsp;// GARBATRAGE NOW</div>
+      <div class="stamp">Market Data · As Of Now</div>
+    </div>
+    <div class="kicker">Earnings · Waste Management Sector</div>
+    <h1 class="headline">Waste Firms <em>Extend Gains</em> As Volume Beats Offset <em>Sticky Staples Tape</em></h1>
+    <p class="dek">Shares of the largest haulers rose in early trading after second-quarter volumes beat expectations, with several operators citing stronger-than-expected commercial pickup demand. Analysts note the sector has held up well against a broader pullback in consumer staples.</p>
+    <div class="reporter">
+      <div class="avatar">MR</div>
+      <div><div class="nm">Marcus Reid</div><div class="by">Markets Anchor · New York</div></div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR INDEX -->
+  <div class="sidebar">
+    <div class="mkt-head">
+      <div class="ttl">GARBATRAGE INDUSTRIAL AVERAGE (GIA)</div>
+      <div class="mkt-line"><div class="val">38,221.07</div><div class="chg">-321.44 (-0.83%)</div></div>
+      <div style="font-family:JetBrains Mono,monospace;font-size:10px;color:var(--faint);margin-top:6px">Down on mixed hauling volumes</div>
+    </div>
+    <div class="sub-tabs"><div class="on">TOP</div><div>MOVERS</div><div>FLOP</div><div>RECYCLE</div></div>
+    <div class="stock-row"><div><div class="name">Trash &amp; Sons</div><div class="tick">TRSH</div></div><div class="val">$3.21</div><div class="chg up">+2.4%</div></div>
+    <div class="stock-row"><div><div class="name">Byte Bin</div><div class="tick">BYTBN</div></div><div class="val">$12.80</div><div class="chg up">+1.1%</div></div>
+    <div class="stock-row"><div><div class="name">Morning Junk</div><div class="tick">MJNK</div></div><div class="val">$0.04</div><div class="chg up">+9.0%</div></div>
+    <div class="stock-row"><div><div class="name">Stable Value, Inc</div><div class="tick">STBL</div></div><div class="val">$44.00</div><div class="chg down">-0.4%</div></div>
+    <div class="stock-row"><div><div class="name">Hysterical Systems</div><div class="tick">HYST</div></div><div class="val">$9.99</div><div class="chg down">-5.0%</div></div>
+    <div class="note">GIA is a proprietary index composed of hand-picked mid-value securities. Not a real benchmark. Not investment advice. For entertainment purposes only.</div>
+  </div>
+</div>
+
+<!-- SCROLLER -->
+<div class="scroller" id="midvalue">
+  <div class="label">MID-VALUE ADVANCERS</div>
+  <div class="marquee"><div class="mq" id="mq1"></div></div>
+</div>
+
+<!-- CONTENT -->
+<div class="content" id="stories">
+  <div class="stories">
+  <div class="section-h reveal">Top Stories</div>
+
+  <div class="feat reveal">
+      <div class="tag-row"><span class="chip">Exclusive</span></div>
+      <h2 class="top">Inside The Mid-Value Boom: Why Discount Retail Off-Floor Pricing Is Having Its Moment</h2>
+      <p style="color:var(--muted);line-height:1.6;font-size:15px">A new wave of secondary-market operators is buying discontinued inventory and reselling at a margin that has quietly caught the attention of larger distributors. We look at what's driving the demand, and who's positioned to capture it.</p>
+    </div>
+
+    <div class="story reveal" data-a="0">
+      <div class="imgbox g">♻</div>
+      <div class="body">
+        <h3 class="open" data-a="0">Waste Firms Extend Gains As Volume Beats Offset Sticky Staples Tape</h3>
+        <p>Municipalities are pushing cleaner streams, and independent operators are consolidating routes. Analysts say margins could widen for the few equipped to handle the new specifications.</p>
+        <div class="meta">Waste Management · Marcus Reid · 4 min read</div>
+      </div>
+    </div>
+
+    <div class="story reveal" data-a="1">
+      <div class="imgbox r">%</div>
+      <div class="body">
+        <h3 class="open" data-a="1">Fed Keeps Its Optionality As Officials Read The Same Data Differently</h3>
+        <p>In remarks this morning, several policymakers emphasized they were in no hurry to adjust, citing modest progress on prices while flagging uncertainty in the labor market.</p>
+        <div class="meta">Federal Reserve · Priya Sharma · 6 min read</div>
+      </div>
+    </div>
+
+    <div class="story reveal" data-a="2">
+      <div class="imgbox g">▲</div>
+      <div class="body">
+        <h3 class="open" data-a="2">Consumer Confidence Steadies As Households Ration Optimism Alongside Budgets</h3>
+        <p>The latest survey showed households marginally more upbeat, with respondents citing steadier prices and improving near-term expectations heading into the holidays.</p>
+        <div class="meta">Consumer Sentiment · Tessa Nguyen · 3 min read</div>
+      </div>
+    </div>
+
+    <div class="story reveal" data-a="3">
+      <div class="imgbox r">$</div>
+      <div class="body">
+        <h3 class="open" data-a="3">Executive Pay Tips Toward The Hurdle As Proxy Season Opens Quietly</h3>
+        <p>Annual proxy filings this season show more modest CEO pay packages, with several boards tying a larger share of comp to performance hurdles than in prior years.</p>
+        <div class="meta">Compensation · Omar Zayed · 5 min read</div>
+      </div>
+    </div>
+
+    <div class="section-h reveal" style="margin-top:34px">Markets Brief</div>
+
+    <div class="story reveal" data-a="4">
+      <div class="imgbox g">⚡</div>
+      <div class="body">
+        <h3 class="open" data-a="4">EV Makers Trade Ambition For Margin As Demand Settles Lower</h3>
+        <p>The company lowered its annual outlook, citing a slower-than-expected ramp in consumer adoption, while reiterating its longer-term production targets. Shares fell modestly in after-hours trading.</p>
+        <div class="meta">Utilities &amp; Auto · Marcus Reid · 4 min read</div>
+      </div>
+    </div>
+
+    <div class="story reveal" data-a="5">
+      <div class="imgbox r">📉</div>
+      <div class="body">
+        <h3 class="open" data-a="5">Treasury Curve Flattens As Investors Stop Paying For Certainty</h3>
+        <p>Activity in consumer-focused names remained firm through the quarter, with brokers reporting steady order flow and little sign of rotation out of high-touch sectors.</p>
+        <div class="meta">Market Structure · Priya Sharma · 2 min read</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT COL -->
+  <div class="right" id="investing">
+    <div class="watch-card reveal">
+      <div class="wc-head"><div class="t">SECTOR PULSE</div><div class="l">UPDATED</div></div>
+      <div class="wc-body">
+        <div class="row"><span>Recycling throughput, Q3</span><b>814K tons</b></div>
+        <div class="gauge"><div style="--w:12%"></div></div>
+        <div class="row"><span>Fleet utilization</span><b>88%</b></div>
+        <div class="gauge"><div style="--w:88%"></div></div>
+        <div class="row"><span>Route consolidation deals</span><b>1,900</b></div>
+        <div class="gauge"><div style="--w:54%"></div></div>
+        <div class="row"><span>Regulatory headwinds</span><b>Stable</b></div>
+        <div class="gauge"><div style="--w:41%"></div></div>
+      </div>
+    </div>
+
+    <div class="tickerbox">
+      <div class="opinion">Value Is <span>Everywhere.</span></div>
+      <div class="opname">— The Garbatrage Investment Thesis, page 4</div>
+
+      <div class="quote reveal">"The market spends most of its time mispricing the unglamorous asset classes. We think that's where the durable returns sit."
+        <div class="who">Elena Marsh · Head of Research</div>
+      </div>
+
+      <div class="quote reveal">"We talk a lot about efficiency in this business, and the truth is the best operators are simply disciplined about cost."
+        <div class="who">Dana Whitfield · Portfolio Strategy</div>
+      </div>
+    </div>
+
+    <div class="watch-card reveal">
+      <div class="wc-head"><div class="t">RATE OUTLOOK</div><div class="l">CONSENSUS</div></div>
+      <div class="wc-body">
+        <div class="row"><span>Next move: hold</span><b>62%</b></div>
+        <div class="row" style="margin-top:8px"><span>Implied terminal rate</span><b>3.6%</b></div>
+        <div class="row"><span>Policy uncertainty</span><b>Elevated</b></div>
+        <div style="margin-top:14px;font-size:11px;color:var(--brand-dim)">"Officials remain data-dependent, and the data remain, as ever, forthcoming."</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE READER -->
+<div class="overlay" id="overlay">
+  <article class="article" id="articleBox">
+    <button class="a-close" id="aClose" aria-label="Close">&times;</button>
+    <div class="a-cat" id="aCat"></div>
+    <h2 id="aTitle"></h2>
+    <div class="a-dek" id="aDek"></div>
+    <div class="a-byline">
+      <div class="a-av" id="aAv"></div>
+      <div><div class="a-name" id="aName"></div><div class="a-role" id="aRole"></div></div>
+    </div>
+    <div id="aBody"></div>
+    <div class="a-tags" id="aTags"></div>
+  </article>
+</div>
+
+<!-- THE DESK -->
+<section class="desk" id="desk">
+  <div class="inner">
+    <div class="desk-h"><div class="t">The Desk</div><div class="l">anchor roster</div></div>
+    <div class="desk-grid" id="deskGrid"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="community">
+  <div class="foot-grid">
+    <div class="foot-col">
+      <h4>Markets</h4><a href="#">Indexes</a><a href="#">Sectors</a><a href="#">Rates</a><a href="#">Calendar</a>
+    </div>
+    <div class="foot-col">
+      <h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Contact</a>
+    </div>
+    <div class="foot-col">
+      <h4>Resources</h4><a href="#">Newsletters</a><a href="#">Data</a><a href="#">Contributors</a><a href="#">Methodology</a>
+    </div>
+    <div class="foot-col">
+      <h4>Legal</h4><a href="#">Terms Of Service</a><a href="#">Privacy Policy</a><a href="#">Do Not Sell My Data</a><a href="#">Licensing</a>
+    </div>
+  </div>
+  <div class="foot-dis">GARBATRAGE is a satirical publication, presented in the style of a professional financial news desk. All quotes, indexes, tickers and figures are fabricated, and any resemblance to real securities, people or firms is coincidental. Nothing herein is investment, legal or tax advice. Uncited statistics may have been invented to make a beat work. Please do your own research, consult a licensed advisor, and understand that markets carry risk.</div>
+  <div class="copyright">© Garbatrage Media Group LLC · For entertainment purposes only · Not a registered investment adviser</div>
+</footer>
+
+<script>
+const FH="https://finnhub.io/api/v1/quote?token=dbhbco1r01qjpoc6egh0dbhbco1r01qjpoc6eghg&symbol=";
+const EQUITIES=[
+ ["AAPL","Apple"],["MSFT","Microsoft"],["NVDA","Nvidia"],["GOOGL","Alphabet"],
+ ["AMZN","Amazon"],["META","Meta"],["TSLA","Tesla"],["JPM","JPMorgan"],
+ ["V","Visa"],["XOM","ExxonMobil"],["KO","Coca-Cola"],["WMT","Walmart"],
+ ["NFLX","Netflix"],["DIS","Disney"],["GS","Goldman Sachs"],["MA","Mastercard"],
+ ["MCD","McDonald's"],["PEP","PepsiCo"],["BA","Boeing"],["CAT","Caterpillar"],
+];
+const tickEl=document.getElementById('tt1');
+const giaVal=document.querySelector('.mkt-head .val');
+const giaChg=document.querySelector('.mkt-head .chg');
+const giaNote=document.querySelector('.mkt-head .ttl + * + *');
+const stockRows=document.querySelectorAll('.stock-row');
+const baskets={TOP:["AAPL","MSFT","NVDA","GOOGL","AMZN"],MOVERS:["TSLA","NVDA","META","BA","XOM"],FLOP:["KO","PEP","DIS","CAT","WMT"],RECYCLE:["AAPL","MSFT","NVDA","GOOGL","META"]};
+function fmt(n){n=parseFloat(n);return n>=1000?n.toLocaleString('en-US',{maximumFractionDigits:0}):n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function buildTicker(data){
+  const items=EQUITIES.filter(e=>data[e[0]]).map(e=>{const q=data[e[0]];const up=q.dp>=0;return `<span class="tick"><span class="sym">${e[0]}</span> &nbsp;$${fmt(q.c)} <span class="${up?'up':'down'}">${up?'+':''}${q.dp.toFixed(1)}%</span></span>`;});
+  tickEl.innerHTML=items.join('')+items.join('');
+}
+function basketVal(data,keys){let s=0;keys.forEach(k=>{if(data[k])s+=data[k].c;});return s;}
+function buildPanel(data){
+  const bkeys=baskets.TOP;
+  const members=bkeys.filter(k=>data[k]);
+  if(members.length<3) return;
+  const run=members.reduce((a,k)=>a+data[k].dp,0)/members.length;
+  giaVal.textContent='$'+basketVal(data,bkeys).toLocaleString('en-US',{maximumFractionDigits:1});
+  giaChg.textContent=(run>=0?'+':'')+run.toFixed(2)+'%';
+  giaChg.style.color=run>=0?'var(--up)':'var(--down)';
+  giaNote.textContent='Top 5 megacap basket · updated live';
+  const keys=baskets[cTab];
+  stockRows.forEach((row,i)=>{
+    const k=keys[i]; const q=k&&data[k]; if(!q) return;
+    const nm=EQUITIES.find(e=>e[0]===k);
+    row.querySelector('.name').textContent=nm?nm[1]:k;
+    row.querySelector('.tick').textContent=k;
+    row.querySelector('.val').textContent='$'+fmt(q.c);
+    const chg=row.querySelector('.chg');
+    const up=q.dp>=0;
+    chg.textContent=(up?'+':'')+q.dp.toFixed(1)+'%';
+    chg.className='chg '+(up?'up':'down');
+  });
+}
+async function live(){
+  const ids=EQUITIES.map(e=>e[0]);
+  const results=await Promise.all(ids.map(s=>fetch(FH+s,{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)));
+  const data={}; ids.forEach((s,i)=>{const q=results[i];if(q&&q.c!=null)data[s]=q;});
+  if(!Object.keys(data).length){ console.warn('no live data'); return; }
+  buildTicker(data); buildPanel(data);
+}
+let cTab='TOP';
+addEventListener('click',e=>{
+  const tab=e.target.closest('.sub-tabs>div');
+  if(!tab) return;
+  document.querySelectorAll('.sub-tabs>div').forEach(t=>t.classList.remove('on'));
+  tab.classList.add('on'); cTab=tab.textContent.trim();
+  live();
+});
+live();
+setInterval(live,30000);
+
+const mqitems = ["Mid-value outperforms the broad market for a sixth straight week.","Collection rate expansion continues to outpace guidance.","Yield spread narrows as volatility eases.","Route consolidation drives margin upside.","Hauling volumes beat on commercial pickup strength.","Analysts wary of froth in high-touch names.","Inflation cools modestly; market holds.","Discount retail sees steady off-floor demand.","Sector rotation favors unglamorous asset classes.","Recyclers invest in sorting capacity."];
+document.getElementById('mq1').innerHTML = mqitems.map(m=>`<span>${m}</span>`).join('') + mqitems.map(m=>`<span>${m}</span>`).join('');
+
+function clock(){
+ const d=new Date();
+ const e=new Date(d.toLocaleString('en-US',{timeZone:'America/New_York'}));
+ document.getElementById('clock').textContent = e.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit'})+' ET';
+}
+clock();setInterval(clock,1000);
+
+// occasional fake breaking lines
+const breaking = [
+ "Waste sector advances as second-quarter volumes exceed expectations.",
+ "Recycling majors announce route consolidation across the Midwest.",
+ "Mid-value operators report wider margins on firmer pickup demand.",
+ "Fed officials reiterate patience as core inflation cools gradually.",
+ "Private haulers see steady commercial volumes heading into the holidays.",
+ "Brokerage firms note steady retail participation through the quarter.",
+];
+let bi=0;
+setInterval(()=>{document.getElementById('breakingMsg').textContent = breaking[bi++%breaking.length];},9000);
+
+// scroll-reveal
+const rv = document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+ const io=new IntersectionObserver((entries)=>{
+   entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('show');io.unobserve(en.target);}});
+ },{threshold:.12});
+ rv.forEach(el=>io.observe(el));
+}else{rv.forEach(el=>el.classList.add('show'));}
+
+// animate gauges when the scoreboard card is revealed
+const gaugeBar = document.querySelectorAll('.gauge');
+const gaugeIO=new IntersectionObserver(entries=>{
+ entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('fill');gaugeIO.unobserve(en.target);}});
+},{threshold:.4});
+gaugeBar.forEach(g=>gaugeIO.observe(g));
+
+// ---------- ARTICLE READER ----------
+const ARTICLES=[
+ {cat:"Waste Management",title:"Waste Firms Extend Gains As Volume Beats Offset Sticky Staples Tape",
+  dek:"Shares of the largest haulers rose after second-quarter volumes beat expectations, with operators citing firmer commercial pickup demand even as the broader consumer tape wobbled.",
+  name:"Marcus Reid",role:"Waste & Industrials Reporter · New York",av:"MR",
+  body:"<p class=\"lead\">Second-quarter volumes across the largest haulers beat expectations on the strength of commercial pickup demand, and the sector received the reward Wall Street reserves for reliably unglamorous growth: a modest, orderly rally. Operators framed it as a function of route density rather than pricing power, a distinction investors have learned to read as durability.</p><p>That discipline extended to the guidance that followed. One operator described fee levels as \"right-sized,\" a phrase that has become corporate code for holding a line without calling it one, while another emphasized collections over pricing in nearly every sentence.</p><blockquote>\"The waste trade pays for consistency, not narrative, and consistency is about the only thing the sector has ever promised,\" said Dana Whitfield, portfolio strategist.</blockquote><p>What complicates the read is the consumer elsewhere. Staples spending has been softer than some expected, and operators tied part of the commercial pickup strength to businesses holding inventory longer, a trend that can unwind as readily as it persists.</p><p>For now the tape is with the trucks. Analysts see room for further gains if volumes hold into the back half, and the sector continues to trade as what it has always been: a low-story equity that reliably clears a modest bar.</p>",
+  tags:["Waste","Haulers","Earnings","Volumes","Margins"]},
+ {cat:"Federal Reserve",title:"Fed Keeps Its Optionality As Officials Read The Same Data Differently",
+  dek:"Pressed on the path of policy, officials this week preserved every option while appearing settled, splitting softly over what the recent inflation prints actually mean.",
+  name:"Priya Sharma",role:"Federal Reserve Reporter · Washington",av:"PS",
+  body:"<p class=\"lead\">Pressed repeatedly this week on the path of policy, Federal Reserve officials offered guidance best described as geometric: it points everywhere and commits nowhere. The current communication cycle, several admitted in hallway remarks, is designed to preserve optionality while conveying the appearance of a settled mind.</p><p>The divergence is subtle but audible. One group reads the recent inflation prints as proof that most of the work is done; another flags the same prints as evidence of how slowly the remaining work moves. Both describe themselves as patient, which is how a committee manages to sound hawkish and dovish in the same meeting.</p><blockquote>\"The committee has become very adept at telling the market the direction without telling it the distance,\" said Elena Marsh, head of research.</blockquote><p>Market pricing reflects the ambiguity. Futures embed a small probability of a move in each direction, the market's polite way of noting that officials have given it everything to work with and nothing to act upon.</p><p>The upshot for investors is a policy environment defined less by what the Fed does than by what it declines to signal. In stretches like this the data do the talking, and the data have so far been careful not to say anything too loudly.</p>",
+  tags:["Monetary Policy","Inflation","Rates","Optionality","Fed"]},
+ {cat:"Consumer Sentiment",title:"Consumer Confidence Steadies As Households Ration Optimism Alongside Budgets",
+  dek:"The gauge came in essentially flat, but the composition moved: less anxiety about prices, more precision about what households will give up.",
+  name:"Tessa Nguyen",role:"Economy Reporter · Chicago",av:"TN",
+  body:"<p class=\"lead\">This month's confidence reading came in essentially flat, about as close to a headline as the gauge has produced all year. Beneath the dormant number, however, the composition shifted in ways economists consider quietly meaningful: less anxiety about prices, more precision about what households are willing to give up.</p><p>The stability is itself the news. Confidence has stopped falling, which for a measure that spent two years in retreat counts as momentum. Respondents describe a consumer budgeting with deliberation rather than panic, trading down in category more than trading away from spending outright.</p><blockquote>\"The consumer stopped forecasting doom and started doing arithmetic,\" said Dana Whitfield, portfolio strategist. \"It is a quieter, and more durable, kind of health.\"</blockquote><p>The pattern is visible in receipts as well: fewer but larger shopping trips, deliberate baskets, and a willingness to pay for durable quality over repeated small purchases. Retailers serving the middle describe a shopper who is present, cheaper, and stubbornly realistic.</p><p>For the macro read, the takeaway is a household that is no longer the economy's main risk but also no longer its engine, idling at an efficient, unexciting setting that nonetheless keeps the tape from rolling backward.</p>",
+  tags:["Consumers","Confidence","Spending","Retail","Sentiment"]},
+ {cat:"Compensation",title:"Executive Pay Tips Toward The Hurdle As Proxy Season Opens Quietly",
+  dek:"Early filings show fewer outsized packages and more pay tied to performance, as boards tighten a benchmark that drew attention last cycle.",
+  name:"Omar Zayed",role:"Corporate Governance Reporter",av:"OZ",
+  body:"<p class=\"lead\">The earliest read of this proxy season points to a change in the tone of top pay: fewer outsized packages, more structural performance hurdles, and a quieter discussion of what leadership is actually being compensated to accomplish. Boards, judging by the early filings, are tightening the benchmark.</p><p>Several of the largest filers shifted a greater share of long-term incentive into multi-year total shareholder return and operational targets, a design intended to reward execution rather than participation in a rising tape. Committees describe it as a return to a simpler definition of alignment.</p><blockquote>\"A pay package that rewards showing up has become a liability to defend,\" said Elena Marsh, head of research. \"The bar for the pay that drew attention last cycle is meaningfully higher this year.\"</blockquote><p>The moderation is real but gradual. Median packages are down only a few percentage points, and the composition shift matters more than the headline figure: more pay is contingent on outcomes shareholders actually experience.</p><p>For investors the practical effect is small and slow, but the direction is consistent, boards treating compensation as a performance instrument rather than a baseline entitlement. Committees deny this reflects anything beyond ordinary rigor; shareholders accept the quiet acknowledgment for what it is.</p>",
+  tags:["Governance","Compensation","Proxies","Incentives","Boards"]},
+ {cat:"Utilities & Auto",title:"EV Makers Trade Ambition For Margin As Demand Settles Lower",
+  dek:"After a year of guidance cuts, automakers are re-emphasizing profitability over volume as orders stabilize at a more pragmatic layer of buyers.",
+  name:"Marcus Reid",role:"Waste & Industrials Reporter · New York",av:"MR",
+  body:"<p class=\"lead\">After a year of sobering guidance, the electric-vehicle narrative is settling into something less dramatic: not a boom and not a bust, but a business finding its footing at a lower cruising altitude. Automakers report order books have stabilized, and the challenge has moved from convincing early adopters to convincing the next, more pragmatic layer of buyers.</p><p>The improvement is incremental and uneven. Fleet orders, historically the dependable wedge of demand, remain cautious, while consumer interest has settled around a durable core of households unlikely to return to combustion regardless of incentives.</p><blockquote>\"The question stopped being whether electric sells and became how slowly it sells,\" said Elena Marsh, head of research. \"Those are very different investment cases.\"</blockquote><p>Management teams have answered by trimming capacity additions and re-emphasizing margins over volume, an acknowledgment that investors now reward profitability on fewer units more than they reward ambition on many more.</p><p>Analysts read the stabilization as a necessary correction rather than a recovery and caution that the sector's next phase will favor disciplined operators over scale stories, a hard-won adjustment the early champions of the transition may not have anticipated.</p>",
+  tags:["EV","Auto","Guidance","Margins","Demand"]},
+ {cat:"Market Structure",title:"Treasury Curve Flattens As Investors Stop Paying For Certainty",
+  dek:"Longer-dated yields drift lower while the front end holds, compressing the term premium in a signal managers read as a statement about the quarters ahead.",
+  name:"Priya Sharma",role:"Markets Reporter · Washington",av:"PS",
+  body:"<p class=\"lead\">A flatter Treasury curve is doing a lot of quiet work this week, most of it telling investors to expect less. Longer-dated yields have drifted lower while the front end holds, compressing the term premium to a level money managers increasingly read as a statement about the quarters ahead rather than this one.</p><p>The move is unremarkable in scale, which is precisely the point. Markets function on the margin, and the margin here is a slow repricing of how much future growth is actually being paid for. Auctions have cleared without drama; the signal sits in the spread, not the sale.</p><blockquote>\"A curve this flat is not predicting a specific outcome,\" said Dana Whitfield, portfolio strategist. \"It is predicting that the outcome, whatever it is, will not be interesting enough to pay for.\"</blockquote><p>The obvious comparison is to earlier flattening episodes, and the nuance matters. Historically, sharp flattening has preceded policy stress; this iteration has unfolded against orderly auctions and steady demand for shorter paper, which alters the read materially.</p><p>For allocation the practical effect is duration that is simultaneously cheap insurance and expensive speculation. Managers describe a market where being early to a curve call has punished investors more than being wrong about the economy, a lesson most say they have now internalized, and one the tape will test again.</p>",
+  tags:["Rates","Curve","Yields","Term Premium","Markets"]},
+];
+const overlay=document.getElementById('overlay');
+const aClose=document.getElementById('aClose');
+function openArticle(i){
+  const a=ARTICLES[i]; if(!a) return;
+  document.getElementById('aCat').textContent=a.cat;
+  document.getElementById('aTitle').textContent=a.title;
+  document.getElementById('aDek').textContent=a.dek;
+  document.getElementById('aAv').textContent=a.av;
+  document.getElementById('aName').textContent=a.name;
+  document.getElementById('aRole').textContent=a.role;
+  document.getElementById('aBody').innerHTML=a.body;
+  document.getElementById('aTags').innerHTML=a.tags.map(t=>`<span class="chip">${t}</span>`).join('');
+  document.body.style.overflow='hidden';
+  overlay.classList.add('show');
+}
+function closeArticle(){overlay.classList.remove('show');document.body.style.overflow='';}
+document.querySelectorAll('.story .body h3').forEach(h=>h.addEventListener('click',()=>openArticle(parseInt(h.dataset.a,10))));
+aClose.addEventListener('click',closeArticle);
+overlay.addEventListener('click',e=>{if(e.target===overlay)closeArticle();});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeArticle();});
+
+// ---------- THE DESK (anchor roster) ----------
+const ANCHORS=[
+ {av:"MR",name:"Marcus Reid",role:"Markets Anchor · NYSE Floor",bio:"Twenty years in front of a closing bell. Hosts Garbatrage Now and the mid-session tape. Treats every uptick like an achievement and every dip like a personality flaw."},
+ {av:"PS",name:"Priya Sharma",role:"Washington Bureau · Fed & Rates",bio:"Former policy wonk who made the jump to cable. Reads dot plots the way other people read novels, and can narrate a GDP release the way an auctioneer narrates a bid."},
+ {av:"TN",name:"Tessa Nguyen",role:"Economy & Data Reporter",bio:"Economist by training, storyteller by instinct. Writes the confidence index like a weather report for the national mood, and is rarely wrong about the forecast."},
+ {av:"OZ",name:"Omar Zayed",role:"Corporate Governance Desk",bio:"Charts proxy statements and comp tables for a living. Has strong feelings about vesting cliffs and is not afraid to use them in a broadcast."},
+ {av:"EM",name:"Elena Marsh",role:"Head of Research",bio:"Runs the desk that produces the basket, the calls, and the occasional apology letter. Believes the market rewards the patient and punishes the theatrical."},
+ {av:"DW",name:"Dana Whitfield",role:"Portfolio Strategy",bio:"Responsible for the firm's long-running thesis that value hides in unglamorous places. Calm, specific, and suspicious of anyone who yells about growth."},
+ {av:"JS",name:"Jake Sullivan",role:"Breakfast Anchor · Before The Open",bio:"Your alarm clock in a blazer. Pre-markets, futures, and the weather in commodity markets before most of you finish coffee. Never once late to the tape."},
+ {av:"CR",name:"Claire Reyes",role:"Debt & Fixed Income",bio:"Talks basis points like a second language and has correctly called four consecutive dot plots. Owns the yield-curve segment no one else wants."},
+];
+const deskGrid=document.getElementById('deskGrid');
+deskGrid.innerHTML=ANCHORS.map((a,i)=>`<div class="anchor reveal" data-anchor="${i}">
+  <div class="an-av">${a.av}</div>
+  <div class="an-name">${a.name}</div>
+  <div class="an-role">${a.role}</div>
+  <div class="an-bio">${a.bio}</div>
+  <div class="an-read">Profile ▶</div>
+</div>`).join('');
+// anchor bios reuse the article overlay with a bio layout
+function openAnchor(i){
+  const a=ANCHORS[i]; if(!a) return;
+  document.getElementById('aCat').textContent='On The Desk';
+  document.getElementById('aTitle').textContent=a.name;
+  document.getElementById('aDek').textContent=a.role;
+  document.getElementById('aAv').textContent=a.av;
+  document.getElementById('aName').textContent=a.name;
+  document.getElementById('aRole').textContent=a.role;
+  document.getElementById('aBody').innerHTML=`<p class="lead">${a.bio}</p><p>${a.name} sits on the ${a.role.split('·')[0].trim()} desk at Garbatrage. They are, like everyone here, an entirely fictional person doing entirely invented work for a publication that is itself a joke.</p><p>Garbatrage is a satirical financial-news site. Our anchors are not real people, our quotes are not real analysts, and all of our reporting is made up.</p>`;
+  document.getElementById('aTags').innerHTML='<span class="chip">Satire</span><span class="chip">Anchor Roster</span><span class="chip">Fictional</span>';
+  document.body.style.overflow='hidden';
+  overlay.classList.add('show');
+}
+deskGrid.addEventListener('click',e=>{
+  const a=e.target.closest('.anchor'); if(!a) return;
+  openAnchor(parseInt(a.dataset.anchor,10));
+});
+</script>
+</body>
+</html>
