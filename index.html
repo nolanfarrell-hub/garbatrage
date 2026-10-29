@@ -53,7 +53,9 @@ body{background:var(--bg);color:var(--text);font-family:'Archivo',sans-serif;-we
 
 /* ================= HERO / LIVE ================= */
 .hero{display:grid;grid-template-columns:2fr 1fr;gap:0;border-bottom:1px solid var(--line)}
-.segment{padding:26px;position:relative;background:radial-gradient(ellipse at 20% 0%,#123053 0%,#0b1e33 60%)}
+.segment{padding:0;position:relative;background:radial-gradient(ellipse at 20% 0%,#123053 0%,#0b1e33 60%)}
+.segment .hero-vis img{display:block;width:100%;height:auto;object-fit:cover}
+.segment .hero-txt{padding:12px 26px 26px}
 .seg-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
 .live-tag{display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--red)}
 .live-tag .rec{width:10px;height:10px;border-radius:50%;background:var(--red);animation:blink 1.2s infinite}
@@ -277,6 +279,8 @@ h3{transition:color .2s ease}
 <!-- HERO -->
 <div class="hero" id="markets">
   <div class="segment">
+    <div class="hero-vis"><img src="media/img/hero.png" alt=""/></div>
+    <div class="hero-txt">
     <div class="seg-top">
       <div class="live-tag"><div class="rec"></div>LIVE &nbsp;// GARBATRAGE NOW</div>
       <div class="stamp">Market Data · As Of Now</div>
@@ -287,6 +291,7 @@ h3{transition:color .2s ease}
     <div class="reporter">
       <div class="avatar">MR</div>
       <div><div class="nm">Marcus Reid</div><div class="by">Markets Anchor · New York</div></div>
+    </div>
     </div>
   </div>
 
