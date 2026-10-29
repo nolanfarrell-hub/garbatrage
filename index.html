@@ -128,7 +128,7 @@ h2.top{margin-bottom:22px;font-size:22px;line-height:1.2}
 footer{border-top:2px solid var(--brand);padding:40px 26px;background:var(--panel)}
 .foot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:1200px;margin:0 auto}
 .foot-col h4{font-size:12px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;font-family:'JetBrains Mono',monospace}
-.foot-col a,.foot-col p{display:block;color:var(--muted);text-decoration:none;font-size:13px;line-height:1.9}
+.foot-col a{display:block;color:var(--muted);text-decoration:none;font-size:13px;line-height:1.9;cursor:pointer}
 .foot-col a:hover{color:var(--white)}
 .foot-dis{max-width:1200px;margin:26px auto 0;font-size:11px;color:var(--faint);line-height:1.7;border-top:1px solid var(--line);padding-top:20px;font-family:'JetBrains Mono',monospace}
 .copyright{text-align:center;color:var(--faint);font-size:11px;margin-top:22px;font-family:'JetBrains Mono',monospace}
@@ -206,6 +206,16 @@ h3{transition:color .2s ease}
 .watch-info .wh{display:flex;align-items:center;gap:10px}
 .watch-info .wh .av{width:34px;height:34px;border-radius:50%;background:#123053;border:1px solid #2e4d73;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--brand);font-size:12px}
 @media(max-width:900px){.watch-grid{grid-template-columns:1fr}}
+/* ================= FOOTER REPLY MODAL ================= */
+.freply{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:34px 38px;max-width:430px;width:90vw;z-index:400;display:none;font-family:'Archivo',sans-serif;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.freply.show{display:block;animation:rise .25s ease}
+.freply .f-close{position:absolute;top:14px;right:18px;background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer;font-family:'JetBrains Mono',monospace}
+.freply .f-close:hover{color:var(--brand)}
+.freply .f-cat{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+.freply h3{font-size:20px;font-weight:800;color:var(--white);margin-bottom:12px}
+.freply p{font-size:14px;line-height:1.6;color:var(--muted)}
+.freply p b{color:var(--white)}
+.freply .f-tone{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--faint);margin-top:18px;text-transform:uppercase;letter-spacing:1px}
 </style>
 </head>
 <body>
@@ -428,6 +438,15 @@ h3{transition:color .2s ease}
   </article>
 </div>
 
+<!-- FOOTER REPLY -->
+<div class="freply" id="freply">
+  <button class="f-close" id="freplyClose" aria-label="Close">&times;</button>
+  <div class="f-cat" id="freplyCat"></div>
+  <h3 id="freplyTitle"></h3>
+  <p id="freplyBody"></p>
+  <div class="f-tone" id="freplyTone"></div>
+</div>
+
 <!-- WATCH -->
 <section class="watch" id="watch">
   <div class="inner">
@@ -458,16 +477,16 @@ h3{transition:color .2s ease}
 <footer id="community">
   <div class="foot-grid">
     <div class="foot-col">
-      <h4>Markets</h4><a href="#">Indexes</a><a href="#">Sectors</a><a href="#">Rates</a><a href="#">Calendar</a>
+      <h4>Markets</h4><a href="#" data-link="indexes">Indexes</a><a href="#" data-link="sectors">Sectors</a><a href="#" data-link="rates">Rates</a><a href="#" data-link="calendar">Calendar</a>
     </div>
     <div class="foot-col">
-      <h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Contact</a>
+      <h4>Company</h4><a href="#" data-link="about">About</a><a href="#" data-link="careers">Careers</a><a href="#" data-link="press">Press</a><a href="mailto:info@garbatrage.com" data-link="contact">Contact</a>
     </div>
     <div class="foot-col">
-      <h4>Resources</h4><a href="#">Newsletters</a><a href="#">Data</a><a href="#">Contributors</a><a href="#">Methodology</a>
+      <h4>Resources</h4><a href="#" data-link="newsletters">Newsletters</a><a href="#" data-link="data">Data</a><a href="#" data-link="contributors">Contributors</a><a href="#" data-link="methodology">Methodology</a>
     </div>
     <div class="foot-col">
-      <h4>Legal</h4><a href="#">Terms Of Service</a><a href="#">Privacy Policy</a><a href="#">Do Not Sell My Data</a><a href="#">Licensing</a>
+      <h4>Legal</h4><a href="#" data-link="terms">Terms Of Service</a><a href="#" data-link="privacy">Privacy Policy</a><a href="#" data-link="ccpa">Do Not Sell My Data</a><a href="#" data-link="licensing">Licensing</a>
     </div>
   </div>
   <div class="foot-dis">GARBATRAGE is a satirical publication, presented in the style of a professional financial news desk. All quotes, indexes, tickers and figures are fabricated, and any resemblance to real securities, people or firms is coincidental. Nothing herein is investment, legal or tax advice. Uncited statistics may have been invented to make a beat work. Please do your own research, consult a licensed advisor, and understand that markets carry risk.</div>
@@ -666,6 +685,43 @@ deskGrid.addEventListener('click',e=>{
   const a=e.target.closest('.anchor'); if(!a) return;
   openAnchor(parseInt(a.dataset.anchor,10));
 });
+
+// ---------- FOOTER REPLY ("why are you asking?") ----------
+const FREAD={
+ indexes:{cat:"Markets · Indexes",title:"Why are you asking about the indexes?",body:"Because we publish a number that moves. Nobody's been told what it means, and we'd like to keep it that way. Try the top of the page — the answer is the same, only bigger.",tone:"Mind your business"},
+ sectors:{cat:"Markets · Sectors",title:"Why are you asking about sectors?",body:"The sectors are fine. They were fine ten minutes ago, and they'll be fine tomorrow. What we're not going to do is sit here and narrate them for you.",tone:"Mind your business"},
+ rates:{cat:"Markets · Rates",title:"Why are you asking about rates?",body:"Because you clicked a link and found your way here. Rates do what rates do, which is mostly not much, slowly. Move along.",tone:"Mind your business"},
+ calendar:{cat:"Markets · Calendar",title:"Why are you asking about the calendar?",body:"It's a calendar. Of dates. Nothing on it has ever happened twice. If you're asking, you're probably on it, and we'd rather you weren't.",tone:"Mind your business"},
+ about:{cat:"Company · About",title:"Why are you asking about us?",body:"We're a satirical financial news publication. That's the whole answer. We've written it on every page and we are not going to write it a fifth time.",tone:"Mind your business"},
+ careers:{cat:"Company · Careers",title:"Why are you asking about careers?",body:"Interesting choice. Most people leave. We don't hire, we appoint, and even then only by handshake, and only if nobody asks questions like this one.",tone:"Mind your business"},
+ press:{cat:"Company · Press",title:"Why are you asking for press?",body:"Press is for things that happened. We publish things that mostly haven't. If you have a question, email it, don't ask it.",tone:"Mind your business"},
+ contact:{cat:"Company · Contact",title:"Why are you contacting us?",body:"Whatever it is, we probably don't have it. But if you insist, the form is in your email client — write to info@garbatrage.com. We may not read it. Good luck.",tone:"Mind your business"},
+ newsletters:{cat:"Resources · Newsletters",title:"Why are you asking about newsletters?",body:"Because you want our words in your inbox. Bold of you. There is one letter a week and it is exactly as long as it needs to be and no longer.",tone:"Mind your business"},
+ data:{cat:"Resources · Data",title:"Why are you asking about data?",body:"The data is on the screen. All of it. If it's not on the screen, it doesn't exist, and we'd kindly ask you not to insist otherwise.",tone:"Mind your business"},
+ contributors:{cat:"Resources · Contributors",title:"Why are you asking about contributors?",body:"Everyone who writes for us is fictional, including the ones we believe in. So to ask 'who' is to miss the point entirely.",tone:"Mind your business"},
+ methodology:{cat:"Resources · Methodology",title:"Why are you asking about methodology?",body:"Methodology would imply there's a method. There's a desk, a deadline, and a strong opinion about the weather. That's the whole thing.",tone:"Mind your business"},
+ terms:{cat:"Legal · Terms",title:"Why are you asking about the terms?",body:"The terms are: read it, don't act on it, don't sue us. You're a reasonable visitor visiting a joke. Act accordingly.",tone:"Mind your business"},
+ privacy:{cat:"Legal · Privacy",title:"Why are you asking about privacy?",body:"We barely know anything about you, and what we know we don't want. That's the privacy policy, in full, forever.",tone:"Mind your business"},
+ ccpa:{cat:"Legal · Do Not Sell",title:"Why are you asking about selling your data?",body:"Sell it? We couldn't give it away. Nobody wants to know who reads fake finance news, least of all us.",tone:"Mind your business"},
+ licensing:{cat:"Legal · Licensing",title:"Why are you asking about licensing?",body:"You want to license made-up headlines. That's a real business model, helpfully. The answer is no, unless you bring a very good story about a very large dog.",tone:"Mind your business"},
+};
+const freply=document.getElementById('freply');
+document.querySelectorAll('.foot-col a[data-link]').forEach(link=>{
+  link.addEventListener('click',e=>{
+    if(link.dataset.link!=='contact') e.preventDefault();
+    const key=link.dataset.link;
+    const r=FREAD[key];
+    if(!r) return;
+    document.getElementById('freplyCat').textContent=r.cat;
+    document.getElementById('freplyTitle').textContent=r.title;
+    document.getElementById('freplyBody').innerHTML=r.body;
+    document.getElementById('freplyTone').textContent='— '+r.tone+' —';
+    freply.classList.add('show');
+  });
+});
+document.getElementById('freplyClose').addEventListener('click',()=>freply.classList.remove('show'));
+freply.addEventListener('click',e=>{if(e.target===freply)freply.classList.remove('show');});
+addEventListener('keydown',e=>{if(e.key==='Escape')freply.classList.remove('show');});
 </script>
 </body>
 </html>
