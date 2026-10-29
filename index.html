@@ -639,13 +639,15 @@ const ANCHORS=[
  {av:"CR",name:"Claire Reyes",role:"Debt & Fixed Income",bio:"Talks basis points like a second language and has correctly called four consecutive dot plots. Owns the yield-curve segment no one else wants."},
 ];
 const deskGrid=document.getElementById('deskGrid');
-deskGrid.innerHTML=ANCHORS.map((a,i)=>`<div class="anchor reveal" data-anchor="${i}">
+deskGrid.innerHTML=ANCHORS.map((a,i)=>`<div class="anchor" data-anchor="${i}">
   <div class="an-av">${a.av}</div>
   <div class="an-name">${a.name}</div>
   <div class="an-role">${a.role}</div>
   <div class="an-bio">${a.bio}</div>
   <div class="an-read">Profile ▶</div>
 </div>`).join('');
+// desk cards are always visible (they are injected after the scroll-reveal
+// observer captures its node list, so relying on reveal would keep them invisible).
 // anchor bios reuse the article overlay with a bio layout
 function openAnchor(i){
   const a=ANCHORS[i]; if(!a) return;
