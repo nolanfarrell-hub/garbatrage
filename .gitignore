@@ -1,6 +1,8 @@
+# segment working folder + temp render assets (never commit these, they change daily)
 segment/
-*.mp3
-*.mp4
 frames/
 frames2/
 spot*/
+
+# chrome/Python artifacts
+*.mp3
