@@ -6,7 +6,7 @@
 <title>Garbatrage</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;900&family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#0b1e33; --panel:#0e2540; --panel2:#123053; --line:#1e3a5c;
@@ -15,7 +15,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
 /* ================= TICKER ================= */
 .ticker{background:#0b1e33;border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;position:relative}
@@ -31,7 +31,7 @@ body{background:var(--bg);color:var(--text);font-family:'Archivo',sans-serif;-we
 .topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 26px;border-bottom:1px solid var(--line);background:var(--bg)}
 .logo{display:flex;align-items:center;gap:14px}
 .logo .mark{flex-shrink:0}
-.logo .word{font-family:'Archivo Black',sans-serif;font-size:30px;letter-spacing:1px;color:var(--white)}
+.logo .word{font-family:'Libre Franklin',sans-serif;font-size:30px;letter-spacing:1px;color:var(--white)}
 .logo .word span{color:var(--brand)}
 .logo .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-left:4px}
 .nav{display:flex;gap:26px}
@@ -48,7 +48,7 @@ body{background:var(--bg);color:var(--text);font-family:'Archivo',sans-serif;-we
 
 /* ================= BREAKING ================= */
 .breaking{display:flex;align-items:center;gap:14px;background:#0b1e33;color:#ffffff;padding:10px 26px;border-bottom:1px solid #2e4d73}
-.breaking .label{font-family:'Archivo Black',sans-serif;font-size:13px;letter-spacing:2px;background:#c83e3e;color:#ffffff;padding:4px 12px}
+.breaking .label{font-family:'Libre Franklin',sans-serif;font-size:13px;letter-spacing:2px;background:#c83e3e;color:#ffffff;padding:4px 12px}
 .breaking .msg{font-weight:900;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
 
 /* ================= HERO / LIVE ================= */
@@ -61,7 +61,7 @@ body{background:var(--bg);color:var(--text);font-family:'Archivo',sans-serif;-we
 .live-tag .rec{width:10px;height:10px;border-radius:50%;background:var(--red);animation:blink 1.2s infinite}
 .stamp{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:2px}
 .kicker{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
-h1.headline{font-family:'Archivo Black',sans-serif;font-size:clamp(30px,4.5vw,56px);line-height:1.02;letter-spacing:-1px;color:var(--white);text-transform:uppercase}
+h1.headline{font-family:'Libre Franklin',sans-serif;font-size:clamp(30px,4.5vw,56px);line-height:1.02;letter-spacing:-1px;color:var(--white);text-transform:uppercase}
 h1.headline em{font-style:normal;color:var(--brand)}
 .dek{margin-top:18px;font-size:17px;line-height:1.5;color:var(--text);max-width:600px;font-weight:500}
 .reporter{margin-top:22px;display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--line)}
@@ -73,7 +73,7 @@ h1.headline em{font-style:normal;color:var(--brand)}
 .mkt-head{padding:20px 22px;border-bottom:1px solid var(--line)}
 .mkt-head .ttl{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px}
 .mkt-line{display:flex;align-items:baseline;gap:12px}
-.mkt-line .val{font-family:'Archivo Black',sans-serif;font-size:34px;color:var(--white)}
+.mkt-line .val{font-family:'Libre Franklin',sans-serif;font-size:34px;color:var(--white)}
 .mkt-line .chg{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;color:var(--up)}
 .sub-tabs{display:flex;gap:2px;padding:10px 0;border-bottom:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:11px}
 .sub-tabs>div{flex:1;text-align:center;padding:8px 0;color:var(--muted);letter-spacing:1px}
@@ -86,7 +86,7 @@ h1.headline em{font-style:normal;color:var(--brand)}
 
 /* ================= TICKER2 BAR ================= */
 .scroller{display:flex;align-items:center;gap:26px;padding:13px 26px;border-bottom:1px solid var(--line);background:var(--panel)}
-.scroller .label{font-family:'Archivo Black',sans-serif;font-size:11px;letter-spacing:2px;color:var(--brand);white-space:nowrap}
+.scroller .label{font-family:'Libre Franklin',sans-serif;font-size:11px;letter-spacing:2px;color:var(--brand);white-space:nowrap}
 .marquee{overflow:hidden;white-space:nowrap;flex:1;position:relative}
 .mq{display:inline-block;animation:mq 34s linear infinite}
 .mq span{display:inline-block;padding:0 30px;font-size:13px;color:var(--muted)}
@@ -112,7 +112,7 @@ h2.top{margin-bottom:22px;font-size:22px;line-height:1.2}
 .right{padding:30px 26px}
 .watch-card{border:1px solid var(--line);background:var(--panel);margin-bottom:26px;overflow:hidden}
 .watch-card .wc-head{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:var(--panel2);border-bottom:1px solid var(--line)}
-.watch-card .wc-head .t{font-family:'Archivo Black',sans-serif;font-size:14px;color:var(--white);letter-spacing:1px}
+.watch-card .wc-head .t{font-family:'Libre Franklin',sans-serif;font-size:14px;color:var(--white);letter-spacing:1px}
 .watch-card .wc-head .l{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--brand);text-transform:uppercase}
 .wc-body{padding:20px 18px;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:2}
 .wc-body .row{display:flex;justify-content:space-between;color:var(--muted)}
@@ -120,7 +120,7 @@ h2.top{margin-bottom:22px;font-size:22px;line-height:1.2}
 .gauge{height:6px;background:#1e3a5c;border-radius:3px;margin:4px 0 2px}
 .gauge>div{height:100%;background:var(--brand);border-radius:3px}
 .tickerbox{}
-.opinion{font-size:32px;line-height:1.1;font-family:'Archivo Black',sans-serif;color:var(--white);text-transform:uppercase;margin-bottom:14px}
+.opinion{font-size:32px;line-height:1.1;font-family:'Libre Franklin',sans-serif;color:var(--white);text-transform:uppercase;margin-bottom:14px}
 .opinion span{color:var(--brand)}
 .opname{font-size:13px;color:var(--muted);margin-bottom:26px}
 .quote{border-left:2px solid var(--brand);padding-left:16px;margin:24px 0;font-size:15px;line-height:1.6;color:var(--text)}
@@ -154,7 +154,7 @@ footer{border-top:2px solid var(--brand);padding:40px 26px;background:var(--pane
 .article .a-close{position:absolute;top:18px;right:22px;background:none;border:1px solid var(--line);color:var(--muted);font-family:'JetBrains Mono',monospace;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:15px;transition:all .2s}
 .article .a-close:hover{border-color:var(--brand);color:var(--brand)}
 .article .a-cat{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
-.article h2{font-family:'Archivo Black',sans-serif;font-size:clamp(24px,3.2vw,34px);line-height:1.1;color:var(--white);margin-bottom:16px}
+.article h2{font-family:'Libre Franklin',sans-serif;font-size:clamp(24px,3.2vw,34px);line-height:1.1;color:var(--white);margin-bottom:16px}
 .article .a-dek{font-size:17px;line-height:1.6;color:var(--text);margin-bottom:22px}
 .article .a-byline{display:flex;align-items:center;gap:12px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:26px}
 .article .a-av{width:38px;height:38px;border-radius:50%;background:#123053;border:1px solid #2e4d73;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--brand);font-size:13px}
@@ -179,7 +179,7 @@ footer{border-top:2px solid var(--brand);padding:40px 26px;background:var(--pane
 .desk{padding:40px 26px;border-top:1px solid var(--line);background:var(--panel) 0 0/cover}
 .desk .inner{max-width:1200px;margin:0 auto}
 .desk .desk-h{display:flex;align-items:center;gap:12px;margin-bottom:28px}
-.desk .desk-h .t{font-family:'Archivo Black',sans-serif;font-size:22px;color:var(--white);text-transform:uppercase}
+.desk .desk-h .t{font-family:'Libre Franklin',sans-serif;font-size:22px;color:var(--white);text-transform:uppercase}
 .desk .desk-h .l{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--brand);text-transform:uppercase;letter-spacing:2px}
 .desk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
 .anchor{background:var(--panel2);border:1px solid var(--line);padding:20px 18px;cursor:pointer;transition:border-color .2s ease,transform .2s ease;position:relative}
@@ -205,20 +205,20 @@ h3{transition:color .2s ease}
 .watch{padding:40px 26px;border-top:1px solid var(--line);background:var(--panel)}
 .watch .inner{max-width:1200px;margin:0 auto}
 .watch .desk-h{display:flex;align-items:center;gap:12px;margin-bottom:28px}
-.watch .desk-h .t{font-family:'Archivo Black',sans-serif;font-size:22px;color:var(--white);text-transform:uppercase}
+.watch .desk-h .t{font-family:'Libre Franklin',sans-serif;font-size:22px;color:var(--white);text-transform:uppercase}
 .watch .desk-h .l{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--brand);text-transform:uppercase;letter-spacing:2px}
 .watch-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
 .watch-frame{background:var(--bg);border:1px solid var(--line);border-radius:8px;overflow:hidden;position:relative}
 .watch-frame video{width:100%;display:block;background:#000}
 .watch-frame .rec{position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:8px;background:rgba(4,10,18,.7);padding:6px 12px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#ff5b4d;letter-spacing:1px;z-index:2}
 .watch-frame .rec .d{width:9px;height:9px;border-radius:50%;background:#c83e3e;animation:blink 1s infinite}
-.watch-info h3{font-family:'Archivo Black',sans-serif;font-size:24px;line-height:1.15;color:var(--white);margin-bottom:12px;text-transform:uppercase}
+.watch-info h3{font-family:'Libre Franklin',sans-serif;font-size:24px;line-height:1.15;color:var(--white);margin-bottom:12px;text-transform:uppercase}
 .watch-info p{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:18px}
 .watch-info .wh{display:flex;align-items:center;gap:10px}
 .watch-info .wh .av{width:34px;height:34px;border-radius:50%;background:#123053;border:1px solid #2e4d73;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--brand);font-size:12px}
 @media(max-width:900px){.watch-grid{grid-template-columns:1fr}}
 /* ================= FOOTER REPLY MODAL ================= */
-.freply{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:34px 38px;max-width:430px;width:90vw;z-index:400;display:none;font-family:'Archivo',sans-serif;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.freply{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:34px 38px;max-width:430px;width:90vw;z-index:400;display:none;font-family:'Inter',sans-serif;box-shadow:0 20px 60px rgba(0,0,0,.6)}
 .freply.show{display:block;animation:rise .25s ease}
 .freply .f-close{position:absolute;top:14px;right:18px;background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer;font-family:'JetBrains Mono',monospace}
 .freply .f-close:hover{color:var(--brand)}
@@ -474,7 +474,7 @@ h3{transition:color .2s ease}
       </div>
       <div class="watch-info">
         <h3>Today's Market Open</h3>
-        <p>The morning broadcast, fresh every day before the open. Headlines, the data, and one quietly mispriced thing we have agreed, as a desk, not to touch again. Deadpan, on time, and entirely fictional — say it with confidence and nobody checks.</p>
+        <p>The morning broadcast. Headlines, the data, and one quietly mispriced thing we have agreed, as a desk, not to touch again. Deadpan, on time, and entirely fictional — say it with confidence and nobody checks.</p>
         <div class="wh"><div class="av">MR</div><span style="color:var(--muted);font-size:13px">Marcus Reid &middot; Markets Anchor</span></div>
       </div>
     </div>
