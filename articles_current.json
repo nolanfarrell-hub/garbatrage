@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "kicker": "Markets · Mid-Session Commentary",
+    "headline": "Market Grinds Higher On <em>Absolutely Nothing</em>, And Analysts Call It The Most Honest Rally Of The Year",
+    "dek": "Equities climbed steadily through the session without a single identifiable catalyst, a condition the desk declined to frame as a problem on the theory that a market rising for no reason, rather than for a bad one, is by today's standards practically a confession. Strategists called the absence of a reason the most reassuring input of the quarter, and cautioned only that this was, itself, a reason, which they were choosing to ignore.",
+    "reporter_name": "Marcus Reid",
+    "reporter_avatar": "MR",
+    "reporter_by": "Markets Anchor · New York"
+  },
+  "articles": [
+    {
+      "cat": "Markets",
+      "title": "Quarterly Earnings Call Lasts A Record 52 Minutes Without Once Mentioning The Business, And Investors Call The Tone Confident",
+      "dek": "The call touched on strategy, culture, the macro backdrop and the chairman's golf handicap, then confirmed the company remains well-positioned before concluding. Analysts called it the most coherent session of the quarter, in the sense that nothing said could be verified, and therefore nothing said could be wrong.",
+      "name": "Marcus Reid",
+      "role": "Markets Anchor · NYSE Floor",
+      "av": "MR",
+      "image": "media/img/art0.png",
+      "tags": ["Earnings", "Conference Call", "Markets"],
+      "body": "<p class=\"lead\">I have sat through a lot of earnings calls, and I want to be very clear that I have never once been on a call where the company talked less about the thing the call was about, and I mean that as a compliment, because the minute they start telling you the actual numbers, you know something went wrong.</p><p>The call this morning ran 52 minutes. It opened with a tribute to the sales team, moved to a strategic word that appears in no dictionary, lingered on tailwinds, headwinds, and then, as a novelty, a crosswind, and it got all the way through without once answering the question everyone had dialed in to ask, which was whether the company still had a business. This, the chief financial officer explained, was the whole point.</p><p>Analysts on the line were not fooled, and said so, admiringly. They noted the tone was confident, which has now overtaken improving, constructive, and well-positioned as the highest praise a firm can give a company that has just said nothing for nearly an hour. They've mastered the form, one said, which means they've stopped pretending the form is about the numbers at all.</p><blockquote>A call that delivers no information is the safest call there is, because you cannot do a forensic accounting of a deck of cards you were never shown. I respect the discipline, is what I'm saying. Nobody respects a company that whispers the actual number — that's a tell.</blockquote><p>The stock was up 4% by the close. Not because of anything the company said, which was nothing, but because saying nothing, in a market this nervous, reads as confidence, and confidence, at this altitude, is a leveraged instrument. When the call ended, the company confirmed it would share more color next quarter, which is the same as confirming it will share the same color, in the same amounts, forever.</p>"
+    },
+    {
+      "cat": "Economy",
+      "title": "Economy Declared Healthy After The Median Household Begins Each Month Already Beating The Market",
+      "dek": "Data out this morning showed the median household now commits roughly 104% of its monthly income before that income arrives, a condition the Bureau calibrated, with only minor hesitation, as healthy, on the reasoning that a 4% overhang is best read as the family front-loading confidence in its own future.",
+      "name": "Tessa Nguyen",
+      "role": "Economy & Data Reporter",
+      "av": "TN",
+      "image": "media/img/art1.png",
+      "tags": ["Economy", "Household Data", "Earnings"],
+      "body": "<p class=\"lead\">New numbers this morning, and they are good numbers, which is to say they are numbers, and in this economy we have learned to be grateful for that. The median household, the Bureau reports, now out-earns nothing, out-saves nothing, and out-forecasts rent by about eleven days, which it begs us to consider a form of financial literacy.</p><p>The Bureau's chief economist walked reporters through the headline figure — 104%, the share of income the average family now commits before the income arrives. He described the overhang as optionality, noting that a household which has already spent next month is a household which has already decided next month is worth believing in, and that this, and only this, is what the markets mean by conviction.</p><p>Asked whether the numbers could be read, in any light, as alarming, he was firm. You are applying a consumer's logic to a structural phenomenon, he said. The household is not behind. It is early. It is front-loaded into its own future. If anything, I am impressed by its discipline in not borrowing more.</p><blockquote>A 4% gap between what a family has and what a family needs is not a problem; it is a latency. The market would be lost without latency. I would argue the family has simply downloaded its own second half.</blockquote><p>Asked what would fix the imbalance, the Bureau listed three things, declined to say them out loud, then described them as forthcoming, a word it used four more times before running out of questions and, shortly after, a spokesperson. The index closes at its highest level of the year.</p>"
+    },
+    {
+      "cat": "Federal Reserve",
+      "title": "Federal Reserve Announces It Has Thoroughly Considered The Situation, And Has Chosen, Once Again, To Consider It",
+      "dek": "Policymakers delivered their decision this afternoon: to remain where they are, having re-read, for the third time this quarter, the same three paragraphs about the same three risks, and having confirmed, to their own satisfaction, that the answer to every question is that the answer is forthcoming.",
+      "name": "Priya Sharma",
+      "role": "Washington Bureau · Fed & Rates",
+      "av": "PS",
+      "image": "media/img/art2.png",
+      "tags": ["Federal Reserve", "Rates", "Policy"],
+      "body": "<p class=\"lead\">At two o'clock the Federal Reserve did the single most powerful thing a central bank can do, which is to absolutely nothing, and it did it beautifully, with conviction, and at a podium, and with a statement that read, in full, like a person explaining why they have decided not to decide.</p><p>The decision — to keep rates unchanged pending further consideration — surprised no one, because the decision a month ago was also to keep rates unchanged pending further consideration, and the decision before that was to consider considering it. What surprised observers was the tone. The Fed described its own inaction as decisive patience, a phrase that has since been adopted by everyone who has ever been late to anything on purpose.</p><p>The post-meeting press conference ran 47 minutes and answered twelve questions by restating the other twelve questions. Asked about inflation, the Chair confirmed the Fed was watching. Asked about the labor market, that it was monitoring. Asked about the difference between watching and monitoring, the Chair thanked the questioner for their engagement and asked if there were other questions, which there were not, though many were raised.</p><blockquote>Doing nothing is only embarrassing if you also move. Our people have perfected staying perfectly still while describing the view, and the view is always, legally, fine.</blockquote><p>Markets rallied on the news, as they always do, because nothing the Fed does is more reassuring than the Fed deciding, at length, to do nothing, which it is now monumentally good at. The next decision is scheduled for a date that is, per the calendar and the Fed both, forthcoming.</p>"
+    },
+    {
+      "cat": "Real Assets",
+      "title": "Real Estate Trust Lists The Air Above Its Building As A Class-AAA Asset, Notes The Sky Has Finally Been Priced",
+      "dek": "Following what it calls a full evaluation of the vertical asset class, the trust has placed a portion of the sky directly above its flagship tower on the balance sheet, assigning it investment-grade credit on the theory that the air, unlike the tenants, has never once missed a payment.",
+      "name": "Omar Zayed",
+      "role": "Corporate Governance Desk",
+      "av": "OZ",
+      "image": "media/img/art3.png",
+      "tags": ["Real Estate", "Asset Class", "Balance Sheet"],
+      "body": "<p class=\"lead\">Somebody finally did it, and by it I mean they put the sky on a balance sheet, and I have to tell you the accounting is flawless in the way that only accounting that is not about anything real can be, which is to say it checks out, internally, completely, forever.</p><p>The trust's annual filing, out this morning, dedicates three pages to a new asset class it calls Class-AAA Air. Management explains that the space directly above the flagship property — currently occupied by weather and, management believes, a migrating hawk worth marking to market — has never once defaulted, never once missed a rent cycle, and, critically, never once complained, which is more than it can say for any other asset on the books.</p><p>Valuation was not the challenge, the filing notes. The challenge was finding a discount rate for a theme. Management solved this by assigning the air a beta of zero — you cannot go down, it reasons, if you were never up — and by observing that the air is, as a physical matter, essentially incompressible, which it is treating as an SEC-preferred synonym for non-cyclical.</p><blockquote>Everyone laughed at the air, and everyone laughed at the guy who bought the air, and then the guy who bought the air bought the laughs too, because nobody had priced laughter either. The thesis is that nothing is mispriced except everything.</blockquote><p>Analysts, caught off guard only in the sense that they have run out of ways to be caught off guard, have already penciled in a Buy on the sky, citing its strong fundamental of not being on the ground. The company declined to confirm any plan to raise rent on the weather, but did note the weather is currently on month-to-month.</p>"
+    },
+    {
+      "cat": "Investing",
+      "title": "Your Advisor Has Prepared A Seven-Hour Seminar On Why Not Knowing The Fees Is Actually A Form Of Wealth",
+      "dek": "A white paper circulating through the advisory world argues that a client who does not know what they are paying cannot properly value what they are receiving, and that this ignorance should be understood not as confusion but as a deliberate, tax-efficient position.",
+      "name": "Dana Whitfield",
+      "role": "Portfolio Strategy",
+      "av": "DW",
+      "image": "media/img/art4.png",
+      "tags": ["Advice", "Fees", "Investing"],
+      "body": "<p class=\"lead\">There is a seminar going around, and it is seven hours long, and by hour two the presenter will have convinced you that the fee you do not know about is the most valuable thing you own, because you cannot lose money on a number you never saw, which, if you think about it too long, is the entire basis of the platform.</p><p>The paper, titled On The Ontology Of The Unrevealed Fee and written, notably, by the people who would be receiving the fee, argues that full disclosure is for retailers — a class it uses with the affection other people reserve for statistics. The informed client is a stressed client, it reads, and a stressed client is a churner, and a churner is a liability. The serene client, blissfully uninformed, is a hold.</p><p>The seminar walks attendees through a framework it calls the three doors of advice: the fee behind door one, the fee behind door two, and, behind door three, a summary of fees it describes frankly as a ceremonial object. Critics note the seminar is free to attend, which the paper cites as proof that the industry is not extracting value, merely reallocating it.</p><blockquote>You cannot audit a fee you were never told about in a timeline you did not request. This is not a loophole. This is the whole craft. Twelve years and nobody has ever produced a statement — mine included.</blockquote><p>By hour seven the audience has normally concluded it has been, at minimum, managed, which the presenter reframes as peace of mind, and the paper closes by recommending clients re-read it annually, on the reasonable theory that understanding you are being charged slightly less is not a raise but is, strictly speaking, close enough.</p>"
+    },
+    {
+      "cat": "Fixed Income",
+      "title": "Guaranteed Return Bond Ships With An Asterisk Large Enough That It Contains Its Own ZIP Code",
+      "dek": "The offering's headline promised 8% guaranteed by management, a phrase that, on page 147, turns out to be guaranteed by a reserve fund that is itself guaranteed by the same management, which is guaranteed, in turn, by a smaller fund that is guaranteed by the asterisk.",
+      "name": "Claire Reyes",
+      "role": "Debt & Fixed Income",
+      "av": "CR",
+      "image": "media/img/art5.png",
+      "tags": ["Fixed Income", "Fine Print", "Bonds"],
+      "body": "<p class=\"lead\">The document was 180 pages, and I am not going to pretend I read page one before page 180, because nobody does, and this particular bond is priced for the people who read the headline, and this headline had an asterisk the size of a small state, and you do not put a state-sized asterisk on a guarantee unless the guarantee is, in some sense, weather.</p><p>The offering's cover promises a return guaranteed by management, which reads cleanly until you find, tucked in the second-to-last footnote — itself tucked in a footnote — that the guarantee is collateralized by a reserve fund, that the reserve fund is guaranteed by the same management, and that the whole arrangement is backed by the board, which the document defines, helpfully, as the board.</p><p>Fixed-income analysts have flagged the disclosure's total structural soundness, noting with admiration that you cannot default on a promise you have already deferred, and that the bond's actual credit risk is now lower than the risk that a human being will ever read the asterisk, a risk they estimate at zero after seven independent studies, none of which read the asterisk.</p><blockquote>A guarantee is only as good as the person guaranteeing it, and when that person is also the collateral, and the collateral is also the spirit of the agreement, you have achieved what we call a full circle, which is finance for someone is holding cash.</blockquote><p>Management confirmed the bond is the safest product we have ever sold, a claim it makes of all its products, and declined to specify whether safe referred to the return or to the certainty that the matter will never be resolved. The asterisk, for its part, was unavailable for comment, which some analysts are choosing, optimistically, to read as a statement.</p>"
+    }
+  ]
+}
