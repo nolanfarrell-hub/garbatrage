@@ -162,3 +162,12 @@ footer a:hover{color:var(--ink)}
 
 .news .btn{display:inline-block;border:1px solid var(--cream);background:var(--cream);color:var(--ink);padding:9px 16px;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;text-decoration:none}
 .news .btn:hover{background:var(--ox);border-color:var(--ox);color:var(--cream)}
+
+.roster{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:10px}
+.anchor{border:1px solid var(--rule);background:var(--cream);padding:16px}
+.an-av{width:40px;height:40px;border:1px solid var(--rule);display:grid;place-items:center;font-weight:700;color:var(--ox);background:var(--paper);margin-bottom:10px;font-size:12px}
+.an-nm{font-family:'Abril Fatface',serif;font-size:18px;line-height:1.1}
+.an-role{font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:var(--ox);margin:4px 0 8px}
+.an-bio{font-size:12px;line-height:1.55;color:#3d3a34}
+.an-filed{font-size:9px;letter-spacing:1.3px;text-transform:uppercase;color:var(--mute);margin-top:10px;border-top:1px solid var(--rule);padding-top:8px}
+@media(max-width:560px){.roster{grid-template-columns:1fr}}

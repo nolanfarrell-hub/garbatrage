@@ -11,6 +11,7 @@ SITE = "https://garbatrage.com"
 gia = json.loads((ROOT / "data/gia.json").read_text())
 stories = sorted(json.loads((ROOT / "data/stories.json").read_text()),
                  key=lambda s: s["date"], reverse=True)
+anchors = json.loads((ROOT / "data/anchors.json").read_text())
 cons = gia["constituents"]
 
 def esc(s): return html.escape(str(s), quote=True)
@@ -46,7 +47,7 @@ def layout(title, desc, body, canonical):
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 </head><body><div class="wrap">
-<div class="bar"><a href="/">Garbatrage</a><span class="back"><a href="/markets/">Markets</a> · <a href="/archive/">Archive</a></span></div>
+<div class="bar"><a href="/">Garbatrage</a><span class="back"><a href="/markets/">Markets</a> · <a href="/desk/">The Desk</a> · <a href="/archive/">Archive</a></span></div>
 <div class="tape">{TAPE}</div>
 {body}
 </div></body></html>"""
@@ -159,7 +160,8 @@ def build_feeds():
             f"{SITE}/methodology/", f"{SITE}/terms.html", f"{SITE}/privacy.html"]
     urls += [f"{SITE}/company/{c['ticker'].lower()}/" for c in cons]
     urls += [f"{SITE}/sector/{slugify(s)}/" for s in gia["sectors"]]
-    urls += [f"{SITE}/desk/{d}/" for d in DESKS]
+    urls.append(f"{SITE}/desk/")
+    urls += [f"{SITE}/desk/{dslug}/" for dslug in DESKS]
     urls += [f"{SITE}/story/{s['slug']}/" for s in stories]
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     write("sitemap.xml",
@@ -263,6 +265,22 @@ def build_desk(desk):
           layout(f"{label} · Garbatrage", f"{label} coverage from Garbatrage.",
                  body, f"{SITE}/desk/{desk}/"))
 
+def build_roster():
+    cards = "".join(
+        f'<div class="anchor"><div class="an-av">{av(a["name"])}</div>'
+        f'<div class="an-nm">{esc(a["name"])}</div>'
+        f'<div class="an-role">{esc(a["role"])}</div>'
+        f'<p class="an-bio">{esc(a["bio"])}</p>'
+        f'<div class="an-filed">{sum(1 for s in stories if s["author"] == a["name"])} pieces filed</div></div>'
+        for a in anchors)
+    body = (f'<div class="kick">The Desk</div><h1>Who files.</h1>'
+            f'<p class="lede">Eight bylines, one desk, no real people. Every one of them is invented and every one of them would tell you otherwise.</p>'
+            f'<div class="roster">{cards}</div>'
+            f'<p class="lede" style="margin-top:22px">All eight are fictional. The work is not.</p>{DISC_INDEX}')
+    write("desk/index.html",
+          layout("The Desk · Garbatrage", "The Garbatrage anchor roster — eight fictional bylines.",
+                 body, f"{SITE}/desk/"))
+
 # ---------- run ----------
 if OUT.exists():
     shutil.rmtree(OUT)
@@ -282,6 +300,7 @@ for d in DESKS:
     build_desk(d)
 build_archive()
 build_home()
+build_roster()
 build_feeds()
 shutil.copytree(ROOT / "static", OUT, dirs_exist_ok=True)
 print(f"built {len(stories)} stories, {len(cons)} companies, {len(gia['sectors'])} sectors")
