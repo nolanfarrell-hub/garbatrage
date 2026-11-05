@@ -145,6 +145,31 @@ os.makedirs(os.path.join(STATIC,"methodology"),exist_ok=True)
 open(os.path.join(STATIC,"methodology","index.html"),"w").write(
     layout("Methodology · Garbatrage","How the index is built, and how the stories are made.", meth, f"{SITE}/methodology/"))
 print("wrote static/methodology/index.html")
+# ---- Press (static/press/index.html) ----
+press_body = ('<div class="kick">Company · Press</div>'
+ '<h1>Press</h1>'
+ '<p class="lede">Press is for things that happened. We publish things that mostly haven\'t. '
+ 'If you need to describe us anyway, use the language below and don\'t improve it.</p>'
+ '<h2>Boilerplate</h2>'
+ '<p>Garbatrage is a satirical financial publication covering a fictional market, reported straight. '
+ 'It publishes the Garbatrage Industrial Average, a fictional twenty-five-company index, alongside real '
+ 'market prices in its tape. Founded 2026. Independently owned by Garbatrage Media Group LLC.</p>'
+ '<h2>The one thing to get right</h2>'
+ '<p>We are satire, not analysis. Anything quoted from us should be attributed as such, and should not be '
+ 'presented as fact or as advice. A link is appreciated and a "satire" tag is not optional.</p>'
+ '<h2>Assets</h2>'
+ '<p>Mark, wordmark and colour references: <a href="mailto:info@garbatrage.com?subject=Press%20assets">request by email</a>. '
+ 'Please don\'t redraw the mark or set the name in a font we don\'t use.</p>'
+ '<h2>Enquiries</h2>'
+ '<p><a href="mailto:info@garbatrage.com">info@garbatrage.com</a> — subject line "Press." '
+ 'We answer press faster than we answer anything else, which is a failing and we know it.</p>'
+ '<div class="disc">GARBATRAGE is a satirical publication. All quotes, indexes, tickers and figures '
+ 'are fabricated. Nothing herein is investment advice.</div>')
+os.makedirs(os.path.join(STATIC,"press"),exist_ok=True)
+open(os.path.join(STATIC,"press","index.html"),"w").write(
+    layout("Press · Garbatrage","Press for a satirical financial publication.", press_body, f"{SITE}/press/"))
+print("wrote static/press/index.html")
+
 # ---- 404 ----
 four_body = ('<div class="kick">Error</div>'
  '<h1>Nothing here.</h1>'

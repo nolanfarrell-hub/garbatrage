@@ -114,7 +114,7 @@ def build_company(c, i):
 def listing(title, desc, groups, url, active):
     chips = '<a href="/markets/"' + (' class="on"' if active == "all" else "") + '>All</a>'
     chips += "".join(
-        f'<a href="/{slugify(s)}/"' + (' class="on"' if slugify(s) == slugify(active) else "") + f'>{esc(s)}</a>'
+        f'<a href="/sector/{slugify(s)}/"' + (' class="on"' if slugify(s) == slugify(active) else "") + f'>{esc(s)}</a>'
         for s in gia["sectors"])
     blocks = ""
     for sector, rows in groups:
@@ -130,7 +130,7 @@ def listing(title, desc, groups, url, active):
 <p class="lede">{esc(desc)}</p>
 <div class="summary"><b>38,221.07</b><span class="ch dn">▼ 321.44 (-0.83%)</span><span class="n">Fictional index</span></div>
 <div class="chips">{chips}</div>{blocks}{DISC_INDEX}"""
-    write(("markets" if active == "all" else slugify(active)) + "/index.html",
+    write(("markets" if active == "all" else f"sector/{slugify(active)}") + "/index.html",
           layout(f"{title} · Garbatrage", desc, body, url))
 
 # ---------- archive ----------
@@ -158,7 +158,8 @@ def build_feeds():
     urls = [f"{SITE}/", f"{SITE}/markets/", f"{SITE}/archive/", f"{SITE}/about/",
             f"{SITE}/methodology/", f"{SITE}/terms.html", f"{SITE}/privacy.html"]
     urls += [f"{SITE}/company/{c['ticker'].lower()}/" for c in cons]
-    urls += [f"{SITE}/{slugify(s)}/" for s in gia["sectors"]]
+    urls += [f"{SITE}/sector/{slugify(s)}/" for s in gia["sectors"]]
+    urls += [f"{SITE}/desk/{d}/" for d in DESKS]
     urls += [f"{SITE}/story/{s['slug']}/" for s in stories]
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     write("sitemap.xml",
@@ -188,7 +189,7 @@ QUOTES = [
 ]
 
 FOOTER = """<footer><div class="fg">
-<div><h4>Markets</h4><a href="/markets/">Indexes</a><a href="/archive/">Archive</a><a href="/rates/">Rates</a></div>
+<div><h4>Markets</h4><a href="/markets/">Indexes</a><a href="/archive/">Archive</a><a href="/desk/rates/">Rates</a></div>
 <div><h4>Company</h4><a href="/about/">About</a><a href="/press/">Press</a><a href="mailto:info@garbatrage.com">Contact</a></div>
 <div><h4>Resources</h4><a href="/methodology/">Methodology</a><a href="/archive/">All stories</a><a href="/rss.xml">RSS</a></div>
 <div><h4>Legal</h4><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></div>
@@ -248,6 +249,23 @@ def build_home():
                  "Deadpan financial satire. A fictional market, reported straight, every weekday.",
                  body, f"{SITE}/"))
 
+# ---------- desks ----------
+DESKS = ["markets", "rates", "etfs", "hauling", "earnings", "estate"]
+
+def build_desk(desk):
+    rows = "".join(
+        f'<div class="entry"><div class="d">{day(s["date"])}</div>'
+        f'<a href="/story/{s["slug"]}/"><h3>{esc(s["title"])}</h3>'
+        f'<div class="m">{esc(s["author"])}</div></a></div>'
+        for s in stories if s["desk"].lower() == desk)
+    label = desk.capitalize()
+    body = (f'<div class="kick">Desk</div><h1>{label}</h1>'
+            f'<p class="lede">Every piece filed to the {label} desk.</p>'
+            f'{rows or "<p>Nothing filed yet.</p>"}{DISC_INDEX}')
+    write(f"desk/{desk}/index.html",
+          layout(f"{label} · Garbatrage", f"{label} coverage from Garbatrage.",
+                 body, f"{SITE}/desk/{desk}/"))
+
 # ---------- run ----------
 if OUT.exists():
     shutil.rmtree(OUT)
@@ -262,7 +280,9 @@ listing("The Garbatrage Industrial Average",
 for s in gia["sectors"]:
     listing(s, f"{s} constituents of the Garbatrage Industrial Average.",
             [(s, [c for c in cons if c["sector"] == s])],
-            f"{SITE}/{slugify(s)}/", s)
+            f"{SITE}/sector/{slugify(s)}/", s)
+for d in DESKS:
+    build_desk(d)
 build_archive()
 build_home()
 build_feeds()
