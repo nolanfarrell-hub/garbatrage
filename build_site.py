@@ -177,6 +177,77 @@ def build_feeds():
           f'<link>{SITE}/</link><description>Markets. Money. Mischief.</description>{items}</channel></rss>',
           raw=True)
 
+# ---------- home ----------
+QUOTES = [
+    ("Diversification is the practice of making every mistake at once, and then being unable to blame a single one, which we regard as the whole of risk management.",
+     "Elena Marsh", "Head of Research"),
+    ("We are asked constantly what we are selling. The honest answer is the thesis, which we sold to ourselves two quarters ago at a premium.",
+     "Dana Whitfield", "Portfolio Strategy"),
+    ("The market does not want a decision; it wants a building that has not decided.",
+     "Marcus Reid", "Markets Anchor"),
+]
+
+FOOTER = """<footer><div class="fg">
+<div><h4>Markets</h4><a href="/markets/">Indexes</a><a href="/archive/">Archive</a><a href="/rates/">Rates</a></div>
+<div><h4>Company</h4><a href="/about/">About</a><a href="/press/">Press</a><a href="mailto:info@garbatrage.com">Contact</a></div>
+<div><h4>Resources</h4><a href="/methodology/">Methodology</a><a href="/archive/">All stories</a><a href="/rss.xml">RSS</a></div>
+<div><h4>Legal</h4><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></div>
+</div><div class="legal">GARBATRAGE is a satirical publication presented in the style of a professional financial news desk.
+All quotes, indexes, tickers and figures are fabricated; any resemblance to real securities, people or firms is coincidental.
+Nothing herein is investment, legal or tax advice. © Garbatrage Media Group LLC. Not a registered investment adviser.</div></footer>"""
+
+def build_home():
+    lead = stories[0]
+    briefs = stories[1:7]
+    movers = sorted(cons, key=lambda c: c["change"], reverse=True)[:3]
+    q, qn, qr = QUOTES[datetime.now().toordinal() % len(QUOTES)]
+    rail_rows = "".join(
+        f'<div class="row"><span>{esc(c["ticker"])}</span>'
+        f'<b class="{"up" if c["change"] >= 0 else "dn"}">{c["change"]:+.1f}%</b></div>'
+        for c in movers)
+    brief_html = "".join(
+        f'<a class="item" href="/story/{s["slug"]}/"><div class="thumb"></div><div>'
+        f'<h3>{esc(s["title"])}</h3><p>{esc(s["dek"])}</p>'
+        f'<div class="meta">{esc(s["desk"])} · {esc(s["author"])}</div></div></a>'
+        for s in briefs)
+    body = f"""
+<main class="home">
+<div class="col">
+  <div class="kick">{esc(lead["desk"])}</div>
+  <h1><a href="/story/{lead["slug"]}/">{esc(lead["title"])}</a></h1>
+  <p class="dek">{esc(lead["dek"])}</p>
+  <a class="hero" href="/story/{lead["slug"]}/"></a>
+  <div class="by"><span class="av">{esc(lead.get("av") or av(lead["author"]))}</span>
+    <span><b>{esc(lead["author"])}</b> · {esc(lead.get("role", ""))} · {lead.get("read", 4)} min read</span></div>
+  <div class="sec">Markets Brief</div>
+  {brief_html}
+</div>
+<aside class="rail">
+  <div class="panel">
+    <div class="ph"><span>Garbatrage Industrial Avg</span><span>GIA</span></div>
+    <div class="pb">
+      <div class="big">38,221.07 <span>▼321.44 (-0.83%)</span></div>
+      <div class="sub">Down on mixed hauling volumes</div>
+      <div style="margin-top:10px">{rail_rows}</div>
+    </div>
+    <div class="disc">GIA is a proprietary index of hand-picked mid-value securities. Not a real benchmark. Not investment advice.</div>
+  </div>
+  <div class="quote">“{esc(q)}”<i>{esc(qn)} · {esc(qr)}</i></div>
+</aside>
+</main>
+<div class="news"><div class="nin">
+  <div><h2>The Morning Dump</h2><p>Six headlines and one quietly mispriced thing, every weekday at 6:40.</p></div>
+  <form action="/subscribe" method="post">
+    <input type="email" name="email" placeholder="you@work.com" required aria-label="Email">
+    <button type="submit">Subscribe</button>
+  </form>
+</div></div>
+{FOOTER}"""
+    write("index.html",
+          layout("Garbatrage · Markets. Money. Mischief.",
+                 "Deadpan financial satire. A fictional market, reported straight, every weekday.",
+                 body, f"{SITE}/"))
+
 # ---------- run ----------
 if OUT.exists():
     shutil.rmtree(OUT)
@@ -193,6 +264,7 @@ for s in gia["sectors"]:
             [(s, [c for c in cons if c["sector"] == s])],
             f"{SITE}/{slugify(s)}/", s)
 build_archive()
+build_home()
 build_feeds()
 shutil.copytree(ROOT / "static", OUT, dirs_exist_ok=True)
 print(f"built {len(stories)} stories, {len(cons)} companies, {len(gia['sectors'])} sectors")
