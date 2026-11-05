@@ -6,32 +6,843 @@
     "note": "Proprietary. Not a benchmark. Not investment advice.",
     "composition": "Hand-picked mid-value securities, rebalanced when someone remembers"
   },
-  "sectors": ["Hauling", "Recycling", "Landfill", "Materials", "Composting", "Real Estate", "Consumer", "Industrials", "Services", "Financials"],
+  "sectors": [
+    "Hauling",
+    "Recycling",
+    "Landfill",
+    "Materials",
+    "Composting",
+    "Real Estate",
+    "Consumer",
+    "Industrials",
+    "Services",
+    "Financials"
+  ],
   "constituents": [
-    {"ticker":"TRSH","name":"Trash & Sons","sector":"Hauling","cap":"$412M","ceo":"Wendell Trash III","founded":1908,"hq":"Gary, IN","business":"Third-generation residential collection. The sons are named Trash; the founder was not.","filing":"8-K — announces fourth son","quote":"We are a family business in the sense that nobody can leave."},
-    {"ticker":"BYTBN","name":"Byte Bin","sector":"Recycling","cap":"$1.9B","ceo":"Priyanka Rao","founded":2016,"hq":"San Jose, CA","business":"Certified e-waste destruction for enterprises that need the certificate more than the destruction.","filing":"10-Q — margin compression in the certificate line","quote":"The hardware is the easy part. The paperwork is the moat."},
-    {"ticker":"MJNK","name":"Morning Junk","sector":"Consumer","cap":"$38M","ceo":"Dale Ostrowski","founded":2019,"hq":"Tampa, FL","business":"Curbside bulk pickup sold as a subscription. Markets itself as a lifestyle brand to people with too much furniture.","filing":"S-1 — fourth attempt","quote":"We are not a hauling company. We are a Saturday."},
-    {"ticker":"STBL","name":"Stable Value, Inc","sector":"Financials","cap":"$6.4B","ceo":"Marguerite Bell","founded":1971,"hq":"Hartford, CT","business":"Money-market administration. Has never had an exciting quarter and mentions this in every deck.","filing":"DEF 14A — board re-nominated unanimously, again","quote":"We sell the absence of a story."},
-    {"ticker":"HYST","name":"Hysterical Systems","sector":"Industrials","cap":"$890M","ceo":"Rob Cuskelly","founded":2004,"hq":"Akron, OH","business":"Compactor and baler maintenance for retail chains. On-call, 24 hours, with a two-hour SLA nobody believes.","filing":"8-K — CFO departs, cites the SLA","quote":"Everyone is calm until the baler stops."},
-    {"ticker":"BINN","name":"Bin There Holdings","sector":"Hauling","cap":"$233M","ceo":"Tobias Lund","founded":1998,"hq":"Duluth, MN","business":"Roll-off container rental for construction. Name is a pun and the company is aware.","filing":"10-K — fleet age disclosed for the first time, stock falls","quote":"We've been Bin There. It's on the trucks. It's not going anywhere."},
-    {"ticker":"SKIP","name":"Skip & Sons Hauling","sector":"Hauling","cap":"$97M","ceo":"Skip Duross","founded":1982,"hq":"Scranton, PA","business":"Commercial roll-off and demolition debris. The sons are not involved and this is discussed at every shareholder meeting.","filing":"DEF 14A — shareholder proposal on succession, defeated","quote":"The sons have their own thing."},
-    {"ticker":"CURB","name":"Curbline Logistics","sector":"Hauling","cap":"$540M","ceo":"Adeola Bankole","founded":2011,"hq":"Atlanta, GA","business":"Route optimisation software sold to haulers, plus a small fleet used as a reference customer.","filing":"10-Q — reference fleet costs exceed software revenue","quote":"We are our own worst client and our best case study."},
-    {"ticker":"DMPR","name":"Dumpster Dynamics","sector":"Industrials","cap":"$1.2B","ceo":"Vince Marchetti","founded":1969,"hq":"Newark, NJ","business":"Manufactures the containers. Sells almost entirely to the same haulers who compete for the containers.","filing":"10-K — steel input costs, fourth consecutive warning","quote":"Everyone needs a box. Nobody wants to buy one."},
-    {"ticker":"LANF","name":"Landfill Capital","sector":"Landfill","cap":"$11.3B","ceo":"Harriet Ngo","founded":1988,"hq":"Houston, TX","business":"Owns the holes. Leases airspace by the ton. Reports remaining capacity the way a mine reports reserves.","filing":"10-K — airspace life extends to 41 years","quote":"We are a real estate company with a smell."},
-    {"ticker":"SCRP","name":"Scrapbook Materials","sector":"Materials","cap":"$764M","ceo":"Ivan Petrov","founded":1954,"hq":"Youngstown, OH","business":"Ferrous and non-ferrous brokerage. The name has caused forty years of stationery jokes.","filing":"8-K — acquires a smaller broker with a normal name","quote":"We bought them for the name. Partly."},
-    {"ticker":"PLUP","name":"Pulp & Patience","sector":"Materials","cap":"$302M","ceo":"Renée Aubert","founded":1931,"hq":"Bangor, ME","business":"Recovered fibre. The patience refers to the permitting.","filing":"10-Q — mill restarts after 14 months idle","quote":"Nothing in this business is fast except the pulp."},
-    {"ticker":"ROT","name":"Rota Composting","sector":"Composting","cap":"$156M","ceo":"Sam Okonkwo","founded":2013,"hq":"Portland, OR","business":"Municipal organics processing. Odour complaints are the primary KPI and are reported quarterly.","filing":"10-K — complaint volume down 12%, stock up 9%","quote":"Our best quarter was a quiet one."},
-    {"ticker":"ODR","name":"Odor Neutral","sector":"Services","cap":"$88M","ceo":"Lainey Fisk","founded":2009,"hq":"Charlotte, NC","business":"Enzyme treatment for transfer stations. Sells to exactly the operators who generate the complaints.","filing":"10-Q — customer concentration, top three are 61% of revenue","quote":"We are a hedge against Rota's KPI."},
-    {"ticker":"GLLT","name":"Gull Trust","sector":"Financials","cap":"$2.1B","ceo":"Peter Van Dorn","founded":1994,"hq":"Boston, MA","business":"Royalty trust holding a share of landfill gas rights. Pays monthly, explains nothing.","filing":"10-K — distribution maintained","quote":"The trust does not give guidance. The trust distributes."},
-    {"ticker":"PIGE","name":"Pigeon Property Group","sector":"Real Estate","cap":"$3.7B","ceo":"Marisol Vega","founded":2002,"hq":"Queens, NY","business":"Buys brownfield sites, remediates partially, leases to storage and logistics.","filing":"8-K — remediation overruns at three sites","quote":"Partially remediated is a business model, not an apology."},
-    {"ticker":"RACC","name":"Raccoon Brands","sector":"Consumer","cap":"$1.4B","ceo":"Nate Halloran","founded":2017,"hq":"Austin, TX","business":"Household storage and bins, sold DTC, named after animals that get into bins.","filing":"S-1 — CAC disclosed, investors recalibrate","quote":"The animal is aspirational. The customer wants to keep things out."},
-    {"ticker":"SLDG","name":"Sludge Works","sector":"Composting","cap":"$204M","ceo":"Bea Tomlinson","founded":1976,"hq":"Milwaukee, WI","business":"Biosolids handling for municipal water districts. Contracts run decades and are won on patience.","filing":"10-K — three contracts renewed, all 20-year","quote":"Nobody celebrates us and nobody replaces us."},
-    {"ticker":"TANG","name":"Tangible Waste","sector":"Services","cap":"$129M","ceo":"Cyrus Meade","founded":2015,"hq":"Denver, CO","business":"Waste audits for ESG reporting. Produces the number, then sells the reduction against the number.","filing":"10-Q — audit revenue and reduction revenue diverge","quote":"We find the problem and then we are the solution. Sequentially."},
-    {"ticker":"BRWN","name":"Brownfield Partners","sector":"Real Estate","cap":"$611M","ceo":"Dara Iwu","founded":1999,"hq":"Cleveland, OH","business":"Industrial redevelopment. Buys what nobody will touch and touches it.","filing":"10-K — portfolio occupancy 94%","quote":"Every asset we own was somebody's problem first."},
-    {"ticker":"LEAF","name":"Leaf & Leave","sector":"Consumer","cap":"$45M","ceo":"Gordy Simms","founded":2021,"hq":"Burlington, VT","business":"Seasonal yard-waste subscription. Revenue is 71% in a nine-week window and the company is at peace with it.","filing":"10-Q — Q2 concentration disclosed as a risk","quote":"We are a nine-week company and the other 43 are for planning."},
-    {"ticker":"MOSS","name":"Mossback Industrial","sector":"Industrials","cap":"$1.8B","ceo":"Trudy Kaminski","founded":1948,"hq":"Erie, PA","business":"Heavy equipment refurbishment. Buys back its own machines at 12 years and resells at 15.","filing":"10-K — refurb mix now 38% of revenue","quote":"A machine is not old. It is between owners."},
-    {"ticker":"GRAV","name":"Gravel & Grit","sector":"Materials","cap":"$420M","ceo":"Hollis Brant","founded":1961,"hq":"Wichita, KS","business":"Aggregate supply for road base. Owns three pits, permits two, operates one.","filing":"8-K — second pit permitted after six years","quote":"The permits are the business. The gravel is the byproduct."},
-    {"ticker":"SORT","name":"Sort-Right Systems","sector":"Industrials","cap":"$967M","ceo":"Aiko Tanaka","founded":2007,"hq":"Sacramento, CA","business":"Optical sorting retrofits for MRFs. Sells throughput; accuracy is the customer's problem to staff.","filing":"10-Q — backlog up, installs slip","quote":"The machine is right. The line is only as good as the people beside it."},
-    {"ticker":"RECL","name":"Reclaim Collective","sector":"Recycling","cap":"$73M","ceo":"Marguerite Bell","founded":2022,"hq":"Detroit, MI","business":"Worker-owned co-op doing commercial recycling. Same CEO as STBL, which nobody has noticed.","filing":"10-K — membership buyout tranche funded","quote":"We are a co-op. Decisions take a month and last a decade."}
+    {
+      "ticker": "TRSH",
+      "name": "Trash & Sons",
+      "sector": "Hauling",
+      "cap": "$412M",
+      "ceo": "Wendell Trash III",
+      "founded": 1908,
+      "hq": "Gary, IN",
+      "business": "Third-generation residential collection. The sons are named Trash; the founder was not.",
+      "filing": "8-K — announces fourth son",
+      "quote": "We are a family business in the sense that nobody can leave.",
+      "price": 3.21,
+      "change": 2.4,
+      "lede": "Third-generation residential collection across northwest Indiana. The sons are named Trash; the founder was not, and the family has declined to explain it for a hundred and eighteen years.",
+      "weight": 0.9,
+      "filings": [
+        {
+          "type": "8-K",
+          "when": "2 days ago",
+          "text": "Announces fourth son. No operational change disclosed; the filing is one page."
+        },
+        {
+          "type": "10-Q",
+          "when": "3 weeks ago",
+          "text": "Collection rate expansion ahead of guidance for a second quarter. Fleet age disclosed, then discussed at length."
+        },
+        {
+          "type": "DEF 14A",
+          "when": "2 months ago",
+          "text": "Board re-nominated without opposition. Succession proposal defeated for the ninth consecutive year."
+        }
+      ]
+    },
+    {
+      "ticker": "BYTBN",
+      "name": "Byte Bin",
+      "sector": "Recycling",
+      "cap": "$1.9B",
+      "ceo": "Priyanka Rao",
+      "founded": 2016,
+      "hq": "San Jose, CA",
+      "business": "Certified e-waste destruction for enterprises that need the certificate more than the destruction.",
+      "filing": "10-Q — margin compression in the certificate line",
+      "quote": "The hardware is the easy part. The paperwork is the moat.",
+      "price": 12.8,
+      "change": 1.1,
+      "lede": "Certified e-waste destruction for enterprises that need the certificate more than the destruction, at a price that assumes you need the certificate very much indeed.",
+      "weight": 4.2,
+      "filings": [
+        {
+          "type": "10-Q",
+          "when": "1 week ago",
+          "text": "Margin compression in the certificate line, which the company notes is more demanding than the destruction."
+        },
+        {
+          "type": "8-K",
+          "when": "1 month ago",
+          "text": "Expands certified-destruction capacity in a market where the certificate is widely believed to be the actual product."
+        },
+        {
+          "type": "D",
+          "when": "2 months ago",
+          "text": "Certification audit returned clean; the certificate certifying the certificate has been re-issued."
+        }
+      ]
+    },
+    {
+      "ticker": "MJNK",
+      "name": "Morning Junk",
+      "sector": "Consumer",
+      "cap": "$38M",
+      "ceo": "Dale Ostrowski",
+      "founded": 2019,
+      "hq": "Tampa, FL",
+      "business": "Curbside bulk pickup sold as a subscription. Markets itself as a lifestyle brand to people with too much furniture.",
+      "filing": "S-1 — fourth attempt",
+      "quote": "We are not a hauling company. We are a Saturday.",
+      "price": 0.04,
+      "change": 9.0,
+      "lede": "Curbside bulk pickup sold as a subscription, marketed as a lifestyle brand to people with too much furniture and not enough Saturdays.",
+      "weight": 0.2,
+      "filings": [
+        {
+          "type": "S-1",
+          "when": "2 days ago",
+          "text": "Fourth attempt at going public. The prospectus is styled as a brand manifesto, which is filing the deck in a drawer as a design decision."
+        },
+        {
+          "type": "10-Q",
+          "when": "1 month ago",
+          "text": "Subscription revenue concentrated in quarters ending in furniture acquisition, disclosed without a metric."
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Announces a furniture-joy index as an unaudited exhibit. The index goes up when storage is full and is considered a trailing indicator."
+        }
+      ]
+    },
+    {
+      "ticker": "STBL",
+      "name": "Stable Value, Inc",
+      "sector": "Financials",
+      "cap": "$6.4B",
+      "ceo": "Marguerite Bell",
+      "founded": 1971,
+      "hq": "Hartford, CT",
+      "business": "Money-market administration. Has never had an exciting quarter and mentions this in every deck.",
+      "filing": "DEF 14A — board re-nominated unanimously, again",
+      "quote": "We sell the absence of a story.",
+      "price": 44.0,
+      "change": -0.4,
+      "lede": "Money-market administration that has never had an exciting quarter and confirms this in every deck, which is, it argues, the point.",
+      "weight": 5.1,
+      "filings": [
+        {
+          "type": "DEF 14A",
+          "when": "5 days ago",
+          "text": "Board re-nominated unanimously, again. The meeting is not expected to be exciting, and is expected to say so."
+        },
+        {
+          "type": "10-Q",
+          "when": "3 weeks ago",
+          "text": "Net asset value unchanged. Management highlights the absence of change as the product, with a chart."
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Confirms the money-market portfolio is, as ever, a portfolio and a market, and that neither has done anything."
+        }
+      ]
+    },
+    {
+      "ticker": "HYST",
+      "name": "Hysterical Systems",
+      "sector": "Industrials",
+      "cap": "$890M",
+      "ceo": "Rob Cuskelly",
+      "founded": 2004,
+      "hq": "Akron, OH",
+      "business": "Compactor and baler maintenance for retail chains. On-call, 24 hours, with a two-hour SLA nobody believes.",
+      "filing": "8-K — CFO departs, cites the SLA",
+      "quote": "Everyone is calm until the baler stops.",
+      "price": 9.99,
+      "change": -5.0,
+      "lede": "Compactor and baler maintenance for retail chains, on call twenty-four hours, with a two-hour service-level agreement nobody has ever believed.",
+      "weight": 2.6,
+      "filings": [
+        {
+          "type": "8-K",
+          "when": "6 hours ago",
+          "text": "CFO departs, citing the service-level agreement. The company reaffirms the SLA hours later, in full."
+        },
+        {
+          "type": "10-Q",
+          "when": "2 weeks ago",
+          "text": "On-call revenue flat; on-call anger steady. Response-time incentives restructured around the two-hour promise."
+        },
+        {
+          "type": "10-K",
+          "when": "1 month ago",
+          "text": "Baler maintenance backlog reaches a record. The backlog itself is now the subject of a separate SLA."
+        }
+      ]
+    },
+    {
+      "ticker": "BINN",
+      "name": "Bin There Holdings",
+      "sector": "Hauling",
+      "cap": "$233M",
+      "ceo": "Tobias Lund",
+      "founded": 1998,
+      "hq": "Duluth, MN",
+      "business": "Roll-off container rental for construction. Name is a pun and the company is aware.",
+      "filing": "10-K — fleet age disclosed for the first time, stock falls",
+      "quote": "We've been Bin There. It's on the trucks. It's not going anywhere.",
+      "price": 18.4,
+      "change": -1.1,
+      "lede": "Roll-off container rental for construction. The name is a pun and the company is aware, and the trucks carry it everywhere.",
+      "weight": 1.7,
+      "filings": [
+        {
+          "type": "10-K",
+          "when": "1 week ago",
+          "text": "Fleet age disclosed for the first time; the stock falls. Management calls the disclosure 'honesty as a line item.'"
+        },
+        {
+          "type": "8-K",
+          "when": "1 month ago",
+          "text": "Renames a container the 'Bin There Classic' while confirming there is nothing classic about it."
+        },
+        {
+          "type": "10-Q",
+          "when": "2 months ago",
+          "text": "Construction starts down; container utilisation up. Net effect, management says, is 'still puns.'"
+        }
+      ]
+    },
+    {
+      "ticker": "SKIP",
+      "name": "Skip & Sons Hauling",
+      "sector": "Hauling",
+      "cap": "$97M",
+      "ceo": "Skip Duross",
+      "founded": 1982,
+      "hq": "Scranton, PA",
+      "business": "Commercial roll-off and demolition debris. The sons are not involved and this is discussed at every shareholder meeting.",
+      "filing": "DEF 14A — shareholder proposal on succession, defeated",
+      "quote": "The sons have their own thing.",
+      "price": 2.85,
+      "change": -0.9,
+      "lede": "Commercial roll-off and demolition debris. The sons are not involved, and this is discussed at every shareholder meeting.",
+      "weight": 1.1,
+      "filings": [
+        {
+          "type": "DEF 14A",
+          "when": "3 days ago",
+          "text": "Shareholder proposal on succession defeated. The proposer noted the sons are not involved and were not running."
+        },
+        {
+          "type": "10-Q",
+          "when": "3 weeks ago",
+          "text": "Demolition debris volume up on Seattle redevelopment; the company confirms none of the sons worked the sites."
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Hires a logistics executive who is, the filing notes with some care, not a son."
+        }
+      ]
+    },
+    {
+      "ticker": "CURB",
+      "name": "Curbline Logistics",
+      "sector": "Hauling",
+      "cap": "$540M",
+      "ceo": "Adeola Bankole",
+      "founded": 2011,
+      "hq": "Atlanta, GA",
+      "business": "Route optimisation software sold to haulers, plus a small fleet used as a reference customer.",
+      "filing": "10-Q — reference fleet costs exceed software revenue",
+      "quote": "We are our own worst client and our best case study.",
+      "price": 31.1,
+      "change": 3.2,
+      "lede": "Route optimisation software sold to haulers, plus a small reference fleet kept largely to prove the software works on something with judgement.",
+      "weight": 3.4,
+      "filings": [
+        {
+          "type": "10-Q",
+          "when": "1 week ago",
+          "text": "Reference fleet costs exceed software revenue for the third consecutive quarter. Management calls the fleet 'a lab,' then 'the point.'"
+        },
+        {
+          "type": "8-K",
+          "when": "1 month ago",
+          "text": "Signs a hauling customer that is also, separately, on the reference-fleet list, creating what the company calls 'a closed loop.'"
+        },
+        {
+          "type": "10-K",
+          "when": "2 months ago",
+          "text": "Discloses that route-optimisation revenue is optimised, but the routes, 'optimally, remain.'"
+        }
+      ]
+    },
+    {
+      "ticker": "DMPR",
+      "name": "Dumpster Dynamics",
+      "sector": "Industrials",
+      "cap": "$1.2B",
+      "ceo": "Vince Marchetti",
+      "founded": 1969,
+      "hq": "Newark, NJ",
+      "business": "Manufactures the containers. Sells almost entirely to the same haulers who compete for the containers.",
+      "filing": "10-K — steel input costs, fourth consecutive warning",
+      "quote": "Everyone needs a box. Nobody wants to buy one.",
+      "price": 58.2,
+      "change": -1.4,
+      "lede": "Manufactures the containers many of its own customers compete to fill. Steel prices are discussed everywhere but the tariff disclosure.",
+      "weight": 4.8,
+      "filings": [
+        {
+          "type": "10-K",
+          "when": "1 week ago",
+          "text": "Steel input costs, fourth consecutive warning. The warning has become a section header in prior filings."
+        },
+        {
+          "type": "10-Q",
+          "when": "1 month ago",
+          "text": "Container orders up as haulers hedge; the company hedges back by raising prices to the same haulers."
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Announces a loyalty box program. The container comes out of the same steel, so loyalty is estimated, not measured."
+        }
+      ]
+    },
+    {
+      "ticker": "LANF",
+      "name": "Landfill Capital",
+      "sector": "Landfill",
+      "cap": "$11.3B",
+      "ceo": "Harriet Ngo",
+      "founded": 1988,
+      "hq": "Houston, TX",
+      "business": "Owns the holes. Leases airspace by the ton. Reports remaining capacity the way a mine reports reserves.",
+      "filing": "10-K — airspace life extends to 41 years",
+      "quote": "We are a real estate company with a smell.",
+      "price": 118.4,
+      "change": 0.6,
+      "lede": "Owns the holes. Leases airspace by the ton and reports remaining capacity the way a mine reports reserves, with the same chemistry of hope and paperwork.",
+      "weight": 9.6,
+      "filings": [
+        {
+          "type": "10-K",
+          "when": "1 week ago",
+          "text": "Airspace life extended to forty-one years. The extension is attributed to 'slower decomposition of the interest rate.'"
+        },
+        {
+          "type": "10-Q",
+          "when": "1 month ago",
+          "text": "Tonnage up; remaining capacity down, but slower. Management calls the margin 'inevitable but patient.'"
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Sells a capped cell to a competitor, then leases back the airspace, in a transaction the lawyers describe as 'complete.'"
+        }
+      ]
+    },
+    {
+      "ticker": "SCRP",
+      "name": "Scrapbook Materials",
+      "sector": "Materials",
+      "cap": "$764M",
+      "ceo": "Ivan Petrov",
+      "founded": 1954,
+      "hq": "Youngstown, OH",
+      "business": "Ferrous and non-ferrous brokerage. The name has caused forty years of stationery jokes.",
+      "filing": "8-K — acquires a smaller broker with a normal name",
+      "quote": "We bought them for the name. Partly.",
+      "price": 18.75,
+      "change": 2.1,
+      "lede": "Ferrous and non-ferrous brokerage whose name has caused forty years of stationery jokes, and which keeps the name precisely because of them.",
+      "weight": 2.9,
+      "filings": [
+        {
+          "type": "8-K",
+          "when": "1 week ago",
+          "text": "Acquires a smaller broker with a normal name. The company confirms the normal name was a consideration."
+        },
+        {
+          "type": "10-Q",
+          "when": "1 month ago",
+          "text": "Ferrous margins steady; stationery joke volume steady. Both are trended in the exhibit."
+        },
+        {
+          "type": "10-K",
+          "when": "2 months ago",
+          "text": "Official company color changed to a metallics; the palette is described as 'also a material.'"
+        }
+      ]
+    },
+    {
+      "ticker": "PLUP",
+      "name": "Pulp & Patience",
+      "sector": "Materials",
+      "cap": "$302M",
+      "ceo": "Renée Aubert",
+      "founded": 1931,
+      "hq": "Bangor, ME",
+      "business": "Recovered fibre. The patience refers to the permitting.",
+      "filing": "10-Q — mill restarts after 14 months idle",
+      "quote": "Nothing in this business is fast except the pulp.",
+      "price": 15.4,
+      "change": -2.2,
+      "lede": "Recovered fibre mill in Bangor. The patience in the name is the permitting, which has been the business for ninety-five years.",
+      "weight": 1.8,
+      "filings": [
+        {
+          "type": "10-Q",
+          "when": "2 days ago",
+          "text": "Mill restarts after fourteen months idle. The permitting that caused the idle is described as 'still a work of art.'"
+        },
+        {
+          "type": "10-K",
+          "when": "1 month ago",
+          "text": "Recovered-fibre prices weak; recovery rates strong; patience, the company notes, is constant."
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Applies for a permit to upgrade the permit office, which is awaiting a permit."
+        }
+      ]
+    },
+    {
+      "ticker": "ROT",
+      "name": "Rota Composting",
+      "sector": "Composting",
+      "cap": "$156M",
+      "ceo": "Sam Okonkwo",
+      "founded": 2013,
+      "hq": "Portland, OR",
+      "business": "Municipal organics processing. Odour complaints are the primary KPI and are reported quarterly.",
+      "filing": "10-K — complaint volume down 12%, stock up 9%",
+      "quote": "Our best quarter was a quiet one.",
+      "price": 22.1,
+      "change": -1.2,
+      "lede": "Municipal organics processing in Portland, where odour complaints are the primary KPI and are reported quarterly, usually with relief.",
+      "weight": 1.5,
+      "filings": [
+        {
+          "type": "10-K",
+          "when": "1 week ago",
+          "text": "Complaint volume down twelve percent, stock up nine percent. Management calls the correlation 'a quiet one.'"
+        },
+        {
+          "type": "10-Q",
+          "when": "1 month ago",
+          "text": "Organic intake up. Odour remediation capex up. KPI commentary is, for once, positive and aspirational."
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Open house scheduled at the newest pile; parking is perpendicular, which management notes is itself progress."
+        }
+      ]
+    },
+    {
+      "ticker": "ODR",
+      "name": "Odor Neutral",
+      "sector": "Services",
+      "cap": "$88M",
+      "ceo": "Lainey Fisk",
+      "founded": 2009,
+      "hq": "Charlotte, NC",
+      "business": "Enzyme treatment for transfer stations. Sells to exactly the operators who generate the complaints.",
+      "filing": "10-Q — customer concentration, top three are 61% of revenue",
+      "quote": "We are a hedge against Rota's KPI.",
+      "price": 5.26,
+      "change": 4.8,
+      "lede": "Enzyme treatment for transfer stations, selling deodorisation to exactly the operators whose KPIs are measured in complaints.",
+      "weight": 0.8,
+      "filings": [
+        {
+          "type": "10-Q",
+          "when": "1 week ago",
+          "text": "Customer concentration — top three are sixty-one percent of revenue. The top three are the operators who generate the complaints."
+        },
+        {
+          "type": "8-K",
+          "when": "1 month ago",
+          "text": "Enzyme efficiency improved. The KPI of the customers improved, which the company describes as a compliment."
+        },
+        {
+          "type": "10-K",
+          "when": "2 months ago",
+          "text": "Discloses that its best quarter was Rota's best quarter, and that correlation is, for once, the strategy."
+        }
+      ]
+    },
+    {
+      "ticker": "GLLT",
+      "name": "Gull Trust",
+      "sector": "Financials",
+      "cap": "$2.1B",
+      "ceo": "Peter Van Dorn",
+      "founded": 1994,
+      "hq": "Boston, MA",
+      "business": "Royalty trust holding a share of landfill gas rights. Pays monthly, explains nothing.",
+      "filing": "10-K — distribution maintained",
+      "quote": "The trust does not give guidance. The trust distributes.",
+      "price": 24.8,
+      "change": 0.3,
+      "lede": "Royalty trust holding a share of landfill gas rights. Pays monthly, explains nothing, and declines to give guidance on principle.",
+      "weight": 3.1,
+      "filings": [
+        {
+          "type": "10-K",
+          "when": "1 week ago",
+          "text": "Distribution maintained at prior level. The one-line press release is considered a model of the genre."
+        },
+        {
+          "type": "10-Q",
+          "when": "1 month ago",
+          "text": "Landfill gas rights stable; distribution declared and paid, with the schedule attached and nothing else."
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Explains, in a rare break from practice, that it will not be explaining anything, and declines to amend."
+        }
+      ]
+    },
+    {
+      "ticker": "PIGE",
+      "name": "Pigeon Property Group",
+      "sector": "Real Estate",
+      "cap": "$3.7B",
+      "ceo": "Marisol Vega",
+      "founded": 2002,
+      "hq": "Queens, NY",
+      "business": "Buys brownfield sites, remediates partially, leases to storage and logistics.",
+      "filing": "8-K — remediation overruns at three sites",
+      "quote": "Partially remediated is a business model, not an apology.",
+      "price": 88.05,
+      "change": -1.1,
+      "lede": "Buys brownfield sites, remediates them partially, and leases the result to storage and logistics, treating partial as a feature.",
+      "weight": 6.2,
+      "filings": [
+        {
+          "type": "8-K",
+          "when": "1 week ago",
+          "text": "Remediation overruns at three sites. The company amends the word 'partial' in its description to 'partially more.'"
+        },
+        {
+          "type": "10-Q",
+          "when": "1 month ago",
+          "text": "Storage and logistics occupancy up on brownfield demand; the remedial shortfall is disclosed in the same paragraph."
+        },
+        {
+          "type": "10-K",
+          "when": "2 months ago",
+          "text": "Declares partial remediation a business model 'rather than an apology,' and files it as such."
+        }
+      ]
+    },
+    {
+      "ticker": "RACC",
+      "name": "Raccoon Brands",
+      "sector": "Consumer",
+      "cap": "$1.4B",
+      "ceo": "Nate Halloran",
+      "founded": 2017,
+      "hq": "Austin, TX",
+      "business": "Household storage and bins, sold DTC, named after animals that get into bins.",
+      "filing": "S-1 — CAC disclosed, investors recalibrate",
+      "quote": "The animal is aspirational. The customer wants to keep things out.",
+      "price": 19.6,
+      "change": 2.9,
+      "lede": "Household storage and bins sold direct-to-consumer, named after animals that get into bins, on the theory that the customer knows the animal.",
+      "weight": 3.7,
+      "filings": [
+        {
+          "type": "S-1",
+          "when": "1 week ago",
+          "text": "Customer acquisition cost disclosed for the first time; investors recalibrate. The bin itself is unchanged."
+        },
+        {
+          "type": "10-Q",
+          "when": "1 month ago",
+          "text": "Direct-to-consumer storage revenue up ahead of a hoarding season analysts had not calendared."
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Contest to name a new bin results in 'Raccoon's Revenge'; the company accepts it on the record."
+        }
+      ]
+    },
+    {
+      "ticker": "SLDG",
+      "name": "Sludge Works",
+      "sector": "Composting",
+      "cap": "$204M",
+      "ceo": "Bea Tomlinson",
+      "founded": 1976,
+      "hq": "Milwaukee, WI",
+      "business": "Biosolids handling for municipal water districts. Contracts run decades and are won on patience.",
+      "filing": "10-K — three contracts renewed, all 20-year",
+      "quote": "Nobody celebrates us and nobody replaces us.",
+      "price": 31.6,
+      "change": 0.4,
+      "lede": "Biosolids handling for municipal water districts, where contracts run decades and are won on patience and a quiet temperament.",
+      "weight": 1.9,
+      "filings": [
+        {
+          "type": "10-K",
+          "when": "1 week ago",
+          "text": "Three contracts renewed, all twenty-year. The tenure, management notes, is both the point and the entire presentation."
+        },
+        {
+          "type": "10-Q",
+          "when": "1 month ago",
+          "text": "Biosolids volumes steady; municipal budgets steady; the patience on both is disclosed as operational."
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Confirms it is replacing nobody and being replaced by nobody, in a filing of unusual confidence."
+        }
+      ]
+    },
+    {
+      "ticker": "TANG",
+      "name": "Tangible Waste",
+      "sector": "Services",
+      "cap": "$129M",
+      "ceo": "Cyrus Meade",
+      "founded": 2015,
+      "hq": "Denver, CO",
+      "business": "Waste audits for ESG reporting. Produces the number, then sells the reduction against the number.",
+      "filing": "10-Q — audit revenue and reduction revenue diverge",
+      "quote": "We find the problem and then we are the solution. Sequentially.",
+      "price": 9.12,
+      "change": -3.3,
+      "lede": "Waste audits for ESG reporting. Produces the number, then sells the reduction against the number, sequentially and in that order.",
+      "weight": 1.3,
+      "filings": [
+        {
+          "type": "10-Q",
+          "when": "1 week ago",
+          "text": "Audit revenue and reduction revenue diverge. The company calls the gap, plainly, the business."
+        },
+        {
+          "type": "8-K",
+          "when": "1 month ago",
+          "text": "Reduction sold against its own audit is disclosed as a method, then as 'sequentially.'"
+        },
+        {
+          "type": "10-K",
+          "when": "2 months ago",
+          "text": "Produces a corporate average that is later disclosed to be the number, which was the point."
+        }
+      ]
+    },
+    {
+      "ticker": "BRWN",
+      "name": "Brownfield Partners",
+      "sector": "Real Estate",
+      "cap": "$611M",
+      "ceo": "Dara Iwu",
+      "founded": 1999,
+      "hq": "Cleveland, OH",
+      "business": "Industrial redevelopment. Buys what nobody will touch and touches it.",
+      "filing": "10-K — portfolio occupancy 94%",
+      "quote": "Every asset we own was somebody's problem first.",
+      "price": 44.15,
+      "change": 0.7,
+      "lede": "Industrial redevelopment in Cleveland that buys what nobody will touch and touches it, usually with a union and a deadline.",
+      "weight": 4.0,
+      "filings": [
+        {
+          "type": "10-K",
+          "when": "1 week ago",
+          "text": "Portfolio occupancy ninety-four percent. The company notes the remaining six percent were deliberately somebody's problem."
+        },
+        {
+          "type": "10-Q",
+          "when": "1 month ago",
+          "text": "Redevelopment starts up; the cleared parcels are described as 'ready to be somebody's problem again.'"
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Acquires a site no one else bid on, calling it 'the honest price' and the rest of the market 'polite.'"
+        }
+      ]
+    },
+    {
+      "ticker": "LEAF",
+      "name": "Leaf & Leave",
+      "sector": "Consumer",
+      "cap": "$45M",
+      "ceo": "Gordy Simms",
+      "founded": 2021,
+      "hq": "Burlington, VT",
+      "business": "Seasonal yard-waste subscription. Revenue is 71% in a nine-week window and the company is at peace with it.",
+      "filing": "10-Q — Q2 concentration disclosed as a risk",
+      "quote": "We are a nine-week company and the other 43 are for planning.",
+      "price": 6.58,
+      "change": 5.5,
+      "lede": "Seasonal yard-waste subscription whose revenue is seventy-one percent in a nine-week window, a fact the company is at peace with.",
+      "weight": 0.5,
+      "filings": [
+        {
+          "type": "10-Q",
+          "when": "1 week ago",
+          "text": "Second-quarter concentration disclosed as a risk, then as the business, then as 'the point of the year.'"
+        },
+        {
+          "type": "8-K",
+          "when": "1 month ago",
+          "text": "Nine-week revenue window confirmed; the other forty-three weeks are described as for planning the window."
+        },
+        {
+          "type": "10-K",
+          "when": "2 months ago",
+          "text": "Winter subscriber churn disclosed as 'seasonal,' which is confirmed to mean the subscribers return in spring with leaves."
+        }
+      ]
+    },
+    {
+      "ticker": "MOSS",
+      "name": "Mossback Industrial",
+      "sector": "Industrials",
+      "cap": "$1.8B",
+      "ceo": "Trudy Kaminski",
+      "founded": 1948,
+      "hq": "Erie, PA",
+      "business": "Heavy equipment refurbishment. Buys back its own machines at 12 years and resells at 15.",
+      "filing": "10-K — refurb mix now 38% of revenue",
+      "quote": "A machine is not old. It is between owners.",
+      "price": 27.9,
+      "change": 1.2,
+      "lede": "Heavy-equipment refurbishment that buys back its own machines at twelve years and resells them at fifteen, between owners.",
+      "weight": 4.4,
+      "filings": [
+        {
+          "type": "10-K",
+          "when": "1 week ago",
+          "text": "Refurbishment mix now thirty-eight percent of revenue. The machines, management notes, are between owners."
+        },
+        {
+          "type": "10-Q",
+          "when": "1 month ago",
+          "text": "Buys back its own machines at twelve years; resells at fifteen. The three years are called the value-add."
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Opens a fourth refurbishment bay, sized deliberately for the machines it already sold twice."
+        }
+      ]
+    },
+    {
+      "ticker": "GRAV",
+      "name": "Gravel & Grit",
+      "sector": "Materials",
+      "cap": "$420M",
+      "ceo": "Hollis Brant",
+      "founded": 1961,
+      "hq": "Wichita, KS",
+      "business": "Aggregate supply for road base. Owns three pits, permits two, operates one.",
+      "filing": "8-K — second pit permitted after six years",
+      "quote": "The permits are the business. The gravel is the byproduct.",
+      "price": 14.22,
+      "change": -0.6,
+      "lede": "Aggregate supply for road base in Wichita. Owns three pits, has permits for two, and actively operates one, in that declining order.",
+      "weight": 2.2,
+      "filings": [
+        {
+          "type": "8-K",
+          "when": "1 week ago",
+          "text": "Second pit permitted after six years of review. The gravel underneath is described as having aged."
+        },
+        {
+          "type": "10-K",
+          "when": "1 month ago",
+          "text": "Reports operating one of three owned pits, holding permits for two, and 'discussing' the third."
+        },
+        {
+          "type": "10-Q",
+          "when": "2 months ago",
+          "text": "Aggregate demand up; available aggregate flat; the differential is disclosed as the thesis."
+        }
+      ]
+    },
+    {
+      "ticker": "SORT",
+      "name": "Sort-Right Systems",
+      "sector": "Industrials",
+      "cap": "$967M",
+      "ceo": "Aiko Tanaka",
+      "founded": 2007,
+      "hq": "Sacramento, CA",
+      "business": "Optical sorting retrofits for MRFs. Sells throughput; accuracy is the customer's problem to staff.",
+      "filing": "10-Q — backlog up, installs slip",
+      "quote": "The machine is right. The line is only as good as the people beside it.",
+      "price": 52.47,
+      "change": 0.9,
+      "lede": "Optical sorting retrofits for material-recovery facilities, selling throughput while leaving staffing of the line, and the accuracy, to the customer.",
+      "weight": 4.6,
+      "filings": [
+        {
+          "type": "10-Q",
+          "when": "1 week ago",
+          "text": "Backlog up, installs slip. The company calls the divergence 'a quality we are improving at.'"
+        },
+        {
+          "type": "10-K",
+          "when": "1 month ago",
+          "text": "Throughput sold as throughput, accuracy excluded. The line, the company notes, is staffed by the customer."
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Optical sort retrofits pass a certification that was written, helpfully, by a retrofit vendor."
+        }
+      ]
+    },
+    {
+      "ticker": "RECL",
+      "name": "Reclaim Collective",
+      "sector": "Recycling",
+      "cap": "$73M",
+      "ceo": "Marguerite Bell",
+      "founded": 2022,
+      "hq": "Detroit, MI",
+      "business": "Worker-owned co-op doing commercial recycling. Same CEO as STBL, which nobody has noticed.",
+      "filing": "10-K — membership buyout tranche funded",
+      "quote": "We are a co-op. Decisions take a month and last a decade.",
+      "price": 4.02,
+      "change": 0.3,
+      "lede": "Worker-owned commercial-recycling co-op in Detroit whose membership takes a month to decide anything and a decade to make it stick.",
+      "weight": 0.6,
+      "filings": [
+        {
+          "type": "10-K",
+          "when": "1 week ago",
+          "text": "Membership buyout tranche funded. The decision to fund it took a month; the cheque cleared in a decade."
+        },
+        {
+          "type": "10-Q",
+          "when": "1 month ago",
+          "text": "Co-op commercial volumes steady. Management declines to call it steady growth, citing the constitution."
+        },
+        {
+          "type": "8-K",
+          "when": "2 months ago",
+          "text": "Announces a vote on a new paint color for the bins. The bins observe, pending the consensus of the committee."
+        }
+      ]
+    }
   ]
 }

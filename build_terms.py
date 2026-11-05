@@ -36,6 +36,8 @@ legal_css = """
 .wrap td{padding:9px 10px;color:var(--text);line-height:1.5;border-bottom:1px solid var(--line);vertical-align:top}
 .joke{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--brand);padding:18px 20px;font-size:14px;line-height:1.7;color:var(--text);border-radius:6px;margin-bottom:34px}
 .joke strong{color:var(--white)}
+.lede-joke{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--brand);padding:18px 20px;font-size:15px;line-height:1.7;color:var(--text);border-radius:6px;margin-bottom:30px}
+.pull{border-left:2px solid var(--brand);padding:4px 0 4px 16px;margin:22px 0;font-size:16px;line-height:1.6;color:var(--white);font-style:italic}
 /* ===== INDEX (GIA) PAGE ===== */
 .gia-head{display:flex;justify-content:space-between;align-items:center;gap:20px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:8px;padding:22px 24px;margin:6px 0 10px;flex-wrap:wrap}
 .gia-meta{display:flex;align-items:center;gap:16px}
@@ -103,6 +105,20 @@ PAGES = [
         "og_desc": "The full GIA roster: 25 hand-picked mid-value securities, rebalanced when someone remembers.",
         "body": "indexes_body.html",
         "banner": "Index Composition · As Of 5 November 2026",
+    },
+    {
+        "out": "about.html",
+        "title": "About",
+        "og_title": "About · Garbatrage",
+        "og_desc": "Garbatrage is a satirical financial publication. That is the whole answer.",
+        "body": "about_body.html",
+    },
+    {
+        "out": "methodology.html",
+        "title": "Methodology",
+        "og_title": "Methodology · Garbatrage",
+        "og_desc": "How the index is built, and how the stories are made.",
+        "body": "methodology_body.html",
     },
 ]
 

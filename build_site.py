@@ -30,7 +30,8 @@ DISC_INDEX = ('<div class="disc">Every constituent is fictional. The Garbatrage 
 DISC_STORY = ('<div class="disc">Garbatrage is a satirical publication. Headlines, quotes, companies and '
               'figures are fabricated. Nothing here is investment advice.</div>')
 
-def layout(title, desc, body, canonical):
+def layout(title, desc, body, canonical, og_image=None):
+    ogi = (SITE + og_image) if og_image else f"{SITE}/assets/og-card.png"
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title>
@@ -38,7 +39,7 @@ def layout(title, desc, body, canonical):
 <link rel="canonical" href="{canonical}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
-<meta property="og:image" content="{SITE}/assets/og-card.png">
+<meta property="og:image" content="{ogi}">
 <meta property="og:url" content="{canonical}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
@@ -65,11 +66,16 @@ def write(rel, content, raw=False):
     p.write_text(content, encoding="utf-8")
 
 # ---------- stories ----------
+def img(s):
+    return s.get("image") or f'/media/img/{s["slug"]}.png'
+
 def build_story(s):
+    art = img(s)
     body = f"""
 <div class="kick">{esc(s["desk"])}</div>
 <h1>{esc(s["title"])}</h1>
 <p class="lede">{esc(s["dek"])}</p>
+<figure class="artbox"><img class="art-img" src="{art}" alt="" loading="lazy"></figure>
 <div class="byline"><span class="av">{esc(s.get("av") or av(s["author"]))}</span>
 <span><b>{esc(s["author"])}</b><br>{esc(s.get("role", ""))}</span>
 <span class="rd">{s.get("read", 4)} min read</span></div>
@@ -79,7 +85,7 @@ def build_story(s):
 <div class="pager"><a href="/archive/">← Archive</a><span>{esc(s["date"])}</span><a href="/">Home</a></div>"""
     url = f"{SITE}/story/{s['slug']}/"
     write(f"story/{s['slug']}/index.html",
-          layout(f"{s['title']} · Garbatrage", s["dek"], body, url))
+          layout(f"{s['title']} · Garbatrage", s["dek"], body, url, og_image=art))
 
 # ---------- companies ----------
 def build_company(c, i):
@@ -209,7 +215,7 @@ def build_home():
         f'<b class="{"up" if c["change"] >= 0 else "dn"}">{c["change"]:+.1f}%</b></div>'
         for c in movers)
     brief_html = "".join(
-        f'<a class="item" href="/story/{s["slug"]}/"><div class="thumb"></div><div>'
+        f'<a class="item" href="/story/{s["slug"]}/"><div class="thumb"><img src="{img(s)}" alt="" loading="lazy"></div><div>'
         f'<h3>{esc(s["title"])}</h3><p>{esc(s["dek"])}</p>'
         f'<div class="meta">{esc(s["desk"])} · {esc(s["author"])}</div></div></a>'
         for s in briefs)
@@ -219,7 +225,7 @@ def build_home():
   <div class="kick">{esc(lead["desk"])}</div>
   <h1><a href="/story/{lead["slug"]}/">{esc(lead["title"])}</a></h1>
   <p class="dek">{esc(lead["dek"])}</p>
-  <a class="hero" href="/story/{lead["slug"]}/"></a>
+  <a class="hero" href="/story/{lead["slug"]}/"><img src="{img(lead)}" alt="" loading="lazy"></a>
   <div class="by"><span class="av">{esc(lead.get("av") or av(lead["author"]))}</span>
     <span><b>{esc(lead["author"])}</b> · {esc(lead.get("role", ""))} · {lead.get("read", 4)} min read</span></div>
   <div class="sec">Markets Brief</div>
