@@ -114,7 +114,7 @@ def build_company(c, i):
 def listing(title, desc, groups, url, active):
     chips = '<a href="/markets/"' + (' class="on"' if active == "all" else "") + '>All</a>'
     chips += "".join(
-        f'<a href="/{slugify(s)}/"' + (' class="on"' if slugify(s) == active else "") + f'>{esc(s)}</a>'
+        f'<a href="/{slugify(s)}/"' + (' class="on"' if slugify(s) == slugify(active) else "") + f'>{esc(s)}</a>'
         for s in gia["sectors"])
     blocks = ""
     for sector, rows in groups:

@@ -145,4 +145,27 @@ os.makedirs(os.path.join(STATIC,"methodology"),exist_ok=True)
 open(os.path.join(STATIC,"methodology","index.html"),"w").write(
     layout("Methodology · Garbatrage","How the index is built, and how the stories are made.", meth, f"{SITE}/methodology/"))
 print("wrote static/methodology/index.html")
+# ---- 404 ----
+four_body = ('<div class="kick">Error</div>'
+ '<h1>Nothing here.</h1>'
+ '<p class="lede">This page does not exist. That is a fact we are prepared to defend, '
+ 'and it is the nearest thing on this site to a guarantee. If you were looking for something, '
+ 'it is probably in the <a href="/archive/">archive</a>, the '
+ '<a href="/markets/">markets</a>, or a company page below the tape. What it is not is here.</p>')
+open(os.path.join(STATIC,"404.html"),"w").write(
+    layout("404 · Garbatrage","This page does not exist. It is probably in the archive or the markets.", four_body, f"{SITE}/404.html"))
+print("wrote static/404.html")
+
+# prune files NOT in the canonical static/ spec
+import os as _os
+KEYS = {"site.css","logo-cream.png","logo-black.png","monogram-cream.png","monogram-black.png",
+        "seal-cream.png","seal-black.png","og-card.png","favicon-16.png","favicon-32.png",
+        "favicon-180.png","icon-512.png","manifest.webmanifest"}
+a = _os.path.join(STATIC,"assets")
+pruned=[]
+for f in _os.listdir(a):
+    if f not in KEYS:
+        _os.remove(_os.path.join(a,f)); pruned.append(f)
+print("pruned from static/assets:", pruned if pruned else "none (clean)")
 print("done static")
+

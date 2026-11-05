@@ -1,0 +1,12 @@
+{
+  "name": "Garbatrage",
+  "short_name": "Garbatrage",
+  "icons": [
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/favicon-180.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#141414",
+  "background_color": "#faf7f0",
+  "display": "standalone",
+  "start_url": "/"
+}
