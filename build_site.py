@@ -189,7 +189,7 @@ QUOTES = [
 ]
 
 FOOTER = """<footer><div class="fg">
-<div><h4>Markets</h4><a href="/markets/">Indexes</a><a href="/archive/">Archive</a><a href="/desk/rates/">Rates</a></div>
+<div><h4>Markets</h4><a href="/markets/">Indexes</a><a href="/archive/">Archive</a><a href="/desk/rates/">Rates</a><a href="/desk/etfs/">ETFs</a><a href="/desk/hauling/">Hauling</a></div>
 <div><h4>Company</h4><a href="/about/">About</a><a href="/press/">Press</a><a href="mailto:info@garbatrage.com">Contact</a></div>
 <div><h4>Resources</h4><a href="/methodology/">Methodology</a><a href="/archive/">All stories</a><a href="/rss.xml">RSS</a></div>
 <div><h4>Legal</h4><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></div>

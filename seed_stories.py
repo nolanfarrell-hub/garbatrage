@@ -62,11 +62,17 @@ def parse(p):
         "tags": [],
     }
 
+# Normalize story desks onto the canonical DESKS so hubs populate correctly.
+DESK_MAP = {"federal reserve": "rates", "funds": "etfs", "etfs": "etfs",
+            "earnings": "earnings", "estate": "estate", "markets": "markets",
+            "hauling": "hauling"}
+
 seen, out = set(), []
 for p in sorted(SRC.glob("*.html")):
     e = parse(p)
     if not e or e["slug"] in seen:
         continue
+    e["desk"] = DESK_MAP.get(e["desk"].lower(), "markets")
     d = git_date(p)
     if not d:
         print(f"skip (no git date): {p.name}")
