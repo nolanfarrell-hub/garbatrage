@@ -9,12 +9,17 @@
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Garbatrage · Markets. Money. Mischief."/>
 <meta property="og:description" content="Deadpan financial satire. Markets, money, and the occasional act of mischief."/>
-<meta property="og:image" content="https://garbatrage.com/media/img/hero.png"/>
+<meta property="og:image" content="https://garbatrage.com/assets/og-card.png"/>
 <meta property="og:url" content="https://garbatrage.com/"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Garbatrage · Markets. Money. Mischief."/>
 <meta name="twitter:description" content="Deadpan financial satire."/>
-<meta name="twitter:image" content="https://garbatrage.com/media/img/hero.png"/>
+<meta name="twitter:image" content="https://garbatrage.com/assets/og-card.png"/>
+<meta name="theme-color" content="#141414"/>
+<link rel="manifest" href="/manifest.webmanifest"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.png"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,6 +46,14 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;-webk
 
 /* ================= HEADER ================= */
 .topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 26px;border-bottom:1px solid var(--line);background:var(--bg)}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:inherit}
+.brand .mark{width:40px;height:40px;flex-shrink:0;object-fit:contain}
+.brand .word{font-family:'Montserrat',sans-serif;font-size:26px;font-weight:900;letter-spacing:1.5px;color:var(--white)}
+.brand .word i{font-style:normal;color:var(--brand)}
+.brand .satire{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;border:1px solid var(--line);padding:4px 7px;border-radius:3px;margin-left:6px}
+/* dark surfaces: the flat cream logo lights up via screen; multiply keeps it clean on light surfaces */
+.topbar .mark, footer .mark, .news .mark{ mix-blend-mode:screen }
+@media(max-width:700px){.brand .satire{display:none}.brand .word{font-size:22px}}
 .logo{display:flex;align-items:center;gap:7px}
 .logo .mark{flex-shrink:0}
 .logo .word{font-family:'Montserrat',sans-serif;font-size:26px;font-weight:900;letter-spacing:1.5px;color:var(--white)}
@@ -250,14 +263,11 @@ h3{transition:color .2s ease}
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <div class="logo">
-    <svg class="mark" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Garbatrage mark">
-      <rect x="1" y="1" width="38" height="38" rx="9" fill="#c83e3e"/>
-      <text x="20" y="33" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="37" font-weight="900" fill="#ffffff">G</text>
-    </svg>
-    <div class="word"><span class="fg">G</span>ARBATRAGE</div>
-    <div class="tag">Markets. Money. Mischief.</div>
-  </div>
+  <a class="brand" href="/" aria-label="Garbatrage, home">
+    <img class="mark" src="/assets/logo-cream.png" alt="" width="40" height="40">
+    <span class="word"><i>G</i>ARBATRAGE</span>
+    <span class="satire">Satire</span>
+  </a>
   <div class="nav">
     <a href="#markets">Markets</a><a href="#investing">Investing</a><a href="#stories">Stories</a><a href="#midvalue">Mid-Value</a><a href="#desk">The Desk</a><a href="#community">Community</a>
   </div>
@@ -517,7 +527,7 @@ h3{transition:color .2s ease}
 <footer id="community">
   <div class="foot-grid">
     <div class="foot-col">
-      <h4>Markets</h4><a href="#" data-link="indexes">Indexes</a><a href="#" data-link="sectors">Sectors</a><a href="#" data-link="rates">Rates</a><a href="#" data-link="calendar">Calendar</a>
+      <h4>Markets</h4><a href="/indexes.html">Indexes</a><a href="#" data-link="sectors">Sectors</a><a href="#" data-link="rates">Rates</a><a href="#" data-link="calendar">Calendar</a>
     </div>
     <div class="foot-col">
       <h4>Company</h4><a href="#" data-link="about">About</a><a href="#" data-link="careers">Careers</a><a href="#" data-link="press">Press</a><a href="mailto:info@garbatrage.com" data-link="contact">Contact</a>
@@ -526,7 +536,7 @@ h3{transition:color .2s ease}
       <h4>Resources</h4><a href="#" data-link="newsletters">Newsletters</a><a href="#" data-link="data">Data</a><a href="#" data-link="contributors">Contributors</a><a href="#" data-link="methodology">Methodology</a>
     </div>
     <div class="foot-col">
-      <h4>Legal</h4><a href="#" data-link="terms">Terms Of Service</a><a href="#" data-link="privacy">Privacy Policy</a><a href="#" data-link="ccpa">Do Not Sell My Data</a><a href="#" data-link="licensing">Licensing</a>
+      <h4>Legal</h4><a href="/terms.html">Terms Of Service</a><a href="/privacy.html">Privacy Policy</a><a href="#" data-link="ccpa">Do Not Sell My Data</a><a href="#" data-link="licensing">Licensing</a>
     </div>
   </div>
   <div class="foot-dis">GARBATRAGE is a satirical publication, presented in the style of a professional financial news desk. All quotes, indexes, tickers and figures are fabricated, and any resemblance to real securities, people or firms is coincidental. Nothing herein is investment, legal or tax advice. Uncited statistics may have been invented to make a beat work. Please do your own research, consult a licensed advisor, and understand that markets carry risk.</div>

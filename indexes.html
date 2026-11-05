@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Garbatrage Industrial Average · Garbatrage</title>
+<meta name="description" content="The full GIA roster: 25 hand-picked mid-value securities, rebalanced when someone remembers."/>
+<meta property="og:site_name" content="Garbatrage"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Garbatrage Industrial Average · Index Composition"/>
+<meta property="og:description" content="The full GIA roster: 25 hand-picked mid-value securities, rebalanced when someone remembers."/>
+<meta property="og:url" content="https://garbatrage.com/indexes.html"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Garbatrage Industrial Average · Index Composition"/>
+<meta name="twitter:description" content="The full GIA roster: 25 hand-picked mid-value securities, rebalanced when someone remembers."/>
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;900&family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;600;700&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#0b1e33; --panel:#0e2540; --panel2:#123053; --line:#1e3a5c;
+  --brand:#c83e3e; --brand-dim:#a02f2f; --up:#2ea84f; --down:#c83e3e;
+  --text:#e9eef3; --muted:#93a6bb; --white:#ffffff; --faint:#6e8094;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ================= TICKER ================= */
+.ticker{background:#0b1e33;border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;position:relative}
+.ticker-track{display:inline-block;padding:8px 0;white-space:nowrap;animation:tick 42s linear infinite}
+.ticker-track2{display:inline-block;padding:8px 0;white-space:nowrap;animation:tick2 42s linear infinite}
+.tick{display:inline-block;padding:0 22px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:.5px}
+.tick .sym{color:var(--muted)}
+.tick .up{color:var(--up)} .tick .down{color:var(--down)}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+@keyframes tick2{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+
+/* ================= HEADER ================= */
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 26px;border-bottom:1px solid var(--line);background:var(--bg)}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:inherit}
+.brand .mark{width:40px;height:40px;flex-shrink:0;object-fit:contain}
+.brand .word{font-family:'Montserrat',sans-serif;font-size:26px;font-weight:900;letter-spacing:1.5px;color:var(--white)}
+.brand .word i{font-style:normal;color:var(--brand)}
+.brand .satire{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;border:1px solid var(--line);padding:4px 7px;border-radius:3px;margin-left:6px}
+/* dark surfaces: the flat cream logo lights up via screen; multiply keeps it clean on light surfaces */
+.topbar .mark, footer .mark, .news .mark{ mix-blend-mode:screen }
+@media(max-width:700px){.brand .satire{display:none}.brand .word{font-size:22px}}
+.logo{display:flex;align-items:center;gap:7px}
+.logo .mark{flex-shrink:0}
+.logo .word{font-family:'Montserrat',sans-serif;font-size:26px;font-weight:900;letter-spacing:1.5px;color:var(--white)}
+.logo .word span{color:var(--brand)}
+.logo .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-left:4px}
+.nav{display:flex;gap:26px}
+.nav a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px}
+.nav a:hover{color:var(--brand)}
+.utc{display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 10px var(--brand);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+
+/* ================= TRADINGVIEW STRIP ================= */
+.tv-wrap{border-bottom:1px solid var(--line);background:#0b1e33}
+.tv-wrap .tradingview-widget-container{max-width:none;background:transparent}
+.tv-wrap .tradingview-widget-container iframe{display:block;background:#0b1e33}
+
+/* ================= BREAKING ================= */
+.breaking{display:flex;align-items:center;gap:14px;background:#0b1e33;color:#ffffff;padding:10px 26px;border-bottom:1px solid #2e4d73}
+.breaking .label{font-family:'Libre Franklin',sans-serif;font-size:13px;letter-spacing:2px;background:#c83e3e;color:#ffffff;padding:4px 12px}
+.breaking .msg{font-weight:900;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+
+/* ================= HERO / LIVE ================= */
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+.segment{padding:0;position:relative;background:radial-gradient(ellipse at 20% 0%,#123053 0%,#0b1e33 60%)}
+.segment .hero-vis img{display:block;width:100%;height:auto;object-fit:cover}
+.segment .hero-txt{padding:12px 26px 26px}
+.seg-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.live-tag{display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--red)}
+.live-tag .rec{width:10px;height:10px;border-radius:50%;background:var(--red);animation:blink 1.2s infinite}
+.stamp{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:2px}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+h1.headline{font-family:'Libre Franklin',sans-serif;font-size:clamp(30px,4.5vw,56px);line-height:1.02;letter-spacing:-1px;color:var(--white);text-transform:uppercase}
+h1.headline em{font-style:normal;color:var(--brand)}
+.dek{margin-top:18px;font-size:17px;line-height:1.5;color:var(--text);max-width:600px;font-weight:500}
+.reporter{margin-top:22px;display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--line)}
+.reporter .avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#123053;border:1px solid #2e4d73;font-weight:900;color:var(--brand)}
+.reporter .by{font-size:12px;color:var(--muted)}.reporter .nm{font-size:14px;font-weight:700;color:var(--white)}
+
+/* ================= INDEX PANEL ================= */
+.sidebar{border-left:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column}
+.mkt-head{padding:20px 22px;border-bottom:1px solid var(--line)}
+.mkt-head .ttl{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px}
+.mkt-line{display:flex;align-items:baseline;gap:12px}
+.mkt-line .val{font-family:'Libre Franklin',sans-serif;font-size:34px;color:var(--white)}
+.mkt-line .chg{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;color:var(--up)}
+.sub-tabs{display:flex;gap:2px;padding:10px 0;border-bottom:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:11px}
+.sub-tabs>div{flex:1;text-align:center;padding:8px 0;color:var(--muted);letter-spacing:1px}
+.sub-tabs>div.on{color:var(--brand);background:var(--panel2);border-bottom:2px solid var(--brand)}
+.stock-row{display:flex;justify-content:space-between;align-items:center;padding:13px 22px;border-bottom:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:13px}
+.stock-row .name{font-weight:700;color:var(--white)}.stock-row .tick{color:var(--muted);padding:0}
+.stock-row .val{color:var(--muted)}
+.stock-row .chg.up{color:var(--up)}.stock-row .chg.down{color:var(--down)}
+.note{padding:16px 22px;font-size:10px;line-height:1.6;color:var(--faint);font-family:'JetBrains Mono',monospace}
+
+/* ================= TICKER2 BAR ================= */
+.scroller{display:flex;align-items:center;gap:26px;padding:13px 26px;border-bottom:1px solid var(--line);background:var(--panel)}
+.scroller .label{font-family:'Libre Franklin',sans-serif;font-size:11px;letter-spacing:2px;color:var(--brand);white-space:nowrap}
+.marquee{overflow:hidden;white-space:nowrap;flex:1;position:relative}
+.mq{display:inline-block;animation:mq 34s linear infinite}
+.mq span{display:inline-block;padding:0 30px;font-size:13px;color:var(--muted)}
+
+/* ================= CONTENT GRID ================= */
+.content{display:grid;grid-template-columns:2fr 1fr;gap:0}
+.stories{padding:30px 26px;border-right:1px solid var(--line)}
+.section-h{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.section-h::after{content:'';flex:1;height:1px;background:var(--line)}
+.feat{margin-bottom:34px}
+.feat .tag-row{display:flex;gap:8px;margin-bottom:12px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border:1px solid var(--line);color:var(--brand-dim)}
+h2.top{margin-bottom:22px;font-size:22px;line-height:1.2}
+.story{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.story .imgbox{width:150px;height:100px;flex-shrink:0;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#0b1e33}
+.story .imgbox img{width:100%;height:100%;object-fit:cover;display:block}
+.story .body h3{font-size:18px;line-height:1.25;margin-bottom:8px;color:var(--white)}
+.story .body h3:hover{color:var(--brand)}
+.story .body p{font-size:14px;color:var(--muted);line-height:1.5;margin-bottom:10px}
+.story .meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:1px}
+
+/* ================= RIGHT COL ================= */
+.right{padding:30px 26px}
+.watch-card{border:1px solid var(--line);background:var(--panel);margin-bottom:26px;overflow:hidden}
+.watch-card .wc-head{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:var(--panel2);border-bottom:1px solid var(--line)}
+.watch-card .wc-head .t{font-family:'Libre Franklin',sans-serif;font-size:14px;color:var(--white);letter-spacing:1px}
+.watch-card .wc-head .l{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--brand);text-transform:uppercase}
+.wc-body{padding:20px 18px;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:2}
+.wc-body .row{display:flex;justify-content:space-between;color:var(--muted)}
+.wc-body .row b{color:var(--white)}
+.gauge{height:6px;background:#1e3a5c;border-radius:3px;margin:4px 0 2px}
+.gauge>div{height:100%;background:var(--brand);border-radius:3px}
+.tickerbox{}
+.opinion{font-size:32px;line-height:1.1;font-family:'Libre Franklin',sans-serif;color:var(--white);text-transform:uppercase;margin-bottom:14px}
+.opinion span{color:var(--brand)}
+.opname{font-size:13px;color:var(--muted);margin-bottom:26px}
+.quote{border-left:2px solid var(--brand);padding-left:16px;margin:24px 0;font-size:15px;line-height:1.6;color:var(--text)}
+.quote .who{font-size:12px;color:var(--muted);margin-top:8px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:1px}
+
+/* ================= FOOTER ================= */
+footer{border-top:2px solid var(--brand);padding:40px 26px;background:var(--panel)}
+.foot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:1200px;margin:0 auto}
+.foot-col h4{font-size:12px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;font-family:'JetBrains Mono',monospace}
+.foot-col a{display:block;color:var(--muted);text-decoration:none;font-size:13px;line-height:1.9;cursor:pointer}
+.foot-col a:hover{color:var(--white)}
+.foot-dis{max-width:1200px;margin:26px auto 0;font-size:11px;color:var(--faint);line-height:1.7;border-top:1px solid var(--line);padding-top:20px;font-family:'JetBrains Mono',monospace}
+.copyright{text-align:center;color:var(--faint);font-size:11px;margin-top:22px;font-family:'JetBrains Mono',monospace}
+
+@media(max-width:900px){
+ .hero,.content{grid-template-columns:1fr}
+ .sidebar{border-left:0;border-top:1px solid var(--line)}
+ .stories{border-right:0}
+ .nav{display:none}
+ .foot-grid{grid-template-columns:1fr 1fr}
+}
+
+/* ================= ARTICLE MODAL ================= */
+.story{position:relative}
+.story .body h3{cursor:pointer}
+.story .body h3:hover{color:var(--brand)}
+.story .open-arrow{display:none}
+.overlay{position:fixed;inset:0;background:rgba(4,10,18,.86);z-index:200;opacity:0;pointer-events:none;transition:opacity .25s ease;display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:36px 20px}
+.overlay.show{opacity:1;pointer-events:auto}
+.article{background:var(--panel);border:1px solid var(--line);max-width:760px;width:100%;padding:40px 44px;position:relative;border-radius:6px}
+.article .a-close{position:absolute;top:18px;right:22px;background:none;border:1px solid var(--line);color:var(--muted);font-family:'JetBrains Mono',monospace;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:15px;transition:all .2s}
+.article .a-close:hover{border-color:var(--brand);color:var(--brand)}
+.article .a-cat{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
+.article h2{font-family:'Libre Franklin',sans-serif;font-size:clamp(24px,3.2vw,34px);line-height:1.1;color:var(--white);margin-bottom:16px}
+.article .a-dek{font-size:17px;line-height:1.6;color:var(--text);margin-bottom:22px}
+.article .a-byline{display:flex;align-items:center;gap:12px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.article .a-av{width:38px;height:38px;border-radius:50%;background:#123053;border:1px solid #2e4d73;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--brand);font-size:13px}
+.article .a-name{font-size:14px;font-weight:700;color:var(--white)}
+.article .a-role{font-size:12px;color:var(--muted)}
+.article p{font-size:15px;line-height:1.75;color:var(--text);margin-bottom:18px}
+.article p.lead{font-size:16px;color:var(--white)}
+.article blockquote{border-left:2px solid var(--brand);padding:4px 0 4px 18px;margin:22px 0;font-size:16px;line-height:1.6;font-style:italic;color:var(--text)}
+.article .a-tags{display:flex;gap:8px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.article .a-tags .chip{color:var(--muted)}
+/* ---- SHARE (news-site style) ---- */
+.article .a-share{display:flex;align-items:center;gap:6px;padding-top:18px;margin-top:2px;border-top:0;flex-wrap:wrap}
+.article .a-share .share-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-right:6px}
+.article .a-share .share-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--panel2);border:1px solid var(--line);color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;line-height:1;padding:9px 12px;border-radius:4px;cursor:pointer;transition:all .15s;min-width:32px}
+.article .a-share .share-btn:hover{border-color:var(--brand);color:var(--brand)}
+.article .a-share .share-btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.article .a-share .share-btn.primary:hover{background:var(--brand-dim)}
+.a-share-toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--white);color:var(--bg);font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;padding:9px 16px;border-radius:4px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:60}
+.a-share-toast.show{opacity:1}
+
+/* ================= THE DESK ================= */
+.desk{padding:40px 26px;border-top:1px solid var(--line);background:var(--panel) 0 0/cover}
+.desk .inner{max-width:1200px;margin:0 auto}
+.desk .desk-h{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.desk .desk-h .t{font-family:'Libre Franklin',sans-serif;font-size:22px;color:var(--white);text-transform:uppercase}
+.desk .desk-h .l{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--brand);text-transform:uppercase;letter-spacing:2px}
+.desk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.anchor{background:var(--panel2);border:1px solid var(--line);padding:20px 18px;cursor:pointer;transition:border-color .2s ease,transform .2s ease;position:relative}
+.anchor:hover{border-color:var(--brand);transform:translateY(-2px)}
+.anchor .an-av{width:48px;height:48px;border-radius:50%;background:#123053;border:1px solid #2e4d73;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--brand);font-size:16px;margin-bottom:14px}
+.anchor .an-name{font-size:16px;font-weight:700;color:var(--white);margin-bottom:2px}
+.anchor .an-role{font-size:12px;color:var(--muted);line-height:1.4;margin-bottom:10px}
+.anchor .an-bio{font-size:12px;color:var(--faint);line-height:1.55}
+.anchor .an-read{position:absolute;right:16px;bottom:14px;color:var(--brand);font-family:'JetBrains Mono',monospace;font-size:11px}
+@media(max-width:560px){.desk-grid{grid-template-columns:1fr 1fr}}
+
+/* ================= MOTION ================= */
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.reveal{opacity:0}
+.reveal.show{animation:rise .6s cubic-bezier(.2,.65,.3,1) forwards}
+.stock-row{transition:background .2s ease}
+.stock-row:hover{background:var(--panel2)}
+h3{transition:color .2s ease}
+.gauge>div{width:0!important;transition:width 1.2s cubic-bezier(.2,.7,.3,1)}
+.gauge.fill>div{width:var(--w)!important}
+.num{transition:transform .15s ease}
+/* ================= WATCH ================= */
+.watch{padding:40px 26px;border-top:1px solid var(--line);background:var(--panel)}
+.watch .inner{max-width:1200px;margin:0 auto}
+.watch .desk-h{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.watch .desk-h .t{font-family:'Libre Franklin',sans-serif;font-size:22px;color:var(--white);text-transform:uppercase}
+.watch .desk-h .l{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--brand);text-transform:uppercase;letter-spacing:2px}
+.watch-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.watch-frame{background:var(--bg);border:1px solid var(--line);border-radius:8px;overflow:hidden;position:relative}
+.watch-frame video{width:100%;display:block;background:#000}
+.watch-frame .rec{position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:8px;background:rgba(4,10,18,.7);padding:6px 12px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#ff5b4d;letter-spacing:1px;z-index:2}
+.watch-frame .rec .d{width:9px;height:9px;border-radius:50%;background:#c83e3e;animation:blink 1s infinite}
+.watch-info h3{font-family:'Libre Franklin',sans-serif;font-size:24px;line-height:1.15;color:var(--white);margin-bottom:12px;text-transform:uppercase}
+.watch-info p{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:18px}
+.watch-info .wh{display:flex;align-items:center;gap:10px}
+.watch-info .wh .av{width:34px;height:34px;border-radius:50%;background:#123053;border:1px solid #2e4d73;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--brand);font-size:12px}
+@media(max-width:900px){.watch-grid{grid-template-columns:1fr}}
+/* ================= FOOTER REPLY MODAL ================= */
+.freply{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:34px 38px;max-width:430px;width:90vw;z-index:400;display:none;font-family:'Inter',sans-serif;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.freply.show{display:block;animation:rise .25s ease}
+.freply .f-close{position:absolute;top:14px;right:18px;background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer;font-family:'JetBrains Mono',monospace}
+.freply .f-close:hover{color:var(--brand)}
+.freply .f-cat{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--brand);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+.freply h3{font-size:20px;font-weight:800;color:var(--white);margin-bottom:12px}
+.freply p{font-size:14px;line-height:1.6;color:var(--muted)}
+.freply p b{color:var(--white)}
+.freply .f-tone{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--faint);margin-top:18px;text-transform:uppercase;letter-spacing:1px}
+
+
+/* ===== LEGAL PAGE ===== */
+.legal-top{display:flex;justify-content:space-between;align-items:center;padding:14px 26px;border-bottom:1px solid var(--line);background:var(--bg)}
+.legal-logo{display:flex;align-items:center;gap:10px}
+.legal-logo a{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:900;letter-spacing:1.5px;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:8px}
+.legal-logo i{font-style:normal;color:var(--brand)}
+.legal-bar{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px}
+.wrap{max-width:820px;margin:0 auto;padding:52px 26px 20px}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--brand);letter-spacing:2px;text-transform:uppercase}
+.wrap h1{font-family:'Libre Franklin',sans-serif;font-weight:900;font-size:clamp(30px,5vw,46px);color:var(--white);margin:10px 0 22px;line-height:1.05}
+.wrap h2{font-family:'Libre Franklin',sans-serif;font-weight:700;font-size:20px;color:var(--white);margin:34px 0 10px}
+.wrap p{font-size:15px;line-height:1.75;color:var(--text);margin-bottom:16px}
+.wrap p.caps{text-transform:uppercase;letter-spacing:.3px;font-size:13px;color:var(--muted);border-left:2px solid var(--brand);padding-left:16px}
+.wrap ul{list-style:none;padding:0;margin:4px 0 16px}
+.wrap ul li{position:relative;padding:5px 0 5px 20px;font-size:15px;line-height:1.7;color:var(--text)}
+.wrap ul li:before{content:"";position:absolute;left:2px;top:14px;width:6px;height:6px;background:var(--brand)}
+.wrap a{color:var(--brand);text-decoration:none}
+.wrap a:hover{text-decoration:underline}
+.wrap table{width:100%;border-collapse:collapse;margin:10px 0 18px;font-size:13px}
+.wrap th{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);text-align:left;padding:9px 10px;border-bottom:2px solid var(--brand)}
+.wrap td{padding:9px 10px;color:var(--text);line-height:1.5;border-bottom:1px solid var(--line);vertical-align:top}
+.joke{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--brand);padding:18px 20px;font-size:14px;line-height:1.7;color:var(--text);border-radius:6px;margin-bottom:34px}
+.joke strong{color:var(--white)}
+/* ===== INDEX (GIA) PAGE ===== */
+.gia-head{display:flex;justify-content:space-between;align-items:center;gap:20px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:8px;padding:22px 24px;margin:6px 0 10px;flex-wrap:wrap}
+.gia-meta{display:flex;align-items:center;gap:16px}
+.gia-symbol{font-family:'Montserrat',sans-serif;font-weight:900;font-size:26px;color:var(--brand);letter-spacing:1px}
+.gia-name{font-family:'Libre Franklin',sans-serif;font-weight:700;font-size:19px;color:var(--white)}
+.gia-level{text-align:right}
+.gia-base{font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:600;color:var(--white)}
+.gia-sub{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-top:4px}
+.sect-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.sector-chip{padding:5px 12px;border:1px solid var(--line);border-radius:30px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);background:var(--panel)}
+.table-scroll{overflow-x:auto;margin-top:6px}
+.gia-table{width:100%;border-collapse:collapse;font-size:13px;min-width:860px}
+.gia-table th{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:2px solid var(--brand);position:sticky;top:0;background:var(--bg)}
+.gia-table td{padding:14px 12px;border-bottom:1px solid var(--line);color:var(--text);vertical-align:top;line-height:1.5}
+.gia-table .tick{font-family:'JetBrains Mono',monospace;font-weight:600;color:var(--brand);white-space:nowrap}
+.gia-table .co{min-width:260px}
+.gia-table .co-n{font-weight:700;color:var(--white);font-size:14px}
+.gia-table .co-b{font-size:12px;color:var(--muted);margin-top:3px}
+.gia-table .co-f{display:flex;flex-direction:column;gap:3px;margin-top:7px;padding-top:7px;border-top:1px dashed var(--line)}
+.gia-table .co-f .filing{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--brand-dim);letter-spacing:.3px}
+.gia-table .co-f .quote{font-size:11px;color:var(--faint);font-style:italic}
+.gia-table .cap{font-family:'JetBrains Mono',monospace;white-space:nowrap;color:var(--white)}
+.gia-table .sec,.gia-table .ceo,.gia-table .fnd,.gia-table .hq{white-space:nowrap;font-size:12px;color:var(--muted)}
+.legal-footer{border-top:2px solid var(--brand);padding:40px 26px;background:var(--panel)}
+.legal-footlink{max-width:820px;margin:0 auto;display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+.legal-footlink a{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:1px}
+.legal-footlink a:hover{color:var(--brand)}
+.legal-footlink span{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--faint)}
+@media(max-width:700px){.legal-bar,.utc{display:none}.legal-top{flex-wrap:wrap;gap:10px}.wrap{padding-top:32px}.legal-footlink span{margin-left:0;width:100%;margin-top:14px}.wrap table{font-size:12px}.wrap th,.wrap td{padding:7px 6px}}
+
+</style>
+</head>
+<body>
+
+<div class="legal-top">
+  <div class="legal-logo"><a class="brand" href="/" aria-label="Garbatrage, home">
+<img class="mark" src="/assets/logo-cream.png" alt="" width="40" height="40">
+<span class="word"><i>G</i>ARBATRAGE</span>
+<span class="satire">Satire</span>
+</a></div>
+  <div class="nav" style="gap:18px">
+    <a href="/#markets">Markets</a><a href="/#stories">Stories</a><a href="/#desk">The Desk</a><a href="/#community">Community</a>
+  </div>
+  <div class="utc">Legal</div>
+</div>
+
+<div class="wrap index">
+  <div class="kicker">Index Composition · As Of 5 November 2026</div>
+  <h1>Garbatrage Industrial Average</h1>
+  <p class="joke">The stock ticker is real and moving. The companies are not. The GIA is a proprietary index composed of hand-picked mid-value securities, rebalanced when someone remembers. It is not a benchmark, is not calculated by any exchange, and is not licensed to anyone.</p>
+
+  <div class="gia-head">
+    <div class="gia-meta">
+      <div class="gia-symbol">GIA</div>
+      <div class="gia-name">Garbatrage Industrial Average</div>
+    </div>
+    <div class="gia-level">
+      <div class="gia-base">38,221.07</div>
+      <div class="gia-sub">Base level · composed of 25 mid-value securities</div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:34px">Sector roster</h2>
+  <div class="sect-chips" id="sectChips"></div>
+
+  <h2 style="margin-top:34px">Constituents</h2>
+  <p style="margin-bottom:8px">Hand-picked mid-value securities, rebalanced when someone remembers. Full roster below.</p>
+  <div class="table-scroll">
+  <table class="gia-table" id="giaTable"></table>
+  </div>
+</div>
+
+<div class="legal-footer">
+  <div class="legal-footlink">
+    <a href="/">Home</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/methodology.html">Methodology</a>
+    <span>© Garbatrage Media Group LLC</span>
+  </div>
+</div>
+
+<script>
+const GIA={"index": {"name": "Garbatrage Industrial Average", "symbol": "GIA", "base": 38221.07, "note": "Proprietary. Not a benchmark. Not investment advice.", "composition": "Hand-picked mid-value securities, rebalanced when someone remembers"}, "sectors": ["Hauling", "Recycling", "Landfill", "Materials", "Composting", "Real Estate", "Consumer", "Industrials", "Services", "Financials"], "constituents": [{"ticker": "TRSH", "name": "Trash & Sons", "sector": "Hauling", "cap": "$412M", "ceo": "Wendell Trash III", "founded": 1908, "hq": "Gary, IN", "business": "Third-generation residential collection. The sons are named Trash; the founder was not.", "filing": "8-K — announces fourth son", "quote": "We are a family business in the sense that nobody can leave."}, {"ticker": "BYTBN", "name": "Byte Bin", "sector": "Recycling", "cap": "$1.9B", "ceo": "Priyanka Rao", "founded": 2016, "hq": "San Jose, CA", "business": "Certified e-waste destruction for enterprises that need the certificate more than the destruction.", "filing": "10-Q — margin compression in the certificate line", "quote": "The hardware is the easy part. The paperwork is the moat."}, {"ticker": "MJNK", "name": "Morning Junk", "sector": "Consumer", "cap": "$38M", "ceo": "Dale Ostrowski", "founded": 2019, "hq": "Tampa, FL", "business": "Curbside bulk pickup sold as a subscription. Markets itself as a lifestyle brand to people with too much furniture.", "filing": "S-1 — fourth attempt", "quote": "We are not a hauling company. We are a Saturday."}, {"ticker": "STBL", "name": "Stable Value, Inc", "sector": "Financials", "cap": "$6.4B", "ceo": "Marguerite Bell", "founded": 1971, "hq": "Hartford, CT", "business": "Money-market administration. Has never had an exciting quarter and mentions this in every deck.", "filing": "DEF 14A — board re-nominated unanimously, again", "quote": "We sell the absence of a story."}, {"ticker": "HYST", "name": "Hysterical Systems", "sector": "Industrials", "cap": "$890M", "ceo": "Rob Cuskelly", "founded": 2004, "hq": "Akron, OH", "business": "Compactor and baler maintenance for retail chains. On-call, 24 hours, with a two-hour SLA nobody believes.", "filing": "8-K — CFO departs, cites the SLA", "quote": "Everyone is calm until the baler stops."}, {"ticker": "BINN", "name": "Bin There Holdings", "sector": "Hauling", "cap": "$233M", "ceo": "Tobias Lund", "founded": 1998, "hq": "Duluth, MN", "business": "Roll-off container rental for construction. Name is a pun and the company is aware.", "filing": "10-K — fleet age disclosed for the first time, stock falls", "quote": "We've been Bin There. It's on the trucks. It's not going anywhere."}, {"ticker": "SKIP", "name": "Skip & Sons Hauling", "sector": "Hauling", "cap": "$97M", "ceo": "Skip Duross", "founded": 1982, "hq": "Scranton, PA", "business": "Commercial roll-off and demolition debris. The sons are not involved and this is discussed at every shareholder meeting.", "filing": "DEF 14A — shareholder proposal on succession, defeated", "quote": "The sons have their own thing."}, {"ticker": "CURB", "name": "Curbline Logistics", "sector": "Hauling", "cap": "$540M", "ceo": "Adeola Bankole", "founded": 2011, "hq": "Atlanta, GA", "business": "Route optimisation software sold to haulers, plus a small fleet used as a reference customer.", "filing": "10-Q — reference fleet costs exceed software revenue", "quote": "We are our own worst client and our best case study."}, {"ticker": "DMPR", "name": "Dumpster Dynamics", "sector": "Industrials", "cap": "$1.2B", "ceo": "Vince Marchetti", "founded": 1969, "hq": "Newark, NJ", "business": "Manufactures the containers. Sells almost entirely to the same haulers who compete for the containers.", "filing": "10-K — steel input costs, fourth consecutive warning", "quote": "Everyone needs a box. Nobody wants to buy one."}, {"ticker": "LANF", "name": "Landfill Capital", "sector": "Landfill", "cap": "$11.3B", "ceo": "Harriet Ngo", "founded": 1988, "hq": "Houston, TX", "business": "Owns the holes. Leases airspace by the ton. Reports remaining capacity the way a mine reports reserves.", "filing": "10-K — airspace life extends to 41 years", "quote": "We are a real estate company with a smell."}, {"ticker": "SCRP", "name": "Scrapbook Materials", "sector": "Materials", "cap": "$764M", "ceo": "Ivan Petrov", "founded": 1954, "hq": "Youngstown, OH", "business": "Ferrous and non-ferrous brokerage. The name has caused forty years of stationery jokes.", "filing": "8-K — acquires a smaller broker with a normal name", "quote": "We bought them for the name. Partly."}, {"ticker": "PLUP", "name": "Pulp & Patience", "sector": "Materials", "cap": "$302M", "ceo": "Renée Aubert", "founded": 1931, "hq": "Bangor, ME", "business": "Recovered fibre. The patience refers to the permitting.", "filing": "10-Q — mill restarts after 14 months idle", "quote": "Nothing in this business is fast except the pulp."}, {"ticker": "ROT", "name": "Rota Composting", "sector": "Composting", "cap": "$156M", "ceo": "Sam Okonkwo", "founded": 2013, "hq": "Portland, OR", "business": "Municipal organics processing. Odour complaints are the primary KPI and are reported quarterly.", "filing": "10-K — complaint volume down 12%, stock up 9%", "quote": "Our best quarter was a quiet one."}, {"ticker": "ODR", "name": "Odor Neutral", "sector": "Services", "cap": "$88M", "ceo": "Lainey Fisk", "founded": 2009, "hq": "Charlotte, NC", "business": "Enzyme treatment for transfer stations. Sells to exactly the operators who generate the complaints.", "filing": "10-Q — customer concentration, top three are 61% of revenue", "quote": "We are a hedge against Rota's KPI."}, {"ticker": "GLLT", "name": "Gull Trust", "sector": "Financials", "cap": "$2.1B", "ceo": "Peter Van Dorn", "founded": 1994, "hq": "Boston, MA", "business": "Royalty trust holding a share of landfill gas rights. Pays monthly, explains nothing.", "filing": "10-K — distribution maintained", "quote": "The trust does not give guidance. The trust distributes."}, {"ticker": "PIGE", "name": "Pigeon Property Group", "sector": "Real Estate", "cap": "$3.7B", "ceo": "Marisol Vega", "founded": 2002, "hq": "Queens, NY", "business": "Buys brownfield sites, remediates partially, leases to storage and logistics.", "filing": "8-K — remediation overruns at three sites", "quote": "Partially remediated is a business model, not an apology."}, {"ticker": "RACC", "name": "Raccoon Brands", "sector": "Consumer", "cap": "$1.4B", "ceo": "Nate Halloran", "founded": 2017, "hq": "Austin, TX", "business": "Household storage and bins, sold DTC, named after animals that get into bins.", "filing": "S-1 — CAC disclosed, investors recalibrate", "quote": "The animal is aspirational. The customer wants to keep things out."}, {"ticker": "SLDG", "name": "Sludge Works", "sector": "Composting", "cap": "$204M", "ceo": "Bea Tomlinson", "founded": 1976, "hq": "Milwaukee, WI", "business": "Biosolids handling for municipal water districts. Contracts run decades and are won on patience.", "filing": "10-K — three contracts renewed, all 20-year", "quote": "Nobody celebrates us and nobody replaces us."}, {"ticker": "TANG", "name": "Tangible Waste", "sector": "Services", "cap": "$129M", "ceo": "Cyrus Meade", "founded": 2015, "hq": "Denver, CO", "business": "Waste audits for ESG reporting. Produces the number, then sells the reduction against the number.", "filing": "10-Q — audit revenue and reduction revenue diverge", "quote": "We find the problem and then we are the solution. Sequentially."}, {"ticker": "BRWN", "name": "Brownfield Partners", "sector": "Real Estate", "cap": "$611M", "ceo": "Dara Iwu", "founded": 1999, "hq": "Cleveland, OH", "business": "Industrial redevelopment. Buys what nobody will touch and touches it.", "filing": "10-K — portfolio occupancy 94%", "quote": "Every asset we own was somebody's problem first."}, {"ticker": "LEAF", "name": "Leaf & Leave", "sector": "Consumer", "cap": "$45M", "ceo": "Gordy Simms", "founded": 2021, "hq": "Burlington, VT", "business": "Seasonal yard-waste subscription. Revenue is 71% in a nine-week window and the company is at peace with it.", "filing": "10-Q — Q2 concentration disclosed as a risk", "quote": "We are a nine-week company and the other 43 are for planning."}, {"ticker": "MOSS", "name": "Mossback Industrial", "sector": "Industrials", "cap": "$1.8B", "ceo": "Trudy Kaminski", "founded": 1948, "hq": "Erie, PA", "business": "Heavy equipment refurbishment. Buys back its own machines at 12 years and resells at 15.", "filing": "10-K — refurb mix now 38% of revenue", "quote": "A machine is not old. It is between owners."}, {"ticker": "GRAV", "name": "Gravel & Grit", "sector": "Materials", "cap": "$420M", "ceo": "Hollis Brant", "founded": 1961, "hq": "Wichita, KS", "business": "Aggregate supply for road base. Owns three pits, permits two, operates one.", "filing": "8-K — second pit permitted after six years", "quote": "The permits are the business. The gravel is the byproduct."}, {"ticker": "SORT", "name": "Sort-Right Systems", "sector": "Industrials", "cap": "$967M", "ceo": "Aiko Tanaka", "founded": 2007, "hq": "Sacramento, CA", "business": "Optical sorting retrofits for MRFs. Sells throughput; accuracy is the customer's problem to staff.", "filing": "10-Q — backlog up, installs slip", "quote": "The machine is right. The line is only as good as the people beside it."}, {"ticker": "RECL", "name": "Reclaim Collective", "sector": "Recycling", "cap": "$73M", "ceo": "Marguerite Bell", "founded": 2022, "hq": "Detroit, MI", "business": "Worker-owned co-op doing commercial recycling. Same CEO as STBL, which nobody has noticed.", "filing": "10-K — membership buyout tranche funded", "quote": "We are a co-op. Decisions take a month and last a decade."}]};
+(function(){
+  const chips=document.getElementById('sectChips');
+  chips.innerHTML=GIA.sectors.map(s=>`<span class="sector-chip">${s}</span>`).join('');
+  const head=GIA.constituents[0];
+  const headers=['Ticker','Company','Sector','Cap','CEO','Founded','HQ'];
+  let h='<thead><tr>'+headers.map(x=>`<th>${x}</th>`).join('')+'</tr></thead><tbody>';
+  GIA.constituents.forEach(c=>{
+    h+=`<tr>
+      <td class="tick">${c.ticker}</td>
+      <td class="co"><div class="co-n">${c.name}</div><div class="co-b">${c.business}</div></td>
+      <td><span class="sec">${c.sector}</span></td>
+      <td class="cap">${c.cap}</td>
+      <td class="ceo">${c.ceo}</td>
+      <td class="fnd">${c.founded}</td>
+      <td class="hq">${c.hq}</td>
+    </tr>`;
+  });
+  h+='</tbody>';
+  document.getElementById('giaTable').innerHTML=h;
+  // footnote line with filing + quote appended under each company cell
+  document.querySelectorAll('#giaTable tbody tr').forEach((tr,i)=>{
+    const c=GIA.constituents[i];
+    const co=tr.querySelector('.co');
+    const n=document.createElement('div');
+    n.className='co-f';
+    n.innerHTML=`<span class="filing">${c.filing}</span><span class="quote">${c.quote}</span>`;
+    co.appendChild(n);
+  });
+})();
+</script>
+
+</body>
+</html>

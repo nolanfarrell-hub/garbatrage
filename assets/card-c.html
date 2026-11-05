@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px;overflow:hidden}
+  body{background:#141414;font-family:'Libre Franklin',Arial,sans-serif}
+  .card{width:1200px;height:630px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:64px 72px;position:relative;overflow:hidden}
+  .seal{width:96px;height:96px;position:relative;z-index:2}
+  .band{display:flex;align-items:center;justify-content:center;position:relative;z-index:2;margin-top:18px;width:100%}
+  .band .ghost{position:absolute;font-weight:900;font-size:200px;color:#1d1d1d;line-height:1;user-select:none}
+  .band h1{position:relative;color:#F2EDE1;font-weight:900;font-size:64px;letter-spacing:8px;text-transform:uppercase;text-align:center}
+  .tag{position:relative;z-index:2;color:#C9C1AE;font-size:19px;letter-spacing:10px;text-transform:uppercase;margin-top:22px}
+  .foot{position:absolute;bottom:0;left:0;right:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:34px 72px;border-top:1px solid #262626}
+  .sw{display:flex;align-items:center;gap:14px}
+  .sw i{width:22px;height:22px;border-radius:4px;display:inline-block}
+  .sw span{color:#C9C1AE;font-size:14px;font-family:'JetBrains Mono',monospace;letter-spacing:1px}
+  .foot>span{color:#F2EDE1;font-size:16px;letter-spacing:1px}
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="seal" src="/assets/seal-cream.png" alt="">
+    <div class="band">
+      <div class="ghost">G</div>
+      <h1>Garbatrage</h1>
+    </div>
+    <div class="tag">Markets Money Mischief</div>
+    <div class="foot">
+      <div class="sw">
+        <i style="background:#141414"></i><span>#141414</span>
+        <i style="background:#f2ede1;border:1px solid #c9c1ae"></i><span>#F2EDE1</span>
+        <i style="background:#620e14"></i><span>#620E14</span>
+      </div>
+      <span>garbatrage.com</span>
+    </div>
+  </div>
+</body>
+</html>
