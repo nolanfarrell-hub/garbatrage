@@ -238,10 +238,7 @@ def build_home():
 </main>
 <div class="news"><div class="nin">
   <div><h2>The Morning Dump</h2><p>Six headlines and one quietly mispriced thing, every weekday at 6:40.</p></div>
-  <form action="/subscribe" method="post">
-    <input type="email" name="email" placeholder="you@work.com" required aria-label="Email">
-    <button type="submit">Subscribe</button>
-  </form>
+  <a class="btn" href="mailto:info@garbatrage.com?subject=Subscribe%20to%20The%20Morning%20Dump&body=Add%20me%20to%20the%20list.%20Address%20to%20use%3A%20">Subscribe</a>
 </div></div>
 {FOOTER}"""
     write("index.html",
