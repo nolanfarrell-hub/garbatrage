@@ -158,8 +158,8 @@ def img(s):
 def build_story(s):
     art = img(s)
     url = f"{SITE}/story/{s['slug']}/"
-    share = (f'<div class="share"><a href="https://twitter.com/intent/tweet?text={quote(s["dek"])}&url={quote(url)}" target="_blank" rel="noopener">Post to X</a>'
-             f'<a href="https://warpcast.com/~/compose?text={quote(s["dek"])}&embeds[]={quote(url)}" target="_blank" rel="noopener">Cast</a>'
+    share = (f'<div class="share"><a href="https://twitter.com/intent/tweet?text={quote(s["title"])}&url={quote(url)}" target="_blank" rel="noopener">Post to X</a>'
+             f'<a href="https://warpcast.com/~/compose?text={quote(s["title"])}&embeds[]={quote(url)}" target="_blank" rel="noopener">Cast</a>'
              f'<a href="{esc(url)}" data-copy>Copy link</a></div>')
     jsonld = {
         "type": "NewsArticle",
@@ -334,7 +334,7 @@ def build_home():
         f'<div class="meta">{esc(s["desk"])} · {esc(s["author"])}</div></div></a>'
         for s in briefs)
     body = f"""
-<main class="home">
+<div class="home">
 <div class="col">
   <div class="kick">{esc(lead["desk"])}</div>
   <h1><a href="/story/{lead["slug"]}/">{esc(lead["title"])}</a></h1>
@@ -357,7 +357,7 @@ def build_home():
   </div>
   <div class="quote">“{esc(q)}”<i>{esc(qn)} · {esc(qr)}</i></div>
 </aside>
-</main>
+</div>
 <div class="news"><div class="nin">
   <div><h2>The Morning Dump</h2><p>Six headlines and one quietly mispriced thing, every weekday at 6:40.</p></div>
   <a class="btn" href="mailto:info@garbatrage.com?subject=Subscribe%20to%20The%20Morning%20Dump&body=Add%20me%20to%20the%20list.%20Address%20to%20use%3A%20">Subscribe</a>

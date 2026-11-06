@@ -112,8 +112,8 @@ ul.fil li span{display:block;font-size:10px;letter-spacing:1px;text-transform:up
 .pager span{color:var(--faint)}
 
 @media(max-width:700px){
-  .bar{padding:12px 16px}
-  .bar .back{font-size:10px}
+  .bar{gap:10px}
+  .bar .back{display:flex;gap:10px;overflow-x:auto;white-space:nowrap;flex-shrink:1;min-width:0;scrollbar-width:none}
   .bar .back a{display:inline-block;padding:2px 0}
   .wrap{padding:32px 18px 50px}
   .entry{gap:10px}
@@ -146,7 +146,7 @@ h1 a:hover{color:var(--ox)}
 .thumb img{width:100%;height:100%;object-fit:cover;display:block}
 .item h3{font-family:'Newsreader',serif;font-size:21px;font-weight:600;letter-spacing:-.012em;line-height:1.2;margin-bottom:5px}
 .item p{font-size:11px;color:var(--mute);line-height:1.5;margin-bottom:4px}
-.meta{font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:#9a9284}
+.meta{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--mute)}
 .panel{border:1px solid var(--ink);margin-bottom:18px}
 .ph{background:var(--ink);color:var(--cream);font-size:9px;letter-spacing:1.8px;text-transform:uppercase;padding:5px 8px;display:flex;justify-content:space-between}
 .pb{padding:10px 8px}
@@ -167,7 +167,7 @@ footer{border-top:3px solid var(--ink);padding:24px 0 40px;font-size:10px;max-wi
 footer h4{font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:var(--ox);margin-bottom:6px}
 footer a{display:block;color:var(--mute);text-decoration:none;line-height:1.9}
 footer a:hover{color:var(--ink)}
-.legal{border-top:1px solid var(--rule);padding-top:12px;font-size:9px;color:#9a9284;line-height:1.6}
+.legal{border-top:1px solid var(--rule);padding-top:12px;font-size:11px;color:var(--mute);line-height:1.6}
 @media(max-width:860px){.home{grid-template-columns:1fr}.home .col{border-right:0;padding-right:0}.home .rail{padding-left:0;border-top:1px solid var(--rule)}.fg{grid-template-columns:1fr 1fr}}
 
 .news .btn{display:inline-block;border:1px solid var(--cream);background:var(--cream);color:var(--ink);padding:9px 16px;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;text-decoration:none}
