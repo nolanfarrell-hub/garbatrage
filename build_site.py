@@ -229,11 +229,11 @@ def build_company(c, i):
                  f"{c['name']} — {c['sector']} constituent of the Garbatrage Industrial Average. Fictional.",
                  body, url))
 
-# ---------- markets + sectors ----------
-def listing(title, desc, groups, url, active):
-    chips = '<a href="/markets/"' + (' class="on"' if active == "all" else "") + '>All</a>'
+# ---------- markets (sectors folded in as in-page anchors; no thin /sector/*/ pages) ----------
+def listing(groups, active="all"):
+    chips = '<a href="#all"' + (' class="on"' if active == "all" else "") + '>All</a>'
     chips += "".join(
-        f'<a href="/sector/{slugify(s)}/"' + (' class="on"' if slugify(s) == slugify(active) else "") + f'>{esc(s)}</a>'
+        f'<a href="#{slugify(s)}"' + (' class="on"' if slugify(s) == slugify(active) else "") + f'>{esc(s)}</a>'
         for s in gia["sectors"])
     blocks = ""
     for sector, rows in groups:
@@ -243,14 +243,14 @@ def listing(title, desc, groups, url, active):
             f'<td class="cap">{esc(c["cap"])}</td><td class="px">${c["price"]}</td>'
             f'<td class="ch {"up" if c["change"] >= 0 else "dn"}">{c["change"]:+.1f}%</td></tr>'
             for c in rows)
-        blocks += (f'<h2>{esc(sector)} <span>{len(rows)} of {len(cons)}</span></h2>'
+        blocks += (f'<h2 id="{slugify(sector)}">{esc(sector)} <span>{len(rows)} of {len(cons)}</span></h2>'
                    f'<table>{trs}</table>')
-    body = f"""<div class="kick">Markets · Index Construction</div><h1>{esc(title)}</h1>
-<p class="lede">{esc(desc)}</p>
+    body = f"""<div class="kick">Markets · Index Construction</div><h1>The Garbatrage Industrial Average</h1>
+<p class="lede">Twenty-five constituents, hand-picked, weighted by price and by mood. Every market is fictional; the construction is the point.</p>
 <div class="summary"><b>38,221.07</b><span class="ch dn">▼ 321.44 (-0.83%)</span><span class="n">Fictional index</span></div>
 <div class="chips">{chips}</div>{blocks}{DISC_INDEX}"""
-    write(("markets" if active == "all" else f"sector/{slugify(active)}") + "/index.html",
-          layout(f"{title} · Garbatrage", desc, body, url))
+    write("markets/index.html",
+          layout("Markets · Garbatrage", "Twenty-five constituents, hand-picked, weighted by price and by mood.", body, f"{SITE}/markets/"))
 
 # ---------- archive ----------
 def build_archive():
@@ -274,12 +274,9 @@ def build_archive():
 
 # ---------- feeds ----------
 def build_feeds():
-    urls = [f"{SITE}/", f"{SITE}/markets/", f"{SITE}/archive/", f"{SITE}/about/",
+    urls = [f"{SITE}/", f"{SITE}/markets/", f"{SITE}/archive/", f"{SITE}/desk/", f"{SITE}/about/",
             f"{SITE}/methodology/", f"{SITE}/terms.html", f"{SITE}/privacy.html"]
     urls += [f"{SITE}/company/{c['ticker'].lower()}/" for c in cons]
-    urls += [f"{SITE}/sector/{slugify(s)}/" for s in gia["sectors"]]
-    urls.append(f"{SITE}/desk/")
-    urls += [f"{SITE}/desk/{dslug}/" for dslug in DESKS]
     urls += [f"{SITE}/story/{s['slug']}/" for s in stories]
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     write("sitemap.xml",
@@ -309,7 +306,7 @@ QUOTES = [
 ]
 
 FOOTER = """<footer><div class="fg">
-<div><h4>Markets</h4><a href="/markets/">Indexes</a><a href="/archive/">Archive</a><a href="/desk/rates/">Rates</a><a href="/desk/etfs/">ETFs</a><a href="/desk/hauling/">Hauling</a></div>
+<div><h4>Markets</h4><a href="/markets/">Indexes</a><a href="/archive/">Archive</a><a href="/desk/">The Desk</a></div>
 <div><h4>Company</h4><a href="/about/">About</a><a href="/press/">Press</a><a href="mailto:info@garbatrage.com">Contact</a></div>
 <div><h4>Resources</h4><a href="/methodology/">Methodology</a><a href="/archive/">All stories</a><a href="/rss.xml">RSS</a></div>
 <div><h4>Legal</h4><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></div>
@@ -408,16 +405,7 @@ for s in stories:
     build_story(s)
 for i, c in enumerate(cons):
     build_company(c, i)
-listing("The Garbatrage Industrial Average",
-        "Twenty-five constituents, hand-picked, weighted by price and by mood.",
-        [(s, [c for c in cons if c["sector"] == s]) for s in gia["sectors"]],
-        f"{SITE}/markets/", "all")
-for s in gia["sectors"]:
-    listing(s, f"{s} constituents of the Garbatrage Industrial Average.",
-            [(s, [c for c in cons if c["sector"] == s])],
-            f"{SITE}/sector/{slugify(s)}/", s)
-for d in DESKS:
-    build_desk(d)
+listing([(s, [c for c in cons if c["sector"] == s]) for s in gia["sectors"]])
 build_archive()
 build_home()
 build_roster()
