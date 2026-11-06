@@ -81,7 +81,7 @@ def layout(title, desc, body, canonical):
 <link rel="me" href="https://twitter.com/garbatrage">
 <link rel="me" href="https://warpcast.com/garbatrage">
 <meta name="theme-color" content="#141414">
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 {jsonld}
 </head><body><a class="skip" href="#main">Skip to content</a>
@@ -109,7 +109,7 @@ LEGAL_STYLE = """
 .legal table td:first-child{font-weight:600;white-space:nowrap;width:200px}
 .ching{margin:0 0 30px}
 .chl{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--maroon);border-radius:6px;padding:16px 20px;font-size:14px;line-height:1.7;margin-bottom:24px}
-.pull{border-left:3px solid var(--maroon);padding:4px 0 4px 20px;margin:24px 0;font-family:'Abril Fatface',serif;font-size:20px;line-height:1.45;color:var(--ink)}
+.pull{border-left:3px solid var(--maroon);padding:4px 0 4px 20px;margin:24px 0;font-family:'Newsreader',serif;font-weight:600;font-size:20px;letter-spacing:-.012em;line-height:1.45;color:var(--ink)}
 .mt{color:var(--faint);font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-top:34px}
 </style>"""
 
