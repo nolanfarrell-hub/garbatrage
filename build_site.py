@@ -3,6 +3,7 @@
 import json, shutil, html, re
 from pathlib import Path
 from datetime import datetime, timezone
+from urllib.parse import quote
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "site"
@@ -19,10 +20,68 @@ def slugify(s): return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")[:70]
 def av(name): return "".join(p[0] for p in name.split()[:2]).upper()
 def day(s): return datetime.fromisoformat(s).strftime("%a %d")
 
-TAPE = "".join(
-    f'<span><i class="s">{esc(c["ticker"])}</i> {c["price"]} '
-    f'<i class="{"up" if c["change"] >= 0 else "dn"}">{c["change"]:+.1f}%</i></span>'
-    for c in cons[:8])
+# Real-time tape (TradingView widget, consent-gated load; see layout <script>).
+# The fiction stays in the GIA rail panel and /markets/. Terms() already names
+# TradingView as a provider, so this makes the legal copy true.
+TAPE_CFG = {
+    "symbols": [
+        {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+        {"proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100"},
+        {"proName": "TVC:GOLD",        "title": "Gold"},
+        {"proName": "TVC:USOIL",       "title": "WTI"},
+        {"proName": "BITSTAMP:BTCUSD", "title": "BTC"},
+        {"proName": "FX:EURUSD",       "title": "EUR/USD"},
+        {"proName": "TVC:DXY",         "title": "Dollar Index"},
+        {"proName": "TVC:VIX",         "title": "VIX"},
+    ],
+    "showSymbolLogo": False,
+    "colorTheme": "dark",
+    "isTransparent": True,
+    "displayMode": "compact",
+    "locale": "en",
+}
+TAPE_JSON = json.dumps(TAPE_CFG, separators=(",", ":"))
+
+TAPE = '''<div class="tape" aria-label="Live market tape">
+  <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div>
+  <noscript><p class="tape-noscript">Live tape needs JavaScript. The GIA — which is fiction — is on the <a href="/markets/">markets page</a>.</p></noscript>
+</div>'''
+
+CONSENT = '''<div id="gb-consent" role="region" aria-label="Cookie consent">
+  <span>We use a third party for the live market tape, which may set cookies.</span>
+  <div class="gbc-btns">
+    <button class="gbc-ok" type="button">Accept</button>
+    <button class="gbc-no" type="button">Essential only</button>
+  </div>
+</div>
+<script data-cfasync="false">
+(function () {
+  var KEY = 'gb_consent';
+  var want = localStorage.getItem(KEY);
+  function loadTape() {
+    var box = document.querySelector('.tradingview-widget-container');
+    if (!box) return;
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.innerHTML = '{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"TVC:GOLD","title":"Gold"},{"proName":"TVC:USOIL","title":"WTI"},{"proName":"BITSTAMP:BTCUSD","title":"BTC"},{"proName":"FX:EURUSD","title":"EUR/USD"},{"proName":"TVC:DXY","title":"Dollar Index"},{"proName":"TVC:VIX","title":"VIX"}],"showSymbolLogo":false,"colorTheme":"dark","isTransparent":true,"displayMode":"compact","locale":"en"}';
+    s.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
+    box.appendChild(s);
+  }
+  function dismiss() {
+    var b = document.getElementById('gb-consent'); if (b) b.remove();
+  }
+  if (want === 'y') { loadTape(); }
+  else if (!want) {
+    window.__accept = function () { localStorage.setItem(KEY, 'y'); dismiss(); loadTape(); };
+    window.__decline = function () { localStorage.setItem(KEY, 'n'); dismiss(); };
+    var b = document.getElementById('gb-consent');
+    if (b) { b.querySelector('.gbc-ok').onclick = window.__accept; b.querySelector('.gbc-no').onclick = window.__decline; }
+  }
+  else { dismiss(); }
+})();
+</script>'''
+
 
 DISC_INDEX = ('<div class="disc">Every constituent is fictional. The Garbatrage Industrial Average is a '
               'proprietary index of hand-picked mid-value securities, is not calculated by any exchange, '
@@ -30,28 +89,54 @@ DISC_INDEX = ('<div class="disc">Every constituent is fictional. The Garbatrage 
 DISC_STORY = ('<div class="disc">Garbatrage is a satirical publication. Headlines, quotes, companies and '
               'figures are fabricated. Nothing here is investment advice.</div>')
 
-def layout(title, desc, body, canonical, og_image=None):
+def layout(title, desc, body, canonical, og_image=None, og_type="website", jsonld=None):
     ogi = (SITE + og_image) if og_image else f"{SITE}/assets/og-card.png"
+    ld = jsonld or {}
+    ld_block = ld.get("block") or (
+        '<script type="application/ld+json">'
+        + json.dumps({
+            "@context": "https://schema.org",
+            "@type": ld.get("type", "WebPage"),
+            "name": ld.get("name", title),
+            "description": desc,
+            "url": f"{SITE}{canonical.replace(SITE,'') if canonical.startswith(SITE) else canonical}",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Garbatrage Media Group LLC",
+                "url": SITE,
+                "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/logo-cream.png"},
+            },
+        }, ensure_ascii=False)
+        + "</script>"
+    )
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canonical}">
+<meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:image" content="{ogi}">
 <meta property="og:url" content="{canonical}">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/favicon-180.png">
+<link rel="me" href="https://twitter.com/garbatrage">
+<link rel="me" href="https://warpcast.com/garbatrage">
 <meta name="theme-color" content="#141414">
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
-</head><body><div class="wrap">
-<div class="bar"><a href="/">Garbatrage</a><span class="back"><a href="/markets/">Markets</a> · <a href="/desk/">The Desk</a> · <a href="/archive/">Archive</a></span></div>
-<div class="tape">{TAPE}</div>
-{body}
-</div></body></html>"""
+{ld_block}
+</head><body><a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="bar"><a href="/" class="wordmark">Garbatrage</a><nav class="back"><a href="/markets/">Markets</a> · <a href="/desk/">The Desk</a> · <a href="/archive/">Archive</a></nav></header>
+{TAPE}
+<main id="main">{body}</main>
+</div>
+{CONSENT}
+</body></html>"""
 
 def pager(prev, nxt, label):
     left = (f'<a href="/company/{prev["ticker"].lower()}/">← {esc(prev["ticker"])}</a>'
@@ -71,6 +156,31 @@ def img(s):
 
 def build_story(s):
     art = img(s)
+    url = f"{SITE}/story/{s['slug']}/"
+    share = (f'<div class="share"><a href="https://twitter.com/intent/tweet?text={quote(s["dek"])}&url={quote(url)}" target="_blank" rel="noopener">Post to X</a>'
+             f'<a href="https://warpcast.com/~/compose?text={quote(s["dek"])}&embeds[]={quote(url)}" target="_blank" rel="noopener">Cast</a>'
+             f'<a href="{esc(url)}" data-copy>Copy link</a></div>')
+    jsonld = {
+        "type": "NewsArticle",
+        "name": s["title"],
+        "block": ('<script type="application/ld+json">'
+                  + json.dumps({
+                      "@context": "https://schema.org",
+                      "@type": "NewsArticle",
+                      "headline": s["title"],
+                      "description": s["dek"],
+                      "datePublished": s["date"],
+                      "dateModified": s["date"],
+                      "author": {"@type": "Person", "name": s["author"]},
+                      "publisher": {"@type": "Organization", "name": "Garbatrage Media Group LLC",
+                                    "url": SITE,
+                                    "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/logo-cream.png"}},
+                      "image": [f"{SITE}{art}"],
+                      "url": url,
+                      "mainEntityOfPage": url,
+                  }, ensure_ascii=False)
+                  + "</script>"),
+    }
     body = f"""
 <div class="kick">{esc(s["desk"])}</div>
 <h1>{esc(s["title"])}</h1>
@@ -78,14 +188,15 @@ def build_story(s):
 <figure class="artbox"><img class="art-img" src="{art}" alt="" loading="lazy"></figure>
 <div class="byline"><span class="av">{esc(s.get("av") or av(s["author"]))}</span>
 <span><b>{esc(s["author"])}</b><br>{esc(s.get("role", ""))}</span>
-<span class="rd">{s.get("read", 4)} min read</span></div>
+<span class="rd"><time datetime="{esc(s["date"])}">{esc(s["date"])}</time> · {s.get("read", 4)} min read</span></div>
 <article class="art">{s["body"]}</article>
 <div class="tags">{"".join(f'<span class="chip">{esc(t)}</span>' for t in s.get("tags", []))}</div>
+{share}
 {DISC_STORY}
 <div class="pager"><a href="/archive/">← Archive</a><span>{esc(s["date"])}</span><a href="/">Home</a></div>"""
-    url = f"{SITE}/story/{s['slug']}/"
     write(f"story/{s['slug']}/index.html",
-          layout(f"{s['title']} · Garbatrage", s["dek"], body, url, og_image=art))
+          layout(f"{s['title']} · Garbatrage", s["dek"], body, url, og_image=art,
+                 og_type="article", jsonld=jsonld))
 
 # ---------- companies ----------
 def build_company(c, i):
@@ -203,7 +314,9 @@ FOOTER = """<footer><div class="fg">
 <div><h4>Legal</h4><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></div>
 </div><div class="legal">GARBATRAGE is a satirical publication presented in the style of a professional financial news desk.
 All quotes, indexes, tickers and figures are fabricated; any resemblance to real securities, people or firms is coincidental.
-Nothing herein is investment, legal or tax advice. © Garbatrage Media Group LLC. Not a registered investment adviser.</div></footer>"""
+Nothing herein is investment, legal or tax advice. © Garbatrage Media Group LLC. Not a registered investment adviser.
+Garbatrage Media Group LLC · 0000 Lakeshore Drive, Saint Joseph, Michigan 49085 · <a href="mailto:info@garbatrage.com">info@garbatrage.com</a></div></footer>
+<script data-cfasync="false">document.querySelectorAll('[data-copy]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();navigator.clipboard.writeText(a.href).then(function(){a.textContent='Copied';});});});</script>"""
 
 def build_home():
     lead = stories[0]
@@ -309,4 +422,10 @@ build_home()
 build_roster()
 build_feeds()
 shutil.copytree(ROOT / "static", OUT, dirs_exist_ok=True)
-print(f"built {len(stories)} stories, {len(cons)} companies, {len(gia['sectors'])} sectors")
+# media/ (story illustration PNGs) lives outside static/; carry it into the build so
+# `rm -rf site && build` cannot silently drop the images.
+if (ROOT / "media").exists():
+    if (OUT / "media").exists():
+        shutil.rmtree(OUT / "media")
+    shutil.copytree(ROOT / "media", OUT / "media")
+print(f"built {len(stories)} stories, {len(cons)} companies, {len(gia['sectors'])} sectors, media carried")
