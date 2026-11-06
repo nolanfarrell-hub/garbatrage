@@ -19,8 +19,10 @@ b,strong{color:var(--ink)}
 
 /* ---------- chrome bar (every page) ---------- */
 .bar{background:var(--bar);color:var(--bar-text);display:flex;justify-content:space-between;align-items:center;padding:14px 26px;position:sticky;top:0;z-index:10}
-.bar .wordmark{color:var(--bar-text);font-weight:700;letter-spacing:2px;font-family:'Newsreader',serif;font-size:19px}
+.bar .wordmark{color:var(--bar-text);font-weight:700;letter-spacing:2px;font-family:'Newsreader',serif;font-size:19px;display:flex;align-items:center;gap:9px;text-decoration:none}
+.bar .wordmark .mark{height:22px;width:auto;display:block}
 .bar .wordmark:hover{text-decoration:none;opacity:.85}
+.bar .wordmark:hover .mark{opacity:.9}
 .bar .back{color:var(--bar-text);font-size:11px;letter-spacing:1px;text-transform:uppercase}
 .bar .back a{color:var(--bar-text);opacity:.75}
 .bar .back a:hover{opacity:1;text-decoration:none}
