@@ -352,7 +352,18 @@ def build_home():
     lead = stories[0]
     briefs = stories[1:7]
     movers = sorted(cons, key=lambda c: c["change"], reverse=True)[:3]
-    _q = QUOTES[datetime.now().toordinal() % len(QUOTES)]
+    # Weighted rotation: street voices double-weighted (50% of days) so the
+    # man-on-the-street register keeps showing, interleaved so no two adjacent
+    # slots are the same voice (no back-to-back repeats as the date advances).
+    _anchors = [e for e in QUOTES if not (len(e) > 3 and e[3] == "street")]
+    _streets = [e for e in QUOTES if len(e) > 3 and e[3] == "street"]
+    _pool = []
+    for i in range(len(_anchors) + len(_streets)):
+        if i % 2 == 0:
+            _pool.append(_anchors[(i // 2) % len(_anchors)])
+        else:
+            _pool.append(_streets[(i // 2) % len(_streets)])
+    _q = _pool[datetime.now().toordinal() % len(_pool)]
     q, qn, qr = _q[:3]
     kind = _q[3] if len(_q) > 3 else None
     rail_rows = "".join(
