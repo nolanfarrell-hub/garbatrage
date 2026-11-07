@@ -296,13 +296,34 @@ def build_feeds():
           raw=True)
 
 # ---------- home ----------
+# Rotating quote pool — all eight anchors in the fiction, plus the man-on-the-street
+# register. Every quote is fabricated; the rotating pick (by day-of-ordinal) means the
+# displayed byline changes, not just the words.
 QUOTES = [
     ("Diversification is the practice of making every mistake at once, and then being unable to blame a single one, which we regard as the whole of risk management.",
      "Elena Marsh", "Head of Research"),
     ("We are asked constantly what we are selling. The honest answer is the thesis, which we sold to ourselves two quarters ago at a premium.",
      "Dana Whitfield", "Portfolio Strategy"),
     ("The market does not want a decision; it wants a building that has not decided.",
-     "Marcus Reid", "Markets Anchor"),
+     "Marcus Reid", "Markets Anchor · NYSE Floor"),
+    ("A rate cut is not the answer; it is the answer to a question nobody has stopped to ask, which is a different job entirely.",
+     "Priya Sharma", "Washington Bureau · Fed & Rates"),
+    ("The economy is not a forecast; it is a weather report delivered to people who have already gone outside.",
+     "Tessa Nguyen", "Economy & Data Reporter"),
+    ("Vesting is the only clause a board reads twice. It is also the only one that reads the board back.",
+     "Omar Zayed", "Corporate Governance Desk"),
+    ("Before the open, nothing has happened and everyone is fully briefed on it, which is the cleanest the market ever looks.",
+     "Jake Sullivan", "Breakfast Anchor · Before The Open"),
+    ("Yield is a language and the market is bilingual, but it may be lying in the language you do not speak.",
+     "Claire Reyes", "Debt & Fixed Income"),
+    ("I do not buy the dip. I watch it become a pool and wait for the lifeguard, who is also fictional.",
+     "Floor phone, 11:02", "Man on the Street"),
+    ("Nobody at the counter can explain the counter, but everyone agrees it is where the money is kept.",
+     "Teller, regional branch", "Man on the Street"),
+    ("I invested in confidence and it paid out in nothing, which my broker insists is still a gain once you adjust for realism.",
+     "Commuters, 8:14", "Man on the Street"),
+    ("The tape and I have an arrangement. It moves, I watch, and neither of us pretends the other understands.",
+     "Unnamed floor clerk", "Man on the Street"),
 ]
 
 FOOTER = """<footer><div class="fg">
@@ -313,7 +334,7 @@ FOOTER = """<footer><div class="fg">
 </div><div class="legal">GARBATRAGE is a satirical publication presented in the style of a professional financial news desk.
 All quotes, indexes, tickers and figures are fabricated; any resemblance to real securities, people or firms is coincidental.
 Nothing herein is investment, legal or tax advice. © Garbatrage Media Group LLC. Not a registered investment adviser.
-Garbatrage Media Group LLC · 0000 Lakeshore Drive, Saint Joseph, Michigan 49085 · <a href="mailto:info@garbatrage.com">info@garbatrage.com</a></div></footer>
+Garbatrage Media Group LLC · <a href="mailto:info@garbatrage.com">info@garbatrage.com</a></div></footer>
 <script data-cfasync="false">document.querySelectorAll('[data-copy]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();navigator.clipboard.writeText(a.href).then(function(){a.textContent='Copied';});});});</script>"""
 
 def build_home():
@@ -383,13 +404,16 @@ def build_desk(desk):
                  body, f"{SITE}/desk/{desk}/"))
 
 def build_roster():
+    # rotate the display order daily so the roster isn't static; the roster card is
+    # authored in data/anchors.json order and the rotation starts fresh each build.
+    order = anchors[datetime.now().toordinal() % len(anchors):] + anchors[:datetime.now().toordinal() % len(anchors)]
     cards = "".join(
         f'<div class="anchor"><div class="an-av">{av(a["name"])}</div>'
         f'<div class="an-nm">{esc(a["name"])}</div>'
         f'<div class="an-role">{esc(a["role"])}</div>'
         f'<p class="an-bio">{esc(a["bio"])}</p>'
         f'<div class="an-filed">{sum(1 for s in stories if s["author"] == a["name"])} pieces filed</div></div>'
-        for a in anchors)
+        for a in order)
     body = (f'<div class="kick">The Desk</div><h1>Who files.</h1>'
             f'<p class="lede">Eight bylines, one desk, no real people. Every one of them is invented and every one of them would tell you otherwise.</p>'
             f'<div class="roster">{cards}</div>'
