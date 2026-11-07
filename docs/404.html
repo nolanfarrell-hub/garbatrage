@@ -39,6 +39,16 @@
 (function () {
   var KEY = 'gb_consent';
   var want = localStorage.getItem(KEY);
+  // Render the live tape by default for everyone EXCEPT likely-UK/EEA visitors,
+  // who get the consent gate (TradingView sets cookies). Timezone heuristic, zero
+  // third party, no infra. (IP-accurate option: a tiny Cloudflare Worker.)
+  function isEea() {
+    var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    if (/^Europe\//.test(tz)) return true;
+    if (tz === 'Atlantic/Reykjavik' || tz === 'Atlantic/Canary' ||
+        tz === 'Atlantic/Madeira' || tz === 'Atlantic/Azores') return true;
+    return false;
+  }
   function loadTape() {
     var box = document.querySelector('.tradingview-widget-container');
     if (!box) return;
@@ -53,13 +63,14 @@
     var b = document.getElementById('gb-consent'); if (b) b.remove();
   }
   if (want === 'y') { loadTape(); }
-  else if (!want) {
+  else if (want === 'n') { dismiss(); }
+  else if (isEea()) {
     window.__accept = function () { localStorage.setItem(KEY, 'y'); dismiss(); loadTape(); };
     window.__decline = function () { localStorage.setItem(KEY, 'n'); dismiss(); };
     var b = document.getElementById('gb-consent');
     if (b) { b.querySelector('.gbc-ok').onclick = window.__accept; b.querySelector('.gbc-no').onclick = window.__decline; }
   }
-  else { dismiss(); }
+  else { dismiss(); loadTape(); } // US/rest-of-world first visit: tape on by default
 })();
 </script>
 </body></html>
