@@ -65,15 +65,17 @@
   function dismiss() {
     var b = document.getElementById('gb-consent'); if (b) b.remove();
   }
-  if (want === 'y') { loadTape(); }
-  else if (want === 'n') { dismiss(); }
-  else if (isEea()) {
-    window.__accept = function () { localStorage.setItem(KEY, 'y'); dismiss(); loadTape(); };
-    window.__decline = function () { localStorage.setItem(KEY, 'n'); dismiss(); };
-    var b = document.getElementById('gb-consent');
-    if (b) { b.querySelector('.gbc-ok').onclick = window.__accept; b.querySelector('.gbc-no').onclick = window.__decline; }
+  if (isEea()) {
+    if (want === 'y') { dismiss(); loadTape(); }
+    else if (want === 'n') { dismiss(); }
+    else {
+      window.__accept = function () { localStorage.setItem(KEY, 'y'); dismiss(); loadTape(); };
+      window.__decline = function () { localStorage.setItem(KEY, 'n'); dismiss(); };
+      var b = document.getElementById('gb-consent');
+      if (b) { b.querySelector('.gbc-ok').onclick = window.__accept; b.querySelector('.gbc-no').onclick = window.__decline; }
+    }
   }
-  else { dismiss(); loadTape(); } // US/rest-of-world first visit: tape on by default
+  else { dismiss(); loadTape(); } // US/rest-of-world: tape on by default, ignores stale decline
 })();
 </script>
 </body></html>
