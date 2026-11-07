@@ -327,14 +327,14 @@ QUOTES = [
      "Jake Sullivan", "Breakfast Anchor · Before The Open"),
     ("Yield is a language and the market is bilingual, but it may be lying in the language you do not speak.",
      "Claire Reyes", "Debt & Fixed Income"),
-    ("I do not buy the dip. I watch it become a pool and wait for the lifeguard, who is also fictional.",
-     "Floor phone, 11:02", "Man on the Street"),
-    ("Nobody at the counter can explain the counter, but everyone agrees it is where the money is kept.",
-     "Teller, regional branch", "Man on the Street"),
-    ("I invested in confidence and it paid out in nothing, which my broker insists is still a gain once you adjust for realism.",
-     "Commuters, 8:14", "Man on the Street"),
-    ("The tape and I have an arrangement. It moves, I watch, and neither of us pretends the other understands.",
-     "Unnamed floor clerk", "Man on the Street"),
+    ("The state says I should feel something, and I do, but my advisor has already bought the feeling for me at a discount.",
+     "Chandra Ferrara", "Drawer Slider, Trust & Estates", "street"),
+    ("I have some outstanding parking tickets if the Fed is taking those, too.",
+     "Tim Llanas", "Snake Farmer, Private Wealth", "street"),
+    ("Are the rate cut leftovers up for grabs, then? I have an account that has been fasting since the last one.",
+     "Scott Dutreix", "Darts Referee, Rates Desk", "street"),
+    ("I do not act on the news; I have a person who acts on the news, and the person is a filing cabinet that is not hiring.",
+     "Avery Loomis", "General Partner, Inertia Fund", "street"),
 ]
 
 FOOTER = """<footer><div class="fg">
@@ -352,7 +352,9 @@ def build_home():
     lead = stories[0]
     briefs = stories[1:7]
     movers = sorted(cons, key=lambda c: c["change"], reverse=True)[:3]
-    q, qn, qr = QUOTES[datetime.now().toordinal() % len(QUOTES)]
+    _q = QUOTES[datetime.now().toordinal() % len(QUOTES)]
+    q, qn, qr = _q[:3]
+    kind = _q[3] if len(_q) > 3 else None
     rail_rows = "".join(
         f'<div class="row"><span>{esc(c["ticker"])}</span>'
         f'<b class="{"up" if c["change"] >= 0 else "dn"}">{c["change"]:+.1f}%</b></div>'
@@ -384,7 +386,7 @@ def build_home():
     </div>
     <div class="disc">GIA is a proprietary index of hand-picked mid-value securities. Not a real benchmark. Not investment advice.</div>
   </div>
-  <div class="quote">“{esc(q)}”<i>{esc(qn)} · {esc(qr)}</i></div>
+  <div class="quote">“{esc(q)}”<i>{esc(qn)}{(", " if kind=="street" else " · ")}{esc(qr)}</i></div>
 </aside>
 </div>
 <div class="news"><div class="nin">
