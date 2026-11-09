@@ -1,608 +1,698 @@
 {
-  "index": {
-    "name": "Garbatrage Industrial Average",
-    "symbol": "GIA",
-    "base": 38221.07,
-    "note": "Proprietary. Not a benchmark. Not investment advice.",
-    "composition": "Hand-picked mid-value securities, rebalanced when someone remembers"
-  },
-  "sectors": [
-    "Hauling",
-    "Recycling",
-    "Landfill",
-    "Materials",
-    "Composting",
-    "Real Estate",
-    "Consumer",
-    "Industrials",
-    "Services",
-    "Financials"
-  ],
-  "constituents": [
+ "index": {
+  "name": "Garbatrage Industrial Average",
+  "symbol": "GIA",
+  "base": 38221.07,
+  "note": "Proprietary. Not a benchmark. Not investment advice.",
+  "composition": "Hand-picked mid-value securities, rebalanced when someone remembers"
+ },
+ "sectors": [
+  "Industrials",
+  "Materials",
+  "Consumer",
+  "Financials",
+  "Energy",
+  "Utilities",
+  "Technology",
+  "Healthcare",
+  "Real Estate",
+  "Services"
+ ],
+ "constituents": [
+  {
+   "ticker": "HNDR",
+   "name": "Hendrix Rail Holdings",
+   "sector": "Industrials",
+   "cap": "$6.1B",
+   "ceo": "Marion Ashe",
+   "founded": 1974,
+   "hq": "Omaha, NE",
+   "business": "Class III freight and short-line takeovers. Buys anything with track and a cash position.",
+   "filings": [
     {
-      "ticker": "TRSH",
-      "name": "Trash & Sons",
-      "sector": "Hauling",
-      "cap": "$412M",
-      "ceo": "Wendell Trash III",
-      "founded": 1908,
-      "hq": "Gary, IN",
-      "business": "Third-generation residential collection. The sons are named Trash; the founder was not.",
-      "filing": "8-K — announces fourth son",
-      "quote": "We are a family business in the sense that nobody can leave.",
-      "price": "3.21",
-      "change": 2.4,
-      "lede": "Third-generation residential collection across northwest Indiana. The sons are named Trash; the founder was not.",
-      "weight": 0.9,
-      "filings": [
-        {
-          "type": "8-K",
-          "when": "2 days ago",
-          "text": "Announces fourth son. One page. No operational change disclosed."
-        },
-        {
-          "type": "10-Q",
-          "when": "3 weeks ago",
-          "text": "Collection rate expansion ahead of guidance for a second quarter."
-        }
-      ]
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Acquires short-line operator; integration expected to add track and avoid detailing."
     },
     {
-      "ticker": "BYTBN",
-      "name": "Byte Bin",
-      "sector": "Recycling",
-      "cap": "$1.9B",
-      "ceo": "Priyanka Rao",
-      "founded": 2016,
-      "hq": "San Jose, CA",
-      "business": "Certified e-waste destruction for enterprises that need the certificate more than the destruction.",
-      "filing": "10-Q — margin compression in the certificate line",
-      "quote": "The hardware is the easy part. The paperwork is the moat.",
-      "price": "12.80",
-      "change": 1.1,
-      "lede": "Certified e-waste destruction for enterprises that need the certificate more than the destruction.",
-      "weight": 4.2,
-      "filings": [
-        {
-          "type": "10-Q",
-          "when": "5 days ago",
-          "text": "Margin compression in the certificate line."
-        },
-        {
-          "type": "8-K",
-          "when": "6 weeks ago",
-          "text": "Renews master services agreement with a logistics customer."
-        }
-      ]
-    },
-    {
-      "ticker": "MJNK",
-      "name": "Morning Junk",
-      "sector": "Consumer",
-      "cap": "$38M",
-      "ceo": "Dale Ostrowski",
-      "founded": 2019,
-      "hq": "Tampa, FL",
-      "business": "Curbside bulk pickup sold as a subscription. Markets itself as a lifestyle brand to people with too much furniture.",
-      "filing": "S-1 — fourth attempt",
-      "quote": "We are not a hauling company. We are a Saturday.",
-      "price": "0.04",
-      "change": 9.0,
-      "lede": "Curbside bulk pickup sold as a subscription, marketed as a lifestyle brand to people with too much furniture.",
-      "weight": 0.2,
-      "filings": [
-        {
-          "type": "S-1",
-          "when": "3 weeks ago",
-          "text": "Fourth attempt. Proceeds earmarked for marketing and fleet."
-        }
-      ]
-    },
-    {
-      "ticker": "STBL",
-      "name": "Stable Value, Inc",
-      "sector": "Financials",
-      "cap": "$6.4B",
-      "ceo": "Marguerite Bell",
-      "founded": 1971,
-      "hq": "Hartford, CT",
-      "business": "Money-market administration. Has never had an exciting quarter and mentions this in every deck.",
-      "filing": "DEF 14A — board re-nominated unanimously, again",
-      "quote": "We sell the absence of a story.",
-      "price": "44.00",
-      "change": -0.4,
-      "lede": "Money-market administration. Has never had an exciting quarter and says so in every deck.",
-      "weight": 5.1,
-      "filings": [
-        {
-          "type": "DEF 14A",
-          "when": "1 month ago",
-          "text": "Board re-nominated unanimously, again."
-        }
-      ]
-    },
-    {
-      "ticker": "HYST",
-      "name": "Hysterical Systems",
-      "sector": "Industrials",
-      "cap": "$890M",
-      "ceo": "Rob Cuskelly",
-      "founded": 2004,
-      "hq": "Akron, OH",
-      "business": "Compactor and baler maintenance for retail chains. On-call, 24 hours, with a two-hour SLA nobody believes.",
-      "filing": "8-K — CFO departs, cites the SLA",
-      "quote": "Everyone is calm until the baler stops.",
-      "price": "9.99",
-      "change": -5.0,
-      "lede": "Compactor and baler maintenance for retail chains. On call, twenty-four hours, with a two-hour SLA nobody believes.",
-      "weight": 2.6,
-      "filings": [
-        {
-          "type": "8-K",
-          "when": "4 days ago",
-          "text": "Chief financial officer departs, citing the SLA."
-        }
-      ]
-    },
-    {
-      "ticker": "BINN",
-      "name": "Bin There Holdings",
-      "sector": "Hauling",
-      "cap": "$233M",
-      "ceo": "Tobias Lund",
-      "founded": 1998,
-      "hq": "Duluth, MN",
-      "business": "Roll-off container rental for construction. Name is a pun and the company is aware.",
-      "filing": "10-K — fleet age disclosed for the first time, stock falls",
-      "quote": "We've been Bin There. It's on the trucks. It's not going anywhere.",
-      "price": "18.40",
-      "change": -1.1,
-      "lede": "Roll-off container rental for construction. The name is a pun and the company is aware of it.",
-      "weight": 1.7,
-      "filings": [
-        {
-          "type": "10-K",
-          "when": "2 weeks ago",
-          "text": "Fleet age disclosed for the first time. Stock fell 11%."
-        }
-      ]
-    },
-    {
-      "ticker": "SKIP",
-      "name": "Skip & Sons Hauling",
-      "sector": "Hauling",
-      "cap": "$97M",
-      "ceo": "Skip Duross",
-      "founded": 1982,
-      "hq": "Scranton, PA",
-      "business": "Commercial roll-off and demolition debris. The sons are not involved and this is discussed at every shareholder meeting.",
-      "filing": "DEF 14A — shareholder proposal on succession, defeated",
-      "quote": "The sons have their own thing.",
-      "price": "7.60",
-      "change": 0.2,
-      "lede": "Commercial roll-off and demolition debris. The sons are not involved and this is raised at every annual meeting.",
-      "weight": 1.1,
-      "filings": [
-        {
-          "type": "DEF 14A",
-          "when": "6 weeks ago",
-          "text": "Shareholder proposal on succession defeated for the sixth year."
-        }
-      ]
-    },
-    {
-      "ticker": "CURB",
-      "name": "Curbline Logistics",
-      "sector": "Hauling",
-      "cap": "$540M",
-      "ceo": "Adeola Bankole",
-      "founded": 2011,
-      "hq": "Atlanta, GA",
-      "business": "Route optimisation software sold to haulers, plus a small fleet used as a reference customer.",
-      "filing": "10-Q — reference fleet costs exceed software revenue",
-      "quote": "We are our own worst client and our best case study.",
-      "price": "26.90",
-      "change": 1.8,
-      "lede": "Route optimisation software sold to haulers, plus a small fleet operated as a reference customer.",
-      "weight": 3.4,
-      "filings": [
-        {
-          "type": "10-Q",
-          "when": "1 week ago",
-          "text": "Reference fleet costs exceed software revenue for a third quarter."
-        }
-      ]
-    },
-    {
-      "ticker": "DMPR",
-      "name": "Dumpster Dynamics",
-      "sector": "Industrials",
-      "cap": "$1.2B",
-      "ceo": "Vince Marchetti",
-      "founded": 1969,
-      "hq": "Newark, NJ",
-      "business": "Manufactures the containers. Sells almost entirely to the same haulers who compete for the containers.",
-      "filing": "10-K — steel input costs, fourth consecutive warning",
-      "quote": "Everyone needs a box. Nobody wants to buy one.",
-      "price": "61.30",
-      "change": -0.9,
-      "lede": "Manufactures the containers, and sells almost entirely to the same haulers who compete for the containers.",
-      "weight": 4.8,
-      "filings": [
-        {
-          "type": "10-K",
-          "when": "3 weeks ago",
-          "text": "Steel input costs. Fourth consecutive forward warning."
-        }
-      ]
-    },
-    {
-      "ticker": "LANF",
-      "name": "Landfill Capital",
-      "sector": "Landfill",
-      "cap": "$11.3B",
-      "ceo": "Harriet Ngo",
-      "founded": 1988,
-      "hq": "Houston, TX",
-      "business": "Owns the holes. Leases airspace by the ton. Reports remaining capacity the way a mine reports reserves.",
-      "filing": "10-K — airspace life extends to 41 years",
-      "quote": "We are a real estate company with a smell.",
-      "price": "118.40",
-      "change": 0.6,
-      "lede": "Owns the holes. Leases airspace by the ton and reports remaining capacity the way a mine reports reserves.",
-      "weight": 9.6,
-      "filings": [
-        {
-          "type": "10-K",
-          "when": "2 weeks ago",
-          "text": "Airspace life extends to 41 years on revised assumptions."
-        }
-      ]
-    },
-    {
-      "ticker": "SCRP",
-      "name": "Scrapbook Materials",
-      "sector": "Materials",
-      "cap": "$764M",
-      "ceo": "Ivan Petrov",
-      "founded": 1954,
-      "hq": "Youngstown, OH",
-      "business": "Ferrous and non-ferrous brokerage. The name has caused forty years of stationery jokes.",
-      "filing": "8-K — acquires a smaller broker with a normal name",
-      "quote": "We bought them for the name. Partly.",
-      "price": "39.10",
-      "change": 0.4,
-      "lede": "Ferrous and non-ferrous brokerage. The name has caused forty years of stationery jokes.",
-      "weight": 2.9,
-      "filings": [
-        {
-          "type": "8-K",
-          "when": "5 days ago",
-          "text": "Acquires a smaller broker with a normal name."
-        }
-      ]
-    },
-    {
-      "ticker": "PLUP",
-      "name": "Pulp & Patience",
-      "sector": "Materials",
-      "cap": "$302M",
-      "ceo": "Renée Aubert",
-      "founded": 1931,
-      "hq": "Bangor, ME",
-      "business": "Recovered fibre. The patience refers to the permitting.",
-      "filing": "10-Q — mill restarts after 14 months idle",
-      "quote": "Nothing in this business is fast except the pulp.",
-      "price": "15.85",
-      "change": -0.6,
-      "lede": "Recovered fibre. The patience in the name refers to permitting.",
-      "weight": 1.8,
-      "filings": [
-        {
-          "type": "10-Q",
-          "when": "4 weeks ago",
-          "text": "Mill restarts after fourteen months idle."
-        }
-      ]
-    },
-    {
-      "ticker": "ROT",
-      "name": "Rota Composting",
-      "sector": "Composting",
-      "cap": "$156M",
-      "ceo": "Sam Okonkwo",
-      "founded": 2013,
-      "hq": "Portland, OR",
-      "business": "Municipal organics processing. Odour complaints are the primary KPI and are reported quarterly.",
-      "filing": "10-K — complaint volume down 12%, stock up 9%",
-      "quote": "Our best quarter was a quiet one.",
-      "price": "22.10",
-      "change": -1.2,
-      "lede": "Municipal organics processing. Odour complaints are the primary KPI and are reported quarterly.",
-      "weight": 1.5,
-      "filings": [
-        {
-          "type": "10-K",
-          "when": "3 weeks ago",
-          "text": "Complaint volume down 12%. Stock up 9% on the disclosure."
-        }
-      ]
-    },
-    {
-      "ticker": "ODR",
-      "name": "Odor Neutral",
-      "sector": "Services",
-      "cap": "$88M",
-      "ceo": "Lainey Fisk",
-      "founded": 2009,
-      "hq": "Charlotte, NC",
-      "business": "Enzyme treatment for transfer stations. Sells to exactly the operators who generate the complaints.",
-      "filing": "10-Q — customer concentration, top three are 61% of revenue",
-      "quote": "We are a hedge against Rota's KPI.",
-      "price": "13.40",
-      "change": 0.7,
-      "lede": "Enzyme treatment for transfer stations, sold to exactly the operators who generate the complaints.",
-      "weight": 0.8,
-      "filings": [
-        {
-          "type": "10-Q",
-          "when": "2 weeks ago",
-          "text": "Customer concentration disclosed. Top three are 61% of revenue."
-        }
-      ]
-    },
-    {
-      "ticker": "GLLT",
-      "name": "Gull Trust",
-      "sector": "Financials",
-      "cap": "$2.1B",
-      "ceo": "Peter Van Dorn",
-      "founded": 1994,
-      "hq": "Boston, MA",
-      "business": "Royalty trust holding a share of landfill gas rights. Pays monthly, explains nothing.",
-      "filing": "10-K — distribution maintained",
-      "quote": "The trust does not give guidance. The trust distributes.",
-      "price": "84.20",
-      "change": 0.1,
-      "lede": "Royalty trust holding a share of landfill gas rights. Pays monthly and explains nothing.",
-      "weight": 3.1,
-      "filings": [
-        {
-          "type": "10-K",
-          "when": "1 month ago",
-          "text": "Distribution maintained. No guidance, as is policy."
-        }
-      ]
-    },
-    {
-      "ticker": "PIGE",
-      "name": "Pigeon Property Group",
-      "sector": "Real Estate",
-      "cap": "$3.7B",
-      "ceo": "Marisol Vega",
-      "founded": 2002,
-      "hq": "Queens, NY",
-      "business": "Buys brownfield sites, remediates partially, leases to storage and logistics.",
-      "filing": "8-K — remediation overruns at three sites",
-      "quote": "Partially remediated is a business model, not an apology.",
-      "price": "47.80",
-      "change": -2.1,
-      "lede": "Buys brownfield sites, remediates partially, leases to storage and logistics.",
-      "weight": 6.2,
-      "filings": [
-        {
-          "type": "8-K",
-          "when": "6 days ago",
-          "text": "Remediation overruns at three sites. Cost estimate withdrawn."
-        }
-      ]
-    },
-    {
-      "ticker": "RACC",
-      "name": "Raccoon Brands",
-      "sector": "Consumer",
-      "cap": "$1.4B",
-      "ceo": "Nate Halloran",
-      "founded": 2017,
-      "hq": "Austin, TX",
-      "business": "Household storage and bins, sold DTC, named after animals that get into bins.",
-      "filing": "S-1 — CAC disclosed, investors recalibrate",
-      "quote": "The animal is aspirational. The customer wants to keep things out.",
-      "price": "52.60",
-      "change": 2.9,
-      "lede": "Household storage and bins sold direct, named after the animals that get into bins.",
-      "weight": 3.7,
-      "filings": [
-        {
-          "type": "S-1",
-          "when": "2 weeks ago",
-          "text": "Customer acquisition cost disclosed. Investors recalibrate."
-        }
-      ]
-    },
-    {
-      "ticker": "SLDG",
-      "name": "Sludge Works",
-      "sector": "Composting",
-      "cap": "$204M",
-      "ceo": "Bea Tomlinson",
-      "founded": 1976,
-      "hq": "Milwaukee, WI",
-      "business": "Biosolids handling for municipal water districts. Contracts run decades and are won on patience.",
-      "filing": "10-K — three contracts renewed, all 20-year",
-      "quote": "Nobody celebrates us and nobody replaces us.",
-      "price": "31.60",
-      "change": 0.4,
-      "lede": "Biosolids handling for municipal water districts. Contracts run decades and are won on patience.",
-      "weight": 1.9,
-      "filings": [
-        {
-          "type": "10-K",
-          "when": "5 weeks ago",
-          "text": "Three contracts renewed, all twenty-year terms."
-        }
-      ]
-    },
-    {
-      "ticker": "TANG",
-      "name": "Tangible Waste",
-      "sector": "Services",
-      "cap": "$129M",
-      "ceo": "Cyrus Meade",
-      "founded": 2015,
-      "hq": "Denver, CO",
-      "business": "Waste audits for ESG reporting. Produces the number, then sells the reduction against the number.",
-      "filing": "10-Q — audit revenue and reduction revenue diverge",
-      "quote": "We find the problem and then we are the solution. Sequentially.",
-      "price": "19.70",
-      "change": -0.8,
-      "lede": "Waste audits for ESG reporting. Produces the number, then sells the reduction against the number.",
-      "weight": 1.3,
-      "filings": [
-        {
-          "type": "10-Q",
-          "when": "1 week ago",
-          "text": "Audit revenue and reduction revenue diverge for the first time."
-        }
-      ]
-    },
-    {
-      "ticker": "BRWN",
-      "name": "Brownfield Partners",
-      "sector": "Real Estate",
-      "cap": "$611M",
-      "ceo": "Dara Iwu",
-      "founded": 1999,
-      "hq": "Cleveland, OH",
-      "business": "Industrial redevelopment. Buys what nobody will touch and touches it.",
-      "filing": "10-K — portfolio occupancy 94%",
-      "quote": "Every asset we own was somebody's problem first.",
-      "price": "43.30",
-      "change": 0.9,
-      "lede": "Industrial redevelopment. Buys what nobody will touch and touches it.",
-      "weight": 4.0,
-      "filings": [
-        {
-          "type": "10-K",
-          "when": "3 weeks ago",
-          "text": "Portfolio occupancy 94%. Two assets sold above basis."
-        }
-      ]
-    },
-    {
-      "ticker": "LEAF",
-      "name": "Leaf & Leave",
-      "sector": "Consumer",
-      "cap": "$45M",
-      "ceo": "Gordy Simms",
-      "founded": 2021,
-      "hq": "Burlington, VT",
-      "business": "Seasonal yard-waste subscription. Revenue is 71% in a nine-week window and the company is at peace with it.",
-      "filing": "10-Q — Q2 concentration disclosed as a risk",
-      "quote": "We are a nine-week company and the other 43 are for planning.",
-      "price": "8.90",
-      "change": -3.4,
-      "lede": "Seasonal yard-waste subscription. Revenue is 71% in a nine-week window and the company is at peace with it.",
-      "weight": 0.5,
-      "filings": [
-        {
-          "type": "10-Q",
-          "when": "4 weeks ago",
-          "text": "Q2 concentration disclosed as a principal risk."
-        }
-      ]
-    },
-    {
-      "ticker": "MOSS",
-      "name": "Mossback Industrial",
-      "sector": "Industrials",
-      "cap": "$1.8B",
-      "ceo": "Trudy Kaminski",
-      "founded": 1948,
-      "hq": "Erie, PA",
-      "business": "Heavy equipment refurbishment. Buys back its own machines at 12 years and resells at 15.",
-      "filing": "10-K — refurb mix now 38% of revenue",
-      "quote": "A machine is not old. It is between owners.",
-      "price": "73.50",
-      "change": 1.3,
-      "lede": "Heavy equipment refurbishment. Buys back its own machines at twelve years and resells at fifteen.",
-      "weight": 4.4,
-      "filings": [
-        {
-          "type": "10-K",
-          "when": "2 weeks ago",
-          "text": "Refurbishment mix now 38% of revenue."
-        }
-      ]
-    },
-    {
-      "ticker": "GRAV",
-      "name": "Gravel & Grit",
-      "sector": "Materials",
-      "cap": "$420M",
-      "ceo": "Hollis Brant",
-      "founded": 1961,
-      "hq": "Wichita, KS",
-      "business": "Aggregate supply for road base. Owns three pits, permits two, operates one.",
-      "filing": "8-K — second pit permitted after six years",
-      "quote": "The permits are the business. The gravel is the byproduct.",
-      "price": "28.40",
-      "change": 0.3,
-      "lede": "Aggregate supply for road base. Owns three pits, permits two, operates one.",
-      "weight": 2.2,
-      "filings": [
-        {
-          "type": "8-K",
-          "when": "3 days ago",
-          "text": "Second pit permitted after six years. Stock barely moved."
-        }
-      ]
-    },
-    {
-      "ticker": "SORT",
-      "name": "Sort-Right Systems",
-      "sector": "Industrials",
-      "cap": "$967M",
-      "ceo": "Aiko Tanaka",
-      "founded": 2007,
-      "hq": "Sacramento, CA",
-      "business": "Optical sorting retrofits for MRFs. Sells throughput; accuracy is the customer's problem to staff.",
-      "filing": "10-Q — backlog up, installs slip",
-      "quote": "The machine is right. The line is only as good as the people beside it.",
-      "price": "64.80",
-      "change": -1.7,
-      "lede": "Optical sorting retrofits for materials recovery facilities. Sells throughput; accuracy is the customer's staffing problem.",
-      "weight": 4.6,
-      "filings": [
-        {
-          "type": "10-Q",
-          "when": "2 weeks ago",
-          "text": "Backlog up, installations slipping against schedule."
-        }
-      ]
-    },
-    {
-      "ticker": "RECL",
-      "name": "Reclaim Collective",
-      "sector": "Recycling",
-      "cap": "$73M",
-      "ceo": "Marguerite Bell",
-      "founded": 2022,
-      "hq": "Detroit, MI",
-      "business": "Worker-owned co-op doing commercial recycling. Same CEO as STBL, which nobody has noticed.",
-      "filing": "10-K — membership buyout tranche funded",
-      "quote": "We are a co-op. Decisions take a month and last a decade.",
-      "price": "4.02",
-      "change": 0.3,
-      "lede": "Worker-owned co-operative doing commercial recycling. Shares a chief executive with STBL and nobody has noticed.",
-      "weight": 0.6,
-      "filings": [
-        {
-          "type": "10-K",
-          "when": "4 weeks ago",
-          "text": "Membership buyout tranche funded."
-        }
-      ]
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
     }
-  ]
+   ],
+   "quote": "The line moves whatever's paid to move it.",
+   "weight": 0.9,
+   "price": "64.20",
+   "change": 0.8,
+   "lede": "A rail for what will run."
+  },
+  {
+   "ticker": "MELT",
+   "name": "Melt Prep Industries",
+   "sector": "Industrials",
+   "cap": "$3.4B",
+   "ceo": "Dale Ostrow",
+   "founded": 1998,
+   "hq": "Toledo, OH",
+   "business": "Commercial foundation and steel forming. Charges by the pour, bills the schedule.",
+   "filings": [
+    {
+     "type": "10-Q",
+     "when": "2 days ago",
+     "text": "Weather variance booked as demand; pour schedule unchanged."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "Slabs don't wait on a budget.",
+   "weight": 0.7,
+   "price": "41.70",
+   "change": -0.3,
+   "lede": "The pour, and then the second pour."
+  },
+  {
+   "ticker": "FLTL",
+   "name": "Flint Logistics Group",
+   "sector": "Industrials",
+   "cap": "$4.9B",
+   "ceo": "Adrian Crossman",
+   "founded": 1987,
+   "hq": "Dallas, TX",
+   "business": "Freight brokerage and drayage. Passes fuel and tolls straight to the load.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Revises pass-through clause; margin guidance unchanged (pass-through never touches it)."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "We don't set the price; we carry it.",
+   "weight": 1.1,
+   "price": "88.35",
+   "change": 1.2,
+   "lede": "A carrying charge."
+  },
+  {
+   "ticker": "VERT",
+   "name": "Vertex Conveyor Works",
+   "sector": "Industrials",
+   "cap": "$2.7B",
+   "ceo": "Sondra Pike",
+   "founded": 1971,
+   "hq": "Reading, PA",
+   "business": "Material movement systems. Sells the conveyor, then the parts, then the parts again.",
+   "filings": [
+    {
+     "type": "20-F",
+     "when": "2 days ago",
+     "text": "Confirms parts revenue now exceeds first-fit; describes conveyor as entry product."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "A conveyor is a subscription pretending to be a machine.",
+   "weight": 0.7,
+   "price": "51.90",
+   "change": 0.4,
+   "lede": "The second half of the machine."
+  },
+  {
+   "ticker": "CRST",
+   "name": "Crestline Aggregates",
+   "sector": "Materials",
+   "cap": "$5.3B",
+   "ceo": "Henry Bolen",
+   "founded": 1960,
+   "hq": "Knoxville, TN",
+   "business": "Crushed stone, sand and gravel across the Southeast. Charges by the ton.",
+   "filings": [
+    {
+     "type": "10-K",
+     "when": "2 days ago",
+     "text": "Reserves extension filed; geologist commentary limited to 'more under here.'"
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "The mountain is the supply chain.",
+   "weight": 1.0,
+   "price": "73.40",
+   "change": 0.9,
+   "lede": "Heavy and underfoot."
+  },
+  {
+   "ticker": "PYLX",
+   "name": "Polylex Packaging Holdings",
+   "sector": "Materials",
+   "cap": "$2.2B",
+   "ceo": "Nora Vilas",
+   "founded": 1992,
+   "hq": "Akron, OH",
+   "business": "Flexible film and rigid plastics. Sells the wrapper the product ships in.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Resin cost to be passed through at shelf; demonstrates pass-through margin."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "Nobody thanks the packaging.",
+   "weight": 0.9,
+   "price": "28.90",
+   "change": -0.7,
+   "lede": "The wrapper nobody asks about."
+  },
+  {
+   "ticker": "GRVL",
+   "name": "Gravel Run Industrial Minerals",
+   "sector": "Materials",
+   "cap": "$1.8B",
+   "ceo": "Paul Dearing",
+   "founded": 1981,
+   "hq": "Bismarck, ND",
+   "business": "Industrial minerals, foundry sands. Sells what fills the holes other industries dig.",
+   "filings": [
+    {
+     "type": "10-Q",
+     "when": "2 days ago",
+     "text": "Foundry sand demand steady; notes every casting began as a hole."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "Every casting began as a hole we were paid to fill.",
+   "weight": 0.6,
+   "price": "19.65",
+   "change": 0.3,
+   "lede": "The fill for other people's holes."
+  },
+  {
+   "ticker": "BNDL",
+   "name": "Bundled Essentials, Inc.",
+   "sector": "Consumer",
+   "cap": "$4.1B",
+   "ceo": "Tara Winslow",
+   "founded": 2004,
+   "hq": "Columbus, OH",
+   "business": "Private-label household staples. Owns the shelf next to the branded item.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Private-label capacity expanded; notes the comparison happens every trip."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "We are the second choice, at scale.",
+   "weight": 1.0,
+   "price": "37.15",
+   "change": 0.6,
+   "lede": "The other thing on the shelf."
+  },
+  {
+   "ticker": "FRZD",
+   "name": "Frozen Frontier Food Co.",
+   "sector": "Consumer",
+   "cap": "$1.6B",
+   "ceo": "Miguel Aramis",
+   "founded": 1978,
+   "hq": "Green Bay, WI",
+   "business": "Frozen dinners and microwave entr\u00e9es. Sells the twenty-minute meal.",
+   "filings": [
+    {
+     "type": "10-K",
+     "when": "2 days ago",
+     "text": "SKU rationalization; the 20-minute meal remains the flagship."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "We sell time, technically as food.",
+   "weight": 0.6,
+   "price": "12.40",
+   "change": -1.1,
+   "lede": "Twenty minutes, minus."
+  },
+  {
+   "ticker": "RGTL",
+   "name": "Right-Tilt Apparel Holdings",
+   "sector": "Consumer",
+   "cap": "$2.9B",
+   "ceo": "Beck O'Neal",
+   "founded": 1967,
+   "hq": "Greensboro, NC",
+   "business": "Workwear and uniforms, sold contract. Charges the employer.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Uniform contract renewed; fit measured in contracts, not people."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "The worker wears it; the contract wears it better.",
+   "weight": 0.9,
+   "price": "46.80",
+   "change": 0.2,
+   "lede": "The uniform, in volume."
+  },
+  {
+   "ticker": "CNVR",
+   "name": "Convergence Capital Trust",
+   "sector": "Financials",
+   "cap": "$8.7B",
+   "ceo": "Andrea Mull",
+   "founded": 1989,
+   "hq": "Charlotte, NC",
+   "business": "Mortgage and consumer-lending trust. Owns loans originators are happy to be rid of.",
+   "filings": [
+    {
+     "type": "10-Q",
+     "when": "2 days ago",
+     "text": "Servicing fee recognized on all loans, paid or not."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "The loan gets paid or gets owned; both bill.",
+   "weight": 0.7,
+   "price": "92.60",
+   "change": 0.5,
+   "lede": "The loan, either way."
+  },
+  {
+   "ticker": "SLVR",
+   "name": "Silverline Federal Bancorp",
+   "sector": "Financials",
+   "cap": "$3.8B",
+   "ceo": "Gordon Reis",
+   "founded": 1923,
+   "hq": "Boise, ID",
+   "business": "Regional bank. Runs on the spread between depositor and borrower.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Deposit beta updated; spread unchanged, retail floor bonus unchanged."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "We're a spread that happens to hold your money.",
+   "weight": 0.7,
+   "price": "58.30",
+   "change": -0.2,
+   "lede": "The spread, held."
+  },
+  {
+   "ticker": "NTHR",
+   "name": "Northbridge Advisory Partners",
+   "sector": "Financials",
+   "cap": "$2.4B",
+   "ceo": "Luther Gains",
+   "founded": 1996,
+   "hq": "Wilmington, DE",
+   "business": "Asset management. Charges on AUM, most reliably the part clients fear to test.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Fee schedule revised; AUM methodology unchanged."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "We manage what we hold and bill what we hope to hold.",
+   "weight": 0.9,
+   "price": "34.80",
+   "change": 0.7,
+   "lede": "The fee, quarterly."
+  },
+  {
+   "ticker": "LEDR",
+   "name": "Ledger & Lane Trust Co.",
+   "sector": "Financials",
+   "cap": "$5.0B",
+   "ceo": "Brooks Reveredy",
+   "founded": 1958,
+   "hq": "Hartford, CT",
+   "business": "Corporate trust administration and escrow. Holds the money in the middle and bills the holding.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Escrow mandate renewed; holding fee unchanged."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "The trust is the product; the trust is also the fee.",
+   "weight": 1.3,
+   "price": "83.90",
+   "change": 0.3,
+   "lede": "The middle, and a fee for it."
+  },
+  {
+   "ticker": "GRDN",
+   "name": "Guardian Pipeline Partners",
+   "sector": "Energy",
+   "cap": "$6.9B",
+   "ceo": "Craig Morrow",
+   "founded": 1979,
+   "hq": "Houston, TX",
+   "business": "Midstream gathering and processing. Takes a toll per molecule, either direction.",
+   "filings": [
+    {
+     "type": "10-Q",
+     "when": "2 days ago",
+     "text": "Throughput guidance raised; toll per molecule unchanged."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "The gas has to go somewhere; we own the somewhere.",
+   "weight": 0.7,
+   "price": "77.15",
+   "change": 1.1,
+   "lede": "The toll for going somewhere."
+  },
+  {
+   "ticker": "GRNV",
+   "name": "Greenvale Electric Cooperative",
+   "sector": "Utilities",
+   "cap": "$3.1B",
+   "ceo": "Esther Poindexter",
+   "founded": 1946,
+   "hq": "Burlington, VT",
+   "business": "Rural distribution utility. Regulated to return a margin on the meter regardless.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Rate case outcome filed; meter counts all months equally."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "The meter does not have a bad month.",
+   "weight": 0.8,
+   "price": "49.25",
+   "change": 0.1,
+   "lede": "The meter, either way."
+  },
+  {
+   "ticker": "CRLN",
+   "name": "Corolang Systems",
+   "sector": "Technology",
+   "cap": "$5.6B",
+   "ceo": "Felix Armitage",
+   "founded": 2003,
+   "hq": "Austin, TX",
+   "business": "Enterprise data orchestration. Sells the software that tells software what to do with its data.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "AI workload reclassification; observability revenue up."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "We make the machines that make the report about the machines.",
+   "weight": 1.1,
+   "price": "128.40",
+   "change": 1.8,
+   "lede": "The machine about the machines."
+  },
+  {
+   "ticker": "SQMS",
+   "name": "Sequoia Measurement Systems",
+   "sector": "Technology",
+   "cap": "$1.5B",
+   "ceo": "Dana Foxworth",
+   "founded": 2010,
+   "hq": "Portland, OR",
+   "business": "Industrial sensors and calibration. Sells the instrument that proves the other instrument.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Calibration services surge; notes someone must measure the measurement."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "Someone has to measure the measurement.",
+   "weight": 1.4,
+   "price": "16.90",
+   "change": 0.5,
+   "lede": "The proof of the measurement."
+  },
+  {
+   "ticker": "CLRD",
+   "name": "Clarridge Diagnostics",
+   "sector": "Healthcare",
+   "cap": "$3.6B",
+   "ceo": "Ines Devereux",
+   "founded": 1985,
+   "hq": "Cleveland, OH",
+   "business": "Reference lab and diagnostics. Runs the test, bills the result.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Panel price adjusted; diagnosis unaffected."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "The diagnosis is a feature; the panel is the product.",
+   "weight": 1.1,
+   "price": "61.70",
+   "change": 0.3,
+   "lede": "The panel, billed."
+  },
+  {
+   "ticker": "BRIX",
+   "name": "Brixley Properties Trust",
+   "sector": "Real Estate",
+   "cap": "$4.4B",
+   "ceo": "Wallace Crane",
+   "founded": 1991,
+   "hq": "Nashville, TN",
+   "business": "Industrial and last-mile logistics REIT. Leases the warehouse the package waits in.",
+   "filings": [
+    {
+     "type": "10-Q",
+     "when": "2 days ago",
+     "text": "Occupancy and mark-to-market; the warehouse stays full."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "The building is full; the promise is a logistics problem.",
+   "weight": 0.9,
+   "price": "71.55",
+   "change": -0.6,
+   "lede": "The last square foot before the door."
+  },
+  {
+   "ticker": "PORL",
+   "name": "Portland Levee Partners",
+   "sector": "Real Estate",
+   "cap": "$2.1B",
+   "ceo": "Maureen Sikes",
+   "founded": 2007,
+   "hq": "Norfolk, VA",
+   "business": "Waterfront industrial and storage. Owns the flood-adjacent footage tenants insure.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Waterfront lease covenant renewed; tide not a named party."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "The tide doesn't file, and neither does the rent.",
+   "weight": 1.4,
+   "price": "22.25",
+   "change": 0.2,
+   "lede": "The land the water visits."
+  },
+  {
+   "ticker": "GLCP",
+   "name": "Gleason Commercial Properties",
+   "sector": "Real Estate",
+   "cap": "$2.8B",
+   "ceo": "Terrence Vole",
+   "founded": 1976,
+   "hq": "Columbus, OH",
+   "business": "Strip and neighborhood retail. Leases to the brands that lease to the neighborhood.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Anchor lease mark-to-market; strip occupancy steady."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "The anchor pays; the strip is the margin.",
+   "weight": 0.6,
+   "price": "33.45",
+   "change": 0.3,
+   "lede": "The strip between the anchors."
+  },
+  {
+   "ticker": "SFGT",
+   "name": "SafeGuard Services of America",
+   "sector": "Services",
+   "cap": "$2.6B",
+   "ceo": "Derek Loomis",
+   "founded": 1993,
+   "hq": "Tampa, FL",
+   "business": "Facility maintenance and security. Sells the monthly contract, then the overage.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Service contract expanded; overage billing unchanged."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "The contract is the reassurance; the work is the line item.",
+   "weight": 1.3,
+   "price": "27.35",
+   "change": 0.4,
+   "lede": "Assurance, monthly."
+  },
+  {
+   "ticker": "TTWL",
+   "name": "Two-Way Leasing Corporation",
+   "sector": "Services",
+   "cap": "$1.9B",
+   "ceo": "Sheila Trent",
+   "founded": 1982,
+   "hq": "Phoenix, AZ",
+   "business": "Equipment rental and capital leasing. Rents the machine, then buys it back to rent again.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Residual value updated; the machine rents again."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "We rent the same machine to three eras of the economy.",
+   "weight": 0.8,
+   "price": "41.10",
+   "change": 0.1,
+   "lede": "The same machine, again."
+  },
+  {
+   "ticker": "TRST",
+   "name": "TrustLine Property Services",
+   "sector": "Services",
+   "cap": "$2.3B",
+   "ceo": "Marisol Dean",
+   "founded": 1985,
+   "hq": "Raleigh, NC",
+   "business": "Residential property management for investor owners. Bills the monthly fee.",
+   "filings": [
+    {
+     "type": "8-K",
+     "when": "2 days ago",
+     "text": "Management portfolio grew; monthly fee survives any vacancy."
+    },
+    {
+     "type": "10-Q",
+     "when": "3 weeks ago",
+     "text": "Operating line in line with guidance; narrative describes the line as steadfast."
+    }
+   ],
+   "quote": "We manage the building; the fee manages us.",
+   "weight": 0.7,
+   "price": "26.10",
+   "change": -0.5,
+   "lede": "The fee that survives the vacancy."
+  }
+ ]
 }
