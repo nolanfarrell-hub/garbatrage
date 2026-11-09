@@ -99,7 +99,7 @@ def layout(title, desc, body, canonical):
 {jsonld}
 </head><body><a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
-<header class="bar"><a href="/" class="wordmark" aria-label="Garbatrage — home"><img class="mark" src="/assets/monogram-cream.png" alt="G" width="24" height="24">Garbatrage</a><nav class="back"><a href="/markets/">Markets</a> · <a href="/desk/">The Desk</a> · <a href="/archive/">Archive</a></nav></header>
+<header class="bar"><a href="/" class="wordmark" aria-label="Garbatrage — home"><img class="mark" src="/assets/logo-g-vector.svg" alt="G" width="24" height="28">Garbatrage</a><nav class="back"><a href="/markets/">Markets</a> · <a href="/desk/">The Desk</a> · <a href="/archive/">Archive</a></nav></header>
 {TAPE}
 <main id="main">{body}</main>
 </div>
@@ -255,7 +255,7 @@ print("wrote static/404.html")
 import os as _os
 KEYS = {"site.css","logo-cream.png","logo-black.png","monogram-cream.png","monogram-black.png",
         "seal-cream.png","seal-black.png","og-card.png","favicon-16.png","favicon-32.png",
-        "favicon-180.png","icon-512.png","manifest.webmanifest"}
+        "favicon-180.png","icon-512.png","manifest.webmanifest","logo-g-vector.svg"}
 a = _os.path.join(STATIC,"assets")
 pruned=[]
 for f in _os.listdir(a):

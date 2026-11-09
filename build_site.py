@@ -145,7 +145,7 @@ def layout(title, desc, body, canonical, og_image=None, og_type="website", jsonl
 {ld_block}
 </head><body><a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
-<header class="bar"><a href="/" class="wordmark" aria-label="Garbatrage — home"><img class="mark" src="/assets/monogram-cream.png" alt="G" width="24" height="24">Garbatrage</a><nav class="back"><a href="/markets/">Markets</a> · <a href="/desk/">The Desk</a> · <a href="/archive/">Archive</a></nav></header>
+<header class="bar"><a href="/" class="wordmark" aria-label="Garbatrage — home"><img class="mark" src="/assets/logo-g-vector.svg" alt="G" width="24" height="28">Garbatrage</a><nav class="back"><a href="/markets/">Markets</a> · <a href="/desk/">The Desk</a> · <a href="/archive/">Archive</a></nav></header>
 {TAPE}
 <main id="main">{body}</main>
 </div>
@@ -368,6 +368,22 @@ def build_home():
     _q = _pool[datetime.now().toordinal() % len(_pool)]
     q, qn, qr = _q[:3]
     kind = _q[3] if len(_q) > 3 else None
+    # Rail shows THREE distinct quote voices (day-keyed), not just today's one.
+    def _pick(offset):
+        e = _pool[(datetime.now().toordinal() + offset) % len(_pool)]
+        return e[0], e[1], e[2], (e[3] if len(e) > 3 else None)
+    _three = []
+    _ord = datetime.now().toordinal()
+    _n = 0
+    while len(_three) < 3 and _n < len(_pool):
+        e = _pool[(_ord + _n) % len(_pool)]
+        name = e[1]
+        if not any(x[0] == name for x in _three):
+            _three.append((e[0], e[1], e[2], e[3] if len(e) > 3 else None))
+        _n += 1
+    quotes_html = "".join(
+        f'<div class="quote">“{esc(x[0])}”<i>{esc(x[1])}{", " if x[3] == "street" else " · "}{esc(x[2])}</i></div>'
+        for x in _three)
     rail_rows = "".join(
         f'<div class="row"><span>{esc(c["ticker"])}</span>'
         f'<b class="{"up" if c["change"] >= 0 else "dn"}">{c["change"]:+.1f}%</b></div>'
@@ -399,7 +415,7 @@ def build_home():
     </div>
     <div class="disc">GIA is a proprietary index of hand-picked mid-value securities. Not a real benchmark. Not investment advice.</div>
   </div>
-  <div class="quote">“{esc(q)}”<i>{esc(qn)}{(", " if kind=="street" else " · ")}{esc(qr)}</i></div>
+  {quotes_html}
 </aside>
 </div>
 <div class="news"><div class="nin">
