@@ -1,15 +1,18 @@
 /* ============================================================
    GARBATRAGE — site.css
-   Light editorial register. Ink #141414 · cream #F2EDE1 ·
-   maroon #620E14 · hairline #C9C1AE. Shared by every page.
+   Classic navy register (original). Navy #0b1e33 · panel #0e2540 ·
+   signal red #c83e3e · near-white #e9eef3 · up-green #2ea84f.
+   Restored 11/2026 from the original navy build; cream G mark kept.
    ============================================================ */
 :root{
-  --ink:#141414; --cream:#F2EDE1; --card:#FAF7F0; --paper:#FAF7F0;
-  --maroon:#620E14; --maroon-on-dark:#C4555C;
-  --muted:#6b6b6b; --faint:#6b6b6b; --line:#E3DECF;
-  --bar:#141414; --bar-text:#F2EDE1; --up:#2e7d32; --dn:#a11c1c;
+  --ink:#e9eef3; --cream:#F2EDE1; --card:#0e2540; --paper:#0b1e33;
+  --maroon:#c83e3e; --maroon-on-dark:#e07171;
+  --muted:#93a6bb; --faint:#6e8094; --line:#1e3a5c;
+  --bar:#0e2540; --bar-text:#e9eef3; --up:#2ea84f; --dn:#c83e3e;
+  /* navy surface fills for panels/avatars/news (was --ink in light theme) */
+  --deep:#123053; --deep2:#1e3a5c;
   /* aliases used by .home block */
-  --rule:#E3DECF; --ox:#620E14; --mute:#6b6b6b;
+  --rule:#1e3a5c; --ox:#c83e3e; --mute:#93a6bb;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:'Newsreader',serif;font-size:17px;-webkit-font-smoothing:antialiased;line-height:1.55}
@@ -32,7 +35,7 @@ b,strong{color:var(--ink)}
 .skip:focus{left:8px;top:8px;outline:2px solid var(--maroon)}
 
 /* ---------- ticker tape (TradingView widget) ---------- */
-.tape{background:var(--bar);border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;height:40px;overflow:hidden;color:var(--bar-text)}
+.tape{background:var(--bar);border-top:1px solid var(--deep2);border-bottom:1px solid var(--deep2);height:40px;overflow:hidden;color:var(--bar-text)}
 .tape .tradingview-widget-container{height:40px}
 .tradingview-widget-container__widget{height:100%}
 .tape-noscript{padding:10px 26px;font-size:12px;color:var(--bar-text)}
@@ -79,13 +82,13 @@ td.ch.dn{color:var(--dn);text-align:right;width:80px;font-family:'JetBrains Mono
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 10px}
 .chips a{padding:4px 12px;border:1px solid var(--line);border-radius:30px;font-size:11px;color:var(--muted);letter-spacing:.5px}
 .chips a:hover{border-color:var(--maroon);color:var(--ink);text-decoration:none}
-.chips a.on{background:var(--ink);border-color:var(--ink);color:var(--bar-text)}
+.chips a.on{background:var(--deep);border-color:var(--deep);color:var(--bar-text)}
 
 /* ---------- story ---------- */
 .artbox{margin:6px 0 24px;border:1px solid var(--rule);overflow:hidden}
 .art-img{width:100%;height:auto;display:block;object-fit:cover}
 .byline{display:flex;align-items:center;gap:12px;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:24px}
-.byline .av{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--bar-text);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
+.byline .av{width:40px;height:40px;border-radius:50%;background:var(--deep);color:var(--bar-text);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
 .byline b{font-size:14px}
 .byline .rd{margin-left:auto;font-size:11px;color:var(--faint);letter-spacing:1px;text-transform:uppercase}
 .art p{font-size:17px;line-height:1.66;margin-bottom:20px}
@@ -136,35 +139,35 @@ h1 a{color:inherit;text-decoration:none}
 h1 a:hover{color:var(--ox)}
 .dek{font-size:17px;line-height:1.66;max-width:620px;margin-bottom:14px}
 .hero{display:block;height:190px;border:1px solid var(--rule);margin-bottom:12px;overflow:hidden;
-  background:repeating-linear-gradient(135deg,#ece6d8 0 9px,#f6f2e9 9px 18px)}
+  background:repeating-linear-gradient(135deg,#0e2540 0 9px,#123053 9px 18px)}
 .hero img{width:100%;height:100%;object-fit:cover;display:block}
 .by{display:flex;align-items:center;gap:8px;border-top:1px solid var(--rule);padding-top:9px;font-size:10px;color:var(--mute)}
 .by b{color:var(--ink)}
 .av{width:26px;height:26px;border:1px solid var(--rule);display:grid;place-items:center;font-weight:700;color:var(--ox);font-size:9px;background:var(--cream)}
-.sec{font-size:9px;letter-spacing:2.3px;text-transform:uppercase;color:var(--ox);font-weight:700;border-bottom:2px solid var(--ink);padding-bottom:5px;margin:28px 0 0}
+.sec{font-size:9px;letter-spacing:2.3px;text-transform:uppercase;color:var(--ox);font-weight:700;border-bottom:2px solid var(--deep2);padding-bottom:5px;margin:28px 0 0}
 .item{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:13px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit}
 .item:hover h3{color:var(--ox)}
-.thumb{height:66px;border:1px solid var(--rule);overflow:hidden;background:repeating-linear-gradient(135deg,#ece6d8 0 8px,#f6f2e9 8px 16px)}
+.thumb{height:66px;border:1px solid var(--rule);overflow:hidden;background:repeating-linear-gradient(135deg,#0e2540 0 8px,#123053 8px 16px)}
 .thumb img{width:100%;height:100%;object-fit:cover;display:block}
 .item h3{font-family:'Newsreader',serif;font-size:21px;font-weight:600;letter-spacing:-.012em;line-height:1.2;margin-bottom:5px}
 .item p{font-size:11px;color:var(--mute);line-height:1.5;margin-bottom:4px}
 .meta{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--mute)}
-.panel{border:1px solid var(--ink);margin-bottom:18px}
-.ph{background:var(--ink);color:var(--cream);font-size:9px;letter-spacing:1.8px;text-transform:uppercase;padding:5px 8px;display:flex;justify-content:space-between}
+.panel{border:1px solid var(--deep2);margin-bottom:18px}
+.ph{background:var(--deep);color:var(--cream);font-size:9px;letter-spacing:1.8px;text-transform:uppercase;padding:5px 8px;display:flex;justify-content:space-between}
 .pb{padding:10px 8px}
 .big{font-family:'Newsreader',serif;font-weight:600;font-size:29px;letter-spacing:-.012em;line-height:1}
 .big span{font-size:12px;color:var(--ox);font-family:'JetBrains Mono',monospace}
 .sub{font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:var(--mute);margin-top:3px}
 .row{display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px dotted var(--rule)}
-.news{border-top:3px solid var(--ink);background:var(--ink);color:var(--cream);padding:24px 0;margin-top:6px}
+.news{border-top:3px solid var(--deep);background:var(--deep);color:var(--cream);padding:24px 0;margin-top:6px}
 .nin{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;max-width:880px;margin:0 auto;padding:0 20px}
 .news h2{font-family:'Newsreader',serif;font-size:26px;line-height:1;font-weight:700;letter-spacing:-.012em;margin:0;border:0;padding:0;display:block}
-.news p{font-size:11px;color:#a9a294;max-width:420px}
+.news p{font-size:11px;color:#93a6bb;max-width:420px}
 .news form{display:flex}
 .news input{border:1px solid var(--cream);border-right:0;padding:8px 10px;font-family:inherit;font-size:11px;background:transparent;color:var(--cream);width:190px}
 .news button{border:1px solid var(--cream);background:var(--cream);color:var(--ink);padding:8px 14px;font-family:inherit;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;cursor:pointer}
 .news button:hover{background:var(--ox);border-color:var(--ox);color:var(--cream)}
-footer{border-top:3px solid var(--ink);padding:24px 0 40px;font-size:10px;max-width:880px;margin:0 auto;padding-inline:20px}
+footer{border-top:3px solid var(--deep);padding:24px 0 40px;font-size:10px;max-width:880px;margin:0 auto;padding-inline:20px}
 .fg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:18px}
 footer h4{font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:var(--ox);margin-bottom:6px}
 footer a{display:block;color:var(--mute);text-decoration:none;line-height:1.9}
@@ -176,11 +179,11 @@ footer a:hover{color:var(--ink)}
 .news .btn:hover{background:var(--ox);border-color:var(--ox);color:var(--cream)}
 
 .roster{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:10px}
-.anchor{border:1px solid var(--rule);background:var(--cream);padding:16px}
-.an-av{width:40px;height:40px;border:1px solid var(--rule);display:grid;place-items:center;font-weight:700;color:var(--ox);background:var(--paper);margin-bottom:10px;font-size:12px}
+.anchor{border:1px solid var(--deep2);background:var(--card);padding:16px}
+.an-av{width:40px;height:40px;border:1px solid var(--deep2);display:grid;place-items:center;font-weight:700;color:var(--ox);background:var(--deep);margin-bottom:10px;font-size:12px}
 .an-nm{font-family:'Newsreader',serif;font-weight:600;font-size:18px;letter-spacing:-.012em;line-height:1.1}
 .an-role{font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:var(--ox);margin:4px 0 8px}
-.an-bio{font-size:12px;line-height:1.55;color:#3d3a34}
+.an-bio{font-size:12px;line-height:1.55;color:#c6cfdd}
 .an-filed{font-size:9px;letter-spacing:1.3px;text-transform:uppercase;color:var(--mute);margin-top:10px;border-top:1px solid var(--rule);padding-top:8px}
 @media(max-width:560px){.roster{grid-template-columns:1fr}}
 
@@ -190,7 +193,7 @@ footer a:hover{color:var(--ink)}
 .share a:hover{border-color:var(--maroon);text-decoration:none;color:var(--ink)}
 
 /* ---------- cookie consent banner ---------- */
-#gb-consent{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--bar);color:var(--bar-text);padding:14px 26px;font-size:12px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid #2a2a2a}
+#gb-consent{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--bar);color:var(--bar-text);padding:14px 26px;font-size:12px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid var(--deep2)}
 #gb-consent .gbc-btns{display:flex;gap:8px}
 #gb-consent button{border:1px solid var(--cream);background:transparent;color:var(--bar-text);padding:7px 14px;font-family:inherit;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer}
 #gb-consent .gbc-ok{background:var(--cream);color:var(--ink)}
