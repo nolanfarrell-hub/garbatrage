@@ -35,8 +35,12 @@ b,strong{color:var(--ink)}
 .skip:focus{left:8px;top:8px;outline:2px solid var(--maroon)}
 
 /* ---------- ticker tape (TradingView widget) ---------- */
-.tape{background:var(--bar);border-top:1px solid var(--deep2);border-bottom:1px solid var(--deep2);height:40px;overflow:hidden;color:var(--bar-text)}
-.tape .tradingview-widget-container{height:40px}
+/* Do NOT fix .tape / .tradingview-widget-container to a small explicit
+   height: the widget iframes at ~84px and a 40px wrapper silences it to a
+   clipped ½-slice (Nolan: "can't fully see the ticker"). Let the tape grow
+   to the widget's natural height. */
+.tape{background:var(--bar);border-top:1px solid var(--deep2);border-bottom:1px solid var(--deep2);min-height:40px;overflow:hidden;color:var(--bar-text)}
+.tape .tradingview-widget-container{height:auto}
 .tradingview-widget-container__widget{height:100%}
 .tape-noscript{padding:10px 26px;font-size:12px;color:var(--bar-text)}
 .tape-noscript a{color:var(--maroon-on-dark)}
@@ -124,8 +128,8 @@ ul.fil li span{display:block;font-size:10px;letter-spacing:1px;text-transform:up
   .entry{gap:10px}
   .entry .d{width:44px}
   td.cap{display:none}
-  .tape{height:36px}
-  .tape .tradingview-widget-container{height:36px}
+  .tape{min-height:44px}
+  .tape .tradingview-widget-container{height:auto}
 }
 
 /* ============================================================
