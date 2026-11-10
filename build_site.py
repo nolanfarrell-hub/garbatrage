@@ -339,6 +339,28 @@ QUOTES = [
      "Avery Loomis", "General Partner, Inertia Fund", "street"),
 ]
 
+# Fresh daily quotes: the daily refresh SOP writes today's three vetted, freshly-written
+# quotes to data/home_quotes.json ([{text,name,role,street?} x3]). When that file exists,
+# build_home uses it verbatim; when absent (e.g. a manual rebuild), fall back to the pool.
+_HOME_QUOTES_PATH = ROOT / "data" / "home_quotes.json"
+def _home_quotes():
+    p = _HOME_QUOTES_PATH
+    if not p.exists():
+        return None
+    import json as _json
+    try:
+        qs = _json.loads(p.read_text())
+    except Exception:
+        return None
+    if not isinstance(qs, list) or len(qs) < 3:
+        return None
+    out = []
+    for q in qs[:3]:
+        if not (isinstance(q, dict) and q.get("text") and q.get("name")):
+            return None
+        out.append((q["text"], q["name"], q.get("role", ""), "street" if q.get("street") else None))
+    return out
+
 FOOTER = """<footer><div class="fg">
 <div><h4>Markets</h4><a href="/markets/">Indexes</a><a href="/archive/">Archive</a><a href="/desk/">The Desk</a></div>
 <div><h4>Company</h4><a href="/about/">About</a><a href="/press/">Press</a><a href="mailto:info@garbatrage.com">Contact</a></div>
@@ -369,18 +391,23 @@ def build_home():
     q, qn, qr = _q[:3]
     kind = _q[3] if len(_q) > 3 else None
     # Rail shows THREE distinct quote voices (day-keyed), not just today's one.
+    # Prefer today's fresh vetted quotes (data/home_quotes.json); fall back to the pool.
+    _fresh = _home_quotes()
     def _pick(offset):
         e = _pool[(datetime.now().toordinal() + offset) % len(_pool)]
         return e[0], e[1], e[2], (e[3] if len(e) > 3 else None)
-    _three = []
-    _ord = datetime.now().toordinal()
-    _n = 0
-    while len(_three) < 3 and _n < len(_pool):
-        e = _pool[(_ord + _n) % len(_pool)]
-        name = e[1]
-        if not any(x[0] == name for x in _three):
-            _three.append((e[0], e[1], e[2], e[3] if len(e) > 3 else None))
-        _n += 1
+    if _fresh:
+        _three = list(_fresh)
+    else:
+        _three = []
+        _ord = datetime.now().toordinal()
+        _n = 0
+        while len(_three) < 3 and _n < len(_pool):
+            e = _pool[(_ord + _n) % len(_pool)]
+            name = e[1]
+            if not any(x[0] == name for x in _three):
+                _three.append((e[0], e[1], e[2], e[3] if len(e) > 3 else None))
+            _n += 1
     quotes_html = "".join(
         f'<div class="quote">“{esc(x[0])}”<i>{esc(x[1])}{", " if x[3] == "street" else " · "}{esc(x[2])}</i></div>'
         for x in _three)
