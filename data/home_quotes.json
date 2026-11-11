@@ -1,20 +1,20 @@
 [
  {
-  "text": "The flat part of the yield curve is where households live. We just chart around them.",
-  "name": "Priya Sharma",
-  "role": "Washington Bureau \u00b7 Fed & Rates",
-  "street": false
- },
- {
-  "text": "I asked the teller to move twenty dollars between two accounts, and she asked which accounts, and I said the two that are both negative.",
+  "text": "They said my overdraft was the market keeping score. I asked what color the jersey is, and they said there is no jersey, just the score.",
   "name": "Ray Okafor",
   "role": "Warehouse Picker",
   "street": true
  },
  {
-  "text": "My credit score went up because I borrowed more. That isn't a system. That's a friend with a win condition.",
+  "text": "My rent is due on the first, and my money is due on the second, and the bank charges me for the one day I have to make them meet.",
   "name": "Simone Doherty",
   "role": "Rideshare Driver",
   "street": true
+ },
+ {
+  "text": "A rate cut is not the answer; it is the answer to a question nobody has stopped to ask, which is a different job entirely.",
+  "name": "Priya Sharma",
+  "role": "Washington Bureau \u00b7 Fed & Rates",
+  "street": false
  }
 ]
