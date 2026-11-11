@@ -1,0 +1,23 @@
+[
+ {
+  "id": 3,
+  "text": "A bond matures in thirty years, which is the market's polite way of saying somebody else is doing the dishes.",
+  "name": "Claire Reyes",
+  "role": "Debt & Fixed Income",
+  "street": false
+ },
+ {
+  "id": 6,
+  "text": "The index owns everything now, so I asked it if I could borrow a lawn, and it said check the basket.",
+  "name": "Simone Doherty",
+  "role": "Rideshare Driver",
+  "street": true
+ },
+ {
+  "id": 7,
+  "text": "I have an overdraft fee named after my coffee order, and at some point you stop counting and just start documenting.",
+  "name": "Dana Whitfield",
+  "role": "Portfolio Strategy",
+  "street": false
+ }
+]
