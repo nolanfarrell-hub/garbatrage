@@ -10,8 +10,11 @@ OUT = ROOT / "site"
 SITE = "https://garbatrage.com"
 
 gia = json.loads((ROOT / "data/gia.json").read_text())
-stories = sorted(json.loads((ROOT / "data/stories.json").read_text()),
-                 key=lambda s: s["date"], reverse=True)
+json_stories = json.loads((ROOT / "data/stories.json").read_text())
+# Sort by date desc; ties (same-day appends) resolve by array position desc so
+# the newest appended batch surfaces first on the home hero/archive.
+stories = sorted(enumerate(json_stories), key=lambda p: (p[1]["date"], p[0]), reverse=True)
+stories = [s for _, s in stories]
 anchors = json.loads((ROOT / "data/anchors.json").read_text())
 cons = gia["constituents"]
 
