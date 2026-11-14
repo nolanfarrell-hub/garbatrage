@@ -310,11 +310,26 @@ def build_dump():
                      "A deadpan aggregate of the internet\u2019s funniest uploads.",
                      body, f"{SITE}/dump/"))
         return
-    # fresh-ish grouping: just show newest first, capped so the page is a
-    # curated two-minutes, not a firehose.
-    limit = min(48, len(videos))
+    # Round-robin across channels so the grid is a true aggregate instead of
+    # a high-volume-channel flood: take each channel's freshest, then next, etc.,
+    # until 48 cards (or the pool exhausts). Keeps every channel represented.
+    by_chan = {}
+    for v in videos:
+        by_chan.setdefault(v["channel"], []).append(v)
+    for k in by_chan:
+        by_chan[k].sort(key=lambda v: v["published"], reverse=True)
+    picks = []
+    idx = 0
+    while len(picks) < 48 and any(by_chan[k] for k in by_chan):
+        got = 0
+        for k in list(by_chan):
+            if by_chan[k]:
+                picks.append(by_chan[k].pop(0)); got += 1
+        if got == 0:
+            break
+        idx += 1
     card = ""
-    for v in videos[:limit]:
+    for v in picks:
         card += (f'<div class="dump-card">'
                  f'<a class="dthumb" href="{esc(v["href"])}" target="_blank" '
                  f'rel="noopener" data-video="{esc(v["id"])}">'
@@ -325,7 +340,7 @@ def build_dump():
                  f'</div>')
     head = (f'<div class="kick">The Morning Dump</div>'
             f'<h1>The funniest uploads, for the most important moments of your day.</h1>'
-            f'<p class="lede">A deadpan aggregate of this week\u2019s uploads from six '
+            f'<p class="lede">A deadpan aggregate of the latest uploads from nine '
             f'channels that actually earn the scroll. Click a card to watch in place; '
             f'click \u2018open\u2019 to give the algorithm your data instead.</p>')
     body = (head + f'<div class="dump-grid">{card}</div>'
@@ -345,7 +360,7 @@ def build_dump():
           layout("The Morning Dump · Garbatrage",
                  "A deadpan aggregate of the internet\u2019s funniest uploads.",
                  body, f"{SITE}/dump/"))
-    print(f"built /dump/ with {len(videos[:limit])} videos")
+    print(f"built /dump/ with {len(picks)} videos from {len(by_chan)} channels")
 
 
 def build_feeds():
