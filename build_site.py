@@ -290,6 +290,63 @@ def build_archive():
                  body, f"{SITE}/archive/"))
 
 # ---------- feeds ----------
+def build_dump():
+    """Render /dump/ — The Morning Dump. Reads data/dump.json (written by
+    build_dump.py, which does the network fetch). The daily build itself never
+    touches the network; if dump.json is absent/stale the page still renders
+    with a deadpan fallback instead of breaking the deploy."""
+    try:
+        dump = json.loads((ROOT / "data" / "dump.json").read_text())
+        videos = dump.get("videos") or []
+    except Exception:
+        videos = []
+    if not videos:
+        body = (f'<div class="kick">The Morning Dump</div>'
+                f'<h1>Nothing is here yet.</h1>'
+                f'<p class="lede">The dump is empty, which is the most '
+                f'honest thing it has ever been.</p>')
+        write("dump/index.html",
+              layout("The Morning Dump · Garbatrage",
+                     "A deadpan aggregate of the internet\u2019s funniest uploads.",
+                     body, f"{SITE}/dump/"))
+        return
+    # fresh-ish grouping: just show newest first, capped so the page is a
+    # curated two-minutes, not a firehose.
+    limit = min(48, len(videos))
+    card = ""
+    for v in videos[:limit]:
+        card += (f'<div class="dump-card">'
+                 f'<a class="dthumb" href="{esc(v["href"])}" target="_blank" '
+                 f'rel="noopener" data-video="{esc(v["id"])}">'
+                 f'<img src="{esc(v["thumb"])}" alt="" loading="lazy">'
+                 f'<span class="dplay">▶</span></a>'
+                 f'<div class="dbody"><div class="dchan">{esc(v["channel"])}</div>'
+                 f'<h3><a href="{esc(v["href"])}" target="_blank" rel="noopener">{esc(v["title"])}</a></h3></div>'
+                 f'</div>')
+    head = (f'<div class="kick">The Morning Dump</div>'
+            f'<h1>The funniest uploads, for the most important moments of your day.</h1>'
+            f'<p class="lede">A deadpan aggregate of this week\u2019s uploads from six '
+            f'channels that actually earn the scroll. Click a card to watch in place; '
+            f'click \u2018open\u2019 to give the algorithm your data instead.</p>')
+    body = (head + f'<div class="dump-grid">{card}</div>'
+            + ('<div class="disc">The Morning Dump curates uploads from The Daily Show, '
+               'Last Week Tonight, The Onion, Saturday Night Live, Key &amp; Peele and The '
+               'Hard Times via their public feeds. It is an aggregate of other people\u2019s '
+               'work, reported straight, and not investment advice.</div>')
+            + ('<script data-cfasync="false">'
+               '(function(){var c=\'https://www.youtube-nocookie.com/embed/\';'
+               'document.querySelectorAll(\'.dthumb\').forEach(function(a){'
+               'a.addEventListener(\'click\',function(e){e.preventDefault();var id=a.getAttribute(\'data-video\');'
+               'a.innerHTML=\'<div class="dumpgrid-embed"><iframe src="\'+c+id+\'?autoplay=1" '
+               'title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" '
+               'allowfullscreen></iframe></div>\';});});})();</script>'))
+    write("dump/index.html",
+          layout("The Morning Dump · Garbatrage",
+                 "A deadpan aggregate of the internet\u2019s funniest uploads.",
+                 body, f"{SITE}/dump/"))
+    print(f"built /dump/ with {len(videos[:limit])} videos")
+
+
 def build_feeds():
     urls = [f"{SITE}/", f"{SITE}/markets/", f"{SITE}/archive/", f"{SITE}/desk/", f"{SITE}/about/",
             f"{SITE}/methodology/", f"{SITE}/terms.html", f"{SITE}/privacy.html"]
@@ -454,8 +511,8 @@ def build_home():
 </aside>
 </div>
 <div class="news"><div class="nin">
-  <div><h2>The Morning Dump</h2><p>Six headlines and one quietly mispriced thing, every weekday at 6:40.</p></div>
-  <a class="btn" href="mailto:info@garbatrage.com?subject=Subscribe%20to%20The%20Morning%20Dump&body=Add%20me%20to%20the%20list.%20Address%20to%20use%3A%20">Subscribe</a>
+  <div><h2>The Morning Dump</h2><p>The day\u2019s headlines and the funniest new uploads, all in one place \u2014 for the part of the morning you\u2019d rather not discuss.</p></div>
+  <a class="btn" href="/dump/">Open the Dump</a>
 </div></div>
 {FOOTER}"""
     write("index.html",
@@ -510,6 +567,7 @@ listing([(s, [c for c in cons if c["sector"] == s]) for s in gia["sectors"]])
 build_archive()
 build_home()
 build_roster()
+build_dump()
 build_feeds()
 shutil.copytree(ROOT / "static", OUT, dirs_exist_ok=True)
 # media/ (story illustration PNGs) lives outside static/; carry it into the build so

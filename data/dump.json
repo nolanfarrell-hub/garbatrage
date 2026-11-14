@@ -1,0 +1,662 @@
+{
+ "generated": "2026-11-14T20:23:20.013613+00:00",
+ "channels": 6,
+ "videos": [
+  {
+   "channel": "Saturday Night Live",
+   "title": "that’s a lot of troyes",
+   "id": "1zQJkqQFPzM",
+   "href": "https://www.youtube.com/shorts/1zQJkqQFPzM",
+   "thumb": "https://i.ytimg.com/vi/1zQJkqQFPzM/hqdefault.jpg",
+   "published": "2026-11-14T20:00:04+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Historian Heather Cox Richardson on Americans reclaiming government in the midterm elections",
+   "id": "yol8fgkhXD0",
+   "href": "https://www.youtube.com/shorts/yol8fgkhXD0",
+   "thumb": "https://i.ytimg.com/vi/yol8fgkhXD0/hqdefault.jpg",
+   "published": "2026-11-14T19:00:37+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "cha cha now y’all",
+   "id": "1ybGVSWiKCc",
+   "href": "https://www.youtube.com/shorts/1ybGVSWiKCc",
+   "thumb": "https://i.ytimg.com/vi/1ybGVSWiKCc/hqdefault.jpg",
+   "published": "2026-11-14T18:33:53+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Sean Duffy: Last Week Tonight with John Oliver (HBO)",
+   "id": "GC0dAsRl0ao",
+   "href": "https://www.youtube.com/watch?v=GC0dAsRl0ao",
+   "thumb": "https://i.ytimg.com/vi/GC0dAsRl0ao/hqdefault.jpg",
+   "published": "2026-11-14T18:32:30+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Is Violence Becoming Too Political?",
+   "id": "0EiTtiouAPg",
+   "href": "https://www.youtube.com/shorts/0EiTtiouAPg",
+   "thumb": "https://i.ytimg.com/vi/0EiTtiouAPg/hqdefault.jpg",
+   "published": "2026-11-14T18:00:07+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Who would’ve thought people were talking s**t about Mississippi all the way in Africa? #DailyShow",
+   "id": "6Oeeb9wtOOE",
+   "href": "https://www.youtube.com/shorts/6Oeeb9wtOOE",
+   "thumb": "https://i.ytimg.com/vi/6Oeeb9wtOOE/hqdefault.jpg",
+   "published": "2026-11-14T16:00:18+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Jon Stewart on Stephen Miller & Desi on Scott Colom's Mississippi Win | The Daily Show",
+   "id": "zpUnm09lTUk",
+   "href": "https://www.youtube.com/watch?v=zpUnm09lTUk",
+   "thumb": "https://i.ytimg.com/vi/zpUnm09lTUk/hqdefault.jpg",
+   "published": "2026-11-14T14:00:33+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "beppo come home",
+   "id": "V5i9-LxtK10",
+   "href": "https://www.youtube.com/shorts/V5i9-LxtK10",
+   "thumb": "https://i.ytimg.com/vi/V5i9-LxtK10/hqdefault.jpg",
+   "published": "2026-11-14T01:05:12+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "their taglines say it all",
+   "id": "qX7NdQReJfk",
+   "href": "https://www.youtube.com/shorts/qX7NdQReJfk",
+   "thumb": "https://i.ytimg.com/vi/qX7NdQReJfk/hqdefault.jpg",
+   "published": "2026-11-14T01:04:15+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Grace learns about the most underutilized resource for cleaning up Cape Cod's waters: women over 65",
+   "id": "_v_rbZ95WTQ",
+   "href": "https://www.youtube.com/shorts/_v_rbZ95WTQ",
+   "thumb": "https://i.ytimg.com/vi/_v_rbZ95WTQ/hqdefault.jpg",
+   "published": "2026-11-13T22:30:14+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Pete Hegseth & Kid Rock #lastweektonight",
+   "id": "FuV1EOQUP9U",
+   "href": "https://www.youtube.com/shorts/FuV1EOQUP9U",
+   "thumb": "https://i.ytimg.com/vi/FuV1EOQUP9U/hqdefault.jpg",
+   "published": "2026-11-13T19:01:10+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Does Stephen Miller pass the chief of staff checklist? Jon Stewart finds out",
+   "id": "fqCRXgsA4xc",
+   "href": "https://www.youtube.com/shorts/fqCRXgsA4xc",
+   "thumb": "https://i.ytimg.com/vi/fqCRXgsA4xc/hqdefault.jpg",
+   "published": "2026-11-13T19:00:15+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "who orders a lobster at a diner",
+   "id": "Bw9FQn_NGfY",
+   "href": "https://www.youtube.com/shorts/Bw9FQn_NGfY",
+   "thumb": "https://i.ytimg.com/vi/Bw9FQn_NGfY/hqdefault.jpg",
+   "published": "2026-11-13T18:31:08+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "SWAT Team Robot Successfully Dismantles Black Man",
+   "id": "iq4SALWrVZU",
+   "href": "https://www.youtube.com/shorts/iq4SALWrVZU",
+   "thumb": "https://i.ytimg.com/vi/iq4SALWrVZU/hqdefault.jpg",
+   "published": "2026-11-13T18:00:20+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "it’s drag brunch",
+   "id": "qunmdpyK04Y",
+   "href": "https://www.youtube.com/shorts/qunmdpyK04Y",
+   "thumb": "https://i.ytimg.com/vi/qunmdpyK04Y/hqdefault.jpg",
+   "published": "2026-11-13T18:00:18+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Sen. Cindy Hyde-Smith blocked Scott Colom from becoming a federal judge, so he took her job instead",
+   "id": "i7Eh2GXf63w",
+   "href": "https://www.youtube.com/shorts/i7Eh2GXf63w",
+   "thumb": "https://i.ytimg.com/vi/i7Eh2GXf63w/hqdefault.jpg",
+   "published": "2026-11-13T17:08:24+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Trash Ladies: Grace Meets the Pond-Diving Grannies Cleaning Up Cape Cod | The Daily Show",
+   "id": "auMligQUxas",
+   "href": "https://www.youtube.com/watch?v=auMligQUxas",
+   "thumb": "https://i.ytimg.com/vi/auMligQUxas/hqdefault.jpg",
+   "published": "2026-11-13T12:23:45+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Heather Cox Richardson on America’s Political History  & “Letters from an American” | The Daily Show",
+   "id": "W-o2X4C24lg",
+   "href": "https://www.youtube.com/watch?v=W-o2X4C24lg",
+   "thumb": "https://i.ytimg.com/vi/W-o2X4C24lg/hqdefault.jpg",
+   "published": "2026-11-13T04:30:05+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Jensen Huang Steps Down as Affairs Pile Up & Scott Colom Paints Mississippi Blue | The Daily Show",
+   "id": "RX59M5t7240",
+   "href": "https://www.youtube.com/watch?v=RX59M5t7240",
+   "thumb": "https://i.ytimg.com/vi/RX59M5t7240/hqdefault.jpg",
+   "published": "2026-11-13T03:00:49+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "not his first rodeo",
+   "id": "_WzoOcfoVXA",
+   "href": "https://www.youtube.com/shorts/_WzoOcfoVXA",
+   "thumb": "https://i.ytimg.com/vi/_WzoOcfoVXA/hqdefault.jpg",
+   "published": "2026-11-13T02:30:43+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "this saturdayyyy!",
+   "id": "9n98sp7Kv5k",
+   "href": "https://www.youtube.com/shorts/9n98sp7Kv5k",
+   "thumb": "https://i.ytimg.com/vi/9n98sp7Kv5k/hqdefault.jpg",
+   "published": "2026-11-13T00:31:06+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "Ben Marshall Thinks John Mulaney Is Roasting Him - SNL",
+   "id": "grfzEXnbtXA",
+   "href": "https://www.youtube.com/watch?v=grfzEXnbtXA",
+   "thumb": "https://i.ytimg.com/vi/grfzEXnbtXA/hqdefault.jpg",
+   "published": "2026-11-13T00:30:31+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "The Democrats took a huge opportunity and totally blew it? Sounds about right",
+   "id": "bv14-USKnoI",
+   "href": "https://www.youtube.com/shorts/bv14-USKnoI",
+   "thumb": "https://i.ytimg.com/vi/bv14-USKnoI/hqdefault.jpg",
+   "published": "2026-11-12T23:20:53+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "Behind the Sketch: Birthday Girl - SNL",
+   "id": "1mM5FFlfe6E",
+   "href": "https://www.youtube.com/watch?v=1mM5FFlfe6E",
+   "thumb": "https://i.ytimg.com/vi/1mM5FFlfe6E/hqdefault.jpg",
+   "published": "2026-11-12T21:00:15+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "john mulaney’s 2018 monologue!",
+   "id": "6_ibRp1QzjE",
+   "href": "https://www.youtube.com/shorts/6_ibRp1QzjE",
+   "thumb": "https://i.ytimg.com/vi/6_ibRp1QzjE/hqdefault.jpg",
+   "published": "2026-11-12T20:04:51+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Desi’s thrilled to see that someone’s going after Pete Hegseth, and not just for child support",
+   "id": "gTc-vCRPuzQ",
+   "href": "https://www.youtube.com/shorts/gTc-vCRPuzQ",
+   "thumb": "https://i.ytimg.com/vi/gTc-vCRPuzQ/hqdefault.jpg",
+   "published": "2026-11-12T19:03:39+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Adult Diaper Model Clarifies He Does Not Use Adult Diapers",
+   "id": "a6bNEcmouGc",
+   "href": "https://www.youtube.com/shorts/a6bNEcmouGc",
+   "thumb": "https://i.ytimg.com/vi/a6bNEcmouGc/hqdefault.jpg",
+   "published": "2026-11-12T18:00:08+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Dems have no excuse for missing Hegseth’s impeachment vote. McConnell was there & he died YEARS ago",
+   "id": "JKCwxTtfJmA",
+   "href": "https://www.youtube.com/shorts/JKCwxTtfJmA",
+   "thumb": "https://i.ytimg.com/vi/JKCwxTtfJmA/hqdefault.jpg",
+   "published": "2026-11-12T16:01:35+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Pete Hegseth & Women's Rights #lastweektonight",
+   "id": "1W5HMOziFEw",
+   "href": "https://www.youtube.com/shorts/1W5HMOziFEw",
+   "thumb": "https://i.ytimg.com/vi/1W5HMOziFEw/hqdefault.jpg",
+   "published": "2026-11-12T14:00:07+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Pet Tarot Readings, Designer Collars & Doggy BBLs? Lewis Black on Pampered Pets | The Daily Show",
+   "id": "tVBJ3JhFKGE",
+   "href": "https://www.youtube.com/watch?v=tVBJ3JhFKGE",
+   "thumb": "https://i.ytimg.com/vi/tVBJ3JhFKGE/hqdefault.jpg",
+   "published": "2026-11-12T12:26:34+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Ron Howard on Richard Avedon’s Creative Courage & Preserving Artistry | The Daily Show",
+   "id": "SC033ROD-2s",
+   "href": "https://www.youtube.com/watch?v=SC033ROD-2s",
+   "thumb": "https://i.ytimg.com/vi/SC033ROD-2s/hqdefault.jpg",
+   "published": "2026-11-12T04:29:29+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Hegseth Impeachment Fails After 11 Dems Play Hooky & Blue Wave Comes for Boebert | The Daily Show",
+   "id": "xpzI21vOJLE",
+   "href": "https://www.youtube.com/watch?v=xpzI21vOJLE",
+   "thumb": "https://i.ytimg.com/vi/xpzI21vOJLE/hqdefault.jpg",
+   "published": "2026-11-12T03:00:02+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "just smile and nod",
+   "id": "g8oPLkPgccQ",
+   "href": "https://www.youtube.com/shorts/g8oPLkPgccQ",
+   "thumb": "https://i.ytimg.com/vi/g8oPLkPgccQ/hqdefault.jpg",
+   "published": "2026-11-11T22:48:39+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "he’s allergic￼",
+   "id": "G1Bursbfg_8",
+   "href": "https://www.youtube.com/shorts/G1Bursbfg_8",
+   "thumb": "https://i.ytimg.com/vi/G1Bursbfg_8/hqdefault.jpg",
+   "published": "2026-11-11T18:14:18+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Al Qaeda Populating U.S. With Peaceful 'Decoy Muslims'",
+   "id": "_1bFllMWE40",
+   "href": "https://www.youtube.com/shorts/_1bFllMWE40",
+   "thumb": "https://i.ytimg.com/vi/_1bFllMWE40/hqdefault.jpg",
+   "published": "2026-11-11T18:00:34+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "well well well",
+   "id": "t-sjZSeF6b4",
+   "href": "https://www.youtube.com/shorts/t-sjZSeF6b4",
+   "thumb": "https://i.ytimg.com/vi/t-sjZSeF6b4/hqdefault.jpg",
+   "published": "2026-11-11T17:08:52+00:00"
+  },
+  {
+   "channel": "Saturday Night Live",
+   "title": "John Mulaney Just Wants to Promote SNL",
+   "id": "1UWLtymkTUs",
+   "href": "https://www.youtube.com/watch?v=1UWLtymkTUs",
+   "thumb": "https://i.ytimg.com/vi/1UWLtymkTUs/hqdefault.jpg",
+   "published": "2026-11-11T17:00:19+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Pete Hegseth & Christian Nationalism #lastweektonight",
+   "id": "-iN0IVjOvjM",
+   "href": "https://www.youtube.com/shorts/-iN0IVjOvjM",
+   "thumb": "https://i.ytimg.com/vi/-iN0IVjOvjM/hqdefault.jpg",
+   "published": "2026-11-11T16:00:14+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Become a member, get the paper",
+   "id": "iymtB_0U9SA",
+   "href": "https://www.youtube.com/shorts/iymtB_0U9SA",
+   "thumb": "https://i.ytimg.com/vi/iymtB_0U9SA/hqdefault.jpg",
+   "published": "2026-11-10T22:30:30+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Is Violence Becoming Too Political?",
+   "id": "VTL-DmXH_bw",
+   "href": "https://www.youtube.com/watch?v=VTL-DmXH_bw",
+   "thumb": "https://i.ytimg.com/vi/VTL-DmXH_bw/hqdefault.jpg",
+   "published": "2026-11-10T18:00:22+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Pete Hegseth #lastweektonight",
+   "id": "Exttj5RMQV4",
+   "href": "https://www.youtube.com/shorts/Exttj5RMQV4",
+   "thumb": "https://i.ytimg.com/vi/Exttj5RMQV4/hqdefault.jpg",
+   "published": "2026-11-10T14:00:09+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Tate McRae Reveals If She Stops Dancing She Dies",
+   "id": "GOvhgPFUf2o",
+   "href": "https://www.youtube.com/shorts/GOvhgPFUf2o",
+   "thumb": "https://i.ytimg.com/vi/GOvhgPFUf2o/hqdefault.jpg",
+   "published": "2026-11-09T18:00:29+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Midterm Results #lastweektonight",
+   "id": "w1ZZcwd_IGc",
+   "href": "https://www.youtube.com/shorts/w1ZZcwd_IGc",
+   "thumb": "https://i.ytimg.com/vi/w1ZZcwd_IGc/hqdefault.jpg",
+   "published": "2026-11-09T15:00:33+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Pete Hegseth: Last Week Tonight with John Oliver (HBO)",
+   "id": "LO5iHyYa0XM",
+   "href": "https://www.youtube.com/watch?v=LO5iHyYa0XM",
+   "thumb": "https://i.ytimg.com/vi/LO5iHyYa0XM/hqdefault.jpg",
+   "published": "2026-11-09T07:30:32+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "S13 E29: Midterm Results & Pete Hegseth: 11/8/26: Last Week Tonight with John Oliver",
+   "id": "UlW28SlFO8k",
+   "href": "https://www.youtube.com/watch?v=UlW28SlFO8k",
+   "thumb": "https://i.ytimg.com/vi/UlW28SlFO8k/hqdefault.jpg",
+   "published": "2026-11-09T04:00:01+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Is Pete Hegseth's Bold Pledge To 'Kill Everyone' By 2028 An Unrealistic Pipe Dream?",
+   "id": "0bMqZczdYM0",
+   "href": "https://www.youtube.com/shorts/0bMqZczdYM0",
+   "thumb": "https://i.ytimg.com/vi/0bMqZczdYM0/hqdefault.jpg",
+   "published": "2026-11-08T18:00:14+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Authorities Investigate Collision Between Trains From Chicago Traveling 80 MPH, DC Traveling 75 MPH",
+   "id": "WeGyes1vkpA",
+   "href": "https://www.youtube.com/shorts/WeGyes1vkpA",
+   "thumb": "https://i.ytimg.com/vi/WeGyes1vkpA/hqdefault.jpg",
+   "published": "2026-11-07T18:00:02+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "Key & Peele's Fan-Favorite Moments 🤩",
+   "id": "czAwlnueUF8",
+   "href": "https://www.youtube.com/watch?v=czAwlnueUF8",
+   "thumb": "https://i.ytimg.com/vi/czAwlnueUF8/hqdefault.jpg",
+   "published": "2026-11-06T21:00:09+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "'This is a Walgreens receipt' #KeyAndPeele",
+   "id": "CmpTAw2KMSs",
+   "href": "https://www.youtube.com/shorts/CmpTAw2KMSs",
+   "thumb": "https://i.ytimg.com/vi/CmpTAw2KMSs/hqdefault.jpg",
+   "published": "2026-11-06T21:00:03+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Why Hasn’t Abdul El-Sayed Accomplished Any Of His Campaign Goals Since Winning 2 Minutes Ago?",
+   "id": "HdxUhuzmozU",
+   "href": "https://www.youtube.com/shorts/HdxUhuzmozU",
+   "thumb": "https://i.ytimg.com/vi/HdxUhuzmozU/hqdefault.jpg",
+   "published": "2026-11-06T18:00:12+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "How Do I Get This Turtleneck Off?",
+   "id": "tQziRo6YeNE",
+   "href": "https://www.youtube.com/shorts/tQziRo6YeNE",
+   "thumb": "https://i.ytimg.com/vi/tQziRo6YeNE/hqdefault.jpg",
+   "published": "2026-11-05T18:00:02+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "The $100 Bill #lastweektonight",
+   "id": "2T4VhRwBnEs",
+   "href": "https://www.youtube.com/shorts/2T4VhRwBnEs",
+   "thumb": "https://i.ytimg.com/vi/2T4VhRwBnEs/hqdefault.jpg",
+   "published": "2026-11-05T15:00:38+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Become an Onion member while it's still optional:",
+   "id": "Lien6Dhu3wI",
+   "href": "https://www.youtube.com/shorts/Lien6Dhu3wI",
+   "thumb": "https://i.ytimg.com/vi/Lien6Dhu3wI/hqdefault.jpg",
+   "published": "2026-11-04T21:30:01+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Trump Voter Feels Betrayed By President After Reading 800 Pages Of Queer Feminist Theory",
+   "id": "X13V3KuJgRU",
+   "href": "https://www.youtube.com/shorts/X13V3KuJgRU",
+   "thumb": "https://i.ytimg.com/vi/X13V3KuJgRU/hqdefault.jpg",
+   "published": "2026-11-04T17:00:19+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Why Hasn’t Abdul El-Sayed Accomplished Any Of His Campaign Goals Since Winning 2 Minutes Ago?",
+   "id": "4vkqSigZeDI",
+   "href": "https://www.youtube.com/watch?v=4vkqSigZeDI",
+   "thumb": "https://i.ytimg.com/vi/4vkqSigZeDI/hqdefault.jpg",
+   "published": "2026-11-04T07:28:58+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Free on Steam: The Onion Voting Simulator 3D. Enjoy a superior American election experience today.",
+   "id": "eq9BGvHj1qY",
+   "href": "https://www.youtube.com/shorts/eq9BGvHj1qY",
+   "thumb": "https://i.ytimg.com/vi/eq9BGvHj1qY/hqdefault.jpg",
+   "published": "2026-11-03T20:30:16+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Republicans & James Talarico #lastweektonight",
+   "id": "KcK_EIEODJE",
+   "href": "https://www.youtube.com/shorts/KcK_EIEODJE",
+   "thumb": "https://i.ytimg.com/vi/KcK_EIEODJE/hqdefault.jpg",
+   "published": "2026-11-03T17:20:12+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Republicans & Abdul El-Sayed #lastweektonight",
+   "id": "4RoLmhoLdRQ",
+   "href": "https://www.youtube.com/shorts/4RoLmhoLdRQ",
+   "thumb": "https://i.ytimg.com/vi/4RoLmhoLdRQ/hqdefault.jpg",
+   "published": "2026-11-03T17:05:33+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Midterms & Trump #lastweektonight",
+   "id": "uEpFWeXkZ3s",
+   "href": "https://www.youtube.com/shorts/uEpFWeXkZ3s",
+   "thumb": "https://i.ytimg.com/vi/uEpFWeXkZ3s/hqdefault.jpg",
+   "published": "2026-11-02T17:00:19+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Midterm Elections #lastweektonight",
+   "id": "iJIPA0cYK_8",
+   "href": "https://www.youtube.com/shorts/iJIPA0cYK_8",
+   "thumb": "https://i.ytimg.com/vi/iJIPA0cYK_8/hqdefault.jpg",
+   "published": "2026-11-02T15:00:04+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Midterms 2026: Last Week Tonight with John Oliver (HBO)",
+   "id": "Np7_mlvXFcA",
+   "href": "https://www.youtube.com/watch?v=Np7_mlvXFcA",
+   "thumb": "https://i.ytimg.com/vi/Np7_mlvXFcA/hqdefault.jpg",
+   "published": "2026-11-02T07:30:24+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "S13 E28: Midterm Elections & The $100 Bill: 11/1/26: Last Week Tonight with John Oliver",
+   "id": "Lz-QkCnw6WQ",
+   "href": "https://www.youtube.com/watch?v=Lz-QkCnw6WQ",
+   "thumb": "https://i.ytimg.com/vi/Lz-QkCnw6WQ/hqdefault.jpg",
+   "published": "2026-11-02T04:00:20+00:00"
+  },
+  {
+   "channel": "The Hard Times",
+   "title": "What Will Your Family Do During a Crisis?",
+   "id": "phKDCQWnOcY",
+   "href": "https://www.youtube.com/shorts/phKDCQWnOcY",
+   "thumb": "https://i.ytimg.com/vi/phKDCQWnOcY/hqdefault.jpg",
+   "published": "2026-09-30T00:00:14+00:00"
+  },
+  {
+   "channel": "The Hard Times",
+   "title": "What NOT to Buy Before a Crisis?",
+   "id": "yEHAao3U0k0",
+   "href": "https://www.youtube.com/shorts/yEHAao3U0k0",
+   "thumb": "https://i.ytimg.com/vi/yEHAao3U0k0/hqdefault.jpg",
+   "published": "2026-09-29T00:00:04+00:00"
+  },
+  {
+   "channel": "The Hard Times",
+   "title": "No Internet, No Power… Can You Still Pay?",
+   "id": "agsgPb1Edoc",
+   "href": "https://www.youtube.com/shorts/agsgPb1Edoc",
+   "thumb": "https://i.ytimg.com/vi/agsgPb1Edoc/hqdefault.jpg",
+   "published": "2026-09-28T00:00:28+00:00"
+  },
+  {
+   "channel": "The Hard Times",
+   "title": "If your city loses water?",
+   "id": "VbydNqfYU-M",
+   "href": "https://www.youtube.com/shorts/VbydNqfYU-M",
+   "thumb": "https://i.ytimg.com/vi/VbydNqfYU-M/hqdefault.jpg",
+   "published": "2026-09-27T00:00:16+00:00"
+  },
+  {
+   "channel": "The Hard Times",
+   "title": "If the power goes out for 7 days?",
+   "id": "1EuGAXsm580",
+   "href": "https://www.youtube.com/shorts/1EuGAXsm580",
+   "thumb": "https://i.ytimg.com/vi/1EuGAXsm580/hqdefault.jpg",
+   "published": "2026-09-26T00:00:05+00:00"
+  },
+  {
+   "channel": "The Hard Times",
+   "title": "If Supermarkets Close Tomorrow, Buy These First",
+   "id": "Ckb5Milatng",
+   "href": "https://www.youtube.com/shorts/Ckb5Milatng",
+   "thumb": "https://i.ytimg.com/vi/Ckb5Milatng/hqdefault.jpg",
+   "published": "2026-09-25T00:00:19+00:00"
+  },
+  {
+   "channel": "The Hard Times",
+   "title": "3 Foods That Can Last For Years Without a Fridge",
+   "id": "t_NFfAGKWxU",
+   "href": "https://www.youtube.com/shorts/t_NFfAGKWxU",
+   "thumb": "https://i.ytimg.com/vi/t_NFfAGKWxU/hqdefault.jpg",
+   "published": "2026-09-24T00:00:25+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "It’s time to celebrate. #SuperBowlLVIII is on NOW. Watch on CBS, Paramount+ and Nickelodeon #SBLVIII",
+   "id": "vBHwTY6qll8",
+   "href": "https://www.youtube.com/shorts/vBHwTY6qll8",
+   "thumb": "https://i.ytimg.com/vi/vBHwTY6qll8/hqdefault.jpg",
+   "published": "2024-02-12T00:00:22+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "Drop the name of your MVP! 👇 Watch #SuperBowlLVIII tonight on CBS, Paramount+ & Nickelodeon #SBLVIII",
+   "id": "Kn4ri4gembs",
+   "href": "https://www.youtube.com/shorts/Kn4ri4gembs",
+   "thumb": "https://i.ytimg.com/vi/Kn4ri4gembs/hqdefault.jpg",
+   "published": "2024-02-11T23:00:09+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "Who are you betting on?! Watch #SuperBowlLVIII tonight on CBS, Paramount+ & Nickelodeon. #SBLVIII",
+   "id": "1BUGsc3q3vg",
+   "href": "https://www.youtube.com/shorts/1BUGsc3q3vg",
+   "thumb": "https://i.ytimg.com/vi/1BUGsc3q3vg/hqdefault.jpg",
+   "published": "2024-02-11T22:00:00+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "The big names are ready. Watch #SuperBowlLVIII tonight on CBS, Paramount+ & Nickelodeon #SBLVIII",
+   "id": "911PNyUOt08",
+   "href": "https://www.youtube.com/shorts/911PNyUOt08",
+   "thumb": "https://i.ytimg.com/vi/911PNyUOt08/hqdefault.jpg",
+   "published": "2024-02-11T21:00:05+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "Don’t miss the greats play this Sunday at #SuperBowlLVIII on CBS, Paramount+ & Nickelodeon. #SBLVIII",
+   "id": "0yZAJq4eGug",
+   "href": "https://www.youtube.com/shorts/0yZAJq4eGug",
+   "thumb": "https://i.ytimg.com/vi/0yZAJq4eGug/hqdefault.jpg",
+   "published": "2024-02-09T21:00:01+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "Is your guy playing this Sunday? Watch #SuperBowlLVIII on CBS, Paramount+ and Nickelodeon. #SBLVIII",
+   "id": "E5g_gXcZqRI",
+   "href": "https://www.youtube.com/shorts/E5g_gXcZqRI",
+   "thumb": "https://i.ytimg.com/vi/E5g_gXcZqRI/hqdefault.jpg",
+   "published": "2024-02-09T17:00:13+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "3 Days until #SuperBowlLVIII on CBS, Paramount+ and Nickelodeon! | #sblviii #keyandpeele",
+   "id": "jWB5Rnypej8",
+   "href": "https://www.youtube.com/shorts/jWB5Rnypej8",
+   "thumb": "https://i.ytimg.com/vi/jWB5Rnypej8/hqdefault.jpg",
+   "published": "2024-02-08T21:00:32+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "Fan-Favorite Football Moments 🏈 Key & Peele",
+   "id": "oooL9QWmO_o",
+   "href": "https://www.youtube.com/watch?v=oooL9QWmO_o",
+   "thumb": "https://i.ytimg.com/vi/oooL9QWmO_o/hqdefault.jpg",
+   "published": "2024-02-08T17:03:07+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "How you know someone is a snitch | #keyandpeele #shorts",
+   "id": "fb-DxKHJ4BU",
+   "href": "https://www.youtube.com/shorts/fb-DxKHJ4BU",
+   "thumb": "https://i.ytimg.com/vi/fb-DxKHJ4BU/hqdefault.jpg",
+   "published": "2024-02-06T01:00:17+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "Now that’s one way to ruin a joke. | #shorts #keyandpeele",
+   "id": "4OmFwUMT9k8",
+   "href": "https://www.youtube.com/shorts/4OmFwUMT9k8",
+   "thumb": "https://i.ytimg.com/vi/4OmFwUMT9k8/hqdefault.jpg",
+   "published": "2024-01-30T01:00:03+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "Some bloopers from Key & Peele Season 1 | #keyandpeele #bloopers #shorts",
+   "id": "Pn6ozoMSg0s",
+   "href": "https://www.youtube.com/shorts/Pn6ozoMSg0s",
+   "thumb": "https://i.ytimg.com/vi/Pn6ozoMSg0s/hqdefault.jpg",
+   "published": "2024-01-23T01:00:14+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "Warn your loved ones about menacing, life-robbing black ice. | #shorts",
+   "id": "w5NJbdxqsFU",
+   "href": "https://www.youtube.com/shorts/w5NJbdxqsFU",
+   "thumb": "https://i.ytimg.com/vi/w5NJbdxqsFU/hqdefault.jpg",
+   "published": "2024-01-18T21:00:26+00:00"
+  },
+  {
+   "channel": "Key & Peele",
+   "title": "Radio DJs are totally different when they’re on commercial break. | #keyandpeele #shorts",
+   "id": "vIdpktFFKfw",
+   "href": "https://www.youtube.com/shorts/vIdpktFFKfw",
+   "thumb": "https://i.ytimg.com/vi/vIdpktFFKfw/hqdefault.jpg",
+   "published": "2024-01-09T01:00:23+00:00"
+  }
+ ]
+}
