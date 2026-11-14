@@ -22,6 +22,7 @@ def esc(s): return html.escape(str(s), quote=True)
 def slugify(s): return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")[:70]
 def av(name): return "".join(p[0] for p in name.split()[:2]).upper()
 def day(s): return datetime.fromisoformat(s).strftime("%a %d")
+def vol(s): return datetime.fromisoformat(s).strftime("%Y")
 
 # Real-time tape (TradingView widget, consent-gated load; see layout <script>).
 # The fiction stays in the GIA rail panel and /markets/. Terms() already names
@@ -423,7 +424,11 @@ def build_home():
         f'<h3>{esc(s["title"])}</h3><p>{esc(s["dek"])}</p>'
         f'<div class="meta">{esc(s["desk"])} · {esc(s["author"])}</div></div></a>'
         for s in briefs)
-    body = f"""
+    body = f"""\
+<div class="mast">
+  <div><h1 class="mmm">Garbatrage</h1><p class="mtag">Markets · Money · Mischief</p></div>
+  <div class="mdate">{datetime.fromisoformat(lead["date"]).strftime("%A, %B %-d, %Y")}</div>
+</div>
 <div class="home">
 <div class="col">
   <div class="kick">{esc(lead["desk"])}</div>
