@@ -1,20 +1,20 @@
 [
  {
-  "text": "They raised my limit by two thousand dollars and sent a card letting me know it arrived. It was the only invitation I've gotten this year, so yes, I'm going.",
-  "name": "Rico Espinoza",
-  "role": "Warehouse Associate",
-  "street": true
- },
- {
-  "text": "They told me the thing costs less if you don't count the part where the bill is higher. So I stopped counting the bill, and the thing is cheap now, and oddly my account is still not.",
-  "name": "Latasha Boone",
-  "role": "Certified Nursing Assistant",
-  "street": true
- },
- {
-  "text": "I did not spend two years being told I was dead just for the world to realize I was alive and then not give me a parade.",
-  "name": "Gerald Twine",
-  "role": "Duration Manager",
+  "text": "We don't call it a recession yet. We call it a repricing, which is what you say when it's other people's houses.",
+  "name": "Elaine Whitmore",
+  "role": "Family Office Principal",
   "street": false
+ },
+ {
+  "text": "The bank called my checking account a privilege. I told them I feel about it the way they do.",
+  "name": "Andre Okafor",
+  "role": "Rideshare Driver",
+  "street": true
+ },
+ {
+  "text": "My landlord raised the rent and the letter said it was a courtesy. I wrote him back asking for the extra month I bought by paying it.",
+  "name": "Tyrone Bell",
+  "role": "Grocery Night Crew",
+  "street": true
  }
 ]
