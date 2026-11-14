@@ -24,11 +24,14 @@ OUT = ROOT / "data" / "dump.json"
 # uploads skew. Keep the list tight: this page's only product is "funny."
 CHANNELS = [
     ("UCfAOh2t5DpxVrgS9NQKjC7A", "The Onion"),
+    ("UCWHeOvQs6p-9KcMtvV0sNmQ", "The Babylon Bee"),
     ("UCdN4aXTrHAtfgbVG9HjBmxQ", "Key & Peele"),
     ("UCwWhs_6x42TyRM4Wstoq8HA", "The Daily Show"),
     ("UC3XTzVzaHQEd30rQbuvCtTQ", "Last Week Tonight"),
     ("UCqFzWxSCi39LnW1JKFR3efg", "Saturday Night Live"),
+    ("UCTcw8GqWQlFcc6ioeJQOMAQ", "Dropout"),
     ("UCSJtWSd-TfydTFExVbxAkMQ", "The Hard Times"),
+    ("UC4woSp8ITBoYDmjkukhEhxg", "Tim Dillon"),
 ]
 UA = {"User-Agent": "Mozilla/5.0 (garbatrage-morning-dump build)"}
 NS = {"yt": "http://www.youtube.com/xml/schemas/2015", "a": "http://www.w3.org/2005/Atom"}

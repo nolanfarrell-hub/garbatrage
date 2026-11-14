@@ -145,7 +145,7 @@ def layout(title, desc, body, canonical, og_image=None, og_type="website", jsonl
 <link rel="me" href="https://warpcast.com/garbatrage">
 <meta name="theme-color" content="#0e2540">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=2">
+<link rel="stylesheet" href="/assets/site.css?v=3">
 {ld_block}
 </head><body><a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
@@ -329,9 +329,10 @@ def build_dump():
             f'channels that actually earn the scroll. Click a card to watch in place; '
             f'click \u2018open\u2019 to give the algorithm your data instead.</p>')
     body = (head + f'<div class="dump-grid">{card}</div>'
-            + ('<div class="disc">The Morning Dump curates uploads from The Daily Show, '
-               'Last Week Tonight, The Onion, Saturday Night Live, Key &amp; Peele and The '
-               'Hard Times via their public feeds. It is an aggregate of other people\u2019s '
+            + ('<div class="disc">The Morning Dump curates uploads from The Onion, '
+               'The Babylon Bee, The Daily Show, Last Week Tonight, Saturday Night Live, '
+               'Key &amp; Peele, Dropout, Hard Times and Tim Dillon via their public feeds. '
+               'It is an aggregate of other people\u2019s '
                'work, reported straight, and not investment advice.</div>')
             + ('<script data-cfasync="false">'
                '(function(){var c=\'https://www.youtube-nocookie.com/embed/\';'
@@ -476,6 +477,22 @@ def build_home():
         f'<div class="row"><span>{esc(c["ticker"])}</span>'
         f'<b class="{"up" if c["change"] >= 0 else "dn"}">{c["change"]:+.1f}%</b></div>'
         for c in movers)
+    # "From the Dump" — a few of the funniest live uploads, surfaced on home.
+    dump_strip = ""
+    try:
+        _d = json.loads((ROOT / "data" / "dump.json").read_text())
+        _vids = (_d.get("videos") or [])[:4]
+    except Exception:
+        _vids = []
+    if _vids:
+        _cards = "".join(
+            f'<a class="dmin" href="{esc(v["href"])}" target="_blank" rel="noopener" '
+            f'data-video="{esc(v["id"])}"><img src="{esc(v["thumb"])}" alt="" loading="lazy">'
+            f'<span><b>{esc(v["channel"])}</b>{esc(v["title"])}</span></a>'
+            for v in _vids)
+        dump_strip = (f'<div class="sec">From the Dump</div>'
+                      f'<div class="dump-mini">{_cards}</div>'
+                      f'<a class="dump-more" href="/dump/">Open the Dump →</a>')
     brief_html = "".join(
         f'<a class="item" href="/story/{s["slug"]}/"><div class="thumb"><img src="{img(s)}" alt="" loading="lazy"></div><div>'
         f'<h3>{esc(s["title"])}</h3><p>{esc(s["dek"])}</p>'
@@ -496,6 +513,7 @@ def build_home():
     <span><b>{esc(lead["author"])}</b> · {esc(lead.get("role", ""))} · {lead.get("read", 4)} min read</span></div>
   <div class="sec">Markets Brief</div>
   {brief_html}
+  {dump_strip}
 </div>
 <aside class="rail">
   <div class="panel">
