@@ -318,7 +318,7 @@ def build_dump():
         card += (f'<div class="dump-card">'
                  f'<a class="dthumb" href="{esc(v["href"])}" target="_blank" '
                  f'rel="noopener" data-video="{esc(v["id"])}">'
-                 f'<img src="{esc(v["thumb"])}" alt="" loading="lazy">'
+                 f'<img src="{esc(v["thumb"])}" alt="" loading="eager">'
                  f'<span class="dplay">▶</span></a>'
                  f'<div class="dbody"><div class="dchan">{esc(v["channel"])}</div>'
                  f'<h3><a href="{esc(v["href"])}" target="_blank" rel="noopener">{esc(v["title"])}</a></h3></div>'
