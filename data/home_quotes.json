@@ -1,23 +1,20 @@
 [
  {
-  "id": 6,
-  "text": "My rent went up, my hours went down, and the landlord called it a rebalancing, so I guess we are both family offices now.",
-  "name": "Morty Kane",
-  "role": "Doorman",
+  "text": "My raise came through as a discount on the overdraft fee, which I did not realize was a promotion until I read the letter twice.",
+  "name": "Simone Vega",
+  "role": "Aide at a Care Facility",
   "street": true
  },
  {
-  "id": 3,
-  "text": "They froze my card for a suspicious purchase, and the suspicious purchase was groceries, and I spent the whole call being grateful they thought I could afford them.",
-  "name": "Delia Osei",
-  "role": "Evening Custodian",
-  "street": true
+  "text": "We did not buy the business for its earnings. We bought it because the family that owned it finally stopped pretending the earnings were the point.",
+  "name": "Barrett Quinn",
+  "role": "Buyout Partner",
+  "street": false
  },
  {
-  "id": 4,
-  "text": "My overdraft went through at 4 a.m. The bank was still open for that. That is the branch I bank at now.",
-  "name": "Pete Loring",
-  "role": "Line Cook",
+  "text": "I was told my exit was voluntary, which is the first thing they have ever let me decide around here, and it was about leaving.",
+  "name": "Tim Llanas",
+  "role": "Recently Relaxed-from-a-Role Analyst",
   "street": true
  }
 ]
