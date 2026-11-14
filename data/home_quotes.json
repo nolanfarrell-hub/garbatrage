@@ -1,20 +1,20 @@
 [
  {
-  "text": "My raise came through as a discount on the overdraft fee, which I did not realize was a promotion until I read the letter twice.",
-  "name": "Simone Vega",
-  "role": "Aide at a Care Facility",
+  "text": "The bank said my account was operationally unserviceable, which is the nicest thing anyone's said to me all week, and I was in for forty dollars.",
+  "name": "Ray Okafor",
+  "role": "Warehouse Picker",
   "street": true
  },
  {
-  "text": "We did not buy the business for its earnings. We bought it because the family that owned it finally stopped pretending the earnings were the point.",
-  "name": "Barrett Quinn",
-  "role": "Buyout Partner",
-  "street": false
+  "text": "The rent went up eleven percent and the building put up a sign about passion, and I thought, right, that's where my eleven percent went.",
+  "name": "Sofia Marchetti",
+  "role": "Barista",
+  "street": true
  },
  {
-  "text": "I was told my exit was voluntary, which is the first thing they have ever let me decide around here, and it was about leaving.",
-  "name": "Tim Llanas",
-  "role": "Recently Relaxed-from-a-Role Analyst",
+  "text": "The gas station changed its price on a Tuesday, and my whole paycheck rearranged itself to make it fit, which I didn't think it was allowed to do.",
+  "name": "Latasha Boone",
+  "role": "Certified Nursing Assistant",
   "street": true
  }
 ]
