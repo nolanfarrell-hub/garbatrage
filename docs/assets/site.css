@@ -187,7 +187,9 @@ footer a:hover{color:var(--ink)}
 .news .btn:hover{background:var(--ox);border-color:var(--ox);color:var(--cream)}
 
 /* ---------- the morning dump (/dump/) ---------- */
-.dump-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;margin:28px 0}
+.dumpt{font-size:clamp(28px,4vw,40px);margin-bottom:8px}
+.dump-note{font-size:13px;color:var(--mute);max-width:62ch;margin-bottom:8px}
+.dump-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;margin:8px 0 28px}
 .dump-card{border:1px solid var(--deep2);background:var(--card);display:flex;flex-direction:column}
 .dthumb{display:block;position:relative;aspect-ratio:16/9;overflow:hidden;border-bottom:1px solid var(--deep2);background:var(--deep)}
 .dthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .2s}
