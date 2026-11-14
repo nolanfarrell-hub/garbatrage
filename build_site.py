@@ -145,7 +145,7 @@ def layout(title, desc, body, canonical, og_image=None, og_type="website", jsonl
 <link rel="me" href="https://warpcast.com/garbatrage">
 <meta name="theme-color" content="#0e2540">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=4">
+<link rel="stylesheet" href="/assets/site.css?v=5">
 {ld_block}
 </head><body><a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
@@ -338,10 +338,8 @@ def build_dump():
                  f'<div class="dbody"><div class="dchan">{esc(v["channel"])}</div>'
                  f'<h3><a href="{esc(v["href"])}" target="_blank" rel="noopener">{esc(v["title"])}</a></h3></div>'
                  f'</div>')
-    head = (f'<div class="kick">The Morning Dump</div>'
-            f'<h1 class="dumpt">The funniest uploads, for the most important moments of your day.</h1>'
-            f'<p class="dump-note">Nine channels that earn the scroll. Tap a card to play in place; '
-            f'open it to give the algorithm your data.</p>')
+    head = (f'<div class="kick dumpkick">The Morning Dump</div>'
+            f'<h1 class="dumpt">The funniest uploads, for the most important moments of your day.</h1>')
     body = (head + f'<div class="dump-grid">{card}</div>'
             + ('<div class="disc">The Morning Dump curates uploads from The Onion, '
                'The Babylon Bee, The Daily Show, Last Week Tonight, Saturday Night Live, '
