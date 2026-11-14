@@ -145,7 +145,7 @@ def layout(title, desc, body, canonical, og_image=None, og_type="website", jsonl
 <link rel="me" href="https://warpcast.com/garbatrage">
 <meta name="theme-color" content="#0e2540">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=2">
 {ld_block}
 </head><body><a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
