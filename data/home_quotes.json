@@ -1,20 +1,20 @@
 [
  {
-  "text": "We don't call it a recession yet. We call it a repricing, which is what you say when it's other people's houses.",
-  "name": "Elaine Whitmore",
-  "role": "Family Office Principal",
-  "street": false
- },
- {
-  "text": "The bank called my checking account a privilege. I told them I feel about it the way they do.",
-  "name": "Andre Okafor",
-  "role": "Rideshare Driver",
+  "text": "My money does not work while I sleep. My money sits on a counter and re-reads the bill I did not ask it to confirm.",
+  "name": "Simone Alder",
+  "role": "Cafeteria Worker",
   "street": true
  },
  {
-  "text": "My landlord raised the rent and the letter said it was a courtesy. I wrote him back asking for the extra month I bought by paying it.",
-  "name": "Tyrone Bell",
-  "role": "Grocery Night Crew",
+  "text": "My checking account filed a claim against me, and by the time I read it, my balance had already settled.",
+  "name": "Ray Okafor",
+  "role": "Warehouse Picker",
+  "street": true
+ },
+ {
+  "text": "The bank explained the fee in layers, like a door, and I was already out the back by the time I understood which one.",
+  "name": "Tim Llanas",
+  "role": "Rideshare Driver",
   "street": true
  }
 ]
