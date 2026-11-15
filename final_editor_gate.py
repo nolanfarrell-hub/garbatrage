@@ -11,8 +11,12 @@ Checks:
   3. SLUG            : every slug byte-identical to baseline (URL + image key stable)
   4. BLOCKQUOTE      : exactly one <blockquote> per body
   5. DATE            : no story dated in the future / empty date
+  6. ART-MATCH       : every story whose premise changed vs baseline must have freshly
+                       regenerated art (file modified after the content change), and the
+                       content-change set must be empty of unregenerated art. Stops the
+                       "rewrote the copy, forgot the pictures" failure.
 """
-import json, subprocess, sys, re, pathlib
+import json, subprocess, sys, re, pathlib, os, time
 
 REPO = pathlib.Path(__file__).resolve().parent
 if len(sys.argv) < 3:
@@ -69,6 +73,31 @@ for sl, s in n.items():
 for sl in m:
     if sl not in n:
         failures.append(f"REMOVED a slug that existed in baseline: {sl}")
+
+# ---- 6. ART-MATCH gate ----
+# baseline commit time = the moment the old premise set shipped
+base_ts = subprocess.run(["git","-C",str(REPO),"log","-1","--format=%ct",baseline_commit],
+    capture_output=True, text=True).stdout.strip()
+try:
+    base_time = int(base_ts)
+except ValueError:
+    base_time = 0
+imgdir = (REPO / "media" / "img").resolve()
+for sl, s in n.items():
+    ref = s.get("image") or f'/media/img/{sl}.png'
+    fname = pathlib.Path(ref).name
+    fpath = imgdir / fname
+    if not fpath.exists():
+        # maybe live under the full slug plus suffix; try glob
+        import glob as _g
+        cands = _g.glob(str(imgdir / (sl + "*.png")))
+        if not cands:
+            failures.append(f"ART MISSING for {sl}: {ref}")
+            continue
+        fpath = pathlib.Path(cands[0])
+    mtime = fpath.stat().st_mtime
+    if mtime < base_time:
+        failures.append(f"ART STALE for {sl} (image predates premise change; regenerate): {ref}")
 
 if failures:
     print(f"FINAL EDITOR GATE: FAIL ({len(failures)} violations) vs {baseline_commit}")
