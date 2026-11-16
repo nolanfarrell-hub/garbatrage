@@ -1,20 +1,5 @@
 [
- {
-  "text": "My money does not work while I sleep. My money sits on a counter and re-reads the bill I did not ask it to confirm.",
-  "name": "Simone Alder",
-  "role": "Cafeteria Worker",
-  "street": true
- },
- {
-  "text": "My checking account filed a claim against me, and by the time I read it, my balance had already settled.",
-  "name": "Ray Okafor",
-  "role": "Warehouse Picker",
-  "street": true
- },
- {
-  "text": "The bank explained the fee in layers, like a door, and I was already out the back by the time I understood which one.",
-  "name": "Tim Llanas",
-  "role": "Rideshare Driver",
-  "street": true
- }
+ {"text": "I put the lettuce back because it cost more than the chicken, and I put the chicken back because it was next, and now I am home with a salad spinner full of nothing but the idea of dinner.", "name": "Deshawn Phelps", "role": "Grocery Clerk", "street": true},
+ {"text": "My grandmother says she remembers when a dollar was a dollar. I told her my fare just went up and she said enjoy it now because that bus you ride is the last thing money was ever for.", "name": "Iris Calloway", "role": "Bus Operator", "street": true},
+ {"text": "The rent, the fare, and the groceries all meet once a month to decide which of me gets the check. This month they split it three ways and mailed the change to the baby formula people.", "name": "Marisol Neri", "role": "Home Health Aide", "street": true}
 ]
