@@ -1,8 +1,16 @@
 {
- "generated": "2026-11-16T16:07:22.568288+00:00",
+ "generated": "2026-11-16T19:29:34.321361+00:00",
  "channels": 9,
  "by_chan": {
   "The Onion": [
+   {
+    "channel": "The Onion",
+    "title": "Breaking: Woman Crying On Train Platform",
+    "id": "WL_4VDfHk-k",
+    "href": "https://www.youtube.com/shorts/WL_4VDfHk-k",
+    "thumb": "https://i.ytimg.com/vi/WL_4VDfHk-k/hqdefault.jpg",
+    "published": "2026-11-16T18:00:11+00:00"
+   },
    {
     "channel": "The Onion",
     "title": "Supreme Court Rules Death Penalty 'Totally Badass'",
@@ -114,14 +122,6 @@
     "href": "https://www.youtube.com/shorts/X13V3KuJgRU",
     "thumb": "https://i.ytimg.com/vi/X13V3KuJgRU/hqdefault.jpg",
     "published": "2026-11-04T17:00:19+00:00"
-   },
-   {
-    "channel": "The Onion",
-    "title": "Why Hasn’t Abdul El-Sayed Accomplished Any Of His Campaign Goals Since Winning 2 Minutes Ago?",
-    "id": "4vkqSigZeDI",
-    "href": "https://www.youtube.com/watch?v=4vkqSigZeDI",
-    "thumb": "https://i.ytimg.com/vi/4vkqSigZeDI/hqdefault.jpg",
-    "published": "2026-11-04T07:28:58+00:00"
    }
   ],
   "The Babylon Bee": [
@@ -371,6 +371,14 @@
   "The Daily Show": [
    {
     "channel": "The Daily Show",
+    "title": "Ron Howard reflects on the iconic fashion photographer behind his new Netflix documentary, “Avedon”",
+    "id": "J76sMRAHG6o",
+    "href": "https://www.youtube.com/shorts/J76sMRAHG6o",
+    "thumb": "https://i.ytimg.com/vi/J76sMRAHG6o/hqdefault.jpg",
+    "published": "2026-11-16T19:00:32+00:00"
+   },
+   {
+    "channel": "The Daily Show",
     "title": "Grace Kuhlenschmidt braves the grueling audition process to join the OULAG trash ladies #DailyShow",
     "id": "GHMvE2uIpR0",
     "href": "https://www.youtube.com/shorts/GHMvE2uIpR0",
@@ -480,14 +488,6 @@
     "href": "https://www.youtube.com/shorts/gTc-vCRPuzQ",
     "thumb": "https://i.ytimg.com/vi/gTc-vCRPuzQ/hqdefault.jpg",
     "published": "2026-11-12T19:03:39+00:00"
-   },
-   {
-    "channel": "The Daily Show",
-    "title": "Dems have no excuse for missing Hegseth’s impeachment vote. McConnell was there & he died YEARS ago",
-    "id": "JKCwxTtfJmA",
-    "href": "https://www.youtube.com/shorts/JKCwxTtfJmA",
-    "thumb": "https://i.ytimg.com/vi/JKCwxTtfJmA/hqdefault.jpg",
-    "published": "2026-11-12T16:01:35+00:00"
    }
   ],
   "Last Week Tonight": [
@@ -615,6 +615,14 @@
   "Saturday Night Live": [
    {
     "channel": "Saturday Night Live",
+    "title": "a life changing experience",
+    "id": "cjQSlu0t-ds",
+    "href": "https://www.youtube.com/shorts/cjQSlu0t-ds",
+    "thumb": "https://i.ytimg.com/vi/cjQSlu0t-ds/hqdefault.jpg",
+    "published": "2026-11-16T19:03:42+00:00"
+   },
+   {
+    "channel": "Saturday Night Live",
     "title": "Weekend Update ft. Tommy Brennan - SNL",
     "id": "5_yHs_TzSr4",
     "href": "https://www.youtube.com/watch?v=5_yHs_TzSr4",
@@ -724,14 +732,6 @@
     "href": "https://www.youtube.com/shorts/XNvPQQpvO3Q",
     "thumb": "https://i.ytimg.com/vi/XNvPQQpvO3Q/hqdefault.jpg",
     "published": "2026-11-15T17:14:18+00:00"
-   },
-   {
-    "channel": "Saturday Night Live",
-    "title": "chris gut and brewmaster kenny ❤️",
-    "id": "AfWBuYpimMo",
-    "href": "https://www.youtube.com/shorts/AfWBuYpimMo",
-    "thumb": "https://i.ytimg.com/vi/AfWBuYpimMo/hqdefault.jpg",
-    "published": "2026-11-15T16:49:05+00:00"
    }
   ],
   "Dropout": [
@@ -1039,6 +1039,30 @@
  },
  "videos": [
   {
+   "channel": "Saturday Night Live",
+   "title": "a life changing experience",
+   "id": "cjQSlu0t-ds",
+   "href": "https://www.youtube.com/shorts/cjQSlu0t-ds",
+   "thumb": "https://i.ytimg.com/vi/cjQSlu0t-ds/hqdefault.jpg",
+   "published": "2026-11-16T19:03:42+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Ron Howard reflects on the iconic fashion photographer behind his new Netflix documentary, “Avedon”",
+   "id": "J76sMRAHG6o",
+   "href": "https://www.youtube.com/shorts/J76sMRAHG6o",
+   "thumb": "https://i.ytimg.com/vi/J76sMRAHG6o/hqdefault.jpg",
+   "published": "2026-11-16T19:00:32+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Breaking: Woman Crying On Train Platform",
+   "id": "WL_4VDfHk-k",
+   "href": "https://www.youtube.com/shorts/WL_4VDfHk-k",
+   "thumb": "https://i.ytimg.com/vi/WL_4VDfHk-k/hqdefault.jpg",
+   "published": "2026-11-16T18:00:11+00:00"
+  },
+  {
    "channel": "Last Week Tonight",
    "title": "Jensen Huang #lastweektonight",
    "id": "idQ3zf4ivfw",
@@ -1207,14 +1231,6 @@
    "published": "2026-11-15T17:14:18+00:00"
   },
   {
-   "channel": "Saturday Night Live",
-   "title": "chris gut and brewmaster kenny ❤️",
-   "id": "AfWBuYpimMo",
-   "href": "https://www.youtube.com/shorts/AfWBuYpimMo",
-   "thumb": "https://i.ytimg.com/vi/AfWBuYpimMo/hqdefault.jpg",
-   "published": "2026-11-15T16:49:05+00:00"
-  },
-  {
    "channel": "The Daily Show",
    "title": "NFL legend Mike Tomlin has a side hobby involving the most thrilling sport of all: urban planning!",
    "id": "eC67przd5pQ",
@@ -1375,14 +1391,6 @@
    "published": "2026-11-12T18:00:08+00:00"
   },
   {
-   "channel": "The Daily Show",
-   "title": "Dems have no excuse for missing Hegseth’s impeachment vote. McConnell was there & he died YEARS ago",
-   "id": "JKCwxTtfJmA",
-   "href": "https://www.youtube.com/shorts/JKCwxTtfJmA",
-   "thumb": "https://i.ytimg.com/vi/JKCwxTtfJmA/hqdefault.jpg",
-   "published": "2026-11-12T16:01:35+00:00"
-  },
-  {
    "channel": "Last Week Tonight",
    "title": "Pete Hegseth & Women's Rights #lastweektonight",
    "id": "1W5HMOziFEw",
@@ -1541,14 +1549,6 @@
    "href": "https://www.youtube.com/shorts/X13V3KuJgRU",
    "thumb": "https://i.ytimg.com/vi/X13V3KuJgRU/hqdefault.jpg",
    "published": "2026-11-04T17:00:19+00:00"
-  },
-  {
-   "channel": "The Onion",
-   "title": "Why Hasn’t Abdul El-Sayed Accomplished Any Of His Campaign Goals Since Winning 2 Minutes Ago?",
-   "id": "4vkqSigZeDI",
-   "href": "https://www.youtube.com/watch?v=4vkqSigZeDI",
-   "thumb": "https://i.ytimg.com/vi/4vkqSigZeDI/hqdefault.jpg",
-   "published": "2026-11-04T07:28:58+00:00"
   },
   {
    "channel": "Last Week Tonight",

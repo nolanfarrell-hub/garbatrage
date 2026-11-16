@@ -1,5 +1,20 @@
 [
- {"text": "My landlord framed the new tax bill and hung it in the hallway, like a diploma he earned off my rent.", "name": "Tyrone Marsh", "role": "Apartment Tenant", "street": true},
- {"text": "The spark plugs cost more than the education that taught me to change one, and the man who owns the shop took one look at my red light and saw a cruise.", "name": "Delia Okafor", "role": "Auto Technician", "street": true},
- {"text": "I wore the same pair of shoes to a funeral and a job interview, and the price on them went up faster than either of those ended.", "name": "Sam Whitlock", "role": "Warehouse Associate", "street": true}
+ {
+  "text": "You raise prices because of a tariff, the government gives the money back, and we count it as compensation. That is just bookkeeping with a title.",
+  "name": "Doris Hale",
+  "role": "CFO, Coastal Hardware",
+  "street": false
+ },
+ {
+  "text": "They said they couldn't afford us, then found a hundred-six million somewhere. I checked under the couch cushions. Nothing.",
+  "name": "Mel Ferrante",
+  "role": "Production worker",
+  "street": true
+ },
+ {
+  "text": "A company that keeps helping people who can't pay enough is a charity that got a stock ticker by mistake.",
+  "name": "Janet Okafor",
+  "role": "Healthcare analyst",
+  "street": false
+ }
 ]
