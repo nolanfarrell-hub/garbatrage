@@ -447,10 +447,9 @@ Garbatrage Media Group LLC · <a href="mailto:info@garbatrage.com">info@garbatra
 <script data-cfasync="false">document.querySelectorAll('[data-copy]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();navigator.clipboard.writeText(a.href).then(function(){a.textContent='Copied';});});});</script>"""
 
 def build_home():
-    # Home shows ONLY the newest day's slate (6), never bleed yesterday's stories
-    # into the grid. Filter to the lead story's date, then cap at 6 briefs.
+    # Home shows the NEWEST six stories (lead + 5 briefs), by index, no bleed.
     lead = stories[0]
-    briefs = [s for s in stories[1:] if s["date"] == lead["date"]][:6]
+    briefs = stories[1:6]
     movers = sorted(cons, key=lambda c: c["change"], reverse=True)[:3]
     # Weighted rotation: street voices double-weighted (50% of days) so the
     # man-on-the-street register keeps showing, interleaved so no two adjacent

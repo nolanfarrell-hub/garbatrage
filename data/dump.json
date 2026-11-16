@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T15:26:03.910908+00:00",
+ "generated": "2026-11-16T16:07:22.568288+00:00",
  "channels": 9,
  "by_chan": {
   "The Onion": [
@@ -371,6 +371,14 @@
   "The Daily Show": [
    {
     "channel": "The Daily Show",
+    "title": "Grace Kuhlenschmidt braves the grueling audition process to join the OULAG trash ladies #DailyShow",
+    "id": "GHMvE2uIpR0",
+    "href": "https://www.youtube.com/shorts/GHMvE2uIpR0",
+    "thumb": "https://i.ytimg.com/vi/GHMvE2uIpR0/hqdefault.jpg",
+    "published": "2026-11-16T16:00:00+00:00"
+   },
+   {
+    "channel": "The Daily Show",
     "title": "Kathryn Hahn on the moment she finally saw her “Madden” co-star Nic Cage without his prosthetics",
     "id": "YQfjEEMxdqs",
     "href": "https://www.youtube.com/shorts/YQfjEEMxdqs",
@@ -480,17 +488,17 @@
     "href": "https://www.youtube.com/shorts/JKCwxTtfJmA",
     "thumb": "https://i.ytimg.com/vi/JKCwxTtfJmA/hqdefault.jpg",
     "published": "2026-11-12T16:01:35+00:00"
-   },
-   {
-    "channel": "The Daily Show",
-    "title": "Pet Tarot Readings, Designer Collars & Doggy BBLs? Lewis Black on Pampered Pets | The Daily Show",
-    "id": "tVBJ3JhFKGE",
-    "href": "https://www.youtube.com/watch?v=tVBJ3JhFKGE",
-    "thumb": "https://i.ytimg.com/vi/tVBJ3JhFKGE/hqdefault.jpg",
-    "published": "2026-11-12T12:26:34+00:00"
    }
   ],
   "Last Week Tonight": [
+   {
+    "channel": "Last Week Tonight",
+    "title": "Jensen Huang #lastweektonight",
+    "id": "idQ3zf4ivfw",
+    "href": "https://www.youtube.com/shorts/idQ3zf4ivfw",
+    "thumb": "https://i.ytimg.com/vi/idQ3zf4ivfw/hqdefault.jpg",
+    "published": "2026-11-16T16:00:27+00:00"
+   },
    {
     "channel": "Last Week Tonight",
     "title": "The FAA Ground Stop #lastweektonight",
@@ -602,14 +610,6 @@
     "href": "https://www.youtube.com/shorts/KcK_EIEODJE",
     "thumb": "https://i.ytimg.com/vi/KcK_EIEODJE/hqdefault.jpg",
     "published": "2026-11-03T17:20:12+00:00"
-   },
-   {
-    "channel": "Last Week Tonight",
-    "title": "Republicans & Abdul El-Sayed #lastweektonight",
-    "id": "4RoLmhoLdRQ",
-    "href": "https://www.youtube.com/shorts/4RoLmhoLdRQ",
-    "thumb": "https://i.ytimg.com/vi/4RoLmhoLdRQ/hqdefault.jpg",
-    "published": "2026-11-03T17:05:33+00:00"
    }
   ],
   "Saturday Night Live": [
@@ -1040,6 +1040,22 @@
  "videos": [
   {
    "channel": "Last Week Tonight",
+   "title": "Jensen Huang #lastweektonight",
+   "id": "idQ3zf4ivfw",
+   "href": "https://www.youtube.com/shorts/idQ3zf4ivfw",
+   "thumb": "https://i.ytimg.com/vi/idQ3zf4ivfw/hqdefault.jpg",
+   "published": "2026-11-16T16:00:27+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Grace Kuhlenschmidt braves the grueling audition process to join the OULAG trash ladies #DailyShow",
+   "id": "GHMvE2uIpR0",
+   "href": "https://www.youtube.com/shorts/GHMvE2uIpR0",
+   "thumb": "https://i.ytimg.com/vi/GHMvE2uIpR0/hqdefault.jpg",
+   "published": "2026-11-16T16:00:00+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
    "title": "The FAA Ground Stop #lastweektonight",
    "id": "dSg_Tke-Fj4",
    "href": "https://www.youtube.com/shorts/dSg_Tke-Fj4",
@@ -1375,14 +1391,6 @@
    "published": "2026-11-12T14:00:07+00:00"
   },
   {
-   "channel": "The Daily Show",
-   "title": "Pet Tarot Readings, Designer Collars & Doggy BBLs? Lewis Black on Pampered Pets | The Daily Show",
-   "id": "tVBJ3JhFKGE",
-   "href": "https://www.youtube.com/watch?v=tVBJ3JhFKGE",
-   "thumb": "https://i.ytimg.com/vi/tVBJ3JhFKGE/hqdefault.jpg",
-   "published": "2026-11-12T12:26:34+00:00"
-  },
-  {
    "channel": "The Onion",
    "title": "Al Qaeda Populating U.S. With Peaceful 'Decoy Muslims'",
    "id": "_1bFllMWE40",
@@ -1549,14 +1557,6 @@
    "href": "https://www.youtube.com/shorts/KcK_EIEODJE",
    "thumb": "https://i.ytimg.com/vi/KcK_EIEODJE/hqdefault.jpg",
    "published": "2026-11-03T17:20:12+00:00"
-  },
-  {
-   "channel": "Last Week Tonight",
-   "title": "Republicans & Abdul El-Sayed #lastweektonight",
-   "id": "4RoLmhoLdRQ",
-   "href": "https://www.youtube.com/shorts/4RoLmhoLdRQ",
-   "thumb": "https://i.ytimg.com/vi/4RoLmhoLdRQ/hqdefault.jpg",
-   "published": "2026-11-03T17:05:33+00:00"
   },
   {
    "channel": "Dropout",
