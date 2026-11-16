@@ -1,8 +1,16 @@
 {
- "generated": "2026-11-15T11:09:24.814435+00:00",
+ "generated": "2026-11-16T14:35:46.697733+00:00",
  "channels": 9,
  "by_chan": {
   "The Onion": [
+   {
+    "channel": "The Onion",
+    "title": "Supreme Court Rules Death Penalty 'Totally Badass'",
+    "id": "yL_lLTGcyHE",
+    "href": "https://www.youtube.com/shorts/yL_lLTGcyHE",
+    "thumb": "https://i.ytimg.com/vi/yL_lLTGcyHE/hqdefault.jpg",
+    "published": "2026-11-15T18:00:31+00:00"
+   },
    {
     "channel": "The Onion",
     "title": "Is Violence Becoming Too Political?",
@@ -114,14 +122,6 @@
     "href": "https://www.youtube.com/watch?v=4vkqSigZeDI",
     "thumb": "https://i.ytimg.com/vi/4vkqSigZeDI/hqdefault.jpg",
     "published": "2026-11-04T07:28:58+00:00"
-   },
-   {
-    "channel": "The Onion",
-    "title": "Free on Steam: The Onion Voting Simulator 3D. Enjoy a superior American election experience today.",
-    "id": "eq9BGvHj1qY",
-    "href": "https://www.youtube.com/shorts/eq9BGvHj1qY",
-    "thumb": "https://i.ytimg.com/vi/eq9BGvHj1qY/hqdefault.jpg",
-    "published": "2026-11-03T20:30:16+00:00"
    }
   ],
   "The Babylon Bee": [
@@ -371,6 +371,22 @@
   "The Daily Show": [
    {
     "channel": "The Daily Show",
+    "title": "Kathryn Hahn on the moment she finally saw her “Madden” co-star Nic Cage without his prosthetics",
+    "id": "YQfjEEMxdqs",
+    "href": "https://www.youtube.com/shorts/YQfjEEMxdqs",
+    "thumb": "https://i.ytimg.com/vi/YQfjEEMxdqs/hqdefault.jpg",
+    "published": "2026-11-15T19:02:03+00:00"
+   },
+   {
+    "channel": "The Daily Show",
+    "title": "NFL legend Mike Tomlin has a side hobby involving the most thrilling sport of all: urban planning!",
+    "id": "eC67przd5pQ",
+    "href": "https://www.youtube.com/shorts/eC67przd5pQ",
+    "thumb": "https://i.ytimg.com/vi/eC67przd5pQ/hqdefault.jpg",
+    "published": "2026-11-15T16:01:32+00:00"
+   },
+   {
+    "channel": "The Daily Show",
     "title": "Historian Heather Cox Richardson on Americans reclaiming government in the midterm elections",
     "id": "yol8fgkhXD0",
     "href": "https://www.youtube.com/shorts/yol8fgkhXD0",
@@ -472,25 +488,33 @@
     "href": "https://www.youtube.com/watch?v=tVBJ3JhFKGE",
     "thumb": "https://i.ytimg.com/vi/tVBJ3JhFKGE/hqdefault.jpg",
     "published": "2026-11-12T12:26:34+00:00"
-   },
-   {
-    "channel": "The Daily Show",
-    "title": "Ron Howard on Richard Avedon’s Creative Courage & Preserving Artistry | The Daily Show",
-    "id": "SC033ROD-2s",
-    "href": "https://www.youtube.com/watch?v=SC033ROD-2s",
-    "thumb": "https://i.ytimg.com/vi/SC033ROD-2s/hqdefault.jpg",
-    "published": "2026-11-12T04:29:29+00:00"
-   },
-   {
-    "channel": "The Daily Show",
-    "title": "Hegseth Impeachment Fails After 11 Dems Play Hooky & Blue Wave Comes for Boebert | The Daily Show",
-    "id": "xpzI21vOJLE",
-    "href": "https://www.youtube.com/watch?v=xpzI21vOJLE",
-    "thumb": "https://i.ytimg.com/vi/xpzI21vOJLE/hqdefault.jpg",
-    "published": "2026-11-12T03:00:02+00:00"
    }
   ],
   "Last Week Tonight": [
+   {
+    "channel": "Last Week Tonight",
+    "title": "Alligator Alcatraz: Last Week Tonight with John Oliver (HBO)",
+    "id": "dtKt6BiTfFk",
+    "href": "https://www.youtube.com/watch?v=dtKt6BiTfFk",
+    "thumb": "https://i.ytimg.com/vi/dtKt6BiTfFk/hqdefault.jpg",
+    "published": "2026-11-16T07:30:23+00:00"
+   },
+   {
+    "channel": "Last Week Tonight",
+    "title": "S13 E30: The FAA, Alligator Alcatraz & Season Finale: 11/15/26: Last Week Tonight with John Oliver",
+    "id": "EPCJ4i3bmBY",
+    "href": "https://www.youtube.com/watch?v=EPCJ4i3bmBY",
+    "thumb": "https://i.ytimg.com/vi/EPCJ4i3bmBY/hqdefault.jpg",
+    "published": "2026-11-16T04:00:18+00:00"
+   },
+   {
+    "channel": "Last Week Tonight",
+    "title": "Pete Hegseth & War Crimes #lastweektonight",
+    "id": "jJMKvH-LMN4",
+    "href": "https://www.youtube.com/shorts/jJMKvH-LMN4",
+    "thumb": "https://i.ytimg.com/vi/jJMKvH-LMN4/hqdefault.jpg",
+    "published": "2026-11-15T15:00:39+00:00"
+   },
    {
     "channel": "Last Week Tonight",
     "title": "Sean Duffy: Last Week Tonight with John Oliver (HBO)",
@@ -586,152 +610,128 @@
     "href": "https://www.youtube.com/shorts/uEpFWeXkZ3s",
     "thumb": "https://i.ytimg.com/vi/uEpFWeXkZ3s/hqdefault.jpg",
     "published": "2026-11-02T17:00:19+00:00"
-   },
-   {
-    "channel": "Last Week Tonight",
-    "title": "Midterm Elections #lastweektonight",
-    "id": "iJIPA0cYK_8",
-    "href": "https://www.youtube.com/shorts/iJIPA0cYK_8",
-    "thumb": "https://i.ytimg.com/vi/iJIPA0cYK_8/hqdefault.jpg",
-    "published": "2026-11-02T15:00:04+00:00"
-   },
-   {
-    "channel": "Last Week Tonight",
-    "title": "Midterms 2026: Last Week Tonight with John Oliver (HBO)",
-    "id": "Np7_mlvXFcA",
-    "href": "https://www.youtube.com/watch?v=Np7_mlvXFcA",
-    "thumb": "https://i.ytimg.com/vi/Np7_mlvXFcA/hqdefault.jpg",
-    "published": "2026-11-02T07:30:24+00:00"
-   },
-   {
-    "channel": "Last Week Tonight",
-    "title": "S13 E28: Midterm Elections & The $100 Bill: 11/1/26: Last Week Tonight with John Oliver",
-    "id": "Lz-QkCnw6WQ",
-    "href": "https://www.youtube.com/watch?v=Lz-QkCnw6WQ",
-    "thumb": "https://i.ytimg.com/vi/Lz-QkCnw6WQ/hqdefault.jpg",
-    "published": "2026-11-02T04:00:20+00:00"
    }
   ],
   "Saturday Night Live": [
    {
     "channel": "Saturday Night Live",
-    "title": "‘85’s gonna be a movie",
-    "id": "27QEb9z74Jc",
-    "href": "https://www.youtube.com/shorts/27QEb9z74Jc",
-    "thumb": "https://i.ytimg.com/vi/27QEb9z74Jc/hqdefault.jpg",
-    "published": "2026-11-15T07:39:28+00:00"
+    "title": "Weekend Update ft. Tommy Brennan - SNL",
+    "id": "5_yHs_TzSr4",
+    "href": "https://www.youtube.com/watch?v=5_yHs_TzSr4",
+    "thumb": "https://i.ytimg.com/vi/5_yHs_TzSr4/hqdefault.jpg",
+    "published": "2026-11-16T14:00:00+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "Still Standing - Phoebe Bridgers",
-    "id": "mxfr-JJE_YM",
-    "href": "https://www.youtube.com/shorts/mxfr-JJE_YM",
-    "thumb": "https://i.ytimg.com/vi/mxfr-JJE_YM/hqdefault.jpg",
-    "published": "2026-11-15T07:15:01+00:00"
+    "title": "photoshoot bts 📸 phoebe bridgers!!!",
+    "id": "oaowPZFUICI",
+    "href": "https://www.youtube.com/shorts/oaowPZFUICI",
+    "thumb": "https://i.ytimg.com/vi/oaowPZFUICI/hqdefault.jpg",
+    "published": "2026-11-15T20:36:19+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "Phoebe Bridgers: Still Standing (Live) - SNL",
-    "id": "wRklbeWexH4",
-    "href": "https://www.youtube.com/watch?v=wRklbeWexH4",
-    "thumb": "https://i.ytimg.com/vi/wRklbeWexH4/hqdefault.jpg",
-    "published": "2026-11-15T07:02:57+00:00"
+    "title": "john mulaney’s photoshoot bts!!!",
+    "id": "Z8prkIFGPr0",
+    "href": "https://www.youtube.com/shorts/Z8prkIFGPr0",
+    "thumb": "https://i.ytimg.com/vi/Z8prkIFGPr0/hqdefault.jpg",
+    "published": "2026-11-15T20:33:27+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "Sister",
-    "id": "ODF1I9kQoRc",
-    "href": "https://www.youtube.com/shorts/ODF1I9kQoRc",
-    "thumb": "https://i.ytimg.com/vi/ODF1I9kQoRc/hqdefault.jpg",
-    "published": "2026-11-15T07:02:06+00:00"
+    "title": "he’s just catching up on the times",
+    "id": "TRwObjldAp4",
+    "href": "https://www.youtube.com/shorts/TRwObjldAp4",
+    "thumb": "https://i.ytimg.com/vi/TRwObjldAp4/hqdefault.jpg",
+    "published": "2026-11-15T20:27:33+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "thanksgiving song with tommy",
-    "id": "IZoTmwb-mhw",
-    "href": "https://www.youtube.com/shorts/IZoTmwb-mhw",
-    "thumb": "https://i.ytimg.com/vi/IZoTmwb-mhw/hqdefault.jpg",
-    "published": "2026-11-15T06:58:29+00:00"
+    "title": "kurt and svetlana’s love story",
+    "id": "cmHlvHyHZAk",
+    "href": "https://www.youtube.com/shorts/cmHlvHyHZAk",
+    "thumb": "https://i.ytimg.com/vi/cmHlvHyHZAk/hqdefault.jpg",
+    "published": "2026-11-15T20:12:59+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "Kathy - Coworker Drinks - SNL",
-    "id": "UrEbWMtkkDI",
-    "href": "https://www.youtube.com/watch?v=UrEbWMtkkDI",
-    "thumb": "https://i.ytimg.com/vi/UrEbWMtkkDI/hqdefault.jpg",
-    "published": "2026-11-15T06:56:10+00:00"
+    "title": "two american icons",
+    "id": "TTI9LwUqq40",
+    "href": "https://www.youtube.com/shorts/TTI9LwUqq40",
+    "thumb": "https://i.ytimg.com/vi/TTI9LwUqq40/hqdefault.jpg",
+    "published": "2026-11-15T20:03:48+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "weekend update!",
-    "id": "9lF_3PilH4s",
-    "href": "https://www.youtube.com/shorts/9lF_3PilH4s",
-    "thumb": "https://i.ytimg.com/vi/9lF_3PilH4s/hqdefault.jpg",
-    "published": "2026-11-15T06:54:14+00:00"
+    "title": "Bob Dylan & The Pope - SNL",
+    "id": "q5L47J-JNik",
+    "href": "https://www.youtube.com/watch?v=q5L47J-JNik",
+    "thumb": "https://i.ytimg.com/vi/q5L47J-JNik/hqdefault.jpg",
+    "published": "2026-11-15T20:00:25+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "Woodstock - SNL",
-    "id": "Lug5Tj1iGiE",
-    "href": "https://www.youtube.com/watch?v=Lug5Tj1iGiE",
-    "thumb": "https://i.ytimg.com/vi/Lug5Tj1iGiE/hqdefault.jpg",
-    "published": "2026-11-15T06:44:08+00:00"
+    "title": "talkin’ thanksgiving transpo",
+    "id": "czf3fTb3IbY",
+    "href": "https://www.youtube.com/shorts/czf3fTb3IbY",
+    "thumb": "https://i.ytimg.com/vi/czf3fTb3IbY/hqdefault.jpg",
+    "published": "2026-11-15T19:02:48+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "Central Park Horse & Carriage Ride - SNL",
-    "id": "j3ciKOrWPO4",
-    "href": "https://www.youtube.com/watch?v=j3ciKOrWPO4",
-    "thumb": "https://i.ytimg.com/vi/j3ciKOrWPO4/hqdefault.jpg",
-    "published": "2026-11-15T06:30:19+00:00"
+    "title": "this week on update",
+    "id": "jpgjLGGPitQ",
+    "href": "https://www.youtube.com/shorts/jpgjLGGPitQ",
+    "thumb": "https://i.ytimg.com/vi/jpgjLGGPitQ/hqdefault.jpg",
+    "published": "2026-11-15T18:29:03+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "Bobby - Phoebe Bridgers",
-    "id": "VyRWWrtYDFM",
-    "href": "https://www.youtube.com/shorts/VyRWWrtYDFM",
-    "thumb": "https://i.ytimg.com/vi/VyRWWrtYDFM/hqdefault.jpg",
-    "published": "2026-11-15T06:24:15+00:00"
+    "title": "that’s the sister difference",
+    "id": "6OY6FrVVJcA",
+    "href": "https://www.youtube.com/shorts/6OY6FrVVJcA",
+    "thumb": "https://i.ytimg.com/vi/6OY6FrVVJcA/hqdefault.jpg",
+    "published": "2026-11-15T18:17:53+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "Weekend Update: Trump Admin Comments on FAA Outage, Biden Writes Memoir About His Presidency - SNL",
-    "id": "n6z70aaezd8",
-    "href": "https://www.youtube.com/watch?v=n6z70aaezd8",
-    "thumb": "https://i.ytimg.com/vi/n6z70aaezd8/hqdefault.jpg",
-    "published": "2026-11-15T06:18:11+00:00"
+    "title": "he’d full kiss a man named mamdani",
+    "id": "9HICUDy2bqI",
+    "href": "https://www.youtube.com/shorts/9HICUDy2bqI",
+    "thumb": "https://i.ytimg.com/vi/9HICUDy2bqI/hqdefault.jpg",
+    "published": "2026-11-15T18:17:25+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "Gettin’ It Done",
-    "id": "WZLWhtvFw7M",
-    "href": "https://www.youtube.com/shorts/WZLWhtvFw7M",
-    "thumb": "https://i.ytimg.com/vi/WZLWhtvFw7M/hqdefault.jpg",
-    "published": "2026-11-15T06:16:39+00:00"
+    "title": "Weekend Update: Mississippi's First Black Senator Hiram Revels Discusses the 2026 Midterms - SNL",
+    "id": "Q6CW-vkS-x0",
+    "href": "https://www.youtube.com/watch?v=Q6CW-vkS-x0",
+    "thumb": "https://i.ytimg.com/vi/Q6CW-vkS-x0/hqdefault.jpg",
+    "published": "2026-11-15T18:00:15+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "oh, mary",
-    "id": "s6U2qOb6tQo",
-    "href": "https://www.youtube.com/shorts/s6U2qOb6tQo",
-    "thumb": "https://i.ytimg.com/vi/s6U2qOb6tQo/hqdefault.jpg",
-    "published": "2026-11-15T06:11:20+00:00"
+    "title": "you know the one",
+    "id": "Y9hUmU_xMog",
+    "href": "https://www.youtube.com/shorts/Y9hUmU_xMog",
+    "thumb": "https://i.ytimg.com/vi/Y9hUmU_xMog/hqdefault.jpg",
+    "published": "2026-11-15T17:20:53+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "Weekend Update: Tommy Brennan Performs an Original Thanksgiving Song - SNL",
-    "id": "H7Q_wnltz0w",
-    "href": "https://www.youtube.com/watch?v=H7Q_wnltz0w",
-    "thumb": "https://i.ytimg.com/vi/H7Q_wnltz0w/hqdefault.jpg",
-    "published": "2026-11-15T06:10:43+00:00"
+    "title": "boots on the ground journalism",
+    "id": "XNvPQQpvO3Q",
+    "href": "https://www.youtube.com/shorts/XNvPQQpvO3Q",
+    "thumb": "https://i.ytimg.com/vi/XNvPQQpvO3Q/hqdefault.jpg",
+    "published": "2026-11-15T17:14:18+00:00"
    },
    {
     "channel": "Saturday Night Live",
-    "title": "Sister - SNL",
-    "id": "-X9dxL17t1k",
-    "href": "https://www.youtube.com/watch?v=-X9dxL17t1k",
-    "thumb": "https://i.ytimg.com/vi/-X9dxL17t1k/hqdefault.jpg",
-    "published": "2026-11-15T06:00:02+00:00"
+    "title": "chris gut and brewmaster kenny ❤️",
+    "id": "AfWBuYpimMo",
+    "href": "https://www.youtube.com/shorts/AfWBuYpimMo",
+    "thumb": "https://i.ytimg.com/vi/AfWBuYpimMo/hqdefault.jpg",
+    "published": "2026-11-15T16:49:05+00:00"
    }
   ],
   "Dropout": [
@@ -1040,123 +1040,171 @@
  "videos": [
   {
    "channel": "Saturday Night Live",
-   "title": "‘85’s gonna be a movie",
-   "id": "27QEb9z74Jc",
-   "href": "https://www.youtube.com/shorts/27QEb9z74Jc",
-   "thumb": "https://i.ytimg.com/vi/27QEb9z74Jc/hqdefault.jpg",
-   "published": "2026-11-15T07:39:28+00:00"
+   "title": "Weekend Update ft. Tommy Brennan - SNL",
+   "id": "5_yHs_TzSr4",
+   "href": "https://www.youtube.com/watch?v=5_yHs_TzSr4",
+   "thumb": "https://i.ytimg.com/vi/5_yHs_TzSr4/hqdefault.jpg",
+   "published": "2026-11-16T14:00:00+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Alligator Alcatraz: Last Week Tonight with John Oliver (HBO)",
+   "id": "dtKt6BiTfFk",
+   "href": "https://www.youtube.com/watch?v=dtKt6BiTfFk",
+   "thumb": "https://i.ytimg.com/vi/dtKt6BiTfFk/hqdefault.jpg",
+   "published": "2026-11-16T07:30:23+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "S13 E30: The FAA, Alligator Alcatraz & Season Finale: 11/15/26: Last Week Tonight with John Oliver",
+   "id": "EPCJ4i3bmBY",
+   "href": "https://www.youtube.com/watch?v=EPCJ4i3bmBY",
+   "thumb": "https://i.ytimg.com/vi/EPCJ4i3bmBY/hqdefault.jpg",
+   "published": "2026-11-16T04:00:18+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "Still Standing - Phoebe Bridgers",
-   "id": "mxfr-JJE_YM",
-   "href": "https://www.youtube.com/shorts/mxfr-JJE_YM",
-   "thumb": "https://i.ytimg.com/vi/mxfr-JJE_YM/hqdefault.jpg",
-   "published": "2026-11-15T07:15:01+00:00"
+   "title": "photoshoot bts 📸 phoebe bridgers!!!",
+   "id": "oaowPZFUICI",
+   "href": "https://www.youtube.com/shorts/oaowPZFUICI",
+   "thumb": "https://i.ytimg.com/vi/oaowPZFUICI/hqdefault.jpg",
+   "published": "2026-11-15T20:36:19+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "Phoebe Bridgers: Still Standing (Live) - SNL",
-   "id": "wRklbeWexH4",
-   "href": "https://www.youtube.com/watch?v=wRklbeWexH4",
-   "thumb": "https://i.ytimg.com/vi/wRklbeWexH4/hqdefault.jpg",
-   "published": "2026-11-15T07:02:57+00:00"
+   "title": "john mulaney’s photoshoot bts!!!",
+   "id": "Z8prkIFGPr0",
+   "href": "https://www.youtube.com/shorts/Z8prkIFGPr0",
+   "thumb": "https://i.ytimg.com/vi/Z8prkIFGPr0/hqdefault.jpg",
+   "published": "2026-11-15T20:33:27+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "Sister",
-   "id": "ODF1I9kQoRc",
-   "href": "https://www.youtube.com/shorts/ODF1I9kQoRc",
-   "thumb": "https://i.ytimg.com/vi/ODF1I9kQoRc/hqdefault.jpg",
-   "published": "2026-11-15T07:02:06+00:00"
+   "title": "he’s just catching up on the times",
+   "id": "TRwObjldAp4",
+   "href": "https://www.youtube.com/shorts/TRwObjldAp4",
+   "thumb": "https://i.ytimg.com/vi/TRwObjldAp4/hqdefault.jpg",
+   "published": "2026-11-15T20:27:33+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "thanksgiving song with tommy",
-   "id": "IZoTmwb-mhw",
-   "href": "https://www.youtube.com/shorts/IZoTmwb-mhw",
-   "thumb": "https://i.ytimg.com/vi/IZoTmwb-mhw/hqdefault.jpg",
-   "published": "2026-11-15T06:58:29+00:00"
+   "title": "kurt and svetlana’s love story",
+   "id": "cmHlvHyHZAk",
+   "href": "https://www.youtube.com/shorts/cmHlvHyHZAk",
+   "thumb": "https://i.ytimg.com/vi/cmHlvHyHZAk/hqdefault.jpg",
+   "published": "2026-11-15T20:12:59+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "Kathy - Coworker Drinks - SNL",
-   "id": "UrEbWMtkkDI",
-   "href": "https://www.youtube.com/watch?v=UrEbWMtkkDI",
-   "thumb": "https://i.ytimg.com/vi/UrEbWMtkkDI/hqdefault.jpg",
-   "published": "2026-11-15T06:56:10+00:00"
+   "title": "two american icons",
+   "id": "TTI9LwUqq40",
+   "href": "https://www.youtube.com/shorts/TTI9LwUqq40",
+   "thumb": "https://i.ytimg.com/vi/TTI9LwUqq40/hqdefault.jpg",
+   "published": "2026-11-15T20:03:48+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "weekend update!",
-   "id": "9lF_3PilH4s",
-   "href": "https://www.youtube.com/shorts/9lF_3PilH4s",
-   "thumb": "https://i.ytimg.com/vi/9lF_3PilH4s/hqdefault.jpg",
-   "published": "2026-11-15T06:54:14+00:00"
+   "title": "Bob Dylan & The Pope - SNL",
+   "id": "q5L47J-JNik",
+   "href": "https://www.youtube.com/watch?v=q5L47J-JNik",
+   "thumb": "https://i.ytimg.com/vi/q5L47J-JNik/hqdefault.jpg",
+   "published": "2026-11-15T20:00:25+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "Woodstock - SNL",
-   "id": "Lug5Tj1iGiE",
-   "href": "https://www.youtube.com/watch?v=Lug5Tj1iGiE",
-   "thumb": "https://i.ytimg.com/vi/Lug5Tj1iGiE/hqdefault.jpg",
-   "published": "2026-11-15T06:44:08+00:00"
+   "title": "talkin’ thanksgiving transpo",
+   "id": "czf3fTb3IbY",
+   "href": "https://www.youtube.com/shorts/czf3fTb3IbY",
+   "thumb": "https://i.ytimg.com/vi/czf3fTb3IbY/hqdefault.jpg",
+   "published": "2026-11-15T19:02:48+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "Kathryn Hahn on the moment she finally saw her “Madden” co-star Nic Cage without his prosthetics",
+   "id": "YQfjEEMxdqs",
+   "href": "https://www.youtube.com/shorts/YQfjEEMxdqs",
+   "thumb": "https://i.ytimg.com/vi/YQfjEEMxdqs/hqdefault.jpg",
+   "published": "2026-11-15T19:02:03+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "Central Park Horse & Carriage Ride - SNL",
-   "id": "j3ciKOrWPO4",
-   "href": "https://www.youtube.com/watch?v=j3ciKOrWPO4",
-   "thumb": "https://i.ytimg.com/vi/j3ciKOrWPO4/hqdefault.jpg",
-   "published": "2026-11-15T06:30:19+00:00"
+   "title": "this week on update",
+   "id": "jpgjLGGPitQ",
+   "href": "https://www.youtube.com/shorts/jpgjLGGPitQ",
+   "thumb": "https://i.ytimg.com/vi/jpgjLGGPitQ/hqdefault.jpg",
+   "published": "2026-11-15T18:29:03+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "Bobby - Phoebe Bridgers",
-   "id": "VyRWWrtYDFM",
-   "href": "https://www.youtube.com/shorts/VyRWWrtYDFM",
-   "thumb": "https://i.ytimg.com/vi/VyRWWrtYDFM/hqdefault.jpg",
-   "published": "2026-11-15T06:24:15+00:00"
+   "title": "that’s the sister difference",
+   "id": "6OY6FrVVJcA",
+   "href": "https://www.youtube.com/shorts/6OY6FrVVJcA",
+   "thumb": "https://i.ytimg.com/vi/6OY6FrVVJcA/hqdefault.jpg",
+   "published": "2026-11-15T18:17:53+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "Weekend Update: Trump Admin Comments on FAA Outage, Biden Writes Memoir About His Presidency - SNL",
-   "id": "n6z70aaezd8",
-   "href": "https://www.youtube.com/watch?v=n6z70aaezd8",
-   "thumb": "https://i.ytimg.com/vi/n6z70aaezd8/hqdefault.jpg",
-   "published": "2026-11-15T06:18:11+00:00"
+   "title": "he’d full kiss a man named mamdani",
+   "id": "9HICUDy2bqI",
+   "href": "https://www.youtube.com/shorts/9HICUDy2bqI",
+   "thumb": "https://i.ytimg.com/vi/9HICUDy2bqI/hqdefault.jpg",
+   "published": "2026-11-15T18:17:25+00:00"
+  },
+  {
+   "channel": "The Onion",
+   "title": "Supreme Court Rules Death Penalty 'Totally Badass'",
+   "id": "yL_lLTGcyHE",
+   "href": "https://www.youtube.com/shorts/yL_lLTGcyHE",
+   "thumb": "https://i.ytimg.com/vi/yL_lLTGcyHE/hqdefault.jpg",
+   "published": "2026-11-15T18:00:31+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "Gettin’ It Done",
-   "id": "WZLWhtvFw7M",
-   "href": "https://www.youtube.com/shorts/WZLWhtvFw7M",
-   "thumb": "https://i.ytimg.com/vi/WZLWhtvFw7M/hqdefault.jpg",
-   "published": "2026-11-15T06:16:39+00:00"
+   "title": "Weekend Update: Mississippi's First Black Senator Hiram Revels Discusses the 2026 Midterms - SNL",
+   "id": "Q6CW-vkS-x0",
+   "href": "https://www.youtube.com/watch?v=Q6CW-vkS-x0",
+   "thumb": "https://i.ytimg.com/vi/Q6CW-vkS-x0/hqdefault.jpg",
+   "published": "2026-11-15T18:00:15+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "oh, mary",
-   "id": "s6U2qOb6tQo",
-   "href": "https://www.youtube.com/shorts/s6U2qOb6tQo",
-   "thumb": "https://i.ytimg.com/vi/s6U2qOb6tQo/hqdefault.jpg",
-   "published": "2026-11-15T06:11:20+00:00"
+   "title": "you know the one",
+   "id": "Y9hUmU_xMog",
+   "href": "https://www.youtube.com/shorts/Y9hUmU_xMog",
+   "thumb": "https://i.ytimg.com/vi/Y9hUmU_xMog/hqdefault.jpg",
+   "published": "2026-11-15T17:20:53+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "Weekend Update: Tommy Brennan Performs an Original Thanksgiving Song - SNL",
-   "id": "H7Q_wnltz0w",
-   "href": "https://www.youtube.com/watch?v=H7Q_wnltz0w",
-   "thumb": "https://i.ytimg.com/vi/H7Q_wnltz0w/hqdefault.jpg",
-   "published": "2026-11-15T06:10:43+00:00"
+   "title": "boots on the ground journalism",
+   "id": "XNvPQQpvO3Q",
+   "href": "https://www.youtube.com/shorts/XNvPQQpvO3Q",
+   "thumb": "https://i.ytimg.com/vi/XNvPQQpvO3Q/hqdefault.jpg",
+   "published": "2026-11-15T17:14:18+00:00"
   },
   {
    "channel": "Saturday Night Live",
-   "title": "Sister - SNL",
-   "id": "-X9dxL17t1k",
-   "href": "https://www.youtube.com/watch?v=-X9dxL17t1k",
-   "thumb": "https://i.ytimg.com/vi/-X9dxL17t1k/hqdefault.jpg",
-   "published": "2026-11-15T06:00:02+00:00"
+   "title": "chris gut and brewmaster kenny ❤️",
+   "id": "AfWBuYpimMo",
+   "href": "https://www.youtube.com/shorts/AfWBuYpimMo",
+   "thumb": "https://i.ytimg.com/vi/AfWBuYpimMo/hqdefault.jpg",
+   "published": "2026-11-15T16:49:05+00:00"
+  },
+  {
+   "channel": "The Daily Show",
+   "title": "NFL legend Mike Tomlin has a side hobby involving the most thrilling sport of all: urban planning!",
+   "id": "eC67przd5pQ",
+   "href": "https://www.youtube.com/shorts/eC67przd5pQ",
+   "thumb": "https://i.ytimg.com/vi/eC67przd5pQ/hqdefault.jpg",
+   "published": "2026-11-15T16:01:32+00:00"
+  },
+  {
+   "channel": "Last Week Tonight",
+   "title": "Pete Hegseth & War Crimes #lastweektonight",
+   "id": "jJMKvH-LMN4",
+   "href": "https://www.youtube.com/shorts/jJMKvH-LMN4",
+   "thumb": "https://i.ytimg.com/vi/jJMKvH-LMN4/hqdefault.jpg",
+   "published": "2026-11-15T15:00:39+00:00"
   },
   {
    "channel": "Key & Peele",
@@ -1327,22 +1375,6 @@
    "published": "2026-11-12T12:26:34+00:00"
   },
   {
-   "channel": "The Daily Show",
-   "title": "Ron Howard on Richard Avedon’s Creative Courage & Preserving Artistry | The Daily Show",
-   "id": "SC033ROD-2s",
-   "href": "https://www.youtube.com/watch?v=SC033ROD-2s",
-   "thumb": "https://i.ytimg.com/vi/SC033ROD-2s/hqdefault.jpg",
-   "published": "2026-11-12T04:29:29+00:00"
-  },
-  {
-   "channel": "The Daily Show",
-   "title": "Hegseth Impeachment Fails After 11 Dems Play Hooky & Blue Wave Comes for Boebert | The Daily Show",
-   "id": "xpzI21vOJLE",
-   "href": "https://www.youtube.com/watch?v=xpzI21vOJLE",
-   "thumb": "https://i.ytimg.com/vi/xpzI21vOJLE/hqdefault.jpg",
-   "published": "2026-11-12T03:00:02+00:00"
-  },
-  {
    "channel": "The Onion",
    "title": "Al Qaeda Populating U.S. With Peaceful 'Decoy Muslims'",
    "id": "_1bFllMWE40",
@@ -1503,14 +1535,6 @@
    "published": "2026-11-04T07:28:58+00:00"
   },
   {
-   "channel": "The Onion",
-   "title": "Free on Steam: The Onion Voting Simulator 3D. Enjoy a superior American election experience today.",
-   "id": "eq9BGvHj1qY",
-   "href": "https://www.youtube.com/shorts/eq9BGvHj1qY",
-   "thumb": "https://i.ytimg.com/vi/eq9BGvHj1qY/hqdefault.jpg",
-   "published": "2026-11-03T20:30:16+00:00"
-  },
-  {
    "channel": "Last Week Tonight",
    "title": "Republicans & James Talarico #lastweektonight",
    "id": "KcK_EIEODJE",
@@ -1541,30 +1565,6 @@
    "href": "https://www.youtube.com/shorts/uEpFWeXkZ3s",
    "thumb": "https://i.ytimg.com/vi/uEpFWeXkZ3s/hqdefault.jpg",
    "published": "2026-11-02T17:00:19+00:00"
-  },
-  {
-   "channel": "Last Week Tonight",
-   "title": "Midterm Elections #lastweektonight",
-   "id": "iJIPA0cYK_8",
-   "href": "https://www.youtube.com/shorts/iJIPA0cYK_8",
-   "thumb": "https://i.ytimg.com/vi/iJIPA0cYK_8/hqdefault.jpg",
-   "published": "2026-11-02T15:00:04+00:00"
-  },
-  {
-   "channel": "Last Week Tonight",
-   "title": "Midterms 2026: Last Week Tonight with John Oliver (HBO)",
-   "id": "Np7_mlvXFcA",
-   "href": "https://www.youtube.com/watch?v=Np7_mlvXFcA",
-   "thumb": "https://i.ytimg.com/vi/Np7_mlvXFcA/hqdefault.jpg",
-   "published": "2026-11-02T07:30:24+00:00"
-  },
-  {
-   "channel": "Last Week Tonight",
-   "title": "S13 E28: Midterm Elections & The $100 Bill: 11/1/26: Last Week Tonight with John Oliver",
-   "id": "Lz-QkCnw6WQ",
-   "href": "https://www.youtube.com/watch?v=Lz-QkCnw6WQ",
-   "thumb": "https://i.ytimg.com/vi/Lz-QkCnw6WQ/hqdefault.jpg",
-   "published": "2026-11-02T04:00:20+00:00"
   },
   {
    "channel": "Tim Dillon",
