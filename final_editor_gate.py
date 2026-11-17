@@ -30,8 +30,7 @@ base = json.loads(subprocess.run(["git","-C",str(REPO),"show",f"{baseline_commit
 m = {s["slug"]: s for s in base}
 n = {s["slug"]: s for s in now}
 
-BANNED = ["configuration","participation","unenumerated","framework","paradigm","mechanism",
-          "in a very real sense","the framing as","simultaneously","a position that is not"]
+BANNED = []  # NO WORD BANS (Nolan 11/16/26: "I don't want you banning words") — zero banned-word checks
 STOP = {"The","A","An","Investors","Analysts","Market","Bond","Banks","Bank","Credit","Estate","Fund","Fed","Company","Exchange","Oil","Some","This","That"}  # common false positives
 NAME_RE = re.compile(r"\b([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)\b")
 def has_name(body):
