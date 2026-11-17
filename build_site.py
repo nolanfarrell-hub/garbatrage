@@ -35,8 +35,8 @@ TAPE_CFG = {
         {"proName": "TVC:USOIL",       "title": "WTI"},
         {"proName": "BITSTAMP:BTCUSD", "title": "BTC"},
         {"proName": "FX:EURUSD",       "title": "EUR/USD"},
-        {"proName": "TVC:DXY",         "title": "Dollar Index"},
-        {"proName": "TVC:VIX",         "title": "VIX"},
+        {"proName": "ICECAP:DXY",      "title": "Dollar Index"},
+        {"proName": "CBOE:VIX",        "title": "VIX"},
     ],
     "showSymbolLogo": False,
     "colorTheme": "dark",
@@ -78,7 +78,7 @@ CONSENT = '''<div id="gb-consent" role="region" aria-label="Cookie consent">
     var s = document.createElement('script');
     s.type = 'text/javascript';
     s.async = true;
-    s.innerHTML = '{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"TVC:GOLD","title":"Gold"},{"proName":"TVC:USOIL","title":"WTI"},{"proName":"BITSTAMP:BTCUSD","title":"BTC"},{"proName":"FX:EURUSD","title":"EUR/USD"},{"proName":"TVC:DXY","title":"Dollar Index"},{"proName":"TVC:VIX","title":"VIX"}],"showSymbolLogo":false,"colorTheme":"dark","isTransparent":true,"displayMode":"compact","locale":"en"}';
+    s.innerHTML = '__TAPE_JSON__';
     s.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
     box.appendChild(s);
   }
@@ -105,6 +105,9 @@ DISC_INDEX = ('<div class="disc">Every constituent is fictional. The Garbatrage 
               'and is not a real benchmark. Prices shown are invented. Nothing here is investment advice.</div>')
 DISC_STORY = ('<div class="disc">Garbatrage is a satirical publication. Headlines, quotes, companies and '
               'figures are fabricated. Nothing here is investment advice.</div>')
+
+CONSENT = CONSENT.replace("__TAPE_JSON__", TAPE_JSON)
+
 
 def layout(title, desc, body, canonical, og_image=None, og_type="website", jsonld=None):
     ogi = (SITE + og_image) if og_image else f"{SITE}/assets/og-card.png"
