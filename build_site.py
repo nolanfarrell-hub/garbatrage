@@ -29,7 +29,7 @@ def vol(s): return datetime.fromisoformat(s).strftime("%Y")
 # TradingView as a provider, so this makes the legal copy true.
 TAPE_CFG = {
     "symbols": [
-        {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+        {"proName": "CAPITALCOM:SPX500", "title": "S&P 500"},
         {"proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100"},
         {"proName": "TVC:GOLD",        "title": "Gold"},
         {"proName": "TVC:USOIL",       "title": "WTI"},
