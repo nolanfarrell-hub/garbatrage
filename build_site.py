@@ -212,7 +212,7 @@ def build_story(s):
 <div class="byline">{bav}<span><b>{esc(s["author"])}</b><br>{esc(s.get("role", ""))}</span>
 <span class="rd"><time datetime="{esc(s["date"])}">{esc(s["date"])}</time> · {s.get("read", 4)} min read</span></div>
 <article class="art">{s["body"]}</article>
-<div class="tags">{"".join(f'<span class="chip">{esc(t)}</span>' for t in s.get("tags", []))}</div>
+<div class="tags">{"".join(f'<span class="chip">{esc(t)}</span>' for t in s.get("tags", []) if t != s.get("desk", ""))}</div>
 {share}
 {DISC_STORY}
 <div class="pager"><a href="/archive/">← Archive</a><span>{esc(s["date"])}</span><a href="/">Home</a></div>"""
