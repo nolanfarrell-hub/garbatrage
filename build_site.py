@@ -178,6 +178,8 @@ def img(s):
 def build_story(s):
     art = img(s)
     url = f"{SITE}/story/{s['slug']}/"
+    bav = (f'<span class="av">{esc(s.get("av") or av(s["author"]))}</span>'
+           if not s.get("column") else "")  # column: speaker byline, no avatar
     share = (f'<div class="share"><a href="https://twitter.com/intent/tweet?text={quote(s["title"])}&url={quote(url)}" target="_blank" rel="noopener">Post to X</a>'
              f'<a href="https://warpcast.com/~/compose?text={quote(s["title"])}&embeds[]={quote(url)}" target="_blank" rel="noopener">Cast</a>'
              f'<a href="{esc(url)}" data-copy>Copy link</a></div>')
@@ -207,8 +209,7 @@ def build_story(s):
 <h1>{esc(s["title"])}</h1>
 <p class="lede">{esc(s["dek"])}</p>
 <figure class="artbox"><img class="art-img" src="{art}" alt="" loading="lazy"></figure>
-<div class="byline"><span class="av">{esc(s.get("av") or av(s["author"]))}</span>
-<span><b>{esc(s["author"])}</b><br>{esc(s.get("role", ""))}</span>
+<div class="byline">{bav}<span><b>{esc(s["author"])}</b><br>{esc(s.get("role", ""))}</span>
 <span class="rd"><time datetime="{esc(s["date"])}">{esc(s["date"])}</time> · {s.get("read", 4)} min read</span></div>
 <article class="art">{s["body"]}</article>
 <div class="tags">{"".join(f'<span class="chip">{esc(t)}</span>' for t in s.get("tags", []))}</div>
@@ -452,6 +453,8 @@ Garbatrage Media Group LLC · <a href="mailto:info@garbatrage.com">info@garbatra
 def build_home():
     # Home shows the NEWEST six stories (lead + 5 briefs), by index, no bleed.
     lead = stories[0]
+    lbav = (f'<span class="av">{esc(lead.get("av") or av(lead["author"]))}</span>'
+            if not lead.get("column") else "")  # column lead: no avatar
     briefs = stories[1:6]
     movers = sorted(cons, key=lambda c: c["change"], reverse=True)[:3]
     # Weighted rotation: street voices double-weighted (50% of days) so the
@@ -525,8 +528,7 @@ def build_home():
   <h1><a href="/story/{lead["slug"]}/">{esc(lead["title"])}</a></h1>
   <p class="dek">{esc(lead["dek"])}</p>
   <a class="hero" href="/story/{lead["slug"]}/"><img src="{img(lead)}" alt="" loading="lazy"></a>
-  <div class="by"><span class="av">{esc(lead.get("av") or av(lead["author"]))}</span>
-    <span><b>{esc(lead["author"])}</b> · {esc(lead.get("role", ""))} · {lead.get("read", 4)} min read</span></div>
+  <div class="by">{lbav}<span><b>{esc(lead["author"])}</b> · {esc(lead.get("role", ""))} · {lead.get("read", 4)} min read</span></div>
   <div class="sec">Markets Brief</div>
   {brief_html}
   {dump_strip}
