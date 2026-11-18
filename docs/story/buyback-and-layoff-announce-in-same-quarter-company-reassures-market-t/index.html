@@ -87,6 +87,24 @@ At press time, the company had confirmed it would hold a town hall to explain th
     }
   }
   else { dismiss(); loadTape(); } // US/rest-of-world: tape on by default, ignores stale decline
+  // Newsletter capture — POST to the worker /subscribe, show a result in place.
+  document.querySelectorAll('form[data-subscribe]').forEach(function (f) {
+    f.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var msg = f.querySelector('.submsg');
+      var btn = f.querySelector('button');
+      var email = f.querySelector('input[name="email"]');
+      if (!email || !email.value || !/.+@.+\..{2,}/.test(email.value)) { if (msg) msg.textContent = 'Enter a real email.'; return; }
+      btn.disabled = true;
+      fetch(f.action, { method: 'POST', body: new FormData(f) })
+        .then(function (r) {
+          if (r.ok) { if (msg) msg.textContent = 'You are on the list. The Dump comes to you.'; f.reset(); }
+          else { if (msg) msg.textContent = 'Could not sign you up — try again.'; }
+        })
+        .catch(function () { if (msg) msg.textContent = 'Could not sign you up — try again.'; })
+        .finally(function () { btn.disabled = false; });
+    });
+  });
 })();
 </script>
 </body></html>

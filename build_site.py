@@ -96,6 +96,24 @@ CONSENT = '''<div id="gb-consent" role="region" aria-label="Cookie consent">
     }
   }
   else { dismiss(); loadTape(); } // US/rest-of-world: tape on by default, ignores stale decline
+  // Newsletter capture — POST to the worker /subscribe, show a result in place.
+  document.querySelectorAll('form[data-subscribe]').forEach(function (f) {
+    f.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var msg = f.querySelector('.submsg');
+      var btn = f.querySelector('button');
+      var email = f.querySelector('input[name="email"]');
+      if (!email || !email.value || !/.+@.+\..{2,}/.test(email.value)) { if (msg) msg.textContent = 'Enter a real email.'; return; }
+      btn.disabled = true;
+      fetch(f.action, { method: 'POST', body: new FormData(f) })
+        .then(function (r) {
+          if (r.ok) { if (msg) msg.textContent = 'You are on the list. The Dump comes to you.'; f.reset(); }
+          else { if (msg) msg.textContent = 'Could not sign you up — try again.'; }
+        })
+        .catch(function () { if (msg) msg.textContent = 'Could not sign you up — try again.'; })
+        .finally(function () { btn.disabled = false; });
+    });
+  });
 })();
 </script>'''
 
@@ -548,6 +566,15 @@ def build_home():
 </div>
 <div class="news"><div class="nin">
   <div><h2>The Morning Dump</h2><p>The day\u2019s headlines and the funniest new uploads, all in one place \u2014 for the part of the morning you\u2019d rather not discuss.</p></div>
+  <div class="subs">
+    <h3>The Dump, by email.</h3>
+    <form action="https://garbatrage-social.nolanfarrell.workers.dev/subscribe" method="post" data-subscribe>
+      <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+      <input type="text" name="company" aria-hidden="true" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" class="hp">
+      <button type="submit">Get the Dump</button>
+      <small class="submsg" aria-live="polite"></small>
+    </form>
+  </div>
   <a class="btn" href="/dump/">Open the Dump</a>
 </div></div>
 {FOOTER}"""

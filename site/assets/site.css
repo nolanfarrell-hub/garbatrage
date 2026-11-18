@@ -175,6 +175,10 @@ h1 a:hover{color:var(--ox)}
 .news input{border:1px solid var(--cream);border-right:0;padding:8px 10px;font-family:inherit;font-size:11px;background:transparent;color:var(--cream);width:190px}
 .news button{border:1px solid var(--cream);background:var(--cream);color:var(--ink);padding:8px 14px;font-family:inherit;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;cursor:pointer}
 .news button:hover{background:var(--ox);border-color:var(--ox);color:var(--cream)}
+.news .subs{margin-left:8px}
+.news .subs h3{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#b9c8d8;margin:0 0 6px;font-weight:700}
+.news .submsg{display:block;width:100%;margin-top:6px;font-size:10px;color:#93a6bb}
+@media(max-width:600px){.news .subs{margin-left:0;width:100%}.news form{flex-wrap:wrap;width:100%}}
 footer{border-top:3px solid var(--deep);padding:24px 0 40px;font-size:10px;max-width:880px;margin:0 auto;padding-inline:20px}
 .fg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:18px}
 footer h4{font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:var(--ox);margin-bottom:6px}
