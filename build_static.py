@@ -15,7 +15,7 @@ def esc(s): return html.escape(str(s), quote=True)
 # Real-time tape (TradingView widget, consent-gated) — mirrors build_site.layout()
 TAPE = '''<div class="tape" aria-label="Live market tape">
   <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div>
-  <noscript><p class="tape-noscript">Live tape needs JavaScript. The GIA — which is fiction — is on the <a href="/markets/">markets page</a>.</p></noscript>
+  <noscript><p class="tape-noscript">Live tape needs JavaScript. The GIA — which is fiction — is in the panel and on the <a href="/markets/">markets page</a>.</p></noscript>
 </div>'''
 
 CONSENT = '''<div id="gb-consent" role="region" aria-label="Cookie consent">

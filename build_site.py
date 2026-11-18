@@ -32,7 +32,7 @@ TAPE_JSON = json.dumps(TAPE_CFG, separators=(",", ":"))
 
 TAPE = '''<div class="tape" aria-label="Live market tape">
   <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div>
-  <noscript><p class="tape-noscript">Live tape needs JavaScript. The GIA — which is fiction — is on the <a href="/markets/">markets page</a>.</p></noscript>
+  <noscript><p class="tape-noscript">Live tape needs JavaScript. The GIA — which is fiction — is in the panel and on the <a href="/markets/">markets page</a>.</p></noscript>
 </div>'''
 
 CONSENT = '''<div id="gb-consent" role="region" aria-label="Cookie consent">
@@ -459,7 +459,7 @@ FOOTER = """<footer><div class="fg">
 <div><h4>Resources</h4><a href="/methodology/">Methodology</a><a href="/archive/">All stories</a><a href="/rss.xml">RSS</a></div>
 <div><h4>Legal</h4><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></div>
 </div><div class="legal">GARBATRAGE is a satirical publication presented in the style of a professional financial news desk.
-All quotes, indexes, tickers and figures are fabricated; any resemblance to real securities, people or firms is coincidental.
+All quotes, indexes, tickers and figures are fabricated; any resemblance to real securities, people or firms is coincidental, or deliberate.
 Nothing herein is investment, legal or tax advice. © Garbatrage Media Group LLC. Not a registered investment adviser.
 Garbatrage Media Group LLC · <a href="mailto:info@garbatrage.com">info@garbatrage.com</a></div></footer>
 <script data-cfasync="false">document.querySelectorAll('[data-copy]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();navigator.clipboard.writeText(a.href).then(function(){a.textContent='Copied';});});});</script>"""
@@ -521,9 +521,8 @@ def build_home():
         _up = (r.get("delta") or 0) > 0
         _lst_lines += (f'<a class="li-it" href="/list/#{esc(r["slug"])}">'
                        f'<span class="r">{r["rank"]:02}</span>'
-                       f'<span class="nm">{esc(r["name"])}</span>'
-                       f'<span class="pct {"up" if _up else "dn"}">{r["pct"]:+.1f}%</span></a>'
-                       f'<p class="why">{esc(r["reason"])}</p>')
+                       f'<span class="nm">{esc(r["name"])}<span class="pct {"up" if _up else "dn"}">{r["pct"]:+.1f}%</span></span>'
+                       f'<span class="why">{esc(r["reason"])}</span></a>')
     _net = sum(1 for r in _movers if (r.get("delta") or 0) > 0) > sum(1 for r in _movers if (r.get("delta") or 0) < 0)
     _agg_cls = "up" if _net else "dn"; _agg_arrow = "▲" if _net else "▼"; _agg_sign = "+" if _net else "−"
     list_panel = (f'<div class="panel list-panel">'
@@ -547,9 +546,11 @@ def build_home():
             f'data-video="{esc(v["id"])}"><img src="{esc(v["thumb"])}" alt="" loading="lazy">'
             f'<span><b>{esc(v["channel"])}</b>{esc(v["title"])}</span></a>'
             for v in _vids)
-        dump_strip = (f'<div class="sec">From the Dump</div>'
+        dump_strip = (f'<div class="dump-wrap">'
+                      f'<div class="sec">From the Dump</div>'
                       f'<div class="dump-mini">{_cards}</div>'
-                      f'<a class="dump-more" href="/dump/">Open the Dump →</a>')
+                      f'<a class="dump-more" href="/dump/">Open the Dump →</a>'
+                      f'</div>')
     brief_html = "".join(
         f'<a class="item" href="/story/{s["slug"]}/"><div class="thumb"><img src="{img(s)}" alt="" loading="lazy"></div><div>'
         f'<h3>{esc(s["title"])}</h3><p>{esc(s["dek"])}</p>'
@@ -586,7 +587,6 @@ def build_home():
       <small class="submsg" aria-live="polite"></small>
     </form>
   </div>
-  <a class="btn" href="/dump/">Open the Dump</a>
 </div></div>
 {dump_strip}
 {FOOTER}"""
