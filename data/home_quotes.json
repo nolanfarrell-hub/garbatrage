@@ -1,20 +1,20 @@
 [
  {
-  "text": "Raised the price for the tariff, took the money back, called it bookkeeping. Nobody bends you over a ledger.",
-  "name": "Doris Hale",
-  "role": "CFO, Coastal Hardware",
-  "street": false
- },
- {
-  "text": "No money for us, a hundred-six million under the sofa, shares bought back. And we're the ones laid off. Fuck the couch.",
-  "name": "Mel Ferrante",
-  "role": "Production worker",
+  "text": "The buyback was approved in an hour. The safety rail took nine months. That tells you what moves.",
+  "name": "Ruben Castillo",
+  "role": "Floor engineer",
   "street": true
  },
  {
-  "text": "A charity got a stock ticker by accident and billed the donations as revenue.",
-  "name": "Janet Okafor",
-  "role": "Healthcare analyst",
+  "text": "We booked the layoffs as a win and the win as a lesson. The lesson is they'll do it again.",
+  "name": "Nadia Petrov",
+  "role": "Director of market risk",
+  "street": false
+ },
+ {
+  "text": "It's not leverage. It's the company betting the house on a card we haven't seen yet.",
+  "name": "Tessa Nguyen",
+  "role": "Credit strategist",
   "street": false
  }
 ]
