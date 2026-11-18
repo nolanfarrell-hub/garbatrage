@@ -1,0 +1,13 @@
+name = "garbatrage-redirect"
+main = "dist/redirect.js"
+compatibility_date = "2024-12-01"
+
+# Real 301s for the slug-rename map on the garbatrage.com zone.
+# The Worker takes the `garbatrage.com/*` route and falls through to the
+# GitHub Pages origin for everything not in the map.
+routes = [
+  { pattern = "garbatrage.com/*", zone_id = "5259325dc576475b77c93680a0546a7d" }
+]
+
+[observability]
+enabled = true
