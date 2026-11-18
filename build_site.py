@@ -510,6 +510,30 @@ def build_home():
         f'<div class="row"><span>{esc(c["ticker"])}</span>'
         f'<b class="{"up" if c["change"] >= 0 else "dn"}">{c["change"]:+.1f}%</b></div>'
         for c in movers)
+    # The List panel: header, GIA aggregate line, five movers (reasoned), disclaimer.
+    try:
+        _lst = json.loads((ROOT / "data" / "list.json").read_text())
+    except Exception:
+        _lst = []
+    _movers = [r for r in _lst if r.get("reason")]
+    _lst_lines = ""
+    for r in _movers[:5]:
+        _up = (r.get("delta") or 0) > 0
+        _lst_lines += (f'<a class="li-it" href="/list/#{esc(r["slug"])}">'
+                       f'<span class="r">{r["rank"]:02}</span>'
+                       f'<span class="nm">{esc(r["name"])}</span>'
+                       f'<span class="pct {"up" if _up else "dn"}">{r["pct"]:+.1f}%</span></a>'
+                       f'<p class="why">{esc(r["reason"])}</p>')
+    _net = sum(1 for r in _movers if (r.get("delta") or 0) > 0) > sum(1 for r in _movers if (r.get("delta") or 0) < 0)
+    _agg_cls = "up" if _net else "dn"; _agg_arrow = "▲" if _net else "▼"; _agg_sign = "+" if _net else "−"
+    list_panel = (f'<div class="panel list-panel">'
+                  f'<div class="ph"><span>The List</span><span>LST</span></div>'
+                  f'<div class="lsum"><span class="lab">GIA</span><span class="tot">38,221.07</span>'
+                  f'<span class="ch {_agg_cls}">{_agg_arrow} 52.91 ({_agg_sign}0.14%)</span></div>'
+                  f'{_lst_lines}'
+                  f'<div class="disc">The List is fictional. The GIA is not a benchmark. Prices invented.</div>'
+                  f'<a class="li-more" href="/list/">All 25 &rarr;</a>'
+                  f'</div>')
     # "From the Dump" — a few of the funniest live uploads, surfaced on home.
     dump_strip = ""
     try:
@@ -547,16 +571,8 @@ def build_home():
   {brief_html}
 </div>
 <aside class="rail">
-  <div class="panel">
-    <div class="ph"><span>Garbatrage Industrial Avg</span><span>GIA</span></div>
-    <div class="pb">
-      <div class="big">38,221.07 <span>▼321.44 (-0.83%)</span></div>
-      <div class="sub">Down on mixed hauling volumes</div>
-      <div style="margin-top:10px">{rail_rows}</div>
-    </div>
-    <div class="disc">GIA is a proprietary index of hand-picked mid-value securities. Not a real benchmark. Not investment advice.</div>
-  </div>
   {quotes_html}
+  {list_panel}
 </aside>
 </div>
 <div class="news"><div class="nin">
@@ -615,6 +631,36 @@ def build_roster():
           layout("The Desk · Garbatrage", "The Garbatrage anchor roster — eight fictional bylines.",
                  body, f"{SITE}/desk/"))
 
+## ---------- The List ----------
+def build_list():
+    """/list/ — The List page: all 25, ranked, each name an anchor target."""
+    try:
+        _lst = json.loads((ROOT / "data" / "list.json").read_text())
+    except Exception:
+        _lst = []
+    rows = ""
+    for r in _lst:
+        _up = (r.get("delta") or 0) > 0
+        _dn = (r.get("delta") or 0) < 0
+        _chg = ""
+        if _up: _chg = f'<b class="up">{r["pct"]:+.1f}%</b>'
+        elif _dn: _chg = f'<b class="dn">{r["pct"]:+.1f}%</b>'
+        _why = f'<p class="why">{esc(r["reason"])}</p>' if r.get("reason") else ""
+        rows += (f'<div class="li-row" id="{esc(r["slug"])}">'
+                 f'<span class="r">{r["rank"]:02}</span>'
+                 f'<div><h3>{esc(r["name"])}</h3>{_why}</div>'
+                 f'<span class="w">{esc(r["worth"])}</span>'
+                 f'<span class="c">{_chg}</span></div>')
+    body = (f'<div class="kick">The List</div><h1>The List.</h1>'
+            f'<p class="lede">Twenty-five people, ranked by worth, in a market that does not exist. '
+            f'Three to five move each day; the rest hold steady, the way money does.</p>'
+            f'<div class="li-grid">{rows}</div>'
+            f'<div class="disc">The List is fictional. The GIA is not a benchmark. Prices invented.</div>')
+    write("list/index.html",
+          layout("The List · Garbatrage", "Twenty-five people, ranked by worth, in a market that does not exist.",
+                 body, f"{SITE}/list/"))
+    print(f"built /list/ with {len(_lst)} entries")
+
 # ---------- run ----------
 if OUT.exists():
     shutil.rmtree(OUT)
@@ -627,6 +673,7 @@ build_archive()
 build_home()
 build_roster()
 build_dump()
+build_list()
 build_feeds()
 shutil.copytree(ROOT / "static", OUT, dirs_exist_ok=True)
 # media/ (story illustration PNGs) lives outside static/; carry it into the build so

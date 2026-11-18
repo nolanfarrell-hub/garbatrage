@@ -172,6 +172,31 @@ h1 a:hover{color:var(--ox)}
 .big span{font-size:12px;color:var(--ox);font-family:'JetBrains Mono',monospace}
 .sub{font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:var(--mute);margin-top:3px}
 .row{display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px dotted var(--rule)}
+/* The List */
+.list-panel{padding-bottom:10px}
+.list-panel .lsum{display:flex;align-items:baseline;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.list-panel .lsum .lab{font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:var(--maroon)}
+.list-panel .lsum .tot{font-family:'Newsreader',serif;font-weight:600;font-size:22px;color:var(--ink)}
+.list-panel .lsum .ch{font-size:11px;font-weight:700}
+.li-it{display:flex;align-items:baseline;gap:8px;padding:10px 12px 2px;text-decoration:none;color:inherit}
+.li-it .r{font-size:9px;color:var(--faint);width:16px}
+.li-it .nm{font-family:'Newsreader',serif;font-weight:600;font-size:15px;color:var(--ink);flex:1}
+.li-it .pct{font-size:10px;font-weight:700}
+.li-it:hover .nm{color:var(--maroon)}
+.li-it .up,.pct.up{color:var(--green)}.li-it .dn,.pct.dn{color:var(--maroon)}
+.li-it + .why{font-size:11px;color:var(--faint);margin:2px 12px 6px 36px;line-height:1.4}
+.li-more{display:block;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--maroon);text-decoration:none;padding:10px 12px 0}
+.li-more:hover{text-decoration:underline}
+.list-panel .disc{margin-left:12px;margin-right:12px}
+/* The List page */
+.li-grid{margin:8px 0 24px}
+.li-row{display:flex;align-items:center;gap:16px;padding:14px 12px;border-bottom:1px solid var(--line)}
+.li-row .r{font-size:10px;color:var(--faint);width:24px}
+.li-row h3{font-family:'Newsreader',serif;font-size:18px;font-weight:600;margin:0 0 2px}
+.li-row .why{font-size:12px;color:var(--faint);margin:0}
+.li-row .w{font-family:'Newsreader',serif;font-size:16px;font-weight:600;margin-left:auto;white-space:nowrap}
+.li-row .c{width:64px;text-align:right}
+.li-row .c .up{color:var(--green)}.li-row .c .dn{color:var(--maroon)}
 .news{border-top:3px solid var(--deep);background:var(--deep);color:var(--cream);padding:24px 0;margin-top:6px}
 .nin{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;max-width:880px;margin:0 auto;padding:0 20px}
 .news h2{font-family:'Newsreader',serif;font-size:26px;line-height:1;font-weight:700;letter-spacing:-.012em;margin:0;border:0;padding:0;display:block}
