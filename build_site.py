@@ -11,6 +11,8 @@ SITE = "https://garbatrage.com"
 
 gia = json.loads((ROOT / "data/gia.json").read_text())
 json_stories = json.loads((ROOT / "data/stories.json").read_text())
+props_index = json.loads((ROOT / "props/index.json").read_text())
+props_by_slug = {p["slug"]: p["alt"] for p in props_index}
 # Sort by date desc; ties (same-day appends) resolve by array position desc so
 # the newest appended batch surfaces first on the home hero/archive.
 stories = sorted(enumerate(json_stories), key=lambda p: (p[1]["date"], p[0]), reverse=True)
@@ -177,8 +179,26 @@ def write(rel, content, raw=False):
 def img(s):
     return s.get("image") or f'/media/img/{s["slug"]}.png'
 
+def resolve_alt(s):
+    """Resolve alt text for story hero. Priority: image_alt field, props index, None."""
+    if s.get("image_alt"):
+        return s["image_alt"]
+    art = img(s)
+    # If image references a prop by path under /props/
+    if art.startswith("/props/"):
+        prop_slug = art.rsplit("/", 1)[-1]
+        if "." in prop_slug:
+            prop_slug = prop_slug.rsplit(".", 1)[0]
+        if prop_slug in props_by_slug:
+            return props_by_slug[prop_slug]
+    # If story slug matches a props slug
+    if s["slug"] in props_by_slug:
+        return props_by_slug[s["slug"]]
+    return None
+
 def build_story(s):
     art = img(s)
+    alt_text = resolve_alt(s) or ""
     url = f"{SITE}/story/{s['slug']}/"
     bav = (f'<span class="av">{esc(s.get("av") or av(s["author"]))}</span>'
            if not s.get("column") else "")  # column: speaker byline, no avatar
@@ -187,7 +207,7 @@ def build_story(s):
                 f'<div class="fignum">{esc(s.get("figure",""))}</div>'
                 f'<div class="figcap">{esc(s.get("figcap","The number, with nothing behind it."))}</div></div>'
                 if s.get("text_only") else
-                f'<figure class="artbox"><img class="art-img" src="{art}" alt="" loading="lazy"></figure>')
+                f'<figure class="artbox"><img class="art-img" src="{art}" alt="{esc(alt_text)}" loading="lazy"></figure>')
     share = (f'<div class="share"><a href="https://twitter.com/intent/tweet?text={quote(s["title"])}&url={quote(url)}" target="_blank" rel="noopener">Post to X</a>'
              f'<a href="https://warpcast.com/~/compose?text={quote(s["title"])}&embeds[]={quote(url)}" target="_blank" rel="noopener">Cast</a>'
              f'<a href="{esc(url)}" data-copy>Copy link</a></div>')
@@ -730,3 +750,24 @@ if (ROOT / "media").exists():
         shutil.rmtree(OUT / "media")
     shutil.copytree(ROOT / "media", OUT / "media")
 print(f"built {len(stories)} stories, {len(cons)} companies, {len(gia['sectors'])} sectors, media carried")
+
+# ---------- alt-text warnings (non-blocking) ----------
+alt_missing = 0
+prop_warn_slugs = []
+for s in stories:
+    if s.get("text_only"):
+        continue
+    art = img(s)
+    # PROP WARN: story references a prop not in the index
+    if art.startswith("/props/"):
+        prop_slug = art.rsplit("/", 1)[-1]
+        if "." in prop_slug:
+            prop_slug = prop_slug.rsplit(".", 1)[0]
+        if prop_slug not in props_by_slug:
+            prop_warn_slugs.append(prop_slug)
+    # Count heroes with no resolved alt
+    if not resolve_alt(s):
+        alt_missing += 1
+print(f"ALT WARN: {alt_missing} heroes missing alt text")
+for slug in prop_warn_slugs:
+    print(f"PROP WARN: {slug} not in props index")
