@@ -2271,7 +2271,7 @@
   ],
   "column": false,
   "text_only": false,
-  "image": "/props/straight/a-closed-steel-gate-and-padlock.png",
+  "image": "/props/straight/closed-steel-gate-and-padlock.png",
   "image_alt": null
  },
  {
@@ -2290,7 +2290,7 @@
   ],
   "column": false,
   "text_only": false,
-  "image": "/props/straight/a-clipboard-on-a-gate.png",
+  "image": "/props/straight/clipboard-on-a-gate.png",
   "image_alt": null
  },
  {
@@ -2309,7 +2309,7 @@
   ],
   "column": false,
   "text_only": false,
-  "image": "/props/straight/a-key-in-a-lock.png",
+  "image": "/props/straight/key-in-a-lock.png",
   "image_alt": null
  },
  {
@@ -2328,7 +2328,7 @@
   ],
   "column": false,
   "text_only": false,
-  "image": "/props/straight/a-chair-pushed-back-from-a-table.png",
+  "image": "/props/straight/chair-pushed-back-from-a-table.png",
   "image_alt": null
  },
  {
@@ -2355,7 +2355,7 @@
   "quotes": [
    "The $12 million is not severance; it is the board pricing me out before the market does."
   ],
-  "image": "/props/lurid/a-suitcase-open-on-a-bed.png",
+  "image": "/props/lurid/suitcase-open-on-a-bed.png",
   "image_alt": null
  },
  {
@@ -2437,7 +2437,7 @@
   "quote_costs": [
    "$1.4 million"
   ],
-  "image": "/props/lurid/a-spilled-ice-bucket-on-tile.png",
+  "image": "/props/straight/cardboard-box-taped-shut.png",
   "image_alt": null
  },
  {
@@ -2464,7 +2464,7 @@
   "quotes": [
    "We are $240 billion liquid, which means we are wet with the cash we no longer trust."
   ],
-  "image": "/props/straight/a-puddle-in-a-car-park.png",
+  "image": "/props/straight/puddle-in-a-car-park.png",
   "image_alt": null
  },
  {
@@ -2491,7 +2491,7 @@
   "quotes": [
    "The $90 million is for the company. The hat is how we let her pay for it."
   ],
-  "image": "/props/lurid/a-torn-envelope-of-cash-on-a-table.png",
+  "image": "/props/lurid/torn-envelope-of-cash-on-a-table.png",
   "image_alt": null
  }
 ]

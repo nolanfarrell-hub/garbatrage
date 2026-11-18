@@ -768,20 +768,42 @@ if (ROOT / "props").exists():
 print(f"built {len(stories)} stories, {len(cons)} companies, {len(gia['sectors'])} sectors, media carried")
 
 # ---------- daily volume cap (warning, not fail) ----------
-# Hard number: 7 full pieces per date. The rest run as briefs. This is a WARNING —
-# the archive already carries >7 on historic overflow days, so it must not abort.
+# Hard number: 7 full pieces per date; the rest run as briefs. WARNING, not a
+# fail — fail-closed on a cap makes you delete a good piece to satisfy a number.
+# Only count dates ON OR AFTER VOLUME_CAP_DATE, or every build warns about the
+# six historical pile-up days and you learn to ignore the one signal that matters.
+VOLUME_CAP = 7
+VOLUME_CAP_DATE = "2026-11-18"  # the day the 7/day cap took effect
 from collections import defaultdict as _dd
 _days = _dd(int)
 for _s in stories:
-    _days.setdefault(_s["date"], 0)
-    _days[_s["date"]] += 1
-_vol = [(d, n) for d, n in sorted(_days.items()) if n > 7]
+    if _s["date"] >= VOLUME_CAP_DATE:
+        _days[_s["date"]] += 1
+_vol = [(d, n) for d, n in sorted(_days.items()) if n > VOLUME_CAP]
 if _vol:
-    print("VOLUME WARN: days over the 7-piece cap:")
+    print(f"VOLUME WARN: days over the {VOLUME_CAP}-piece cap (effective {VOLUME_CAP_DATE}):")
     for d, n in _vol:
-        print(f"  {d}: {n} pieces (cap 7)")
+        print(f"  {d}: {n} pieces (cap {VOLUME_CAP})")
 else:
-    print("VOLUME OK: no day exceeds 7 pieces")
+    print(f"VOLUME OK: no day since {VOLUME_CAP_DATE} exceeds {VOLUME_CAP} pieces")
+
+# ---------- lurid-per-day cap (warning, not fail) ----------
+# Rule of the register: one or two lurid frames per day, straight as the default.
+# Three lurid makes the two straight frames read as the odd ones out. WARNING
+# scoped to the same effective date so historical days don't drown the signal.
+LURID_CAP = 2
+_lurid = _dd(int)
+for _s in stories:
+    if _s["date"] >= VOLUME_CAP_DATE and _s.get("image", "").startswith("/props/lurid/"):
+        _lurid[_s["date"]] += 1
+_lur = [(d, n) for d, n in sorted(_lurid.items()) if n > LURID_CAP]
+if _lur:
+    print(f"LURID WARN: days over the {LURID_CAP}-lurid cap:")
+    for d, n in _lur:
+        print(f"  {d}: {n} lurid prop heroes (cap {LURID_CAP})")
+else:
+    print(f"LURID OK: no day since {VOLUME_CAP_DATE} exceeds {LURID_CAP} lurid heroes")
+
 
 # ---------- alt-text hard checks ----------
 # Every hero must have authored alt text; a prop reference must resolve; the image
