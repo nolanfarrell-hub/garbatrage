@@ -545,7 +545,6 @@ def build_home():
   <div class="by">{lbav}<span><b>{esc(lead["author"])}</b> · {esc(lead.get("role", ""))} · {lead.get("read", 4)} min read</span></div>
   <div class="sec">Markets Brief</div>
   {brief_html}
-  {dump_strip}
 </div>
 <aside class="rail">
   <div class="panel">
@@ -573,6 +572,7 @@ def build_home():
   </div>
   <a class="btn" href="/dump/">Open the Dump</a>
 </div></div>
+{dump_strip}
 {FOOTER}"""
     write("index.html",
           layout("Garbatrage · Markets. Money. Mischief.",
