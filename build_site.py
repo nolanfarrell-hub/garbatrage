@@ -198,6 +198,12 @@ def build_story(s):
     url = f"{SITE}/story/{s['slug']}/"
     bav = (f'<span class="av">{esc(s.get("av") or av(s["author"]))}</span>'
            if not s.get("column") else "")  # column: speaker byline, no avatar
+    # text-only TRUE FIGURE card (no image): a big figure with nothing behind it.
+    fig_card = (f'<div class="figcard"><span class="figtag">TRUE FIGURE</span>'
+                f'<div class="fignum">{esc(s.get("figure",""))}</div>'
+                f'<div class="figcap">{esc(s.get("figcap","The number, with nothing behind it."))}</div></div>'
+                if s.get("text_only") else
+                f'<figure class="artbox"><img class="art-img" src="{art}" alt="" loading="lazy"></figure>')
     share = (f'<div class="share"><a href="https://twitter.com/intent/tweet?text={quote(s["title"])}&url={quote(url)}" target="_blank" rel="noopener">Post to X</a>'
              f'<a href="https://warpcast.com/~/compose?text={quote(s["title"])}&embeds[]={quote(url)}" target="_blank" rel="noopener">Cast</a>'
              f'<a href="{esc(url)}" data-copy>Copy link</a></div>')
@@ -225,8 +231,7 @@ def build_story(s):
     body = f"""
 <div class="kick">{esc(s["desk"])}</div>
 <h1>{esc(s["title"])}</h1>
-<p class="lede">{esc(s["dek"])}</p>
-<figure class="artbox"><img class="art-img" src="{art}" alt="" loading="lazy"></figure>
+<p class="lede">{esc(s["dek"])}</p>{fig_card}
 <div class="byline">{bav}<span><b>{esc(s["author"])}</b><br>{esc(s.get("role", ""))}</span>
 <span class="rd"><time datetime="{esc(s["date"])}">{esc(s["date"])}</time> · {s.get("read", 4)} min read</span></div>
 <article class="art">{s["body"]}</article>

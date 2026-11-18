@@ -90,6 +90,10 @@ td.ch.dn{color:var(--dn);text-align:right;width:80px;font-family:'JetBrains Mono
 
 /* ---------- story ---------- */
 .artbox{margin:6px 0 24px;border:1px solid var(--rule);overflow:hidden}
+.figcard{margin:6px 0 24px;border:3px solid var(--deep);background:var(--deep);color:var(--cream);padding:26px 22px}
+.figcard .figtag{display:inline-block;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#93a6bb;margin-bottom:10px;border:1px solid var(--cream);padding:3px 8px}
+.figcard .fignum{font-family:'Newsreader',serif;font-size:52px;line-height:1;font-weight:700;color:var(--cream);letter-spacing:-.02em}
+.figcard .figcap{font-size:11px;color:#b9c8d8;margin-top:10px;max-width:420px}
 .art-img{width:100%;height:auto;display:block;object-fit:cover}
 .byline{display:flex;align-items:center;gap:12px;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:24px}
 .byline .av{width:40px;height:40px;border-radius:50%;background:var(--deep);color:var(--bar-text);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
