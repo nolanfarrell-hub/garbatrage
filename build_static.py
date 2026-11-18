@@ -102,7 +102,7 @@ def layout(title, desc, body, canonical):
 {jsonld}
 </head><body><a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
-<header class="bar"><a href="/" class="wordmark" aria-label="Garbatrage — home"><img class="mark" src="/assets/logo-g-vector.svg" alt="G" width="24" height="28">Garbatrage</a><nav class="back"><a href="/markets/">Markets</a> · <a href="/desk/">The Desk</a> · <a href="/archive/">Archive</a></nav></header>
+<header class="bar"><a href="/" class="wordmark" aria-label="Garbatrage — home"><img class="mark" src="/assets/logo-g-vector.svg" alt="G" width="24" height="28">Garbatrage</a><nav class="back"><a href="/markets/">Index</a> · <a href="/desk/">The Desk</a> · <a href="/archive/">Archive</a></nav></header>
 {TAPE}
 <main id="main">{body}</main>
 </div>

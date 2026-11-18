@@ -154,7 +154,7 @@ def layout(title, desc, body, canonical, og_image=None, og_type="website", jsonl
 {ld_block}
 </head><body><a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
-<header class="bar"><a href="/" class="wordmark" aria-label="Garbatrage — home"><img class="mark" src="/assets/logo-g-vector.svg" alt="G" width="24" height="28">Garbatrage</a><nav class="back"><a href="/markets/">Markets</a> · <a href="/desk/">The Desk</a> · <a href="/archive/">Archive</a></nav></header>
+<header class="bar"><a href="/" class="wordmark" aria-label="Garbatrage — home"><img class="mark" src="/assets/logo-g-vector.svg" alt="G" width="24" height="28">Garbatrage</a><nav class="back"><a href="/markets/">Index</a> · <a href="/desk/">The Desk</a> · <a href="/archive/">Archive</a></nav></header>
 {TAPE}
 <main id="main">{body}</main>
 </div>
@@ -226,7 +226,7 @@ def build_story(s):
 <span class="rd"><time datetime="{esc(s["date"])}">{esc(s["date"])}</time> · {s.get("read", 4)} min read</span></div>
 <article class="art">{s["body"]}</article>
 {closer_sig}
-<div class="tags">{"".join(f'<span class="chip">{esc(t)}</span>' for t in s.get("tags", []) if t != s.get("desk", ""))}</div>
+<div class="tags">{"".join(f'<a class="chip" href="/tag/{esc(t)}/">{esc(t)}</a>' for t in s.get("tags", []) if isinstance(t, str))}</div>
 {share}
 {DISC_STORY}
 <div class="pager"><a href="/archive/">← Archive</a><span>{esc(s["date"])}</span><a href="/">Home</a></div>"""
@@ -380,7 +380,8 @@ def build_dump():
 
 def build_feeds():
     urls = [f"{SITE}/", f"{SITE}/markets/", f"{SITE}/archive/", f"{SITE}/desk/", f"{SITE}/about/",
-            f"{SITE}/methodology/", f"{SITE}/terms.html", f"{SITE}/privacy.html"]
+            f"{SITE}/methodology/", f"{SITE}/terms.html", f"{SITE}/privacy.html", f"{SITE}/list/"]
+    urls += [f"{SITE}/tag/{t}/" for t in TAGS]
     urls += [f"{SITE}/company/{c['ticker'].lower()}/" for c in cons]
     urls += [f"{SITE}/story/{s['slug']}/" for s in stories]
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -661,6 +662,51 @@ def build_list():
                  body, f"{SITE}/list/"))
     print(f"built /list/ with {len(_lst)} entries")
 
+## ---------- Tag pages ----------
+# The whitelist drives which /tag/<slug>/ pages exist. Adding a tag to this
+# array makes a page automatically. The count is the honest surface: it is
+# the number of pieces filed under that tag (desk match OR explicit tag), so
+# a mis-filed piece (a telecom buyout under `etfs`) shows up in the count.
+TAGS = ["markets", "rates", "earnings", "estate", "hauling", "etfs",
+        "credit", "consumer", "prices"]
+
+def _tagged_stories(tag):
+    """Pieces that belong to a tag: explicit tag match OR desk filing."""
+    out = []
+    for s in stories:
+        if tag in (s.get("tags") or []):
+            out.append(s)
+        elif s.get("desk") == tag:
+            out.append(s)
+    # newest first, stable
+    return sorted(out, key=lambda s: s["date"], reverse=True)
+
+def build_tags():
+    for tag in TAGS:
+        members = _tagged_stories(tag)
+        tiles = "".join(
+            f'<a class="chip{" on" if tag == _t else ""}" href="/tag/{_t}/">{_t}</a>'
+            for _t in TAGS)
+        rows = "".join(
+            f'<div class="entry"><div class="d">{day(s["date"])}</div>'
+            f'<a href="/story/{s["slug"]}/"><h3>{esc(s["title"])}</h3>'
+            f'<div class="m"><b>{esc(s["desk"])}</b> · {esc(s["author"])}</div></a></div>'
+            for s in members)
+        body = [
+            f'<div class="kick">Tag</div><h1>{esc(tag)}</h1>'
+            f'<p class="lede">{esc(tag)} · {len(members)} piece{"s" if len(members)!=1 else ""}</p>'
+            f'<div class="chips">{tiles}</div>']
+        if members:
+            body.append(rows)
+        else:
+            body.append('<p class="lede">Nothing filed here yet.</p>')
+        body.append(DISC_INDEX)
+        write(f"tag/{tag}/index.html",
+              layout(f"{tag} · Garbatrage",
+                     f"Every {tag} piece — {len(members)} filed.",
+                     "".join(body), f"{SITE}/tag/{tag}/"))
+    print(f"built /tag/ pages for {len(TAGS)} tags")
+
 # ---------- run ----------
 if OUT.exists():
     shutil.rmtree(OUT)
@@ -674,6 +720,7 @@ build_home()
 build_roster()
 build_dump()
 build_list()
+build_tags()
 build_feeds()
 shutil.copytree(ROOT / "static", OUT, dirs_exist_ok=True)
 # media/ (story illustration PNGs) lives outside static/; carry it into the build so
