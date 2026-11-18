@@ -191,11 +191,17 @@ def build_story(s):
     share = (f'<div class="share"><a href="https://twitter.com/intent/tweet?text={quote(s["title"])}&url={quote(url)}" target="_blank" rel="noopener">Post to X</a>'
              f'<a href="https://warpcast.com/~/compose?text={quote(s["title"])}&embeds[]={quote(url)}" target="_blank" rel="noopener">Cast</a>'
              f'<a href="{esc(url)}" data-copy>Copy link</a></div>')
+    # E-01/E-02 house signature: wire pieces close with "Pays: X." The closer
+    # is the last line that names who eats it — the thing that makes the site
+    # recognisable. Columns carry their own-voice closer (E-waiver) so they
+    # never get a Pays line bolted on.
+    closer_sig = (''
+        if s.get("column")
+        else f'<p class="closer">{esc(s.get("closer", ""))}</p>')
     jsonld = {
         "type": "NewsArticle",
         "name": s["title"],
-        "block": ('<script type="application/ld+json">'
-                  + json.dumps({
+        "block": ('<script type="application/ld+json">'                  + json.dumps({
                       "@context": "https://schema.org",
                       "@type": "NewsArticle",
                       "headline": s["title"],
@@ -219,6 +225,7 @@ def build_story(s):
 <div class="byline">{bav}<span><b>{esc(s["author"])}</b><br>{esc(s.get("role", ""))}</span>
 <span class="rd"><time datetime="{esc(s["date"])}">{esc(s["date"])}</time> · {s.get("read", 4)} min read</span></div>
 <article class="art">{s["body"]}</article>
+{closer_sig}
 <div class="tags">{"".join(f'<span class="chip">{esc(t)}</span>' for t in s.get("tags", []) if t != s.get("desk", ""))}</div>
 {share}
 {DISC_STORY}

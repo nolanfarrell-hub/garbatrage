@@ -101,6 +101,7 @@ td.ch.dn{color:var(--dn);text-align:right;width:80px;font-family:'JetBrains Mono
 .byline .rd{margin-left:auto;font-size:11px;color:var(--faint);letter-spacing:1px;text-transform:uppercase}
 .art p{font-size:17px;line-height:1.66;margin-bottom:20px}
 .art p.lead{color:var(--ink);font-weight:700}
+.art p.closer{font-family:'Newsreader',serif;font-weight:700;font-size:19px;letter-spacing:-.01em;color:var(--maroon);margin:28px 0 20px;padding-top:18px;border-top:1px solid var(--line)}
 .art blockquote{border-left:3px solid var(--maroon);padding:4px 0 4px 22px;margin:24px 0;font-family:'Newsreader',serif;font-weight:600;font-size:20px;letter-spacing:-.012em;line-height:1.45;color:var(--ink)}
 .tags{display:flex;flex-wrap:wrap;gap:7px;margin:26px 0}
 .tags .chip{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--maroon);border:1px solid var(--maroon);padding:3px 9px;border-radius:3px}

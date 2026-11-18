@@ -3,13 +3,13 @@
   "name": "Marcus Reid",
   "role": "Markets Anchor · NYSE Floor",
   "bio": "Twenty years in front of a closing bell. Hosts Garbatrage Now and the mid-session tape. Treats every uptick like an achievement and every dip like a personality flaw.",
-  "display": "Markets Anchor"
+  "display": "Markets Anchor · NYSE Floor"
  },
  {
   "name": "Priya Sharma",
   "role": "Washington Bureau, Fed & Rates, plus household costs (insurance, mortgages)",
   "bio": "Former policy wonk who made the jump to cable. Reads dot plots the way other people read novels, and can narrate a GDP release the way an auctioneer narrates a bid.",
-  "display": "Washington Bureau"
+  "display": "Washington Bureau, Fed & Rates, plus household costs (insurance, mortgages)"
  },
  {
   "name": "Tessa Nguyen",
@@ -21,7 +21,7 @@
   "name": "Omar Zayed",
   "role": "Corporate Governance Desk",
   "bio": "Charts proxy statements and comp tables for a living. Has strong feelings about vesting cliffs and is not afraid to use them in a broadcast.",
-  "display": "Corporate Governance"
+  "display": "Corporate Governance Desk"
  },
  {
   "name": "Elena Marsh",
@@ -39,12 +39,12 @@
   "name": "Jake Sullivan",
   "role": "Breakfast Anchor · Before The Open",
   "bio": "Your alarm clock in a blazer. Pre-markets, futures, and the weather in commodity markets before most of you finish coffee. Never once late to the tape.",
-  "display": "Breakfast Anchor"
+  "display": "Breakfast Anchor · Before The Open"
  },
  {
   "name": "Claire Reyes",
   "role": "Debt & Fixed Income, plus consumer credit",
   "bio": "Talks basis points like a second language and has correctly called four consecutive dot plots. Owns the yield-curve segment no one else wants.",
-  "display": "Debt & Fixed Income"
+  "display": "Debt & Fixed Income, plus consumer credit"
  }
 ]
