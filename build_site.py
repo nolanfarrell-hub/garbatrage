@@ -551,7 +551,6 @@ def build_home():
     for r in _movers[:5]:
         _up = (r.get("delta") or 0) > 0
         _lst_lines += (f'<a class="li-it" href="/list/#{esc(r["slug"])}">'
-                       f'<span class="r">{r["rank"]:02}</span>'
                        f'<span class="nm">{esc(r["name"])}<span class="pct {"up" if _up else "dn"}">{r["pct"]:+.1f}%</span></span>'
                        f'<span class="why">{esc(r["reason"])}</span></a>')
     _net = sum(1 for r in _movers if (r.get("delta") or 0) > 0) > sum(1 for r in _movers if (r.get("delta") or 0) < 0)
