@@ -757,23 +757,43 @@ if (ROOT / "props").exists():
     shutil.copytree(ROOT / "props", OUT / "props")
 print(f"built {len(stories)} stories, {len(cons)} companies, {len(gia['sectors'])} sectors, media carried")
 
-# ---------- alt-text warnings (non-blocking) ----------
-alt_missing = 0
+# ---------- alt-text hard checks ----------
+# Every hero must have authored alt text; a prop reference must resolve; the image
+# must live under props/ or media/img/; alt must be 4..12 words. Any violation aborts.
+alt_fail = []
 prop_warn_slugs = []
+path_fail = []
 for s in stories:
     if s.get("text_only"):
         continue
     art = img(s)
-    # PROP WARN: story references a prop not in the index
+    # path constraint: story art must live under the two sanctioned roots
+    if not (art.startswith("/props/") or art.startswith("/media/img/")):
+        path_fail.append((s["slug"], art))
+    # prop reference must resolve in the index
     if art.startswith("/props/"):
         prop_slug = art.rsplit("/", 1)[-1]
         if "." in prop_slug:
             prop_slug = prop_slug.rsplit(".", 1)[0]
         if prop_slug not in props_by_slug:
             prop_warn_slugs.append(prop_slug)
-    # Count heroes with no resolved alt
-    if not resolve_alt(s):
-        alt_missing += 1
-print(f"ALT WARN: {alt_missing} heroes missing alt text")
+    # every hero needs an alt, and it must be 4..12 words
+    a = (s.get("image_alt") if s.get("image_alt") else
+         (props_by_slug.get(art.rsplit("/", 1)[-1].rsplit(".", 1)[0]) if art.startswith("/props/") else None))
+    if not a:
+        alt_fail.append((s["slug"], "missing"))
+    elif not (4 <= len(a.split()) <= 12):
+        alt_fail.append((s["slug"], f"{len(a.split())}w:{a[:40]}"))
+if alt_fail:
+    for slug, why in alt_fail:
+        print(f"ALT FAIL: {slug} — {why}")
+    raise SystemExit(f"ABORT: {len(alt_fail)} hero(s) without valid 4-12 word alt text")
 for slug in prop_warn_slugs:
-    print(f"PROP WARN: {slug} not in props index")
+    print(f"PROP FAIL: {slug} not in props index")
+if prop_warn_slugs:
+    raise SystemExit(f"ABORT: {len(prop_warn_slugs)} unresolved prop reference(s)")
+for slug, art in path_fail:
+    print(f"PATH FAIL: {slug} — art outside props/ or media/img/: {art}")
+if path_fail:
+    raise SystemExit(f"ABORT: {len(path_fail)} story image(s) outside sanctioned roots")
+print("ALT OK: all story heroes carry 4-12 word alt text")
