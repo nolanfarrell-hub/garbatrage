@@ -1894,21 +1894,152 @@
  },
  {
   "title": "Goodwill Is What You Overpaid. The Impairment Is Morning After.",
-  "dek": "$2.1 billion, written off and called a refresh.",
+  "dek": "The company wrote off $2.1 billion and called it a refresh.",
   "slug": "goodwill-is-what-you-overpaid-the-impairment-is-morning-after",
   "desk": "earnings",
-  "author": "the clerk",
-  "role": "The Goodwill Room",
-  "av": "",
+  "author": "Emmett Voss",
+  "role": "Goodwill Room Clerk",
+  "av": "EV",
   "date": "2026-11-17",
   "read": "4",
-  "body": "I am a clerk in the goodwill room, and I write the numbers down as they un-matter. Monday the company decided the $2.1 billion it had paid to be a different company was, in accounting terms, an error that had finally been noticed, so we wrote the goodwill down to zero and called the write-off a refresh, like a coat of paint on a building being demolished. I am forty-two and I have slept in this building. The morning-after feeling is not mine to keep; it is booked. When goodwill goes, you are not losing value, you are admitting you were never paying for value, you were paying for the memory of having wanted it. I type that. I type it as an asset, then I type it as a loss, and I am the one who has to look at both numbers with the same hands. My supervisor says it is not a loss, it is an alignment, which is the word we use for a figure that has changed its mind. The company is worth $18.3 billion without the goodwill it paid for, which means it is worth exactly what it was before it got ambitious. I cross it out. It is the honest morning after anyone can have, if they have ever overpaid for a thing they only wanted because someone else had it.",
   "tags": [
    "earnings"
   ],
   "column": true,
   "text_only": true,
   "figure": "$2.1 billion",
-  "figcap": "Paid to be a different company. Written off as a refresh."
+  "figcap": "Paid to be a different company. Written off as a refresh.",
+  "body": "<p>I am Emmett Voss, a clerk in the goodwill room, and I write the numbers down as they un-matter. On Monday the company decided the $2.1 billion it had paid to be a different company was an error that had finally been noticed, so we wrote it down to zero and called the write-off a refresh, like a coat of paint on a building being demolished. Nobody in the build room believes the number anymore. That is my job to believe it for them.</p>\n\n<p>I type it as an asset, then I type it as a loss, and I am the one who has to look at both numbers with the same hands. My supervisor calls it not a loss but an alignment, the word we use for a figure that has changed its mind. When goodwill goes, you are not losing value; you are admitting you were never paying for value — you were paying for the memory of having wanted it. The company is worth $18.3 billion without the goodwill it paid for, which is what it was before it got ambitious.</p>\n\n<p>My prayer is a ledger. It writes: paid. It writes: gone. It never writes: why. Fuck.</p>",
+  "first_sentence": "I am Emmett Voss, a clerk in the goodwill room, and I write the numbers down as they un-matter.",
+  "closer": "My prayer is a ledger. It writes: paid. It writes: gone. It never writes: why. Fuck.",
+  "pays": "Emmett pays",
+  "verb": "writes",
+  "figure_role": "level",
+  "quotes": []
+ },
+ {
+  "title": "Her Husband Refinances the Marriage",
+  "dek": "He remortgages the marriage. She keeps the debt.",
+  "slug": "her-husband-refinances-the-marriage",
+  "desk": "estate",
+  "author": "Priya Sharma",
+  "role": "Washington Bureau",
+  "av": "PS",
+  "date": "2026-11-17",
+  "read": "4",
+  "tags": [
+   "estate"
+  ],
+  "column": false,
+  "text_only": false,
+  "body": "<p>Maureen Tolliver, 58, signed away the $84,000 of equity she had paid into the house, watched her name slide off the note, and let her husband remortgage the marriage in the loan's vocabulary. He refinanced into an account that held only his signature, and the lower payment was the gift he dressed as arithmetic. She had carried the first eight years of that mortgage on a waitress's schedule.</p>\n\n<p>She raised it at dinner. He said a refi is not a divorce, it is an extension, which is how courts mark the thing that looks like a marriage and no longer is one. The equity was now a number that moved in his name, and when she asked where she signed for the half she had paid, the only form left removed the other half without her pen. Fuck the paperwork, she told the mirror afterwards, low enough that no one heard, because she still loved him, and the fight costs more than the mortgage does.</p>\n\n<blockquote>&ldquo;It is the lower payment that does it — $84,000 in equity, and the marriage remortgaged with one signature.&rdquo;<br><br>&mdash; Vance Kettering, the closing agent</blockquote>",
+  "first_sentence": "Maureen Tolliver, 58, signed away the $84,000 of equity",
+  "closer": "Pays: Maureen. The signature was hers.",
+  "pays": "Maureen pays",
+  "verb": "refinances",
+  "figure_role": "level",
+  "quotes": [
+   "It is the lower payment that does it — $84,000 in equity, and the marriage remortgaged with one signature."
+  ]
+ },
+ {
+  "title": "Comp Package Is a Hand Job",
+  "dek": "The board calls it retention. He calls it the hand job.",
+  "slug": "comp-package-is-a-hand-job",
+  "desk": "earnings",
+  "author": "Claire Reyes",
+  "role": "Debt & Fixed Income",
+  "av": "CR",
+  "date": "2026-11-17",
+  "read": "4",
+  "tags": [
+   "earnings"
+  ],
+  "column": false,
+  "text_only": false,
+  "body": "<p>Walter Odin, 31, opened the compensation package the board had sent to him and read his own raise as the kind of thing you receive with one hand while the other is scribbling your signature. The $1.4 million package extends him two more years, and they wrote the hand job into the print so nobody has to say it out loud. He has fourteen months left on the leash and a mortgage that keeps time.</p>\n\n<p>The board calls it retention. Walter calls the package a hand job on paper — the gesture that is pleasant to pretend is about loyalty, when it is really about the two years you will not be free. He told his wife the number. She asked how much of it he actually keeps, and he had read far enough to know the answer was the part that stops when he stops. Shit, he said, and neither of them could argue with the arithmetic.</p>\n\n<blockquote>&ldquo;The $1.4 million extends him two years, which is what a hand job is for: it makes the staying feel chosen.&rdquo;<br><br>&mdash; Meredith Vale, the compensation committee chair</blockquote>",
+  "first_sentence": "Walter Odin, 31, opened the compensation package the board had sent",
+  "closer": "Pays: Walter. Fourteen months left.",
+  "pays": "Walter pays",
+  "verb": "extends",
+  "figure_role": "level",
+  "quotes": [
+   "The $1.4 million extends him two years, which is what a hand job is for: it makes the staying feel chosen."
+  ]
+ },
+ {
+  "title": "Portfolio Is Wet. The Rain Is the Print.",
+  "dek": "$240 billion in cash, and the blood is the liquidity.",
+  "slug": "portfolio-is-wet-the-rain-is-the-print",
+  "desk": "markets",
+  "author": "Marcus Reid",
+  "role": "Markets Anchor",
+  "av": "MR",
+  "date": "2026-11-17",
+  "read": "4",
+  "tags": [
+   "markets"
+  ],
+  "column": false,
+  "text_only": false,
+  "body": "<p>Simon Cribb, 52, ran his hand over the $240 billion in cash the fund was now calling liquid, the way a man feels a soaked sleeve and names the weather lucky. The market had swung, the fund had sold into it, and the proceeds sat in the account, wet with the thing they had not been at the top of the cycle: dry powder the size of a small country's deficit.</p>\n\n<p>He is the portfolio manager, which means he is the one who has to say the word seriously every quarter without being a joke. The cash is liquid, they told the investor call, and Simon thought about how the wettest thing in finance is the thing that used to be yours before you needed it to stay. Cunt, he wrote in the margin beside the word liquidity, then erased it, because the minutes get read and the hand he was filling jobs no one applauds.</p>\n\n<blockquote>&ldquo;We are $240 billion liquid, which means we are wet with the cash we no longer trust.&rdquo;<br><br>&mdash; Simon Cribb</blockquote>",
+  "first_sentence": "Simon Cribb, 52, ran his hand over the $240 billion in cash",
+  "closer": "Pays: Simon. The cash is not his.",
+  "pays": "Simon pays",
+  "verb": "pockets",
+  "figure_role": "change",
+  "quotes": [
+   "We are $240 billion liquid, which means we are wet with the cash we no longer trust."
+  ]
+ },
+ {
+  "title": "Rights Issue Passes the Hat, Keeps Every Bit of the Change",
+  "dek": "The firm needs cash. The shareholders hold the hat.",
+  "slug": "rights-issue-passes-the-hat-keeps-every-bit-of-the-change",
+  "desk": "markets",
+  "author": "Omar Zayed",
+  "role": "Corporate Governance",
+  "av": "OZ",
+  "date": "2026-11-17",
+  "read": "4",
+  "tags": [
+   "markets"
+  ],
+  "column": false,
+  "text_only": false,
+  "body": "<p>Sofia Marchetti, 61, read the rights issue as a hat passed at her kitchen table, and she held it long enough to feel how light it was. The company needed $90 million, and the right to buy more of a thing she already owned thinly was being offered to her as a favor, the way a waiter offers you the check and calls it the experience. She had held the shares since 2004, through two boom-and-busts and one proud statement about discipline.</p>\n\n<p>The notice called it an opportunity to participate. Sofia called it passing the hat, and the hat had already been around the room before it got to her: the board had subscribed first, at the bottom price, the way the house always takes its cut before the game. Asshole, she said to the letter, with real affection, because after twenty years she was too far in to leave and too honest to pretend the hat had not been passed at her before.</p>\n\n<blockquote>&ldquo;The $90 million is for the company. The hat is how we let her pay for it.&rdquo;<br><br>&mdash; Gerard Foley, the board chairman</blockquote>",
+  "first_sentence": "Sofia Marchetti, 61, read the rights issue as a hat passed at her kitchen table",
+  "closer": "Pays: Sofia. The hat gets heavier.",
+  "pays": "Sofia pays",
+  "verb": "hat",
+  "figure_role": "level",
+  "quotes": [
+   "The $90 million is for the company. The hat is how we let her pay for it."
+  ]
+ },
+ {
+  "title": "CEO Priced to Leave, Companies the Buyout",
+  "dek": "$12 million to jump. The board holds the chute.",
+  "slug": "ceo-priced-to-leave-companies-the-buyout",
+  "desk": "earnings",
+  "author": "Elena Marsh",
+  "role": "Head of Research",
+  "av": "EM",
+  "date": "2026-11-17",
+  "read": "4",
+  "tags": [
+   "earnings"
+  ],
+  "column": false,
+  "text_only": false,
+  "body": "<p>Rita Soriano, 58, read her own $12 million golden parachute as the board's way of pricing her to leave before it wanted her gone, and she has spent the year packing. The clause is the parachute: it makes the fall look chosen, the way a man strapping on gear calls the ledge a plan. She has the offer in progress, and the board knows it, and nobody in the room will say the word exit where the minutes can hear.</p>\n\n<p>The board calls it retention, which is the polite name for the thing it has priced. Rita calls the parachute the most honest line in her contract — it is the one sentence that tells her exactly what her leaving is worth, and worth is the only number the company ever says without wincing. The buyout was half-assed, she told her brother, the way she says everything she is leaving behind: with both palms flat on the table, priced and ready.</p>\n\n<blockquote>&ldquo;The $12 million is not severance; it is the board pricing me out before the market does.&rdquo;<br><br>&mdash; Rita Soriano</blockquote>",
+  "first_sentence": "Rita Soriano, 58, read her own $12 million golden parachute",
+  "closer": "Pays: Rita. She was always priced to leave.",
+  "pays": "Rita pays",
+  "verb": "parachutes",
+  "figure_role": "level",
+  "quotes": [
+   "The $12 million is not severance; it is the board pricing me out before the market does."
+  ]
  }
 ]
