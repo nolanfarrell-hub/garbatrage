@@ -244,15 +244,45 @@ open(os.path.join(STATIC,"press","index.html"),"w").write(
 print("wrote static/press/index.html")
 
 # ---- 404 ----
+# GH Pages (the live origin behind Cloudflare CDN) does not apply _redirects
+# (that's a Cloudflare *Pages build* feature). Its one redirect mechanism for
+# unknown paths is a 404.html with a client-side map. Keep _redirects in the
+# output for the CF-Pages case, and derive the 404 redirect block from the SAME
+# file so the two never drift.
+_four_redirect = ""
+_red_path = os.path.join(STATIC, "_redirects")
+_pairs = []
+if os.path.exists(_red_path):
+    for _line in open(_red_path).read().splitlines():
+        _parts = _line.split()
+        if len(_parts) == 3 and _parts[2] == "301" and "/story/" in _parts[0]:
+            _old = _parts[0].removeprefix("/story/").strip("/")
+            _new = _parts[1].removeprefix("/story/").strip("/")
+            _pairs.append((_old, _new))
+    if _pairs:
+        _objs = ", ".join('{"old": "%s", "new": "%s"}' % (o, n) for o, n in _pairs)
+        _four_redirect = (
+            "<script data-cfasync=\"false\">\n"
+            "(function(){\n"
+            "  var REDIRECTS = [%s];\n"
+            "  var slug = (location.pathname.match(/^\\/story\\/([^\\/]+)\\/?$/) || [])[1] || '';\n"
+            "  for (var i = 0; i < REDIRECTS.length; i++) {\n"
+            "    if (REDIRECTS[i].old === slug) { location.replace('/story/' + REDIRECTS[i].new + '/'); return; }\n"
+            "  }\n"
+            "})();\n"
+            "</script>"
+        ) % _objs
 four_body = ('<div class="kick">Error</div>'
  '<h1>Nothing here.</h1>'
  '<p class="lede">This page does not exist. That is a fact we are prepared to defend, '
  'and it is the nearest thing on this site to a guarantee. If you were looking for something, '
  'it is probably in the <a href="/archive/">archive</a>, the '
- '<a href="/markets/">markets</a>, or a company page below the tape. What it is not is here.</p>')
+ '<a href="/markets/">markets</a>, or a company page below the tape. What it is not is here.</p>'
+ + _four_redirect)
 open(os.path.join(STATIC,"404.html"),"w").write(
     layout("404 · Garbatrage","This page does not exist. It is probably in the archive or the markets.", four_body, f"{SITE}/404.html"))
-print("wrote static/404.html")
+_n_paircount = len(_pairs) if ("_pairs" in dir() and _pairs) else 0
+print(f"wrote static/404.html (embedded {_n_paircount} redirect pairs)")
 
 # prune files NOT in the canonical static/ spec
 import os as _os
