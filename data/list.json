@@ -6,7 +6,7 @@
   "worth": "$4.2B",
   "delta": 0.8,
   "pct": 0.8,
-  "reason": "Bought a painting for a song, appraised it for the orchestra.",
+  "reason": "His portrait sold for more than it was thought to be worth.",
   "updated": "2026-11-17"
  },
  {
@@ -26,7 +26,7 @@
   "worth": "$3.4B",
   "delta": -1.2,
   "pct": -1.2,
-  "reason": "The yacht hull is rotting, and the trust just says no.",
+  "reason": "A survey found the yacht hull was rotten.",
   "updated": "2026-11-17"
  },
  {
@@ -46,7 +46,7 @@
   "worth": "$2.6B",
   "delta": 0.5,
   "pct": 0.5,
-  "reason": "Found a second marble seam where the accountants swore there was none.",
+  "reason": "A second seam was found in the marble quarry.",
   "updated": "2026-11-17"
  },
  {
@@ -56,7 +56,7 @@
   "worth": "$2.3B",
   "delta": -0.6,
   "pct": -0.6,
-  "reason": "Two nephews married, and somebody had to pay for both.",
+  "reason": "Two nephews had weddings, and the host paid for both.",
   "updated": "2026-11-17"
  },
  {
@@ -206,7 +206,7 @@
   "worth": "$290M",
   "delta": 0.2,
   "pct": 0.2,
-  "reason": "A ski chalet rented out all season on the future's tab.",
+  "reason": "The ski chalet rented out for the full season.",
   "updated": "2026-11-17"
  },
  {
