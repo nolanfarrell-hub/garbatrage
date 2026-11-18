@@ -549,9 +549,8 @@ def build_home():
     _movers = [r for r in _lst if r.get("reason")]
     _lst_lines = ""
     for r in _movers[:5]:
-        _up = (r.get("delta") or 0) > 0
         _lst_lines += (f'<a class="li-it" href="/list/#{esc(r["slug"])}">'
-                       f'<span class="nm">{esc(r["name"])}<span class="pct {"up" if _up else "dn"}">{r["pct"]:+.1f}%</span></span>'
+                       f'<span class="nm">{esc(r["name"])}</span>'
                        f'<span class="why">{esc(r["reason"])}</span></a>')
     _net = sum(1 for r in _movers if (r.get("delta") or 0) > 0) > sum(1 for r in _movers if (r.get("delta") or 0) < 0)
     _agg_cls = "up" if _net else "dn"; _agg_arrow = "▲" if _net else "▼"; _agg_sign = "+" if _net else "−"
@@ -670,17 +669,11 @@ def build_list():
         _lst = []
     rows = ""
     for r in _lst:
-        _up = (r.get("delta") or 0) > 0
-        _dn = (r.get("delta") or 0) < 0
-        _chg = ""
-        if _up: _chg = f'<b class="up">{r["pct"]:+.1f}%</b>'
-        elif _dn: _chg = f'<b class="dn">{r["pct"]:+.1f}%</b>'
         _why = f'<p class="why">{esc(r["reason"])}</p>' if r.get("reason") else ""
         rows += (f'<div class="li-row" id="{esc(r["slug"])}">'
                  f'<span class="r">{r["rank"]:02}</span>'
                  f'<div><h3>{esc(r["name"])}</h3>{_why}</div>'
-                 f'<span class="w">{esc(r["worth"])}</span>'
-                 f'<span class="c">{_chg}</span></div>')
+                 f'<span class="w">{esc(r["worth"])}</span></div>')
     body = (f'<div class="kick">The List</div><h1>The List.</h1>'
             f'<p class="lede">Twenty-five people, ranked by worth, in a market that does not exist. '
             f'Three to five move each day; the rest hold steady, the way money does.</p>'
