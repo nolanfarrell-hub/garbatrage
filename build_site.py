@@ -27,23 +27,7 @@ def vol(s): return datetime.fromisoformat(s).strftime("%Y")
 # Real-time tape (TradingView widget, consent-gated load; see layout <script>).
 # The fiction stays in the GIA rail panel and /markets/. Terms() already names
 # TradingView as a provider, so this makes the legal copy true.
-TAPE_CFG = {
-    "symbols": [
-        {"proName": "CAPITALCOM:SPX500", "title": "S&P 500"},
-        {"proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100"},
-        {"proName": "TVC:GOLD",        "title": "Gold"},
-        {"proName": "TVC:USOIL",       "title": "WTI"},
-        {"proName": "BITSTAMP:BTCUSD", "title": "BTC"},
-        {"proName": "FX:EURUSD",       "title": "EUR/USD"},
-        {"proName": "CAPITALCOM:DXY", "title": "Dollar Index"},
-        {"proName": "CAPITALCOM:VIX", "title": "VIX"},
-    ],
-    "showSymbolLogo": False,
-    "colorTheme": "dark",
-    "isTransparent": True,
-    "displayMode": "compact",
-    "locale": "en",
-}
+from site_tape import TAPE_CFG
 TAPE_JSON = json.dumps(TAPE_CFG, separators=(",", ":"))
 
 TAPE = '''<div class="tape" aria-label="Live market tape">
