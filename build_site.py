@@ -825,13 +825,26 @@ for s in stories:
             prop_slug = prop_slug.rsplit(".", 1)[0]
         if prop_slug not in props_by_slug:
             prop_warn_slugs.append(prop_slug)
-    # every hero needs an alt, and it must be 4..12 words
+    # every hero needs an alt: 4..12 words AND sentence register — a leading
+    # article (A/An/The) + a spatial-anchored clause — so a noun-pile like
+    # "tag with red check beside blank sign and man at podium" fails the way a
+    # keyword list would. Matches the house rule and the prop-index register.
+    SPATIAL = re.compile(r"\b(in|into|on|at|beside|behind|before|between|below|above|under|beneath|near|toward|across|against|through|inside|outside|left of|right of|with|from|onto|downto|alongside|over)\b", re.I)
     a = (s.get("image_alt") if s.get("image_alt") else
          (props_by_slug.get(art.rsplit("/", 1)[-1].rsplit(".", 1)[0]) if art.startswith("/props/") else None))
+    def _sentence(t):
+        # Leading article OR a sentence-initial count word (Two/Three/Twelve/
+        # Four) — both open a proper spoken clause. A bare lowercased noun-pile
+        # opens neither and fails.
+        if not re.match(r"^(A|An|The|Two|Three|Four|Twelve)\b", t.strip()):
+            return False
+        return bool(SPATIAL.search(t))
     if not a:
         alt_fail.append((s["slug"], "missing"))
     elif not (4 <= len(a.split()) <= 12):
         alt_fail.append((s["slug"], f"{len(a.split())}w:{a[:40]}"))
+    elif not _sentence(a):
+        alt_fail.append((s["slug"], f"not-sentence:{a[:40]}"))
 if alt_fail:
     for slug, why in alt_fail:
         print(f"ALT FAIL: {slug} — {why}")
