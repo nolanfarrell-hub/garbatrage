@@ -749,6 +749,12 @@ if (ROOT / "media").exists():
     if (OUT / "media").exists():
         shutil.rmtree(OUT / "media")
     shutil.copytree(ROOT / "media", OUT / "media")
+# props/ (the reusable editorial art bank) likewise lives outside static/; carry it
+# so stories that reference a prop by slug resolve their image path in the build.
+if (ROOT / "props").exists():
+    if (OUT / "props").exists():
+        shutil.rmtree(OUT / "props")
+    shutil.copytree(ROOT / "props", OUT / "props")
 print(f"built {len(stories)} stories, {len(cons)} companies, {len(gia['sectors'])} sectors, media carried")
 
 # ---------- alt-text warnings (non-blocking) ----------
