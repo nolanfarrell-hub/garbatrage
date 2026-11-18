@@ -186,7 +186,7 @@ def thumb(s):
         fig = s.get("figure") or s.get("figcap") or "THE NUMBER"
         return (f'<div class="thumb thumb-fig"><span class="figtag">TRUE FIGURE</span>'
                 f'<span class="fignum">{esc(fig)}</span></div>')
-    return f'<img src="{img(s)}" alt="" loading="lazy">'
+    return f'<img src="{img(s)}" alt="{esc(resolve_alt(s) or "")}" loading="lazy">'
 
 def resolve_alt(s):
     """Resolve alt text for story hero. Priority: image_alt field, props index, None."""
@@ -209,8 +209,7 @@ def build_story(s):
     art = img(s)
     alt_text = resolve_alt(s) or ""
     url = f"{SITE}/story/{s['slug']}/"
-    bav = (f'<span class="av">{esc(s.get("av") or av(s["author"]))}</span>'
-           if not s.get("column") else "")  # column: speaker byline, no avatar
+    bav = f'<span class="av">{esc(s.get("av") or av(s["author"]))}</span>'
     # text-only TRUE FIGURE card (no image): a big figure with nothing behind it.
     # brief: the daily-cut shape — big figure + a rule + TRUE FIGURE, one graf, no
     # closer. Same figcard, plus a rule above the body.
@@ -493,7 +492,7 @@ def _home_quotes():
 FOOTER = """<footer><div class="fg">
 <div><h4>Markets</h4><a href="/markets/">Indexes</a><a href="/archive/">Archive</a><a href="/desk/">The Desk</a></div>
 <div><h4>Company</h4><a href="/about/">About</a><a href="/press/">Press</a><a href="mailto:info@garbatrage.com">Contact</a></div>
-<div><h4>Resources</h4><a href="/methodology/">Methodology</a><a href="/archive/">All stories</a><a href="/rss.xml">RSS</a></div>
+<div><h4>Resources</h4><a href="/methodology/">Methodology</a><a href="/archive/">All stories</a><a href="/rss.xml">RSS</a><a href="https://twitter.com/garbatrage" rel="me" target="_blank">X</a><a href="https://warpcast.com/garbatrage" rel="me" target="_blank">Farcaster</a></div>
 <div><h4>Legal</h4><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a></div>
 </div><div class="legal">GARBATRAGE is a satirical publication presented in the style of a professional financial news desk.
 All quotes, indexes, tickers and figures are fabricated; any resemblance to real securities, people or firms is coincidental, or deliberate.
@@ -504,8 +503,7 @@ Garbatrage Media Group LLC · <a href="mailto:info@garbatrage.com">info@garbatra
 def build_home():
     # Home shows the NEWEST six stories (lead + 5 briefs), by index, no bleed.
     lead = stories[0]
-    lbav = (f'<span class="av">{esc(lead.get("av") or av(lead["author"]))}</span>'
-            if not lead.get("column") else "")  # column lead: no avatar
+    lbav = f'<span class="av">{esc(lead.get("av") or av(lead["author"]))}</span>'
     briefs = stories[1:6]
     movers = sorted(cons, key=lambda c: c["change"], reverse=True)[:3]
     # Weighted rotation: street voices double-weighted (50% of days) so the
@@ -578,7 +576,7 @@ def build_home():
     if _vids:
         _cards = "".join(
             f'<a class="dmin" href="{esc(v["href"])}" target="_blank" rel="noopener" '
-            f'data-video="{esc(v["id"])}"><img src="{esc(v["thumb"])}" alt="" loading="lazy">'
+            f'data-video="{esc(v["id"])}"><img src="{esc(v["thumb"])}" alt="{esc(v.get("channel","")+" video thumbnail.").strip()}" loading="lazy">'
             f'<span><b>{esc(v["channel"])}</b>{esc(v["title"])}</span></a>'
             for v in _vids)
         dump_strip = (f'<div class="dump-wrap">'
