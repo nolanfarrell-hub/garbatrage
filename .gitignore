@@ -8,3 +8,5 @@ spot*/
 *.mp3
 
 # built output (regenerate with build_site.py, do not hand-edit)
+.wrangler/
+worker/dist/

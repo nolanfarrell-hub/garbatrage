@@ -179,6 +179,15 @@ def write(rel, content, raw=False):
 def img(s):
     return s.get("image") or f'/media/img/{s["slug"]}.png'
 
+def thumb(s):
+    """Card-thumbnail markup: renders the art for a normal story, or a mini TRUE
+    FIGURE block for a text-only brief/column (which has no image file)."""
+    if s.get("text_only") or s.get("brief"):
+        fig = s.get("figure") or s.get("figcap") or "THE NUMBER"
+        return (f'<div class="thumb thumb-fig"><span class="figtag">TRUE FIGURE</span>'
+                f'<span class="fignum">{esc(fig)}</span></div>')
+    return f'<img src="{img(s)}" alt="" loading="lazy">'
+
 def resolve_alt(s):
     """Resolve alt text for story hero. Priority: image_alt field, props index, None."""
     if s.get("image_alt"):
@@ -203,20 +212,21 @@ def build_story(s):
     bav = (f'<span class="av">{esc(s.get("av") or av(s["author"]))}</span>'
            if not s.get("column") else "")  # column: speaker byline, no avatar
     # text-only TRUE FIGURE card (no image): a big figure with nothing behind it.
+    # brief: the daily-cut shape — big figure + a rule + TRUE FIGURE, one graf, no
+    # closer. Same figcard, plus a rule above the body.
     fig_card = (f'<div class="figcard"><span class="figtag">TRUE FIGURE</span>'
                 f'<div class="fignum">{esc(s.get("figure",""))}</div>'
                 f'<div class="figcap">{esc(s.get("figcap","The number, with nothing behind it."))}</div></div>'
-                if s.get("text_only") else
+                + ('<hr class="briefrule">' if s.get("brief") else '')
+                if (s.get("text_only") or s.get("brief")) else
                 f'<figure class="artbox"><img class="art-img" src="{art}" alt="{esc(alt_text)}" loading="lazy"></figure>')
     share = (f'<div class="share"><a href="https://twitter.com/intent/tweet?text={quote(s["title"])}&url={quote(url)}" target="_blank" rel="noopener">Post to X</a>'
              f'<a href="https://warpcast.com/~/compose?text={quote(s["title"])}&embeds[]={quote(url)}" target="_blank" rel="noopener">Cast</a>'
              f'<a href="{esc(url)}" data-copy>Copy link</a></div>')
-    # E-01/E-02 house signature: wire pieces close with "Pays: X." The closer
-    # is the last line that names who eats it — the thing that makes the site
-    # recognisable. Columns carry their own-voice closer (E-waiver) so they
-    # never get a Pays line bolted on.
+    # E-01/E-02 house signature: wire pieces close with "Pays: X." Columns carry
+    # their own closer (E-waiver); briefs are one graf with no closer (waived too).
     closer_sig = (''
-        if s.get("column")
+        if (s.get("column") or s.get("brief"))
         else f'<p class="closer">{esc(s.get("closer", ""))}</p>')
     jsonld = {
         "type": "NewsArticle",
@@ -573,7 +583,7 @@ def build_home():
                       f'<a class="dump-more" href="/dump/">Open the Dump →</a>'
                       f'</div>')
     brief_html = "".join(
-        f'<a class="item" href="/story/{s["slug"]}/"><div class="thumb"><img src="{img(s)}" alt="" loading="lazy"></div><div>'
+        f'<a class="item" href="/story/{s["slug"]}/"><div class="thumb">{thumb(s)}</div><div>'
         f'<h3>{esc(s["title"])}</h3><p>{esc(s["dek"])}</p>'
         f'<div class="meta">{esc(s["desk"])} · {esc(s["author"])}</div></div></a>'
         for s in briefs)
@@ -587,7 +597,7 @@ def build_home():
   <div class="kick">{esc(lead["desk"])}</div>
   <h1><a href="/story/{lead["slug"]}/">{esc(lead["title"])}</a></h1>
   <p class="dek">{esc(lead["dek"])}</p>
-  <a class="hero" href="/story/{lead["slug"]}/"><img src="{img(lead)}" alt="" loading="lazy"></a>
+  <a class="hero" href="/story/{lead["slug"]}/">{thumb(lead)}</a>
   <div class="by">{lbav}<span><b>{esc(lead["author"])}</b> · {esc(lead.get("role", ""))} · {lead.get("read", 4)} min read</span></div>
   <div class="sec">Markets Brief</div>
   {brief_html}
@@ -757,6 +767,22 @@ if (ROOT / "props").exists():
     shutil.copytree(ROOT / "props", OUT / "props")
 print(f"built {len(stories)} stories, {len(cons)} companies, {len(gia['sectors'])} sectors, media carried")
 
+# ---------- daily volume cap (warning, not fail) ----------
+# Hard number: 7 full pieces per date. The rest run as briefs. This is a WARNING —
+# the archive already carries >7 on historic overflow days, so it must not abort.
+from collections import defaultdict as _dd
+_days = _dd(int)
+for _s in stories:
+    _days.setdefault(_s["date"], 0)
+    _days[_s["date"]] += 1
+_vol = [(d, n) for d, n in sorted(_days.items()) if n > 7]
+if _vol:
+    print("VOLUME WARN: days over the 7-piece cap:")
+    for d, n in _vol:
+        print(f"  {d}: {n} pieces (cap 7)")
+else:
+    print("VOLUME OK: no day exceeds 7 pieces")
+
 # ---------- alt-text hard checks ----------
 # Every hero must have authored alt text; a prop reference must resolve; the image
 # must live under props/ or media/img/; alt must be 4..12 words. Any violation aborts.
@@ -764,7 +790,7 @@ alt_fail = []
 prop_warn_slugs = []
 path_fail = []
 for s in stories:
-    if s.get("text_only"):
+    if s.get("text_only") or s.get("brief"):
         continue
     art = img(s)
     # path constraint: story art must live under the two sanctioned roots
