@@ -2399,7 +2399,6 @@
    "earnings"
   ],
   "column": true,
-  "text_only": true,
   "figure": "$2.1 billion",
   "figcap": "Paid to be a different company. Written off as a refresh.",
   "body": "<p>I am Emmett Voss, a clerk in the goodwill room, and I write the numbers down as they un-matter. On Monday the company decided the $2.1 billion it had paid to be a different company was an error that had finally been noticed, so we wrote it down to zero and called the write-off a refresh, like a coat of paint on a building being demolished. Nobody in the build room believes the number anymore. That is my job to believe it for them. I type it as an asset, then I type it as a loss, and I am the one who has to look at both numbers with the same hands. My supervisor calls it not a loss but an alignment, the word we use for a figure that has changed its mind. When goodwill goes, you are not losing value; you are admitting you were never paying for value — you were paying for the memory of having wanted it. The company is worth $18.3 billion without the goodwill it paid for, which is what it was before it got ambitious.</p>\n\n<p>My prayer is a ledger. It writes: paid. It writes: gone. It never writes: why. Fuck.</p>",
@@ -2408,7 +2407,8 @@
   "pays": "Emmett pays",
   "verb": "writes",
   "figure_role": "level",
-  "quotes": []
+  "quotes": [],
+  "text_only": true
  },
  {
   "title": "Comp Package Is a Hand Job",

@@ -223,11 +223,17 @@ def build_story(s):
     share = (f'<div class="share"><a href="https://twitter.com/intent/tweet?text={quote(s["title"])}&url={quote(url)}" target="_blank" rel="noopener">Post to X</a>'
              f'<a href="https://warpcast.com/~/compose?text={quote(s["title"])}&embeds[]={quote(url)}" target="_blank" rel="noopener">Cast</a>'
              f'<a href="{esc(url)}" data-copy>Copy link</a></div>')
-    # E-01/E-02 house signature: wire pieces close with "Pays: X." Columns carry
-    # their own closer (E-waiver); briefs are one graf with no closer (waived too).
-    closer_sig = (''
-        if (s.get("column") or s.get("brief"))
-        else f'<p class="closer">{esc(s.get("closer", ""))}</p>')
+    # Closer policy, split by shape so neither eats the other:
+    #  - WIRE (E-02): bolted-on house signature "Pays: X."
+    #  - COLUMN: E-waiver — the narrator's own closing line lives in the BODY;
+    #    nothing is bolted on after it.
+    #  - BRIEF: no closer at all, not even a body-held one. One graf, figure, rule.
+    if s.get("brief"):
+        closer_sig = ''          # briefs never close with a line
+    elif s.get("column"):
+        closer_sig = ''          # column ends on its own voice, already inside body
+    else:
+        closer_sig = f'<p class="closer">{esc(s.get("closer", ""))}</p>'
     jsonld = {
         "type": "NewsArticle",
         "name": s["title"],
