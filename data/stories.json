@@ -2732,43 +2732,141 @@
   "body": "<p>Rosa Nduta, 62, lifts her can to the curb on Thursday the way she always has, and the hauler bills her $38 more this month than last. The truck still stops, the arm still lifts, and the can goes into the same hopper. The company says the rate now covers the route. Rosa asks which end of the route the money covers.</p>\n\n<p>The tidy haul is the one thing she pays for outright, after the tax and the county fee and the bag surcharge. She keeps the receipt in the drawer with the ones from last year, and the numbers do not match. Rosa keeps a shit ledger of what the curb costs now. Last year the same can cost her $19 off the curb. This year the number is up again, and the service is not. Her neighbor pays the same rate and leaves the same three bags, and Rosa gives him her receipt to hold up next to his own.</p>\n\n<blockquote>“If the truck comes either way, the billing is what you notice, $38 at a time. The route covers itself.”<br><br>&mdash; Rosa Nduta, 62, who lives off the route</blockquote>\n\n<p>Rosa lifts the can with both hands and pays it anyway. The route covers someone, and it is not her route. Fuck.</p>"
  },
  {
-  "title": "The Missing Bus Shelter Is Now a $9 Fee",
-  "dek": "The stop is a bench and the fare is up for the cover.",
-  "slug": "the-missing-bus-shelter-is-now-a-9-fee",
-  "desk": "prices",
+  "title": "Whitaker Halsey Poured $2 Billion Into a 25% Hole",
+  "dek": "A falling number is an invitation, and he answered.",
+  "slug": "whitaker-halsey-poured-2-billion-into-a-25-percent-hole",
+  "desk": "etfs",
   "author": "Tessa Nguyen",
   "role": "Economy & Data Reporter",
   "av": "TN",
   "date": "2026-11-19",
+  "read": 2,
+  "tags": [
+   "etfs"
+  ],
+  "column": false,
+  "brief": true,
+  "first_sentence": "Whitaker Halsey poured $2 billion into a bitcoin ETF that lost a quarter of its value this year, because the ultra-wealthy treat a falling number the way a shoebox treats a pair of shoes it has already decided it likes: as an invitation.",
+  "closer": "Whoever bought the dip.",
+  "pays": "whoever bought the dip",
+  "verb": "pour",
+  "figure_role": "change",
+  "quotes": [],
+  "quote_costs": [],
+  "dependencies": {
+   "pun_in_lede": false,
+   "swear_is_joke": false
+  },
+  "figure": "$2B in, -25% on the year",
+  "figcap": "The conviction that arrives to meet the loss.",
+  "body": "<p>Whitaker Halsey poured $2 billion into a bitcoin ETF that lost a quarter of its value this year, because the ultra-wealthy treat a falling number the way a shoebox treats a pair of shoes it has already decided it likes: as an invitation. The fund fell 25 percent and the money arrived to meet it. The buyers call it conviction. What it is is a holding pattern around a number that has not yet come back, maintained at enormous expense by people who cannot stand to miss the turn. Shit, the turn will come when it comes.</p>"
+ },
+ {
+  "title": "Gold Crosses $4,000 as Preston Sold at $3,800",
+  "dek": "The gap between $3,800 and $4,000 costs him a summer home.",
+  "slug": "gold-crosses-4000-after-a-man-sold-at-3800",
+  "desk": "markets",
+  "author": "Marcus Reid",
+  "role": "Markets Anchor · NYSE Floor",
+  "av": "MR",
+  "date": "2026-11-19",
   "read": 4,
   "tags": [
-   "prices"
+   "markets"
   ],
   "column": false,
   "brief": false,
-  "first_sentence": "Kelechi Obi, 38, rides the 44 twice a day, and the fare is up to $3 this spring while the shelter at the corner stop was removed in December.",
-  "closer": "Pays: Kelechi. The shelter is gone.",
-  "pays": "Kelechi",
-  "verb": "funds",
+  "first_sentence": "Preston Cavell, 66, sold twenty kilos of bullion in the spring when it was trading around $3,800 an ounce, on advice from a planner who said the metal had had its run and that his money belonged somewhere newer.",
+  "closer": "Pays: Preston, once more, having chosen wrong.",
+  "pays": "Preston",
+  "verb": "crosses",
   "figure_role": "level",
   "quotes": [
-   "We pay $3 and stand wetter, and they call the difference service."
+   "The hurt is that he chose, and the $3,800 gap has spent the whole year being right."
   ],
   "quote_costs": [
-   "$3"
+   "$3,800"
   ],
   "dependencies": {
    "pun_in_lede": false,
    "swear_is_joke": false
   },
-  "image": "/props/straight/bench-beside-closed-booth.png",
+  "image": "/props/straight/empty-trolley-bay.png",
   "image_alt": null,
-  "body": "<p>Kelechi Obi, 38, rides the 44 twice a day, and the fare is up to $3 this spring while the shelter at the corner stop was removed in December, so he waits at a bare bench in the rain for the more expensive bus. The transit board calls the $0.50 fare bump a service investment and does not list the shelter among the investments. He has stood at the bare bench through two downpours.</p>\n\n<p>The board calls it ridership pricing. Kelechi calls it paying for a roof that used to be there. The fare and the shelter moved in opposite directions, and the direction of the money is the only part of the route that improved. The bench is bolted where the shelter stood. Shit, the 44 still comes.</p>"
+  "body": "<p>Preston Cavell, 66, sold twenty kilos of bullion in the spring when it was trading around $3,800 an ounce, on advice from a planner who said the metal had had its run and that his money belonged somewhere newer. The newer place was an AI fund, since down 18 percent, while gold has climbed past $4,000 — a gap between what Preston sold and where it now sits that he has recalculated every day since at roughly the level of a solidly built summer home.\nHe does not need the money. That is not the point, and he will tell you loudly and often while checking the price. The hurt is not the loss. The hurt is that he chose, and the metal that everyone said was finished has spent the whole year pointing at him and being right.\nThe guy who sold safe money for fancier money calls the whole spread shit and keeps staring at it like the metal owes him an apology.</p>"
  },
  {
-  "title": "One Worn Key Opens a Door She Cannot Afford",
-  "dek": "The access card is $4 a month and the elevator is broken.",
-  "slug": "one-worn-key-opens-a-door-she-cannot-afford",
+  "title": "Meredith Vane Takes Her Buyout, Calls It a Choice",
+  "dek": "The buyout was voluntary. The runway cost her own salary.",
+  "slug": "meredith-vane-takes-her-buyout-calls-it-a-choice",
+  "desk": "earnings",
+  "author": "Jake Sullivan",
+  "role": "Breakfast Anchor · Before The Open",
+  "av": "JS",
+  "date": "2026-11-19",
+  "read": 4,
+  "tags": [
+   "earnings"
+  ],
+  "column": false,
+  "brief": false,
+  "first_sentence": "Meredith Vane, 52, took Google's buyout in the second extension and told herself she chose it, the way a passenger who has watched three buses leave says she preferred to walk.",
+  "closer": "Pays: Meredith Vane.",
+  "pays": "Meredith Vane",
+  "verb": "takes",
+  "figure_role": "level",
+  "quotes": [
+   "The $1.8 million was the best price I could name for my own shelf life."
+  ],
+  "quote_costs": [
+   "shelf life"
+  ],
+  "dependencies": {
+   "pun_in_lede": false,
+   "swear_is_joke": false
+  },
+  "image": "/props/straight/empty-bicycle-rack-at-dusk.png",
+  "image_alt": null,
+  "body": "<p>Meredith Vane, 52, took Google&#x27;s buyout in the second extension and told herself she chose it, the way a passenger who has watched three buses leave says she preferred to walk. The company called the offers voluntary every time it extended the deadline, and it extended the deadline until enough people believed the word described their own decision. Meredith was one of them.</p>\n\n<p>The $1.8 million package Google handed her was the same money she had helped earn over twenty-two years, packaged as a gift. She calls the whole thing shit with a bow and signs anyway, because the check clears either way. The company needed fewer salaries on the board, and Meredith needed a story that let her leave.</p>"
+ },
+ {
+  "title": "ING Unveils €1.65 Billion Buyback and 400 Job Cuts",
+  "dek": "Arthur Winthrop, 59, signs his own exit and calls the redundancy a graceful rotation.",
+  "slug": "ing-unveils-165-billion-buyback-and-400-job-cuts",
+  "desk": "earnings",
+  "author": "Elena Marsh",
+  "role": "Head of Research",
+  "av": "EM",
+  "date": "2026-11-19",
+  "read": 4,
+  "tags": [
+   "earnings"
+  ],
+  "column": false,
+  "brief": false,
+  "first_sentence": "Arthur Winthrop, 59, signs the exit memo that makes 400 roles redundant and calls his own departure a graceful rotation, the same week ING announced a €1.65 billion buyback from the same part of the balance sheet that used to pay people.",
+  "closer": "Pays: Arthur Winthrop, who called it a rotation.",
+  "pays": "Arthur Winthrop",
+  "verb": "unveils",
+  "figure_role": "level",
+  "quotes": [
+   "A €1.65 billion buyback and a rotation notice in the same week is just good housekeeping."
+  ],
+  "quote_costs": [
+   "balance sheet"
+  ],
+  "dependencies": {
+   "pun_in_lede": false,
+   "swear_is_joke": false
+  },
+  "image": "/props/straight/office-chair-at-empty-table.png",
+  "image_alt": null,
+  "body": "<p>Arthur Winthrop, 59, signs the exit memo that makes 400 roles redundant and calls his own departure a graceful rotation, the same week ING announced a €1.65 billion buyback from the same part of the balance sheet that used to pay people. The two numbers sit in different paragraphs of the press release but come from the same ledger. The buyback costs the bank €1.65 billion and pays the shareholders who will still be there after the 400 have left. Winthrop calls the whole spread a restructuring and holds the door. The buyback is a machine that feeds itself. The cuts are a machine that feeds the buyback. The bank calls the whole thing streamlining, and &#x27;streamlining&#x27; is just the word the bank uses so the memo does not have to say fired, which is the bank&#x27;s whole approach to language: make the number of people smaller and the fucking sentence cleaner.</p>"
+ },
+ {
+  "title": "The Fed Holds at 3.75% and Calls It Patience",
+  "dek": "December's hike is 93 percent priced in. Rich borrowers read it as permission.",
+  "slug": "the-fed-holds-at-375-and-calls-it-patience",
   "desk": "rates",
   "author": "Priya Sharma",
   "role": "Washington Bureau, Fed & Rates, plus household costs (insurance, mortgages)",
@@ -2780,16 +2878,50 @@
   ],
   "column": false,
   "brief": false,
-  "first_sentence": "Sade Ajayi, 40, pays $4 a month for the access key to her building's service door, and the worn button on the keypad is the one everyone presses.",
-  "closer": "Pays: Sade. The elevator is down.",
-  "pays": "Sade",
-  "verb": "opens",
+  "first_sentence": "Tristan Overman III, 47, of Greenwich, floated $12 million at floating rates and calls the Fed's patience permission — the $187,000 a quarter bill is a flex, a sign of strength that says the hike is not a risk but the price of having borrowed right.",
+  "closer": "Pays: Tristan Overman, once the patience expires.",
+  "pays": "Tristan Overman",
+  "verb": "holds",
   "figure_role": "level",
   "quotes": [
-   "The card is $4 and the elevator is nothing, and they bill the door for the lift."
+   "Patience is the word for the hike you have already decided on."
   ],
   "quote_costs": [
-   "$4"
+   "patience"
+  ],
+  "dependencies": {
+   "pun_in_lede": false,
+   "swear_is_joke": false
+  },
+  "image": "/props/straight/closed-steel-gate-and-padlock.png",
+  "image_alt": null,
+  "body": "<p>Tristan Overman III, 47, of Greenwich, floated $12 million at floating rates and calls the Fed&#x27;s patience permission — the $187,000 a quarter bill is a flex, a sign of strength that says the hike is not a risk but the price of having borrowed right. The futures priced a 93 percent chance of a December quarter-point hike two weeks ago. The press release says the Committee is patient, which is Fed for we are raising in December. Everyone in the front row knows which quarter point the patience is about.\nThis is how the world&#x27;s most powerful monetary authority communicates an actual rate decision by refusing to say it, over a phrase that means the decision was already made. Tristan Overman is being patient along with the Fed, by which the Fed means he can take the hike until January, when the next one lands.\nThe pause is real for exactly one more press conference. Then patience costs him $187,000 a quarter in extra interest, which is the fee for believing a rumor dressed as a policy statement, the whole goddamned thing. He tells the partners the philadelphia curve is his personal party trick and that a real borrower does not flinch. The flinch is the bill, arriving on schedule, and Tristan will tell you he never flinched once. The patience is the whole fee, and he pays it standing, and there is not a shred of shit in him for it.</p>"
+ },
+ {
+  "title": "Roland Berkowitz Treats Netflix's Dip as a Doorbuster Sale",
+  "dek": "He bought the stock at $146. The company just spent $4.8 billion buying it, too.",
+  "slug": "roland-berkowitz-treats-netflix-dip-as-doorbuster",
+  "desk": "etfs",
+  "author": "Tessa Nguyen",
+  "role": "Economy & Data Reporter",
+  "av": "TN",
+  "date": "2026-11-19",
+  "read": 4,
+  "tags": [
+   "etfs"
+  ],
+  "column": false,
+  "brief": false,
+  "first_sentence": "Roland Berkowitz, 61, who has bought Netflix into every dip since it lost its first DVD, just watched the company announce its biggest buyback on a stock down 50% and called it a personal doorbuster.",
+  "closer": "Pays: the canceled show.",
+  "pays": "the canceled show",
+  "verb": "treats",
+  "figure_role": "change",
+  "quotes": [
+   "It's $4.8 billion of the company."
+  ],
+  "quote_costs": [
+   "$4.8 billion"
   ],
   "dependencies": {
    "pun_in_lede": false,
@@ -2797,46 +2929,12 @@
   },
   "image": "/props/straight/keypad-with-worn-button.png",
   "image_alt": null,
-  "body": "<p>Sade Ajayi, 40, pays $4 a month for the access key to her building&#x27;s service door, and the worn button on the keypad is the one everyone presses. The elevator has been down a month, the stairs are the only way up, and the access key still bills her every month for the privilege of a door that opens onto the same broken lift. She presses the worn key because the other buttons do not work.\nThe provider calls it a keyless access fee. Sade calls it a subscription to a locked door. The fee does not buy the elevator repair; it buys the card that lets her stand at the broken lift with her groceries. She pays it because the alternative is the alley door that does not lock.\n&quot;The card is $4 and the elevator is nothing, and they bill the door for the lift.&quot;\nSade pays the $4 and the stairs. Shit, the lift is still down.</p>"
+  "body": "<p>Roland Berkowitz, 61, who has bought Netflix into every dip since it lost its first DVD, just watched the company announce its biggest buyback on a stock down 50% and called it a personal doorbuster. The $4.8 billion repurchase means the company bought its own shares at the same discount Berkowitz has been riding since the last panic. He spent the afternoon refreshing his brokerage app and told his wife the stock is on sale again. He does not care about the content cuts. The show that lost its season is not his show. He is buying more, and the whole fucking thing is his now.</p>"
  },
  {
-  "title": "The Dead Plant Took Her Whole Utility Credit",
-  "dek": "The charge canceled the winter-heat discount.",
-  "slug": "the-dead-plant-took-her-whole-utility-credit",
-  "desk": "consumer",
-  "author": "Claire Reyes",
-  "role": "Debt & Fixed Income, plus consumer credit",
-  "av": "CR",
-  "date": "2026-11-19",
-  "read": 4,
-  "tags": [
-   "consumer"
-  ],
-  "column": false,
-  "brief": false,
-  "first_sentence": "Yolanda Adeyemi, 71, qualifies for her state's winter-heat discount, and the utility canceled it this season because an inspector found her window box plant was dry and called the unit not maintained.",
-  "closer": "Pays: Yolanda. The stem is bare now.",
-  "pays": "Yolanda",
-  "verb": "takes",
-  "figure_role": "change",
-  "quotes": [
-   "The plant was dead and now the $58 discount is too, and they counted the one against the other."
-  ],
-  "quote_costs": [
-   "$58"
-  ],
-  "dependencies": {
-   "pun_in_lede": false,
-   "swear_is_joke": false
-  },
-  "image": "/props/straight/window-box-with-one-dead-plant.png",
-  "image_alt": null,
-  "body": "<p>Yolanda Adeyemi, 71, qualifies for her state&#x27;s winter-heat discount, and the utility canceled it this season because an inspector found her window box plant was dry and called the unit not maintained. The discount was $58 a month. The dead plant cost her the winter. She has kept that plant bare for two years and the heat has never once canceled for it until the discount became the thing they inspect for.\nThe utility calls it a service condition. Yolanda calls it the fine print now reaching into the flower box. The plant was never part of the heat agreement; it became part of the heat agreement the month the money was on the line. She waters the bare stem anyway, because she cannot afford to fail the check twice.\n&quot;The plant was dead and now the discount is too, and they counted the one against the other.&quot;\nYolanda waters the stem. Shit, the winter.</p>"
- },
- {
-  "title": "A Board Seat Earns Eight Minutes a Month",
-  "dek": "The director files one agenda and takes home a retainer.",
-  "slug": "a-board-seat-earns-eight-minutes-a-month",
+  "title": "Disney Milks a Hundred Thousand Paychecks to Fatten Its Own Stock",
+  "dek": "The dividend is up a third and the dream is made of fewer, cheaper people.",
+  "slug": "disney-milks-a-hundred-thousand-paychecks-to-fatten-its-own-stock",
   "desk": "earnings",
   "author": "Omar Zayed",
   "role": "Corporate Governance Desk",
@@ -2848,125 +2946,23 @@
   ],
   "column": false,
   "brief": false,
-  "first_sentence": "Marcus Vane, 62, sits on a board that meets once a month for eight minutes and pays him a $9,000 retainer, and he loses money by refinishing the hours he does not spend there.",
-  "closer": "Pays: Marcus. The seat stays warm.",
-  "pays": "Marcus",
-  "verb": "earns",
+  "first_sentence": "Whitney Ashby, 54, who inherited 40,000 Disney shares and never once looked at a headcount, watched her quarterly dividend rise 33 percent the same week the parks raised ticket prices and the company confirmed more layoffs.",
+  "closer": "Pays: Whitney, at a gate she never uses.",
+  "pays": "Whitney",
+  "verb": "milks",
   "figure_role": "level",
   "quotes": [
-   "Eight minutes is more than the job takes and the $9,000 is for what does not."
+   "$3 billion in savings and the check still arrives. That is a good quarter."
   ],
   "quote_costs": [
-   "$9,000"
+   "$3 billion"
   ],
   "dependencies": {
    "pun_in_lede": false,
    "swear_is_joke": false
   },
-  "image": "/props/straight/office-chair-at-empty-table.png",
+  "image": "/props/straight/folded-newspaper-on-a-cafe-table.png",
   "image_alt": null,
-  "body": "<p>Marcus Vane, 62, sits on a board that meets once a month for eight minutes and pays him a $9,000 retainer, and he loses money by refinishing the hours he does not spend there. The meeting is a formality by design: the real decisions were signed before he dialed in, and the agenda is approved in the time it takes him to set up his computer. He collects the retainer and cannot name the last motion he read.\nThe company calls it governance. Marcus calls it the fee for having a pulse in the room, and he is candid about why he stays. He used to have opinions. The retainer is now larger than any opinion he has ever held, and the check is the reason the chair is warm.\n&quot;Eight minutes is more than the job takes and the retainer is for what does not,&quot; he says.\nMarcus keeps the seat and the check clears. Shit, he set a reminder for the meeting.</p>"
- },
- {
-  "title": "Parking Ticket Stack Now Worth a Deposit",
-  "dek": "The city sells the unpaid stack to a collector who bills her interest.",
-  "slug": "parking-ticket-stack-now-worth-a-deposit",
-  "desk": "credit",
-  "author": "Dana Whitfield",
-  "role": "Portfolio Strategy",
-  "av": "DW",
-  "date": "2026-11-19",
-  "read": 4,
-  "tags": [
-   "credit"
-  ],
-  "column": false,
-  "brief": false,
-  "first_sentence": "Rita Eze, 49, has a stack of eleven old parking tickets she stopped opening, and the city sold the stack to a collector who now bills her the interest on each one as if the fines were a loan.",
-  "closer": "Pays: Rita. The pile bills for waiting.",
-  "pays": "Rita",
-  "verb": "sells",
-  "figure_role": "change",
-  "quotes": [
-   "The tickets are old and the $1,140 interest is new, and they bill the pile for waiting."
-  ],
-  "quote_costs": [
-   "$1,140"
-  ],
-  "dependencies": {
-   "pun_in_lede": false,
-   "swear_is_joke": false
-  },
-  "image": "/props/straight/stack-of-parking-tickets.png",
-  "image_alt": null,
-  "body": "<p>Rita Eze, 49, has a stack of eleven old parking tickets she stopped opening, and the city sold the stack to a collector who now bills her the interest on each one as if the fines were a loan. The original tickets totaled $640. The collector&#x27;s demand is $1,140 and rising, because the interest starts the day the ticket is written and compounds through the years she ignored it. She has the stack in the glovebox.\nThe city calls it debt recovery. Rita calls it the fine that learned to breed. She paid one ticket in full in 2023 and cannot prove it because the collector sent the letter to the old address, and the old address is the one the city keeps. The stack sits there. Shit, the pile keeps its own compound interest.\n&quot;The tickets are old and the interest is new, and they bill the pile for waiting.&quot;</p>"
- },
- {
-  "title": "How the Empty Rack Pays the Landlord",
-  "dek": "The bike spot rents for $30 a month and holds nothing.",
-  "slug": "how-the-empty-rack-pays-the-landlord",
-  "desk": "estate",
-  "author": "Stanley Oduya",
-  "role": "Residential portfolio manager",
-  "av": "SO",
-  "date": "2026-11-19",
-  "read": 4,
-  "tags": [
-   "estate"
-  ],
-  "column": false,
-  "brief": false,
-  "first_sentence": "Dexter Mensah, 44, pays $30 a month for an assigned bike spot in the new block's garage, and the rack has been empty since he moved in because he rides a scooter that does not fit the lockup.",
-  "closer": "Pays: Dexter. The spot stays his and empty.",
-  "pays": "Dexter",
-  "verb": "rents",
-  "figure_role": "level",
-  "quotes": [
-   "The spot is mine at $30 and the rack is empty, and the landlord calls the gap an amenity."
-  ],
-  "quote_costs": [
-   "$30"
-  ],
-  "dependencies": {
-   "pun_in_lede": false,
-   "swear_is_joke": false
-  },
-  "image": "/props/straight/empty-bicycle-rack-at-dusk.png",
-  "image_alt": null,
-  "body": "<p>Dexter Mensah, 44, pays $30 a month for an assigned bike spot in the new block&#x27;s garage, and the rack has been empty since he moved in because he rides a scooter that does not fit the lockup. The lease itemizes the spot and the spot is rented, and the landlord counts it as occupied either way. Dexter pays for the air above a floor he never uses.\nThe landlord calls it an amenity fee. Dexter calls it a subscription to an empty rack, the only recurring bill he has that delivers nothing but the permission to keep paying. The rack is bolted down and the spot is his on paper, and his scooter sleeps folded in the hall where nobody charges him. The rack pays rent on air and he pays it standing. Shit, the spot he pays for.\n&quot;The spot is mine and the rack is empty, and the landlord calls the gap an amenity.&quot;</p>"
- },
- {
-  "title": "The Rebate Never Becomes a Check",
-  "dek": "Sorting earns her $11 back and the paper stays a credit.",
-  "slug": "the-rebate-never-becomes-a-check",
-  "desk": "hauling",
-  "author": "Elena Marsh",
-  "role": "Head of Research",
-  "av": "EM",
-  "date": "2026-11-19",
-  "read": 4,
-  "tags": [
-   "hauling"
-  ],
-  "column": false,
-  "brief": false,
-  "first_sentence": "Tola Ibekwe, 57, sorts her recycling every Thursday and the hauler credits her $11 a month for it, and the credit never once becomes a check she can hold.",
-  "closer": "Pays: Tola. The coins never round.",
-  "pays": "Tola",
-  "verb": "returns",
-  "figure_role": "level",
-  "quotes": [
-   "The coins are mine until the company says round at $11. They never say round."
-  ],
-  "quote_costs": [
-   "$11"
-  ],
-  "dependencies": {
-   "pun_in_lede": false,
-   "swear_is_joke": false
-  },
-  "image": "/props/straight/paper-cup-on-an-empty-chair.png",
-  "image_alt": null,
-  "body": "<p>Tola Ibekwe, 57, sorts her recycling every Thursday and the hauler credits her $11 a month for it, and the credit never once becomes a check she can hold. The balance sits on the statement as a number that pays down next year&#x27;s fee the way a tip pays down a tab. She has accumulated forty-three credits in the box and cashed none.\nThe hauler calls it customer coins. Tola calls it a tally she is not allowed to spend. The sorting is real and the bin is real and the $11 is real on the page, but real money needs a hand and the credit has no hand that reaches back. She keeps the papers in a folder marked hers. Shit, the folder is the only thing that ever rounds.\n&quot;The coins are mine until the company says round. They never say round.&quot;</p>"
+  "body": "<p>Whitney Ashby, 54, who inherited 40,000 Disney shares and never once looked at a headcount, watched her quarterly dividend rise 33 percent the same week the parks raised ticket prices and the company confirmed more layoffs. She does not need the cut imaginer&#x27;s name; she needs the number that mentions her. $3 billion in savings, $9 billion in buybacks, and a two-dollar dividend that grew a third, and the source of all of it is people she will never run into.</p>\n\n<p>The money is one stream doing two things: it empties a family&#x27;s wallet at the gate and fills the holders&#x27; ledger at the same clip. Whitney calls the parks crowded and the stock an income generator, in that order, and she is not being ironic because she does not know it is ironic.</p>\n\n<blockquote>“$3 billion in savings and the check still arrives,&quot; she said, reading the release&#x27;s good parts. &quot;That is a good quarter.”<br><br>&mdash; Whitney Ashby</blockquote>\n\n<p>The magic is intact for exactly the people who can read a register without holding a park pass. Shit, the mountain she never visited is gone and the check is bigger.</p>"
  }
 ]
