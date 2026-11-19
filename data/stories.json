@@ -2493,5 +2493,240 @@
   ],
   "image": "/props/lurid/torn-envelope-of-cash-on-a-table.png",
   "image_alt": null
+ },
+ {
+  "title": "Bank Buries the Overdraft in the Fine Print",
+  "dek": "The fee now costs more than the shortfall. She found it in the mail.",
+  "slug": "bank-buries-the-overdraft-in-the-fine-print",
+  "desk": "consumer",
+  "author": "Claire Reyes",
+  "role": "Debt & Fixed Income, plus consumer credit",
+  "av": "CR",
+  "date": "2026-11-18",
+  "read": 4,
+  "tags": [
+   "consumer"
+  ],
+  "column": false,
+  "text_only": false,
+  "brief": false,
+  "first_sentence": "Mabel Osei, 57, opened the envelope about the account change and read to the bottom of the second page before the overdraft fee surfaced.",
+  "closer": "Pays: Mabel. The fine print wins.",
+  "pays": "Mabel",
+  "verb": "buries",
+  "figure_role": "level",
+  "quotes": [
+   "They know which transfer is going to catch me. They just moved the $39 where I can't see it."
+  ],
+  "quote_costs": [
+   "$39"
+  ],
+  "dependencies": {
+   "pun_in_lede": false,
+   "swear_is_joke": false
+  },
+  "image": "/props/straight/receipt-curled-on-a-plate.png",
+  "image_alt": null,
+  "body": "<p>Mabel Osei, 57, opened the envelope about the account change and read to the bottom of the second page before the overdraft fee surfaced. The fee is up to $39, buried in a paragraph about electronic transfers. She pays it once, short one transfer on a Tuesday, and the fee is now larger than the shortfall that caused it. She keeps the notice.</p>\n\n<p>The bank calls the nine-dollar increase a maintenance adjustment. Mabel calls it the fine print doing its job. Her checking balance does not cover her gas and her groceries in the same week, and the bank knows the exact day of the month that happens. The notice arrived on the first. The overdraft came on the ninth. \"They know which transfer is going to catch me. They just moved the $39 where I can't see it.\"</p>\n\n<p>Mabel reads the notice twice and files the paper with the year's others, the whole stack a shit ledger of what the bank took and what she let it.</p>"
+ },
+ {
+  "title": "Index Fund Shunts the Loss Onto the Fee",
+  "dek": "The index fell. The expense ratio rose beside it.",
+  "slug": "index-fund-shunts-the-loss-onto-the-fee",
+  "desk": "etfs",
+  "author": "Tessa Nguyen",
+  "role": "Economy & Data Reporter",
+  "av": "TN",
+  "date": "2026-11-18",
+  "read": 4,
+  "tags": [
+   "etfs"
+  ],
+  "column": false,
+  "text_only": false,
+  "brief": false,
+  "first_sentence": "Darnell Okoye, 44, opened his statement on a red month and found the index down four percent and his fee up half a point.",
+  "closer": "Pays: Darnell. The ratio moved with it.",
+  "pays": "Darnell",
+  "verb": "shunts",
+  "figure_role": "level",
+  "quotes": [
+   "You pay the ratio to own the market, like a toll for the road. $4,200 is the toll and the road still goes somewhere. That keeps working."
+  ],
+  "quote_costs": [
+   "$4,200"
+  ],
+  "dependencies": {
+   "pun_in_lede": false,
+   "swear_is_joke": false
+  },
+  "image": "/props/straight/cooling-tower-in-haze.png",
+  "image_alt": null,
+  "body": "<p>Darnell Okoye, 44, opened his statement on a red month and found the index down four percent and his fee up half a point. The fund bills the loss back through the expense ratio, the same truck charging for the same trip when the road got worse. He pays for the tracking error twice, once when the market drops and once in the management line.</p>\n\n<p>The prospectus calls it a cost of doing business. Darnell calls it the seams showing. He held the fund for nine years and never saw the ratio move on a good month. The down months are where the arithmetic finds him. His $142,000 is $4,200 lighter than the market says it should be, and the gap is billed, not borrowed.</p>\n\n<p>His neighbor Lester Poole, 61, who holds the same fund and reads the same statement, defends the fee out loud on the landing. \"You pay the ratio to own the market, like a toll for the road. $4,200 is the toll and the road still goes somewhere. That keeps working.\"</p>\n\n<p>The road did not move. The fund just charged the toll for it, then held the rate for the next quarter so the same $4,000 could be billed again. Darnell turns his own statement face down on the table. Fuck.</p>"
+ },
+ {
+  "title": "Firm Takes the Bonus Back From the Severance",
+  "dek": "The check costs him $14,000 of it before he can read the total.",
+  "slug": "firm-takes-the-bonus-back-from-the-severance",
+  "desk": "earnings",
+  "author": "Omar Zayed",
+  "role": "Corporate Governance Desk",
+  "av": "OZ",
+  "date": "2026-11-18",
+  "read": 4,
+  "tags": [
+   "earnings"
+  ],
+  "column": false,
+  "text_only": false,
+  "brief": false,
+  "first_sentence": "Terrance Boyd, 51, was laid off in June with eleven weeks' pay and a clause that let the company claw back his signing bonus if he left before the year was up.",
+  "closer": "Pays: Terrance. The old signature did the work.",
+  "pays": "Terrance",
+  "verb": "takes",
+  "figure_role": "level",
+  "quotes": [
+   "You sign for the bonus and you sign for the exit, and they bill you the $14,000 for the middle."
+  ],
+  "quote_costs": [
+   "$14,000"
+  ],
+  "dependencies": {
+   "pun_in_lede": false,
+   "swear_is_joke": false
+  },
+  "image": "/props/straight/cardboard-box-taped-shut.png",
+  "image_alt": null,
+  "body": "<p>Terrance Boyd, 51, was laid off in June with eleven weeks' pay and a clause that let the company claw back his signing bonus if he left before the year was up. They counted the layoff as the leaving. The severance check arrived with $14,000 already taken out of it, and the note called it a recovery of compensation. He did not sign anything new. The old signature did the work.</p>\n\n<p>The company calls it protecting shareholder value. Terrance calls it the one time his badge was worth something, and it was worth exactly the $14,000 they kept. The job had been his for six years. The bonus was his for four of them. The clause outlived both.</p>\n\n<blockquote>“You sign for the bonus and you sign for the exit, and they bill you for the middle.”<br><br>&mdash; Terrance Boyd</blockquote>\n\n<p>Terrance files the notice, calls the clause shit, and lets the old signature stand.</p>"
+ },
+ {
+  "title": "Rate Keeps the House, the Bank Holds the Key",
+  "dek": "The refi cost more than the first year of the savings.",
+  "slug": "rate-keeps-the-house-the-bank-holds-the-key",
+  "desk": "rates",
+  "author": "Priya Sharma",
+  "role": "Washington Bureau, Fed & Rates, plus household costs (insurance, mortgages)",
+  "av": "PS",
+  "date": "2026-11-18",
+  "read": 4,
+  "tags": [
+   "rates"
+  ],
+  "column": false,
+  "text_only": false,
+  "brief": false,
+  "first_sentence": "Corinne Hale, 49, refinanced in May to take a full point off her mortgage, and by November the new rate is what the bank says it is and the math does not reach her.",
+  "closer": "Pays: Corinne. The break-even moves with her.",
+  "pays": "Corinne",
+  "verb": "withholds",
+  "figure_role": "level",
+  "quotes": [
+   "The $2,100 in closing costs was a gift with a ticket. I bought the ticket and the gift stayed in the shop."
+  ],
+  "quote_costs": [
+   "$2,100"
+  ],
+  "dependencies": {
+   "pun_in_lede": false,
+   "swear_is_joke": false
+  },
+  "image": "/props/straight/key-in-a-lock.png",
+  "image_alt": null,
+  "body": "<p>Corinne Hale, 49, refinanced in May to take a full point off her mortgage, and by November the new rate is what the bank says it is and the math does not reach her. The closing costs, the appraisal, the new title insurance, the points, they add up to more than the first year of the savings. She keeps paying the old number anyway. The bank holds the key to the lower rate and charges admission.</p>\n\n<p>The lender calls it the cost of a better position. Corinne calls it a revolving door she paid to walk through. Her payment is $118 lower than it was, but she paid $2,100 to get there, and the break-even lands past her plans. She did the arithmetic in the kitchen with a receipt from the closing and a calculator she has to press twice.</p>\n\n<blockquote>“The rate was a gift with a ticket. I bought the ticket and the gift stayed in the shop.”<br><br>&mdash; Corinne Hale</blockquote>\n\n<p>Corinne presses the calculator twice, calls the break-even shit, and reruns it.</p>"
+ },
+ {
+  "title": "Rent Is Up and the Stairs Work",
+  "dek": "A landlord keeps eleven percent and calls the cracked step an investment.",
+  "slug": "rent-is-up-and-the-stairs-work",
+  "desk": "estate",
+  "author": "Ansel Whitby",
+  "role": "Landlord, six units on North Margin",
+  "av": "AW",
+  "date": "2026-11-18",
+  "read": 4,
+  "tags": [
+   "estate"
+  ],
+  "column": true,
+  "text_only": false,
+  "brief": false,
+  "first_sentence": "I raise the rent on North Margin every spring and I am not ashamed of it.",
+  "closer": "",
+  "pays": "",
+  "verb": "hikes",
+  "figure_role": "level",
+  "quotes": [],
+  "quote_costs": [],
+  "dependencies": {
+   "pun_in_lede": false,
+   "swear_is_joke": false
+  },
+  "image": "/props/straight/ladder-against-a-wall.png",
+  "image_alt": null,
+  "body": "<p>I raise the rent on North Margin every spring and I am not ashamed of it. The stairs work. That is the part nobody books. I took eleven percent across the six units this year and I mapped it out for the tenants: three points to the boiler, two to the shared porch, the rest to the building doing what I said it would do. Meanwhile I live down the block and I look at the same cracked step I look at every morning.</p>\n\n<p>My tenants call it a family building. I call it six payments and one of them is going to be late, and that late one is the one I planned the year around. The boiler works because the rent pays for it, and the porch works because the rent pays for it, and the step I keep meaning to fix is the difference between what I keep and what I spend on keeping.</p>\n\n<p>I am proud of the win. The rent went up and the stairs work, and those two facts sit on the same shelf. Shit, the step is still cracked.</p>"
+ },
+ {
+  "title": "The Bag Fee Is Now 40 Cents on the Curbside Can",
+  "dek": "The fee costs Rosa $4.80 a week.",
+  "slug": "the-bag-fee-is-now-40-cents-on-the-curbside-can",
+  "desk": "hauling",
+  "author": "Marcus Reid",
+  "role": "Markets Anchor · NYSE Floor",
+  "av": "MR",
+  "date": "2026-11-18",
+  "read": 2,
+  "tags": [
+   "hauling"
+  ],
+  "column": false,
+  "text_only": false,
+  "brief": true,
+  "first_sentence": "Rosa Nduta carries her cans to the curb and the bag fee climbs another dime.",
+  "closer": "Pays: Rosa, at the curb.",
+  "pays": "Rosa",
+  "verb": "jacks",
+  "figure_role": "level",
+  "quotes": [],
+  "quote_costs": [],
+  "dependencies": {
+   "pun_in_lede": false,
+   "swear_is_joke": false
+  },
+  "body": "<p>Rosa Nduta carries her cans to the curb and the bag fee climbs another dime this quarter, to $0.40. The average bin is twelve bags, which makes the fee $4.80 a week, or $250 a year, for the privilege of throwing away the same weight. The county calls it a recovery fee. The hauler calls it a line item. Nobody calls it a raise for Rosa, who still carries the cans. Shit, and the cans did not get any lighter.</p>"
+ },
+ {
+  "title": "The Hauler Bills the Curb and Keeps the Truck",
+  "dek": "The monthly rate is up nineteen dollars. The can does not get lighter.",
+  "slug": "the-hauler-bills-the-curb-and-keeps-the-truck",
+  "desk": "hauling",
+  "author": "Marcus Reid",
+  "role": "Markets Anchor · NYSE Floor",
+  "av": "MR",
+  "date": "2026-11-18",
+  "read": 4,
+  "tags": [
+   "hauling"
+  ],
+  "column": false,
+  "text_only": false,
+  "brief": false,
+  "first_sentence": "Rosa Nduta, 62, lifts her can to the curb on Thursday the way she always has, and the hauler bills her $38 more this month than last.",
+  "closer": "Pays: Rosa. The can is heavier.",
+  "pays": "Rosa",
+  "verb": "bills",
+  "figure_role": "level",
+  "quotes": [
+   "If the truck comes either way, the billing is what you notice, $38 at a time. The route covers itself."
+  ],
+  "quote_costs": [
+   "$38"
+  ],
+  "dependencies": {
+   "pun_in_lede": false,
+   "swear_is_joke": false
+  },
+  "image": "/props/straight/skip-on-a-kerb.png",
+  "image_alt": null,
+  "body": "<p>Rosa Nduta, 62, lifts her can to the curb on Thursday the way she always has, and the hauler bills her $38 more this month than last. The truck still stops, the arm still lifts, and the can goes into the same hopper. The company says the rate now covers the route. Rosa asks which end of the route the money covers.</p>\n\n<p>The tidy haul is the one thing she pays for outright, after the tax and the county fee and the bag surcharge. She keeps the receipt in the drawer with the ones from last year, and the numbers do not match. Last year the same can cost her $19 off the curb. This year the number is up again, and the service is not. Her neighbor pays the same rate and leaves the same three bags, and Rosa gives him her receipt to hold up next to his own.</p>\n\n<blockquote>“If the truck comes either way, the billing is what you notice, $38 at a time. The route covers itself.”<br><br>&mdash; Rosa Nduta, 62, who lives off the route</blockquote>\n\n<p>Rosa lifts the can with both hands now, calls the surplus shit, and pays it anyway.</p>"
  }
 ]

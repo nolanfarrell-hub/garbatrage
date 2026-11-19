@@ -825,7 +825,7 @@ for s in stories:
     # article (A/An/The) + a spatial-anchored clause — so a noun-pile like
     # "tag with red check beside blank sign and man at podium" fails the way a
     # keyword list would. Matches the house rule and the prop-index register.
-    SPATIAL = re.compile(r"\b(in|into|on|at|beside|behind|before|between|below|above|under|beneath|near|toward|across|against|through|inside|outside|left of|right of|with|from|onto|downto|alongside|over)\b", re.I)
+    SPATIAL = re.compile(r"\b(in|into|on|at|beside|behind|before|between|below|above|under|beneath|near|toward|across|against|through|inside|outside|left of|right of|with|from|onto|downto|alongside|over|out of)\b", re.I)
     a = (s.get("image_alt") if s.get("image_alt") else
          (props_by_slug.get(art.rsplit("/", 1)[-1].rsplit(".", 1)[0]) if art.startswith("/props/") else None))
     def _sentence(t):
