@@ -2551,7 +2551,7 @@
   "verb": "shunts",
   "figure_role": "level",
   "quotes": [
-   "You pay the ratio to own the market, like a toll for the road. $4,200 is the toll and the road still goes somewhere. That keeps working."
+   "You pay the ratio to own the market. $4,200 is the toll, and the road still gets you there."
   ],
   "quote_costs": [
    "$4,200"
@@ -2562,7 +2562,7 @@
   },
   "image": "/props/straight/cooling-tower-in-haze.png",
   "image_alt": null,
-  "body": "<p>Darnell Okoye, 44, opened his statement on a red month and found the index down four percent and his fee up half a point. The fund bills the loss back through the expense ratio, the same truck charging for the same trip when the road got worse. He pays for the tracking error twice, once when the market drops and once in the management line.</p>\n\n<p>The prospectus calls it a cost of doing business. Darnell calls it the seams showing. He held the fund for nine years and never saw the ratio move on a good month. The down months are where the arithmetic finds him. His $142,000 is $4,200 lighter than the market says it should be, and the gap is billed, not borrowed.</p>\n\n<p>His neighbor Lester Poole, 61, who holds the same fund and reads the same statement, defends the fee on the landing.</p>\n\n<blockquote>“You pay the ratio to own the market, like a toll for the road. $4,200 is the toll and the road still goes somewhere. That keeps working.”<br><br>&mdash; Lester Poole, 61, his neighbor</blockquote>\n\n<p>The road did not move. The fund just charged the toll for it, then held the rate for the next quarter so the same $4,200 could be billed again. Darnell turns his own statement face down on the table. Fuck.</p>"
+  "body": "<p>Darnell Okoye, 44, opened his statement on a red month and found the index down four percent and his fee up half a point. The fund bills the loss back through the expense ratio, charging twice for the same trip when the road got worse. He pays for the tracking error twice, once when the market drops and once in the management line.</p>\n\n<p>The prospectus calls it a cost of doing business. Darnell calls it the seams showing. He held the fund for nine years and never saw the ratio move on a good month. The down months are where the arithmetic finds him. His $142,000 is $4,200 lighter than the market says it should be, and the gap is billed, not borrowed.</p>\n\n<p>His neighbor Lester Poole, 61, who holds the same fund and reads the same statement, defends the fee on the landing.</p>\n\n<blockquote>“You pay the ratio to own the market. $4,200 is the toll, and the road still gets you there.”<br><br>&mdash; Lester Poole, 61, his neighbor</blockquote>\n\n<p>The road did not move. The fund just charged the toll for it, then held the rate for the next quarter so the same $4,200 could be billed again. Darnell turns his own statement face down on the table. Fuck.</p>"
  },
  {
   "title": "Firm Takes the Bonus Back From the Severance",
@@ -2670,9 +2670,9 @@
   "dek": "The fee costs Rosa $4.80 a week.",
   "slug": "the-bag-fee-is-now-40-cents-on-the-curbside-can",
   "desk": "hauling",
-  "author": "Marcus Reid",
-  "role": "Markets Anchor · NYSE Floor",
-  "av": "MR",
+  "author": "Elena Marsh",
+  "role": "Head of Research",
+  "av": "EM",
   "date": "2026-11-18",
   "read": 2,
   "tags": [
@@ -2692,13 +2692,13 @@
    "pun_in_lede": false,
    "swear_is_joke": false
   },
-  "body": "<p>Rosa Nduta carries her cans to the curb and the bag fee climbs another dime this quarter, to $0.40. The average bin is twelve bags, which makes the fee $4.80 a week, or $250 a year, for the privilege of throwing away the same weight. The county calls it a recovery fee. The hauler calls it a line item. Nobody calls it a raise for Rosa, who still carries the cans. Shit, and the cans did not get any lighter.</p>",
+  "body": "<p>Rosa Nduta carries her cans to the curb and the bag fee climbs another dime this quarter, to $0.40. The average bin is twelve bags, which makes the fee $4.80 a week, or $250 a year, for the privilege of throwing away the same weight. The county calls it a recovery fee. The hauler calls it a line item. Nobody calls it a raise for Rosa. Forty cents a bag. Shit.</p>",
   "figure": "40¢",
   "figcap": "A fee, added at the curb, billed on the hauler's line."
  },
  {
   "title": "The Hauler Bills the Curb and Keeps the Truck",
-  "dek": "The monthly rate is up $38 this month. The cans do not get lighter.",
+  "dek": "The monthly rate is up $38. The can does not get lighter.",
   "slug": "the-hauler-bills-the-curb-and-keeps-the-truck",
   "desk": "hauling",
   "author": "Marcus Reid",
