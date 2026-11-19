@@ -2562,7 +2562,7 @@
   },
   "image": "/props/straight/cooling-tower-in-haze.png",
   "image_alt": null,
-  "body": "<p>Darnell Okoye, 44, opened his statement on a red month and found the index down four percent and his fee up half a point. The fund bills the loss back through the expense ratio, the same truck charging for the same trip when the road got worse. He pays for the tracking error twice, once when the market drops and once in the management line.</p>\n\n<p>The prospectus calls it a cost of doing business. Darnell calls it the seams showing. He held the fund for nine years and never saw the ratio move on a good month. The down months are where the arithmetic finds him. His $142,000 is $4,200 lighter than the market says it should be, and the gap is billed, not borrowed.</p>\n\n<p>His neighbor Lester Poole, 61, who holds the same fund and reads the same statement, defends the fee out loud on the landing. \"You pay the ratio to own the market, like a toll for the road. $4,200 is the toll and the road still goes somewhere. That keeps working.\"</p>\n\n<p>The road did not move. The fund just charged the toll for it, then held the rate for the next quarter so the same $4,000 could be billed again. Darnell turns his own statement face down on the table. Fuck.</p>"
+  "body": "<p>Darnell Okoye, 44, opened his statement on a red month and found the index down four percent and his fee up half a point. The fund bills the loss back through the expense ratio, the same truck charging for the same trip when the road got worse. He pays for the tracking error twice, once when the market drops and once in the management line.</p>\n\n<p>The prospectus calls it a cost of doing business. Darnell calls it the seams showing. He held the fund for nine years and never saw the ratio move on a good month. The down months are where the arithmetic finds him. His $142,000 is $4,200 lighter than the market says it should be, and the gap is billed, not borrowed.</p>\n\n<p>His neighbor Lester Poole, 61, who holds the same fund and reads the same statement, defends the fee on the landing.</p>\n\n<blockquote>“You pay the ratio to own the market, like a toll for the road. $4,200 is the toll and the road still goes somewhere. That keeps working.”<br><br>&mdash; Lester Poole, 61, his neighbor</blockquote>\n\n<p>The road did not move. The fund just charged the toll for it, then held the rate for the next quarter so the same $4,200 could be billed again. Darnell turns his own statement face down on the table. Fuck.</p>"
  },
  {
   "title": "Firm Takes the Bonus Back From the Severance",
@@ -2692,11 +2692,13 @@
    "pun_in_lede": false,
    "swear_is_joke": false
   },
-  "body": "<p>Rosa Nduta carries her cans to the curb and the bag fee climbs another dime this quarter, to $0.40. The average bin is twelve bags, which makes the fee $4.80 a week, or $250 a year, for the privilege of throwing away the same weight. The county calls it a recovery fee. The hauler calls it a line item. Nobody calls it a raise for Rosa, who still carries the cans. Shit, and the cans did not get any lighter.</p>"
+  "body": "<p>Rosa Nduta carries her cans to the curb and the bag fee climbs another dime this quarter, to $0.40. The average bin is twelve bags, which makes the fee $4.80 a week, or $250 a year, for the privilege of throwing away the same weight. The county calls it a recovery fee. The hauler calls it a line item. Nobody calls it a raise for Rosa, who still carries the cans. Shit, and the cans did not get any lighter.</p>",
+  "figure": "40¢",
+  "figcap": "A fee, added at the curb, billed on the hauler's line."
  },
  {
   "title": "The Hauler Bills the Curb and Keeps the Truck",
-  "dek": "The monthly rate is up nineteen dollars. The can does not get lighter.",
+  "dek": "The monthly rate is up $38 this month. The cans do not get lighter.",
   "slug": "the-hauler-bills-the-curb-and-keeps-the-truck",
   "desk": "hauling",
   "author": "Marcus Reid",
@@ -2727,6 +2729,6 @@
   },
   "image": "/props/straight/skip-on-a-kerb.png",
   "image_alt": null,
-  "body": "<p>Rosa Nduta, 62, lifts her can to the curb on Thursday the way she always has, and the hauler bills her $38 more this month than last. The truck still stops, the arm still lifts, and the can goes into the same hopper. The company says the rate now covers the route. Rosa asks which end of the route the money covers.</p>\n\n<p>The tidy haul is the one thing she pays for outright, after the tax and the county fee and the bag surcharge. She keeps the receipt in the drawer with the ones from last year, and the numbers do not match. Last year the same can cost her $19 off the curb. This year the number is up again, and the service is not. Her neighbor pays the same rate and leaves the same three bags, and Rosa gives him her receipt to hold up next to his own.</p>\n\n<blockquote>“If the truck comes either way, the billing is what you notice, $38 at a time. The route covers itself.”<br><br>&mdash; Rosa Nduta, 62, who lives off the route</blockquote>\n\n<p>Rosa lifts the can with both hands now, calls the surplus shit, and pays it anyway.</p>"
+  "body": "<p>Rosa Nduta, 62, lifts her can to the curb on Thursday the way she always has, and the hauler bills her $38 more this month than last. The truck still stops, the arm still lifts, and the can goes into the same hopper. The company says the rate now covers the route. Rosa asks which end of the route the money covers.</p>\n\n<p>The tidy haul is the one thing she pays for outright, after the tax and the county fee and the bag surcharge. She keeps the receipt in the drawer with the ones from last year, and the numbers do not match. Last year the same can cost her $19 off the curb. This year the number is up again, and the service is not. Her neighbor pays the same rate and leaves the same three bags, and Rosa gives him her receipt to hold up next to his own.</p>\n\n<blockquote>“If the truck comes either way, the billing is what you notice, $38 at a time. The route covers itself.”<br><br>&mdash; Rosa Nduta, 62, who lives off the route</blockquote>\n\n<p>Rosa lifts the can with both hands and pays it anyway. The route covers someone, and it is not her route. Fuck.</p>"
  }
 ]
