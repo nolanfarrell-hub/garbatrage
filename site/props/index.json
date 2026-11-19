@@ -358,5 +358,47 @@
   "grade": "lurid",
   "subject": "a forearm on a bar with a watch",
   "alt": "A forearm rests on a bar, a watch on the wrist."
+ },
+ {
+  "slug": "paper-cup-on-an-empty-chair",
+  "grade": "straight",
+  "subject": "paper cup on an empty chair",
+  "alt": "A paper cup rests on the seat of an empty waiting-room chair."
+ },
+ {
+  "slug": "empty-bicycle-rack-at-dusk",
+  "grade": "straight",
+  "subject": "empty bicycle rack at dusk",
+  "alt": "An empty bicycle rack stands beneath a single streetlamp."
+ },
+ {
+  "slug": "stack-of-parking-tickets",
+  "grade": "straight",
+  "subject": "stack of parking tickets",
+  "alt": "A neat stack of blank parking tickets sits on a counter."
+ },
+ {
+  "slug": "office-chair-at-empty-table",
+  "grade": "straight",
+  "subject": "office chair at empty table",
+  "alt": "A single office chair waits at a long empty meeting table."
+ },
+ {
+  "slug": "window-box-with-one-dead-plant",
+  "grade": "straight",
+  "subject": "window box with one dead plant",
+  "alt": "A window box holds one bare plant against a brick wall."
+ },
+ {
+  "slug": "keypad-with-worn-button",
+  "grade": "straight",
+  "subject": "keypad with worn button",
+  "alt": "A keypad button is worn smooth at a service counter."
+ },
+ {
+  "slug": "bench-beside-closed-booth",
+  "grade": "straight",
+  "subject": "bench beside closed booth",
+  "alt": "A wooden bench sits beside a shuttered booth on an empty pavement."
  }
 ]
