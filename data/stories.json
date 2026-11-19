@@ -2733,7 +2733,7 @@
  },
  {
   "title": "Heir Forced to Pay $41 Million Because His Dad Owned a Utility",
-  "dek": "Bartholomew Finch-Duarte paid $41 million and now wants the money back, understands what it was for.",
+  "dek": "Estate tax is due before the will opens. The heir calls it a receipt for breathing.",
   "slug": "heir-forced-to-pay-41-million-because-his-dad-owned-a-utility",
   "desk": "estate",
   "author": "Elena Marsh",
@@ -2746,13 +2746,17 @@
   ],
   "column": false,
   "brief": false,
-  "first_sentence": "Bartholomew Finch-Duarte, 61, paid the $41 million estate tax on his father's utility business and has since described the payment as a fee for everything his father owned, which he has confirmed includes him.",
-  "closer": "Finch-Duarte pays the tax.",
+  "first_sentence": "Bartholomew Finch-Duarte, 61, paid $41 million in estate tax on his father's utility business and has since described the check as the cost of the room he was built to inherit.",
+  "closer": "Bartholomew Finch-Duarte foots the estate.",
   "pays": "Bartholomew Finch-Duarte",
-  "verb": "describes",
+  "verb": "paid",
   "figure_role": "loss",
-  "quotes": [],
-  "quote_costs": [],
+  "quotes": [
+   "Who here has paid 41 million to be told something they already knew?"
+  ],
+  "quote_costs": [
+   "$41 million"
+  ],
   "reads": [],
   "dependencies": {
    "pun_in_lede": false,
@@ -2760,11 +2764,11 @@
   },
   "image": "/props/straight/torn-envelope-of-cash-on-a-table.png",
   "image_alt": null,
-  "body": "<p>Bartholomew Finch-Duarte, 61, paid the $41 million estate tax on his father&#x27;s utility business and has since described the payment as a fee for everything his father owned, which he has confirmed includes him. The tax was due in full before the will could be read. Mr. Finch-Duarte paid it from an account set up for exactly that purpose by the man whose estate the account was now taxing, and the setup has struck him as needlessly personal.</p>\n\n<p>The business was a utility his father assembled over sixty years and three mergers. The tax ate 23 percent of a figure the accountants had been careful to make large. Mr. Finch-Duarte has quoted the 23 percent at every dinner since, describing it as the amount the state charged for the privilege of his father having planned.</p>\n\n<p>Mr. Finch-Duarte told his lawyer he had no idea what went into a bill that big; the lawyer walked him through it the previous week. When the lawyer explained that the bill was the market value of the assets, Mr. Finch-Duarte described it as the state valuing his father&#x27;s life at the price of the father&#x27;s house and his own inheritance at the price of the rest.</p>\n\n<p>He has kept every page of the filing, including the page that itemizes the deduction for the exact amount the estate spent on the accountants who arranged for the deduction. When that was explained to him he said the state had found a way to tax his father twice for the same person and had credited the estate for half of it, the cunts. The estate has not moved on, and neither has Mr. Finch-Duarte, who is still in the house the tax almost took, using a stapler his father used on a document the stapler helped produce almost forty years ago.</p>"
+  "body": "<p>Bartholomew Finch-Duarte, 61, paid $41 million in estate tax on his father&#x27;s utility business and has since described the check as the cost of the room he was built to inherit. The bill came due before the will could be opened, which is the law. The money sat in an account his father set up for exactly that bill, a fact Mr. Finch-Duarte has called needlessly personal.</p>\n\n<blockquote>Do you understand what it takes to own a utility? You do not inherit that. That is graft, and it pays. My father ran the county for forty years and made everyone pay for the light. Now they bill me for the light going out. I paid them 41 million dollars to be told my father is dead. Who here has paid 41 million to be told something they already knew?</blockquote>\n\n<p>The 23 percent was calculated on the market value of the assets, which the accountants had spent the entire prior decade making large. Mr. Finch-Duarte has kept every page of the filing, including the page that itemizes the deduction for the exact amount the estate spent on the accountants who arranged for the deduction.</p>\n\n<p>He does not dispute the number. He disputes that the number proves anything about his father&#x27;s life, and he is right that it does not, and that is the part he cannot accept: the state taxed the father, the father knew he would be taxed, planned for it, and the plan worked, and Bartholomew is furious at the plan for working. He is furious the state took the money and more furious that his father set the money aside, because one of those things is a theft and the other is a fact, and he cannot decide which is worse, and that is the whole shit of it.</p>"
  },
  {
   "title": "Lost $19 Million and Wished It Had Been a Subscription",
-  "dek": "Mona Voss thinks the money is down, says the arrangement is not losing, it is subscribing.",
+  "dek": "The drawdown is a drawdown until the owner says otherwise. The owner says otherwise.",
   "slug": "lost-19-million-and-wished-it-had-been-a-subscription",
   "desk": "rates",
   "author": "Priya Sharma",
@@ -2777,13 +2781,17 @@
   ],
   "column": false,
   "brief": false,
-  "first_sentence": "Mona Voss, 59, lost 12 percent of a nine-figure portfolio this year and has described the loss as a subscription, which she says she did not cancel because she forgot it was one.",
-  "closer": "Mona Voss covers the loss.",
+  "first_sentence": "Mona Voss, 59, lost $19 million this year, or 12 percent of the portfolio, and has described the loss as a subscription she forgot to cancel.",
+  "closer": "Mona Voss absorbs the subscription.",
   "pays": "Mona Voss",
-  "verb": "sheds",
+  "verb": "lost",
   "figure_role": "loss",
-  "quotes": [],
-  "quote_costs": [],
+  "quotes": [
+   "I lost 19 million and you are asking me about it like it is a number"
+  ],
+  "quote_costs": [
+   "$19 million"
+  ],
   "reads": [],
   "dependencies": {
    "pun_in_lede": false,
@@ -2791,11 +2799,11 @@
   },
   "image": "/props/straight/cracked-phone-screen-on-a-bar.png",
   "image_alt": null,
-  "body": "<p>Mona Voss, 59, lost 12 percent of a nine-figure portfolio this year and has described the loss as a subscription, which she says she did not cancel because she forgot it was one. The amount was $19 million. She has confirmed that if it were a subscription she would have canceled it, but that the people who manage the money described it to her as a loss and she took their word for it.</p>\n\n<p>The money is managed by a firm that sends a quarterly report. The report calls the 12 percent a drawdown and recommends against reacting, which Ms. Voss adopted in full and has since described as the most useful paragraph in her financial life. She keeps the report on the same nightstand as the subscription bills she does not read, and once confused the two.</p>\n\n<p>Ms. Voss has asked whether it turns out she was subscribing to her own losses the whole time, and if so she would like the canceled checks back. Her advisor told the press the firm has no record of Ms. Voss purchasing a subscription, but that the firm does charge a fee every quarter regardless of whether the money makes money, which he said is a different arrangement.</p>\n\n<p>Ms. Voss has asked whether the fee is what she is subscribing to. The advisor said no. Ms. Voss said she would like that in writing, and the advisor said the firm does not put that in writing, which Ms. Voss accepted, because a 12 percent loss, in her view, is the closest thing the market has to a refund that arrives every year and is always on time, and she is not pissed about it.</p>"
+  "body": "<p>Mona Voss, 59, lost $19 million this year, or 12 percent of the portfolio, and has described the loss as a subscription she forgot to cancel. The money went down a defined path. The firms that manage it called the path a drawdown, and Ms. Voss has said she took them at their word, because she has never once read a quarterly statement and does not plan to start now.</p>\n\n<blockquote>A loss is just a fee for staying in the building. You do not get to sit at this table without losing. You think the men at this table are not losing? They are losing standing up, in nicer shoes. I lost 19 million and you are asking me about it like it is a number, and it is not a number, it is the price of the chair.</blockquote>\n\n<p>The firms do charge a fee every quarter, on the full value, whether the money goes up or down. Ms. Voss asked whether the fee is what she is subscribing to. The firm said no. Ms. Voss said she would like that in writing. The firm does not put that in writing. Ms. Voss said that was fine, because a subscription you cannot cancel has a clarity to it a loss does not.</p>\n\n<p>She has asked the advisor twice whether they could bill the $19 million separately, so she could see it leave, the way she sees the other bills. The advisor says the whole position is the bill. Ms. Voss says she cannot feel a whole position. She can feel a bill. She believes if the money were leaving as a fee instead of as a loss, she would have canceled it, and she is proud of that, in the way a person is proud of a resolution they did not actually keep, the cunt.</p>"
  },
  {
   "title": "Founder Locked in Own Stock 4 Years, Says the Water's Cold",
-  "dek": "Rafferty cannot sell his shares for five years, says his best years are in there.",
+  "dek": "He proposed the lockup to show confidence. He has spent three years inside.",
   "slug": "founder-locked-in-own-stock-4-years-says-the-water-s-cold",
   "desk": "markets",
   "author": "Marcus Reid",
@@ -2808,13 +2816,17 @@
   ],
   "column": false,
   "brief": false,
-  "first_sentence": "Rafferty O'Dell, 44, called the five-year lockup on his own company's shares a pool when the deal was signed, and has spent three of those years in it, unable to sell, describing the water as cold.",
-  "closer": "Rafferty pays the price.",
-  "pays": "Rafferty",
-  "verb": "holds",
+  "first_sentence": "Rafferty O'Dell, 44, proposed the four-year lockup on his own company's shares as a sign of confidence, and has since spent three of those years inside it, unable to sell a single share.",
+  "closer": "Rafferty ODell pays to swim in it.",
+  "pays": "Rafferty O'Dell",
+  "verb": "built",
   "figure_role": "loss",
-  "quotes": [],
-  "quote_costs": [],
+  "quotes": [
+   "That is not a loss. That is me trusting the market for four years"
+  ],
+  "quote_costs": [
+   "four years"
+  ],
   "reads": [],
   "dependencies": {
    "pun_in_lede": false,
@@ -2822,11 +2834,11 @@
   },
   "image": "/props/straight/empty-bicycle-rack-at-dusk.png",
   "image_alt": null,
-  "body": "<p>Rafferty O&#x27;Dell, 44, called the five-year lockup on his own company&#x27;s shares a pool when the deal was signed, and has spent three of those years in it, unable to sell, describing the water as cold. The pool was his own idea. He proposed the lockup to the investors as a sign of confidence, and has since confirmed that the confidence was real at the time and that he would like out of the pool now.</p>\n\n<p>The company&#x27;s stock listed at $38 and trades at $14. Mr. O&#x27;Dell&#x27;s shares are worth roughly $41 million on paper and cannot be sold until the fourth quarter of next year, which he has described as the quarter the pool empties. He has asked the board twice whether the pool could be drained early. The board said no.</p>\n\n<p>Mr. O&#x27;Dell told a conference he had built a good pool. The conference was about AI, not liquidity, which he noted after he had finished speaking. He told reporters that the pool is cold because he built it in the winter of the deal, and that he has spent the time since trying to build a heater.</p>\n\n<p>The heater is a second offering the company filed for, which would dilute his shares further but raise the cash he cannot access any other way. Mr. O&#x27;Dell has described the trade as heating the pool with the water in the pool, which is a bastard of a plan. When it was pointed out that this would make the pool colder, he said that was exactly the kind of cold the pool was already, and that he had gotten used to it, which he described as the entire problem.</p>"
+  "body": "<p>Rafferty O&#x27;Dell, 44, proposed the four-year lockup on his own company&#x27;s shares as a sign of confidence, and has since spent three of those years inside it, unable to sell a single share. The stock listed at $38 and trades at $14. His stake is worth $41 million on paper and cannot be touched until the fourth quarter of next year.</p>\n\n<blockquote>The lockup is my pool. I built it. Do you understand how rich you have to be to have your own pool? You have to be rich enough that the water wants you in it. The market said it wanted me, so I got in. Now the market is saying it wants me out, and turns out the lock was my idea. That is not a loss. That is me trusting the market for four years and the market showing me who built the damn pool.</blockquote>\n\n<p>The board has declined twice to let him sell early. Mr. O&#x27;Dell has described the board as the lifeguard, which he hired. He does not see the irony. He has asked whether the company can raise its own cash by issuing new shares, which would dilute his stake further, and he described that as heating the pool with the water in the pool.</p>\n\n<p>When it was pointed out that this would make the pool colder, he said that was the point, that he had spent three years in the cold and that the only way to get warm was to trust the market to make it colder, because the market never gives you the warm thing you are already holding. He said it the way a man says it who has said it before and will say it again, at every conference, into every microphone, until the lock he built empties and he finds out what was in it, the asshole.</p>"
  },
  {
   "title": "Man Owns 3,000 Companies and Hates Every One of Them",
-  "dek": "Salvador Kane owns the stock market and would prefer none, but the tax bill stops him.",
+  "dek": "Seventeen index funds, the whole economy, and an annual loss he refuses to call a position.",
   "slug": "man-owns-3-000-companies-and-hates-every-one-of-them",
   "desk": "etfs",
   "author": "Tessa Nguyen",
@@ -2839,13 +2851,17 @@
   ],
   "column": false,
   "brief": false,
-  "first_sentence": "Salvador Kane, 71, owns the stock market through 17 index funds and has told his advisor that he hates every company in them without exception, and that this is not going to change.",
-  "closer": "Salvador Kane writes the check.",
+  "first_sentence": "Salvador Kane, 71, owns the stock market through seventeen index funds and has told his advisor that he hates every company in them, without exception.",
+  "closer": "Salvador Kane funds the hatred.",
   "pays": "Salvador Kane",
   "verb": "owns",
   "figure_role": "loss",
-  "quotes": [],
-  "quote_costs": [],
+  "quotes": [
+   "I own every hand that ever picked my pocket, every one of them, and I do it on purpose, in a fund that costs me $30 million a year to run"
+  ],
+  "quote_costs": [
+   "$30 million"
+  ],
   "reads": [],
   "dependencies": {
    "pun_in_lede": false,
@@ -2853,11 +2869,11 @@
   },
   "image": "/props/straight/bare-desk-with-one-phone.png",
   "image_alt": null,
-  "body": "<p>Salvador Kane, 71, owns the stock market through 17 index funds and has told his advisor that he hates every company in them without exception, and that this is not going to change. His funds hold stakes in several thousand firms, for one of which Mr. Kane&#x27;s son works. Mr. Kane has confirmed the fund holds the son&#x27;s company and that he reinvests the dividends from it on principle.</p>\n\n<p>The 17 funds cost $30 million a year in total. Mr. Kane does not know which fund owns what and has said he prefers it that way, because if he knew, he would have sold the ones holding companies he hates, which is all of them.</p>\n\n<p>Mr. Kane told his advisor that he has looked at the statements and been told he owns it all, that he believes he owns it all, and that he would like it back in cash, who explained that selling everything would trigger a taxable event larger than Mr. Kane&#x27;s annual income. Mr. Kane described this as the only reason he has not sold, and the advisor confirmed the reasoning was exactly that.</p>\n\n<p>He asked whether the market had any companies he would like, since he owns all of them. The advisor said a handful. Mr. Kane said the handful were not worth seeing the statement. He has held the funds for 31 years and calls it diversification, which he has described as the asshole method by which he owns things he hates and is unable to sell them.</p>"
+  "body": "<p>Salvador Kane, 71, owns the stock market through seventeen index funds and has told his advisor that he hates every company in them, without exception. The funds hold stakes in several thousand firms, including the one where his own son works, and Mr. Kane reinvests the dividend from that firm on principle, which he calls discipline.</p>\n\n<blockquote>Do you know what it means to own the whole economy? It means you own the airline that lost your bag and the bank that froze your card and the hospital that billed you for the room you were in while they froze the card. I own every hand that ever picked my pocket, every one of them, and I do it on purpose, in a fund that costs me $30 million a year to run so that I can hate it at scale.</blockquote>\n\n<p>Selling everything would trigger a taxable event larger than his annual income, which Mr. Kane has cited as the only reason he has not sold. The advisor confirmed the reasoning was exactly that. Mr. Kane asked whether there was a fund that owned only companies he liked. The advisor said a handful. Mr. Kane said the handful were not worth seeing the statement.</p>\n\n<p>He has held the funds for 31 years. He calls it diversification, which he defines as the strategy of owning things you hate and being unable to sell them. He said if there were a cheaper way to hate that much of the economy, he would take it, and the advisor said there was not, and Mr. Kane said that was why the market worked, that it had found a way to profit from the one man who would never sell because selling would cost him too much, so the market just keeps the man and the man keeps hating, the bastard.</p>"
  },
  {
   "title": "Margin Call Forces Rothko Sale, Owner Thanks Bank for the Exercise",
-  "dek": "Phineas Grant sold a quarter of his art to cover margin, says market made him fitter.",
+  "dek": "A $12 million collateral call, one painting, and a man who calls the whole thing cardio.",
   "slug": "margin-call-forces-rothko-sale-owner-thanks-bank-for-the-exercise",
   "desk": "credit",
   "author": "Claire Reyes",
@@ -2870,13 +2886,17 @@
   ],
   "column": false,
   "brief": false,
-  "first_sentence": "Phineas Grant, 58, was margin called on Wednesday and has described the call as a workout he did not sign up for, before selling a quarter of his art collection to complete it.",
-  "closer": "Phineas Grant foots the bill.",
+  "first_sentence": "Phineas Grant, 58, was margin called on a Wednesday and sold a Rothko to cover it, and has since thanked the bank for making him carde.",
+  "closer": "Phineas Grant sells for the spread.",
   "pays": "Phineas Grant",
-  "verb": "sells",
+  "verb": "sold",
   "figure_role": "loss",
-  "quotes": [],
-  "quote_costs": [],
+  "quotes": [
+   "They tested me by asking for money I have parked behind a $12 million painting"
+  ],
+  "quote_costs": [
+   "$12 million"
+  ],
   "reads": [],
   "dependencies": {
    "pun_in_lede": false,
@@ -2884,11 +2904,11 @@
   },
   "image": "/props/straight/key-in-a-lock.png",
   "image_alt": null,
-  "body": "<p>Phineas Grant, 58, was margin called on Wednesday and has described the call as a workout he did not sign up for, before selling a quarter of his art collection to complete it. The call was for $12 million in collateral on a mortgage-style loan against his portfolio, which the bank said had fallen below the loan&#x27;s coverage ratio for the second time this year.</p>\n\n<p>Mr. Grant transferred the $12 million in cash by lunch. To do so he sold a Rothko he had owned since 1998, and has described the painting&#x27;s departure as the market forcing him to make room. He has confirmed the room is a smaller office he was going to rent anyway.</p>\n\n<p>&#x27;It is a good lesson, that the money has to move when the number moves,&#x27; Mr. Grant told the dinner party. The dinner party was in the smaller office. He described the reduced square footage as the market helping him decide what mattered, and the bank confirmed it did not intend to help him decide anything.</p>\n\n<p>He has asked whether the margin call could happen again next month. The bank said it could. Mr. Grant said that was fine, that a workout a man can schedule is a workout a man can train for, and that he already had the trainers, which he said was the shit payment he was making for the privilege of being margin called on his own terms.</p>"
+  "body": "<p>Phineas Grant, 58, was margin called on a Wednesday and sold a Rothko to cover it, and has since thanked the bank for making him carde. The call was for $12 million in collateral against a loan on his portfolio, which the bank said had fallen below the coverage ratio for the second time this year. He wired the cash by lunch.</p>\n\n<blockquote>They tested me. I want you to understand that. The bank tested me. Do they test you? They test you by asking for money you do not have. They test me by asking for money I have parked behind a $12 million painting. So I sold the painting. That is not a loss. That is me telling the bank I am not sentimental, which is the only thing the bank respects. I passed. Two of them have seen me weaker.</blockquote>\n\n<p>The Rothko had hung in his office since 1998. Mr. Grant has described the painting&#x27;s departure as the room getting smaller, and the smaller office as the bank helping him decide what mattered. The bank has confirmed it did not intend to help him decide anything.</p>\n\n<p>He has asked whether the call could come again next month. The bank said it could. Mr. Grant said that was fine, that a call you can schedule is a call you can train for, and that he already had the trainers, which he said was the payment for the privilege of being margin called at all. He does not see the difference between a margin call and a workout, and he said he would rather be margin called than work out, because one of them makes money and the other one makes time, and he has never had a lot of the first and never had a plan for the second, which is bollocks.</p>"
  },
  {
   "title": "Woman Who Paid $55 Million in Fees Isn't Sure What For",
-  "dek": "Aurelia Somerset paid fees for 24 years, would like the money to know it is safe.",
+  "dek": "Twenty-four years of fees. She never read the agreement. Asking is for the poor.",
   "slug": "woman-who-paid-55-million-in-fees-isn-t-sure-what-for",
   "desk": "consumer",
   "author": "Jake Sullivan",
@@ -2901,13 +2921,17 @@
   ],
   "column": false,
   "brief": false,
-  "first_sentence": "Aurelia Somerset, 63, has paid $2.3 million a year in management fees for 24 years without reading the agreements, and has described the payments as the light she leaves on so the money knows it is safe.",
-  "closer": "Aurelia Somerset pays the fees.",
+  "first_sentence": "Aurelia Somerset, 63, has paid $2.3 million a year in management fees for 24 years and has never once read the agreements, which she describes as the rich man's duty.",
+  "closer": "Aurelia Somerset pays to be the light.",
   "pays": "Aurelia Somerset",
-  "verb": "keeps",
+  "verb": "pays",
   "figure_role": "loss",
-  "quotes": [],
-  "quote_costs": [],
+  "quotes": [
+   "The rich do not ask. The rich leave the money in the room, and that is the arrangement"
+  ],
+  "quote_costs": [
+   "arrangement"
+  ],
   "reads": [],
   "dependencies": {
    "pun_in_lede": false,
@@ -2915,11 +2939,11 @@
   },
   "image": "/props/straight/paper-cup-on-an-empty-chair.png",
   "image_alt": null,
-  "body": "<p>Aurelia Somerset, 63, has paid $2.3 million a year in management fees for 24 years without reading the agreements, and has described the payments as the light she leaves on so the money knows it is safe. The money is in two buildings, a trust, and a desk she visits quarterly. She has confirmed the money has never once required a light to find any of them.</p>\n\n<p>The fees total roughly $55 million over the course of her adult life, a figure the advisor&#x27;s firm confirmed without embarrassment. Ms. Somerset has never asked what the fee is for, and confirmed she does not intend to start asking, because in her experience asking what a thing is for is the fastest way to find out the thing was for her.</p>\n\n<p>Ms. Somerset said that as long as there is a building the money is in, she feels fine. The building is managed by the firm that charges the fee. She said that was the arrangement and that she had stopped interrogating the arrangement the year the money lost 18 percent and the bollocks fee still arrived, which she said was the money&#x27;s way of staying in touch.</p>\n\n<p>She keeps the quarterly statements stacked on the desk the money is in, unopened, which she said was the desk&#x27;s entire purpose. When asked what she thinks the money is doing, Ms. Somerset said the money is where it is supposed to be, and she does not check on money that knows where it belongs, because a person who checks on money is a person who does not trust it, and a person who does not trust it is a person who did not leave the light on, which is bollocks.</p>"
+  "body": "<p>Aurelia Somerset, 63, has paid $2.3 million a year in management fees for 24 years and has never once read the agreements, which she describes as the rich man&#x27;s duty. The fees total roughly $55 million over her adult life. The money sits in two buildings, a trust, and a desk she visits quarterly, none of which she has ever needed a receipt to find.</p>\n\n<blockquote>You do not ask what the fee is for. That is the first thing my father taught me, and he taught me it because he paid fees his whole life and never once got anything on the receipt. If I ask what it is for, I am telling these people I am not rich enough to not ask. The rich do not ask. The rich leave the money in the room and the room charges the fee, and that is the arrangement, and the arrangement does not require my attention.</blockquote>\n\n<p>Ms. Somerset has never asked what the fee is for, and confirmed she does not intend to start. In her experience, asking what a thing is for is the fastest way to find out the thing was for her. She keeps the quarterly statements stacked on the desk, unopened, which she said was the desk&#x27;s entire purpose.</p>\n\n<p>The building that holds the money is managed by the same firm that charges the fee. Ms. Somerset said that was the arrangement. In the year the money lost 18 percent, the fee arrived on time, and she described that as the money staying in touch. When asked what she thinks the fee actually hires, she said she assumed it hired the firm, and when asked what the firm does, she said that was between the firm and the money, and she is not part of it, which is the entire point, and she is relieved to finally be the kind of person who is not part of it, which her father would be pissed about.</p>"
  },
  {
   "title": "Billionaire Calls His 20% Cut a Tip, Has Tipped Nobody Since 1987",
-  "dek": "Cecil Hartigan takes $10 billion off the top and sees no reason the waiter costs him.",
+  "dek": "The carried interest still lands every quarter. The man still calls it a gratuity.",
   "slug": "billionaire-calls-his-20-cut-a-tip-has-tipped-nobody-since-1987",
   "desk": "earnings",
   "author": "Omar Zayed",
@@ -2932,13 +2956,17 @@
   ],
   "column": false,
   "brief": false,
-  "first_sentence": "Cecil Hartigan, 68, of Greenwich, calls the 20 percent he takes from every fund a tip, and has spent four decades maintaining that the tip is money he does not actually have to tip anyone with.",
+  "first_sentence": "Cecil Hartigan, 68, of Greenwich, takes 20 percent off every fund he raises, calls the money a tip, and has not actually tipped a human being since 1987, which he will tell you is the whole thesis.",
   "closer": "Cecil Hartigan keeps the tip.",
   "pays": "Cecil Hartigan",
-  "verb": "skims",
+  "verb": "takes",
   "figure_role": "loss",
-  "quotes": [],
-  "quote_costs": [],
+  "quotes": [
+   "You want to sit at this table, you leave the 20 on it"
+  ],
+  "quote_costs": [
+   "$10 billion"
+  ],
   "reads": [],
   "dependencies": {
    "pun_in_lede": false,
@@ -2946,6 +2974,6 @@
   },
   "image": "/props/straight/folded-newspaper-on-a-cafe-table.png",
   "image_alt": null,
-  "body": "<p>Cecil Hartigan, 68, of Greenwich, calls the 20 percent he takes from every fund a tip, and has spent four decades maintaining that the tip is money he does not actually have to tip anyone with. Over his career that 20 percent has come to roughly $10 billion. He has never once left one for a waiter, a driver, or the people who built the companies the tip is taken from, and he tells the people who ask that the tip does not work like that.</p>\n\n<p>Mr. Hartigan earns the percentage whether the fund that pays it makes money or not. It is calculated on the capital a fund raises, not on what it returns, a detail he has described as the real generosity. When a portfolio company the fund owned went bankrupt last year, the 20 percent on the sum that entered the company was already collected.</p>\n\n<p>&#x27;You leave the 20 on the table and the good money finds it,&#x27; Mr. Hartigan told the industry dinner. The 20 was not left on any table. It was wired to a management entity that does not appear in the fund&#x27;s marketing materials, which he has called getting the tip while the room is still open.</p>\n\n<p>He has two homes, a staff, and a standing reservation at a restaurant he has never once had to describe as expensive. When asked what the money actually buys, Mr. Hartigan said the money buys the position from which the tip is taken, and that the position is the whole point. The whole thing functions on the premise that a waiter who never receives a fucking tip will keep serving, because the waiter does not know what the percentage was.</p>"
+  "body": "<p>Cecil Hartigan, 68, of Greenwich, takes 20 percent off every fund he raises, calls the money a tip, and has not actually tipped a human being since 1987, which he will tell you is the whole thesis. Over forty years that 20 percent has come to just north of $10 billion, calculated on capital raised and not on anything the money ever did. The rule does not care if the fund makes a nickel.</p>\n\n<blockquote>Listen to me. The 20 is the tip. That is what you are buying the room for. You want to sit at this table, you leave the 20 on it, and I do not have to say thank you, because a table that costs 20 of every dollar is a table you asked for. I have never once left a tip in my life. That is the point. The tip is a pump, and I am the one who gets it wet.</blockquote>\n\n<p>Mr. Hartigan says this without irony, which is the closest thing to a substantive position he has ever held. When a portfolio company he owned went bankrupt in the third quarter, the 20 on the money that entered it had already been wired to an entity with no address and a single officer, who is Mr. Hartigan.</p>\n\n<p>The tip does not go down when the room burns. The tip is collected in advance, like a coat check for a coat that was never worn. He calls it generosity. What he is paying for, he will tell you, is the position from which the tip is taken, and he wants you to understand how much that costs, because in his view you are not really in the business until it costs you that much and you still do not give a fuck.</p>"
  }
 ]
